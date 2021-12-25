@@ -1,0 +1,159 @@
+/** app place **********************************************************************************************************************/
+.body--light,
+.q-light {
+  color:rgba(50, 50, 50, 1) !important;
+  background: rgba(250, 250, 250, 1) !important;
+}
+
+.body--dark,
+.q-dark {
+  color: #DDDDDD !important;
+  background: rgba(10, 10, 10, 1) !important;
+}
+
+.body--light .q-separator {
+  background: rgba(200, 200, 200, 0.4);
+}
+
+.body--dark .q-separator {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.body--light .q-tree {
+  color:rgba(50, 50, 50, 1) !important;
+}
+
+.body--dark .q-tree {
+  color: #DDDDDD !important;
+}
+
+.text-d2r {
+  color: #660000 !important;
+}
+
+@font-face {
+  font-family: 'Kodia';
+  src: url('/static/fonts/kodia.woff2') format('woff2'),
+    url('/static/fonts/kodia.woff') format('woff');
+  font-weight: bolder;
+}
+
+.font-kodia {
+  font-family: 'Kodia';
+}
+
+.bg-d2r {
+  background-color: #660000 !important;
+}
+
+.d2r-logo-b {
+  text-shadow: 0 -1px 2px rgb(255, 255, 255, 0.4);
+}
+
+.d2r-logo-w {
+  text-shadow: 0 1px 2px rgb(0, 0, 0, 0.6);
+}
+
+.text-title {
+  color: #b89c5b !important;
+}
+
+.bg-title {
+  background-color: #b89c5b !important;
+}
+
+.title-size {
+  font-size: 1.2em;
+}
+
+.d2r-drawer .q-separator {
+  background-color: rgba(28, 32, 32, 1);
+}
+
+.body--light .d2r-drawer .q-separator {
+  background-color: rgba(200, 200, 200, 0.4) !important;
+}
+
+.d2r-drawer .active {
+  color: rgba(10, 13, 13, 1) !important;
+  background-color: rgba(184, 156, 91, 0.7) !important;
+  font-weight: bold;
+}
+
+.table-back {
+  background-color: rgba(184, 156, 91, .2) !important;
+}
+
+.body--light .table-back {
+  background-color: rgba(100, 100, 100, .2) !important;
+}
+
+.q-inner-loading {
+  background: rgba(100, 100, 100, 0.2) !important;
+  backdrop-filter: saturate(200%) blur(4px);
+  -webkit-backdrop-filter: saturate(200%) blur(4px);
+  border-radius: 4px !important;
+}
+
+.body--light .q-inner-loading {
+  background: rgba(0, 0, 0, 0.2) !important;
+}
+
+.text-small {
+  font-size: 0.8em !important;
+  line-height: 1.4em !important;
+}
+
+.d2r-table th {
+  background-color: rgba(184, 156, 91, .2) !important;
+  color: rgba(184, 156, 91, 1) !important;
+  font-size: 1.4em !important;
+  font-family: 'Kodia';
+}
+
+.d2r-table td {
+  white-space: normal !important;
+}
+
+.d2r-table table {
+  box-shadow: inset 0 0 1px 1px rgba(184, 156, 91, .5) !important;
+  background-color: rgba(10, 10, 10, 1) !important;
+  border-radius: 4px;
+}
+
+.d2r-table td {
+  border-color: rgba(184, 156, 91, .5) !important;
+}
+
+.body--light .d2r-table table {
+  box-shadow: inset 0 0 1px 1px rgba(200, 200, 200, .5) !important;
+  background-color: rgba(245, 245, 245, 1) !important;
+  border-radius: 4px;
+}
+
+.body--light .d2r-table td {
+  border-color: rgba(200, 200, 200, .5) !important;
+}
+
+.d2r-card {
+  background-color: rgba(20, 20, 20, 1) !important;
+  border-color: rgba(184, 156, 91, .5) !important;
+  border-radius: 4px;
+}
+
+.body--light .d2r-card {
+  background-color: rgba(245, 245, 245, 1) !important;
+  border-color: rgba(200, 200, 200, .5) !important;
+}
+
+.d2r-card hr {
+  background-color: rgba(184, 156, 91, .5) !important;
+}
+
+.body--light .d2r-card hr {
+  background-color: rgba(200, 200, 200, .5) !important;
+}
+
+.text-underline {
+  text-decoration: underline;
+}

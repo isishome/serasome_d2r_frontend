@@ -1,0 +1,25 @@
+{
+  "name": "serasome_d2r_frontend_6004",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "pkg package.json"
+  },
+  "author": "FoursHome",
+  "license": "ISC",
+  "dependencies": {
+    "connect-history-api-fallback": "^1.6.0",
+    "express": "^4.17.1",
+    "pkg": "^4.5.1"
+  },
+  "pkg": {
+    "assets": "dist/**/*",
+    "targets": [
+      "node14-win-x64"
+    ],
+    "outputPath": "../../publish/serasome_d2r_frontend"
+  }
+}

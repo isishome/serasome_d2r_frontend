@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+  <meta name="description" content="<%= VUE_APP_D2R_DESC %>">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-TileImage" content="<%= BASE_URL %>static/icon/apple-touch-icon.png">
+  <meta name="theme-color" content="#ffffff">
+  <meta property="og:url" content="<%= VUE_APP_D2R_URL %>" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="<%= VUE_APP_D2R_TITLE %>" />
+  <meta property="og:description" content="<%= VUE_APP_D2R_DESC %>" />
+  <meta property="og:image" content="<%= BASE_URL %>static/images/d2r_og.jpg" />
+  <meta property="og:image:width" content="800" />
+  <meta property="og:image:height" content="400" />
+  <title>
+    <%= VUE_APP_D2R_TITLE %>
+  </title>
+  <link rel="apple-touch-icon" sizes="180x180" href="<%= BASE_URL %>static/icon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="<%= BASE_URL %>static/icon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="<%= BASE_URL %>static/icon/favicon-16x16.png">
+  <link rel="mask-icon" href="<%= BASE_URL %>static/icon/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&family=Nunito:wght@400;700;900&family=Source+Code+Pro&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet preload" href="<%= BASE_URL %>static/styles/common.css" as="style" type="text/css">
+  <link rel="stylesheet preload" href="<%= BASE_URL %>static/styles/d2r.css" as="style" type="text/css">
+  <link rel="stylesheet preload" href="<%= BASE_URL %>static/styles/tiptap.css" as="style" type="text/css">
+  <link rel="manifest" href="<%= BASE_URL %>static/icon/site.webmanifest">
+  <link rel="stylesheet preload" href="<%= BASE_URL %>static/library/highlight/styles/vs2015.min.css" as="style"
+    type="text/css">
+  <script src="<%= BASE_URL %>static/library/highlight/highlight.min.js"></script>
+  <% if(process.env.NODE_ENV==='production' ) { %>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DCMMV6W5LP"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+
+      gtag('config', 'G-DCMMV6W5LP');
+    </script>
+    <script data-ad-client="ca-pub-5110777286519562" async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" crossorigin="anonymous"></script>
+    <% } %>
+</head>
+
+<body>
+  <noscript>
+    <strong>We're sorry but SeraSome doesn't work properly without JavaScript enabled. Please enable it to
+      continue.</strong>
+  </noscript>
+  <div id="app"></div>
+  <!-- built files will be auto injected -->
+</body>
+
+</html>
