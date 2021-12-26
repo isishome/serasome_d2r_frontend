@@ -150,8 +150,8 @@
                 <q-item-section side v-if="file.__img">
                   <q-radio dense v-if="file.__img" v-model="writeInfo.thumb" :val="file.name" size="xs" color="d2r" />
                 </q-item-section>
-                <q-item-section v-if="file.__img" thumbnail>
-                  <img :src="file.__img.src">
+                <q-item-section v-if="file.__img" style="width:10%" thumbnail>
+                  <q-img :src="file.__img.src" width="100%" :ratio="3/2" />
                 </q-item-section>
                 <q-item-section>
                   <q-item-label>
@@ -702,7 +702,7 @@
   }
 
   .body--dark .editor-menu-bar {
-    background-color: #151939 !important;
+    background-color: #202020 !important;
   }
 
   @media screen and (max-width:1439px) {

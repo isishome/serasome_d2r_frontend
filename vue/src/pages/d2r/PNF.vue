@@ -3,14 +3,14 @@
     <q-list class="column justify-start items-center absolute-center full-width">
       <q-item class="lt-md">
         <q-avatar size="60px" round>
-          <q-badge floating transparent color="red" label="404" />
+          <q-badge floating transparent color="red" label="404" style="top:4px;right:-10px;" />
           <img src="@/assets/images/d2r.png" />
         </q-avatar>
       </q-item>
       <q-item>
         <q-item-section class="gt-sm" center avatar>
           <q-avatar size="60px" round>
-            <q-badge floating transparent color="red" label="404" />
+            <q-badge floating transparent color="red" label="404" style="top:4px;right:-10px;" />
             <img src="@/assets/images/d2r.png" />
           </q-avatar>
         </q-item-section>

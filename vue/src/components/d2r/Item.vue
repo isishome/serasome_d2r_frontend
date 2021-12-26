@@ -40,8 +40,8 @@
           <template #list="scope">
             <q-list :dark="false" separator :style="$q.screen.lt.sm ? 'height:40px' : ''" class="scroll">
               <q-item :dark="false" dense v-for="file in scope.files" :key="file.name">
-                <q-item-section v-if="file.__img" thumbnail>
-                  <q-img :src="file.__img.src" style="width:30px" />
+                <q-item-section v-if="file.__img" style="width:10%" thumbnail>
+                  <q-img :src="file.__img.src" width="100%" :ratio="3/2" />
                 </q-item-section>
                 <q-item-section>
                   <q-item-label class="ellipsis text-grey-10 q-py-xs">

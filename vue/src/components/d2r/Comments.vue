@@ -44,8 +44,7 @@
               <div v-if="signStatus" class="row justify-end">
                 <div v-if="(c.secret === false || c.owner === true) && c.delete === false"
                   class="lt-sm row justify-end q-gutter-x-md">
-                  <q-btn dense push round icon="more_vert" size="sm" padding="6px" color="grey-10" text-color="grey-7"
-                    @click="show('change', c)" />
+                  <q-btn dense flat round icon="more_vert" size="sm" padding="6px" @click="show('change', c)" />
                 </div>
                 <div class="gt-xs row justify-end q-gutter-x-sm">
                   <q-btn v-if="c.owner === true && c.delete === false" :disable="loading" dense push
@@ -61,8 +60,8 @@
               </div>
             </q-item-label>
             <q-item-label class="q-pt-sm">
-              <q-input class="col" input-class="no-padding no-scroll comments-text" v-model="c.contents" dark dense
-                readonly borderless autogrow>
+              <q-input class="col" input-class="no-padding no-scroll comments-text" v-model="c.contents" dense readonly
+                borderless autogrow>
                 <template #prepend>
                   <div class="full-height">
                     <q-icon v-if="c.secret === true && (c.owner === true || owner === true)" name="lock" size="14px"
@@ -100,8 +99,7 @@
                 <div v-if="signStatus" class="row justify-end">
                   <div v-if="(r.secret === false || r.owner === true) && r.delete === false"
                     class="lt-sm row justify-end q-gutter-x-md">
-                    <q-btn dense push round icon="more_vert" size="sm" padding="6px" color="grey-10" text-color="grey-7"
-                      @click="show('change', r)" />
+                    <q-btn dense flat round icon="more_vert" size="sm" padding="6px" @click="show('change', r)" />
                   </div>
                   <div class="gt-xs row justify-end q-gutter-x-sm">
                     <q-btn v-if="r.owner === true && r.delete === false" :disable="loading" dense push
@@ -117,7 +115,7 @@
                 </div>
               </q-item-label>
               <q-item-label class="q-pt-sm">
-                <q-input class="col" input-class="no-padding no-scroll comments-text" v-model="r.contents" dark dense
+                <q-input class="col" input-class="no-padding no-scroll comments-text" v-model="r.contents" dense
                   readonly borderless autogrow>
                   <template #prepend>
                     <div class="full-height">
@@ -159,9 +157,9 @@
         </q-form>
       </q-item>
     </q-list>
-    <q-dialog v-if="signStatus" ref="dialog" v-model="dialog" :position="$q.screen.lt.sm ? 'bottom' : 'standard'"
-      @before-hide="hide">
-      <q-card v-if="info.mode === 'change'" class="comments-card" dark>
+    <q-dialog v-if="signStatus" ref="dialog" v-model="dialog"
+      :position="$q.screen.lt.sm && info.mode === 'change' ? 'bottom' : 'standard'" @before-hide="hide">
+      <q-card v-if="info.mode === 'change'" class="comments-card">
         <q-card-section class=" row items-center no-wrap">
           <div class="row justify-end q-gutter-x-md full-width">
             <q-btn v-if="info.owner === true && info.delete === false" :disable="loading" dense push icon="delete"
@@ -174,15 +172,16 @@
           </div>
         </q-card-section>
       </q-card>
-      <q-card v-else-if="['leave', 'modify', 'reply'].includes(info.mode)" dark class="comments-card">
+      <q-card v-else-if="['leave', 'modify', 'reply'].includes(info.mode)" class="comments-card">
         <q-card-section class="row items-center no-wrap">
           <q-form class="fit" autocorrect="off" autocapitalize="off" autocomplete="off" spellcheck="false">
-            <q-input :disable="loading" :autofocus="$q.screen.gt.xs" color="grey-6" bg-color="grey-4 d2r-comments2"
-              class="full-width comments-contents" v-model="info.contents" type="textarea"
-              :input-style="{'height':'140px','resize':'none','margin-top':'10px'}" style="border-color: transparent;"
-              :error="info.error" :error-message="$t('d2r.comments.message.invalidContents')"
-              :hint="$t('d2r.comments.contentsHint')" maxlength="500" :label="commentLabel"
-              @input="info.error = check(info.contents)" flat no-error-icon outlined>
+            <q-input :dark="false" :disable="loading" :autofocus="$q.screen.gt.xs" color="grey-6"
+              bg-color="grey-4 d2r-comments2" class="full-width comments-contents" v-model="info.contents"
+              type="textarea" :input-style="{'height':'140px','resize':'none','margin-top':'10px'}"
+              style="border-color: transparent;" :error="info.error"
+              :error-message="$t('d2r.comments.message.invalidContents')" :hint="$t('d2r.comments.contentsHint')"
+              maxlength="500" :label="commentLabel" @input="info.error = check(info.contents)" flat no-error-icon
+              outlined>
               <template v-slot:append>
                 <q-icon v-if="info.contents && info.contents.length > 0" class="cursor-pointer absolute-top-right"
                   style="top:10px;right:10px" name="cancel" size="sm" dense flat @click="info.contents = null" />
@@ -202,7 +201,7 @@
           </div>
         </q-card-actions>
       </q-card>
-      <q-card dark class="comments-card" v-else-if="info.mode === 'delete'">
+      <q-card class="comments-card" v-else-if="info.mode === 'delete'">
         <q-card-section class="q-pa-sm row items-center">
           <div>
             <q-avatar icon="delete" size="md" color="red" text-color="white" />
@@ -371,7 +370,7 @@
   }
 </script>
 <style>
-  .d2r-comments:before {
+  .body--dark .d2r-comments:before {
     border-color: #222222 !important;
   }
 

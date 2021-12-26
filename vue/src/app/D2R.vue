@@ -100,13 +100,13 @@
           </div>
         </q-toolbar>
       </q-header>
-      <q-drawer v-model="drawer" side="left" behavior="mobile" class="font-kodia" content-class="d2r-drawer"
-        :width="240" elevated>
+      <q-drawer no-swipe-open no-swipe-close no-swipe-backdrop v-model="drawer" side="left" behavior="mobile"
+        class="font-kodia" content-class="d2r-drawer" :width="240" elevated>
         <q-scroll-area class="fit">
           <q-list>
             <q-item>
               <q-item-section>
-                <q-select dense outlined separator emit-value map-options color="title" behavior="dialog" v-model="lang"
+                <q-select dense outlined separator emit-value map-options color="title" behavior="menu" v-model="lang"
                   :options="options" popup-content-class="font-kodia"
                   popup-content-style="box-shadow:inset 0 0 1px 0 rgba(150,150,150,1); opacity:.9"
                   :label="$t('language')" />
@@ -238,7 +238,7 @@
                             </q-item-label>
                           </q-item-section>
                           <q-item-section v-if="file.__img" thumbnail>
-                            <img :src="file.__img.src">
+                            <img :src="file.__img.src" style="width:40px;height: 40px;">
                           </q-item-section>
                           <q-item-section top side>
                             <q-btn size="12px" flat dense round icon="delete" @click="scope.removeFile(file)" />
@@ -382,10 +382,7 @@
       lang: function (val, old) {
         if (val !== old) {
           this.$q.cookies.set(process.env.VUE_APP_LANGUAGE_NAME, val, { path: '/', expires: '7300d' })
-          this.drawer = false
-          this.$nextTick(() => {
-            document.location.reload()
-          })
+          document.location.reload()
         }
       }
     },
