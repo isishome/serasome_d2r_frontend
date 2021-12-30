@@ -10,10 +10,10 @@ import axios from 'axios'
 import vuePlugin from "@/plugin/highlight"
 import { Quasar, Notify, Cookies, Loading } from 'quasar'
 
-const Adsense = () => import(/* webpackChunkName: "etc-component" */ '@/components/etc/AdSense')
-const d2rTable = () => import(/* webpackChunkName: "d2r-component" */ '@/components/d2r/Table')
-const d2rTh = () => import(/* webpackChunkName: "d2r-component" */'@/components/d2r/Th')
-const d2rTapPanel = () => import(/* webpackChunkName: "d2r-component" */ '@/components/d2r/TapPanel')
+const Adsense = () => import(/* webpackChunkName: "d2r" */ '@/components/etc/AdSense')
+const d2rTable = () => import(/* webpackChunkName: "d2r-bbs" */ '@/components/d2r/Table')
+const d2rTh = () => import(/* webpackChunkName: "d2r-bbs" */'@/components/d2r/Th')
+const d2rTapPanel = () => import(/* webpackChunkName: "d2r-knowledge" */ '@/components/d2r/TapPanel')
 
 const lang = Cookies.has(process.env.VUE_APP_LANGUAGE_NAME) ? Cookies.get(process.env.VUE_APP_LANGUAGE_NAME) : Quasar.lang.getLocale().substring(0, 2) || 'ko'
 

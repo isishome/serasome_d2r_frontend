@@ -277,22 +277,19 @@
         </q-dialog>
         <router-view name="carousel" />
         <div :class="['row q-mx-sm', $q.screen.lt.md ? 'q-mt-sm' : 'q-mt-lg']">
-          <div class="gt-md col-xl-2 offset-xl-1 col-lg-2 row justify-end" style="padding-right:6px;">
+          <div class="gt-md col-xl col-lg-1 row justify-end" style="padding:60px 6px 0 0;">
             <adsense :visible="!noAD && $q.screen.gt.sm && isProduction && !isKnowledge"
               data-ad-client="ca-pub-5110777286519562" data-ad-slot="4948790020" data-ad-format="vertical"
-              horizontal="right" :key="`al-${key}`" random>
+              horizontal="right" :key="`al-${key}`" width="120px" height="600px">
             </adsense>
           </div>
-          <q-page class="col-xl-6 col-lg-8 col-12">
+          <q-page class="col-xl-7 col-lg-10 col-12">
             <router-view />
-            <adsense :visible="!noAD && $q.screen.lt.md && isProduction" data-ad-client="ca-pub-5110777286519562"
-              data-ad-slot="9230987257" width="300px" height="50px" :key="`ac-${key}`">
-            </adsense>
           </q-page>
-          <div class="gt-md col-xl-2 col-lg-2 column items-start q-gutter-y-sm" style="padding-left:6px;">
+          <div class="gt-md col-xl col-lg-1 column items-start q-gutter-y-sm" style="padding:60px 0 0 6px;">
             <div v-if="$q.screen.gt.sm && isProduction" style="position: fixed;">
               <adsense :visible="!noAD" data-ad-client="ca-pub-5110777286519562" data-ad-slot="9654321794"
-                data-ad-format="vertical" horizontal="left" :key="`ar-${key}`" random>
+                data-ad-format="vertical" horizontal="left" :key="`ar-${key}`" width="120px" height="600px">
               </adsense>
               <!-- <adsense :visible="!noAD && isKnowledge" data-ad-client="ca-pub-5110777286519562"
                 data-ad-slot="4948790020" style="margin-top: 10px;" data-ad-format="vertical" horizontal="left" :key="`al-${key}`" random>
@@ -307,7 +304,7 @@
         <q-page-scroller position="bottom-left" :scroll-offset="150" :offset="[0, 0]"
           style="position: absolute;z-index: 2;">
           <q-btn push
-            :style="$q.screen.gt.lg ? 'left:20vw;bottom:20px' : $q.screen.gt.md ? 'left:10vw;bottom:20px' : 'left:10px;bottom:30px'"
+            :style="$q.screen.gt.lg ? 'left:18vw;bottom:20px' : $q.screen.gt.md ? 'left:5vw;bottom:20px' : 'left:10px;bottom:30px'"
             round size="md" icon="keyboard_arrow_up" color="d2r" />
         </q-page-scroller>
       </q-page-container>

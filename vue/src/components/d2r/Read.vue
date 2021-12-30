@@ -40,6 +40,17 @@
         </div>
       </q-card-section>
       <q-separator inset />
+      <q-card-section class="no-padding row justify-center items-center">
+        <div class="q-pt-xs">
+          <adsense v-if="$q.platform.is.mobile" :visible="!noAD && isProduction"
+            data-ad-client="ca-pub-5110777286519562" data-ad-slot="9230987257" width="300px" height="50px"
+            :key="`ac-${key}`">
+          </adsense>
+          <adsense v-else :visible="!noAD && isProduction" data-ad-client="ca-pub-5110777286519562"
+            data-ad-slot="9230987257" width="728px" height="90px" :key="`ac-${key}`">
+          </adsense>
+        </div>
+      </q-card-section>
       <q-card-section class="read-contents">
         <div v-if="data && data.youtube">
           <q-video :ratio="16/9" :src="`https://www.youtube.com/embed/${getYoutubeId(data.youtube)}?rel=0`" />
@@ -87,6 +98,7 @@
             :to="{name:'d2r-bbs', params:{sec:sec}, query:{page:$route.query.page || 1}}" />
         </div>
       </q-card-actions>
+
       <q-card-section class="comments-wrap row justify-between items-center">
         <d2r-comments ref="comments" v-if="data.classify !== 'notice'" :loading="loading" :data="comments"
           :authority="authority(sec, 'comments')" :owner="data.owner" :all="pagination.all" @process="processComments"
@@ -402,6 +414,7 @@
     box-shadow: 0 0 0 1px rgba(45, 45, 45, 1);
     background-color: rgba(5, 5, 5, 1) !important;
     border-radius: 4px;
+    position: relative;
   }
 
   .body--light .read-card {

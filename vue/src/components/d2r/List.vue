@@ -169,7 +169,7 @@
     <q-page-sticky v-if="mode !== 'search' && authority(sec, 'write')" position="bottom-right" :offset="[0, 0]"
       style="z-index: 2;">
       <q-btn push
-        :style="$q.screen.gt.lg ? 'right:20vw;bottom:20px' : $q.screen.gt.md ? 'right:10vw;bottom:20px' : 'right:10px;bottom:30px'"
+        :style="$q.screen.gt.lg ? 'right:18vw;bottom:20px' : $q.screen.gt.md ? 'right:5vw;bottom:20px' : 'right:10px;bottom:30px'"
         round size="md" icon="add" color="grey-4" text-color="d2r" :to="`${sec}/write`" :disable="loading" />
     </q-page-sticky>
   </div>
@@ -449,8 +449,7 @@
   }
 
   .finish {
-    background-color: rgba(50, 50, 50, 0.1);
-    opacity: 0.8;
+    opacity: .4;
   }
 
   .finish-icon {

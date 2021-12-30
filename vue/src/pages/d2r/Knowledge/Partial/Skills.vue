@@ -95,8 +95,8 @@
 
   import { copyToClipboard } from 'quasar'
 
-  const d2rTree = () => import(/* webpackChunkName: "d2r-tree-component" */ '@/components/d2r/Tree')
-  const d2rSkill = () => import(/* webpackChunkName: "d2r-skill-component" */ '@/components/d2r/Skill')
+  const d2rTree = () => import(/* webpackChunkName: "d2r-knowledge-skills" */ '@/components/d2r/Tree')
+  const d2rSkill = () => import(/* webpackChunkName: "d2r-knowledge-skills" */ '@/components/d2r/Skill')
 
   String.prototype.format = function () {
     var formatted = this
