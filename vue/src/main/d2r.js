@@ -5,10 +5,11 @@ import i18n from '@/setup/i18n-setup'
 import mixin from '@/setup/mixin'
 import VueRouter from 'vue-router'
 import routes from '@/router/d2r'
+import routesCordova from '@/router/cordova'
 import store from '@/store/d2r'
 import axios from 'axios'
 import vuePlugin from "@/plugin/highlight"
-import { Quasar, Notify, Cookies, Loading } from 'quasar'
+import { Quasar, Notify, Cookies, Loading, Platform } from 'quasar'
 
 const Adsense = () => import(/* webpackChunkName: "d2r" */ '@/components/etc/AdSense')
 const d2rTable = () => import(/* webpackChunkName: "d2r-bbs" */ '@/components/d2r/Table')
@@ -20,7 +21,7 @@ const lang = Cookies.has(process.env.VUE_APP_LANGUAGE_NAME) ? Cookies.get(proces
 // Vue Router --------------------------------------------------------------------------------------------------------------------------------------------
 const router = new VueRouter({
   //mode: 'history',
-  routes,
+  routes: Platform.is.cordova ? routesCordova : routes,
   scrollBehavior(to, from, savedPosition) {
     const findTopScroll = to.matched.find(route => route.meta.topScroll)
     if (findTopScroll)

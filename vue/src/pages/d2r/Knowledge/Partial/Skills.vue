@@ -65,7 +65,8 @@
                   </d2r-tree>
                 </div>
               </div>
-              <div v-if="existsData" class="full-width row justify-center items-center q-gutter-sm">
+              <div v-if="existsData && !$q.platform.is.cordova"
+                class="full-width row justify-center items-center q-gutter-sm">
                 <div class="col gt-sm"></div>
                 <div>
                   <q-btn icon="share" color="red-10" :label="$t('d2r.knowledge.skills.btn.share')" @click="share"
@@ -319,20 +320,7 @@
           .then(function () {
             vm.loading = false
           })
-      },
-      // reset() {
-      //   this.mobile.max = false
-      //   this.mobile.remove = false
-      //   this.mobile.info = false
-
-      //   if (this.$children) {
-      //     this.$children.forEach(c => {
-      //       if (c.points && c.points > 0) {
-      //         c.choice(-1000)
-      //       }
-      //     })
-      //   }
-      // }
+      }
     }
   }
 </script>

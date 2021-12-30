@@ -14,12 +14,15 @@ module.exports = {
       importStrategy: 'kebab',
       rtlSupport: false,
       supportIE: true
-    }
+    },
+    cordovaPath: 'src-cordova'
   },
   transpileDependencies: [
     'quasar',
     'highlight.js'
   ],
+
   outputDir: '../dist',
-  assetsDir: 'static'
+  assetsDir: 'static',
+  publicPath: ''
 }

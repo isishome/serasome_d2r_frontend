@@ -112,48 +112,73 @@
                   :label="$t('language')" />
               </q-item-section>
             </q-item>
-            <q-item v-if="$route.name !== 'd2r-search'">
-              <q-item-section>
-                <q-input dense standout outlined :label="$t('btn.search')" color="title" v-model="text"
-                  input-class="text-left" @keyup.enter="search" :error="text.length > 20" hide-bottom-space
-                  no-error-icon>
-                  <template v-slot:append>
-                    <q-icon v-if="text === ''" name="search" />
-                    <q-icon v-else name="close" class="cursor-pointer" @click="text = ''" />
-                  </template>
-                </q-input>
-              </q-item-section>
-            </q-item>
-            <q-item active-class="none" @click="goSeras" clickable>
-              <q-item-section avatar>
-                <q-avatar size="30px">
-                  <img src="@/assets/images/seras.svg" style="width:30px !important;" />
-                </q-avatar>
-              </q-item-section>
-              <q-item-section>
-                SeraSome
-              </q-item-section>
-            </q-item>
+            <template v-if="!$q.platform.is.cordova">
+              <q-item v-if="$route.name !== 'd2r-search'">
+                <q-item-section>
+                  <q-input dense standout outlined :label="$t('btn.search')" color="title" v-model="text"
+                    input-class="text-left" @keyup.enter="search" :error="text.length > 20" hide-bottom-space
+                    no-error-icon>
+                    <template v-slot:append>
+                      <q-icon v-if="text === ''" name="search" />
+                      <q-icon v-else name="close" class="cursor-pointer" @click="text = ''" />
+                    </template>
+                  </q-input>
+                </q-item-section>
+              </q-item>
+              <q-item active-class="none" @click="goSeras" clickable>
+                <q-item-section avatar>
+                  <q-avatar size="30px">
+                    <img src="@/assets/images/seras.svg" style="width:30px !important;" />
+                  </q-avatar>
+                </q-item-section>
+                <q-item-section>
+                  SeraSome
+                </q-item-section>
+              </q-item>
+              <q-separator />
+              <q-item active-class="bg-teal-4" @click="sign" clickable>
+                <q-item-section avatar>
+                  <q-icon size="24px" :name="signStatus ? 'fas fa-sign-out-alt' : 'fas fa-user-circle'" />
+                </q-item-section>
+                <q-item-section>
+                  {{ signStatus ? $t('signOut.title') : $t('signIn.title') }}
+                </q-item-section>
+              </q-item>
+            </template>
             <q-separator />
-            <q-item active-class="bg-teal-4" @click="sign" clickable>
-              <q-item-section avatar>
-                <q-icon size="24px" :name="signStatus ? 'fas fa-sign-out-alt' : 'fas fa-user-circle'" />
-              </q-item-section>
-              <q-item-section>
-                {{ signStatus ? $t('signOut.title') : $t('signIn.title') }}
-              </q-item-section>
-            </q-item>
-            <q-separator />
-            <q-item v-if="signStatus" :to="{name:'d2r-account'}">
-              <q-item-section avatar>
-                <q-icon size="24px" name="settings" />
-              </q-item-section>
-              <q-item-section>
-                {{$t('d2r.account.title')}}
-              </q-item-section>
-            </q-item>
-            <q-separator v-if="signStatus === true" />
-            <q-expansion-item exact default-opened :to="{name:'d2r-main'}" exact-active-class="active text-transparent">
+            <template v-if="signStatus">
+              <q-item :to="{name:'d2r-account'}">
+                <q-item-section avatar>
+                  <q-icon size="24px" name="settings" />
+                </q-item-section>
+                <q-item-section>
+                  {{$t('d2r.account.title')}}
+                </q-item-section>
+              </q-item>
+              <q-separator />
+            </template>
+            <q-expansion-item v-if="$q.platform.is.cordova" exact default-opened
+              exact-active-class="active text-transparent">
+              <template v-slot:header>
+                <q-item-section avatar>
+                  <q-icon size="20px" name="fas fa-book" />
+                </q-item-section>
+                <q-item-section>
+                  {{$t('d2r.knowledge.title')}}
+                </q-item-section>
+              </template>
+              <q-item v-for="tab in list" :key="tab.value" :inset-level="0.5"
+                :to="{name:'d2r-knowledge-section', params:{ section:tab.value }}" active-class="active">
+                <q-item-section avatar>
+                  <q-icon size="20px" :name="tab.icon" />
+                </q-item-section>
+                <q-item-section>
+                  {{tab.name}}
+                </q-item-section>
+              </q-item>
+            </q-expansion-item>
+            <q-expansion-item v-else exact default-opened :to="{name:'d2r-main'}"
+              exact-active-class="active text-transparent">
               <template v-slot:header>
                 <q-item-section avatar>
                   <q-icon size="24px" name="fas fa-star-of-david" class="text-d2r d2r-logo-w" />
@@ -277,16 +302,16 @@
         </q-dialog>
         <router-view name="carousel" />
         <div :class="['row q-mx-sm', $q.screen.lt.md ? 'q-mt-sm' : 'q-mt-lg']">
-          <div class="gt-md col-xl col-lg-1 row justify-end" style="padding:60px 6px 0 0;">
+          <div class="gt-sm col row justify-end" style="padding:60px 6px 0 0;">
             <adsense :visible="!noAD && $q.screen.gt.sm && isProduction && !isKnowledge"
               data-ad-client="ca-pub-5110777286519562" data-ad-slot="4948790020" data-ad-format="vertical"
               horizontal="right" :key="`al-${key}`" width="120px" height="600px">
             </adsense>
           </div>
-          <q-page class="col-xl-7 col-lg-10 col-12">
+          <q-page class="col-xl-6 col-lg-8 col-md-10 col-12">
             <router-view />
           </q-page>
-          <div class="gt-md col-xl col-lg-1 column items-start q-gutter-y-sm" style="padding:60px 0 0 6px;">
+          <div class="gt-sm col column items-start q-gutter-y-sm" style="padding:60px 0 0 6px;">
             <div v-if="$q.screen.gt.sm && isProduction" style="position: fixed;">
               <adsense :visible="!noAD" data-ad-client="ca-pub-5110777286519562" data-ad-slot="9654321794"
                 data-ad-format="vertical" horizontal="left" :key="`ar-${key}`" width="120px" height="600px">
@@ -304,7 +329,7 @@
         <q-page-scroller position="bottom-left" :scroll-offset="150" :offset="[0, 0]"
           style="position: absolute;z-index: 2;">
           <q-btn push
-            :style="$q.screen.gt.lg ? 'left:18vw;bottom:20px' : $q.screen.gt.md ? 'left:5vw;bottom:20px' : 'left:10px;bottom:30px'"
+            :style="$q.screen.gt.lg ? 'left:22vw;bottom:20px' : $q.screen.gt.md ? 'left:13vw;bottom:20px' : 'left:10px;bottom:30px'"
             round size="md" icon="keyboard_arrow_up" color="d2r" />
         </q-page-scroller>
       </q-page-container>
@@ -369,7 +394,9 @@
       const cookieIsDark = this.$q.cookies.has(process.env.VUE_APP_D2R_DARK_NAME) ? this.$q.cookies.get(process.env.VUE_APP_D2R_DARK_NAME) : true
       this.$q.dark.set(cookieIsDark)
       this.loadD2RInfo()
-      this.checkSignStatus()
+
+      if (!this.$q.platform.is.cordova)
+        this.checkSignStatus()
     },
     watch: {
       '$route': function (to, old) {
@@ -392,6 +419,9 @@
         independent: 'getIndependent',
         noAD: 'getNoAD'
       }),
+      list() {
+        return this.$t('d2r.knowledge.list')
+      },
       checkValidate() {
         return /^[0-9a-zA-Z]{1,32}$/mi.test(this.basicInfo.nickname || '')
       },
@@ -436,13 +466,15 @@
         }
       },
       async loadD2RInfo() {
-        if (this.d2rInfo === null) {
+        if (this.d2rInfo === null && !this.$q.platform.is.cordova) {
           const d2rInfo = await this.axios.get("/d2r/account/info")
           this.setD2RInfo(d2rInfo.data)
         }
       },
       home() {
-        if (this.$router.currentRoute.name === 'd2r-main')
+        if (this.$q.platform.is.cordova)
+          return
+        else if (this.$router.currentRoute.name === 'd2r-main')
           this.$router.go()
         else
           this.$router.push({ name: 'd2r-main' }).catch(() => { })
