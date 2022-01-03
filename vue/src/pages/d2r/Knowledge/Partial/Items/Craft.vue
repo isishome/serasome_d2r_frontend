@@ -114,7 +114,7 @@
           </q-tr>
         </template>
         <template #item="props">
-          <div class="col-md-6 col-12">
+          <q-intersection transition="slide-up" once class="col-md-6 col-12 example-item">
             <q-card class="d2r-card text-center word-keep" :class="$q.screen.lt.sm ? 'text-caption' : 'text-body2'"
               bordered>
               <q-card-section class="q-pa-xs bg-yellow-9 text-black">
@@ -191,7 +191,7 @@
                 </ul>
               </q-card-section>
             </q-card>
-          </div>
+          </q-intersection>
         </template>
       </q-table>
     </template>
@@ -230,8 +230,10 @@
     },
     created() {
       this.$i18n.mergeLanguageAsync('craft').then(() => {
-        this.data = this.$t('crafted').map(c => ({ ...c, selected: false }))
-        this.data.find(c => c.id === 'caster').selected = true
+        setTimeout(() => {
+          this.data = this.$t('crafted').map(c => ({ ...c, selected: false }))
+          this.data.find(c => c.id === 'caster').selected = true
+        }, 0)
       })
     },
     computed: {
@@ -262,3 +264,8 @@
     }
   }
 </script>
+<style scoped>
+  .example-item {
+    min-height: 400px;
+  }
+</style>

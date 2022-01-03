@@ -144,7 +144,7 @@
         </q-tr>
       </template>
       <template #item="props">
-        <div class="col-md-6 col-12">
+        <q-intersection transition="slide-up" once class="col-md-6 col-12 example-item">
           <q-card class="d2r-card text-center" bordered>
             <q-card-section class="text-grey-6 text-h6 word-keep q-pa-xs">
               <div class="text-h6 word-keep text-amber-6 column">
@@ -197,13 +197,9 @@
               </div>
             </q-card-section>
           </q-card>
-        </div>
+        </q-intersection>
       </template>
     </q-table>
-    <div v-if="pagesNumber.length !== 0" class="mobile-only row justify-center full-width q-mt-md">
-      <q-pagination color="title" v-model="pagination.page" :max="pagesNumber" :max-pages="$q.screen.gt.sm ? 5 : 3"
-        :ellipses="false" direction-links :boundary-numbers="false" :boundary-links="$q.screen.gt.sm" />
-    </div>
     <p class="q-mt-xl text-right text-grey-6" :class="$q.screen.lt.md ? 'text-caption' : ''">
       {{$t('d2r.knowledge.source')}} : <a style="text-decoration: none;" class="text-green-4" target="_blank"
         href="https://namu.wiki/w/%EB%A3%AC%EC%96%B4%20%EC%95%84%EC%9D%B4%ED%85%9C">{{$t('d2r.knowledge.namuWiki')}}</a>
@@ -222,7 +218,7 @@
       return {
         pagination: {
           page: 1,
-          rowsPerPage: this.$q.platform.is.mobile ? 10 : 10000
+          rowsPerPage: 10000
         },
         filter: '',
         columns: [
@@ -246,16 +242,11 @@
         sortOptions: [{ 'label': this.$t('d2r.knowledge.items.hot'), 'value': 'hot' }, { 'label': this.$t('d2r.knowledge.items.runewordName'), 'value': 'name' }, { 'label': this.$t('d2r.knowledge.items.level'), 'value': 'level' }]
       }
     },
-    watch: {
-      'pagination.page': function (val, old) {
-        if (val !== old)
-          window.scrollTo(0, 0)
-      }
-
-    },
     created() {
       this.$i18n.mergeLanguageAsync('rune').then(() => {
-        this.runeWords = this.$t('runeWords')
+        setTimeout(() => {
+          this.runeWords = this.$t('runeWords')
+        }, 0)
       })
     },
     computed: {
@@ -393,5 +384,9 @@
       border-radius: 4px;
       box-shadow: inset 0 0 0 1px rgba(184, 156, 91, 1);
     }
+  }
+
+  .example-item {
+    min-height: 300px;
   }
 </style>

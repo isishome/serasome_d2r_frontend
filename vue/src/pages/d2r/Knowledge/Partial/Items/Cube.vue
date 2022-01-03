@@ -44,7 +44,7 @@
         </q-tr>
       </template>
       <template #item="props">
-        <div class="col-md-6 col-12">
+        <q-intersection transition="slide-up" once class="col-md-6 col-12 example-item">
           <q-card class="d2r-card" bordered>
             <q-card-section class="font-kodia text-h6 word-keep">{{props.row.title}}</q-card-section>
             <q-separator />
@@ -70,13 +70,9 @@
               </div>
             </q-card-section>
           </q-card>
-        </div>
+        </q-intersection>
       </template>
     </q-table>
-    <div v-if="pagesNumber !== 0" class="mobile-only row justify-center full-width q-mt-md">
-      <q-pagination color="title" v-model="pagination.page" :max="pagesNumber" :max-pages="$q.screen.gt.sm ? 5 : 3"
-        :ellipses="false" direction-links :boundary-numbers="false" :boundary-links="$q.screen.gt.sm" />
-    </div>
     <p class="q-mt-xl text-right text-grey-6" :class="$q.screen.lt.md ? 'text-caption' : ''">
       {{$t('d2r.knowledge.source')}} :
       <a style="text-decoration: none;" class="text-green-4" target="_blank"
@@ -92,7 +88,7 @@
       return {
         pagination: {
           page: 1,
-          rowsPerPage: this.$q.platform.is.mobile ? 10 : 10000
+          rowsPerPage: 10000
         },
         filter: '',
         columns: [
@@ -101,12 +97,6 @@
           { name: 'recipe', align: 'center', style: 'width:25%' }
         ],
         data: []
-      }
-    },
-    watch: {
-      'pagination.page': function (val, old) {
-        if (val !== old)
-          window.scrollTo(0, 0)
       }
     },
     computed: {
@@ -125,7 +115,10 @@
     },
     created() {
       this.$i18n.mergeLanguageAsync('cube').then(() => {
-        this.data = this.$t('cubeData')
+        setTimeout(() => {
+          this.data = this.$t('cubeData')
+        }, 0)
+
       })
     }
   }
@@ -142,5 +135,9 @@
     list-style-position: inside;
     text-indent: -20px;
     padding-left: 20px;
+  }
+
+  .example-item {
+    min-height: 230px;
   }
 </style>

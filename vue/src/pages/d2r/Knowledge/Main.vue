@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="lt-md">
+    <div class="lt-lg">
       <div class="row items-center">
         <q-icon name="fas fa-book" class="q-ma-sm" size="20px" color="title" />
         <div class="font-title text-amber-8 q-ml-xs text-uppercase font-kodia">{{$t('d2r.knowledge.title')}}</div>
@@ -17,6 +17,14 @@
             <div>{{tab.name}}</div>
           </q-btn>
         </div>
+      </div>
+      <div v-if="!$q.platform.is.cordova" class="q-pt-xs">
+        <adsense v-if="$q.platform.is.mobile" :visible="!noAD && isProduction" data-ad-client="ca-pub-5110777286519562"
+          data-ad-slot="9230987257" width="300px" height="50px" :key="`ac-${key}`">
+        </adsense>
+        <adsense v-else :visible="!noAD && isProduction" data-ad-client="ca-pub-5110777286519562"
+          data-ad-slot="9230987257" width="728px" height="90px" :key="`ac-${key}`">
+        </adsense>
       </div>
       <q-tab-panels class="bg-knowledge tab-panels" :class="!leftTabs ? 'no-left-tabs' : ''" v-model="section" animated
         vertical :transition-prev="$q.screen.lt.sm ? 'none' : 'jump-right'"
@@ -45,21 +53,26 @@
     },
     data() {
       return {
+        isProduction: process.env.NODE_ENV === 'production',
         list: this.$t('d2r.knowledge.list'),
         loading: false,
         sectionComponent: null,
-        leftTabs: true
+        leftTabs: true,
+        key: 0
       }
     },
     computed: {
       ...mapGetters({
-        d2rClass: 'getD2RClass'
+        d2rClass: 'getD2RClass',
+        noAD: 'getNoAD'
       })
     },
     watch: {
       '$route': function (to, from) {
         if (to.params.section !== from.params.section)
           this.init()
+
+        this.key++
       },
       sectionComponent: function (val, old) {
         if (val !== old)

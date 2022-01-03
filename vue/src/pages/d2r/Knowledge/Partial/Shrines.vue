@@ -38,7 +38,7 @@
                   </q-tr>
                 </template>
                 <template #item="{props}">
-                  <div class="q-pa-sm col-xs-12 col-sm-6">
+                  <q-intersection transition="slide-up" once class="q-pa-sm col-xs-12 col-sm-6 example-item">
                     <q-card flat bordered class="table-card">
                       <q-card-section class="text-center">
                         <q-img :src='props.row.image' width="75px" />
@@ -69,7 +69,7 @@
                         <div class="text-caption text-right">{{ props.row.duration}}</div>
                       </q-card-section>
                     </q-card>
-                  </div>
+                  </q-intersection>
                 </template>
               </d2r-table>
               <p class="text-right text-grey-6" style="font-size: 1em;">{{$t('d2r.knowledge.source')}} : <a
@@ -379,5 +379,9 @@
     .body--light .wrap {
       box-shadow: none;
     }
+  }
+
+  .example-item {
+    min-height: 300px;
   }
 </style>
