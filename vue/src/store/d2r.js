@@ -15,7 +15,8 @@ export default new Vuex.Store({
     skills: {
       data: null,
       points: 110
-    }
+    },
+    isKnowledge: false
   },
   getters: {
     getSignStatus: state => {
@@ -95,6 +96,9 @@ export default new Vuex.Store({
     },
     getSkillsPoints: state => {
       return state.skills.points
+    },
+    getIsKnowledge: state => {
+      return state.isKnowledge
     }
   },
   mutations: {
@@ -134,6 +138,9 @@ export default new Vuex.Store({
     },
     addSkillsPoints(state, payload) {
       state.skills.points = state.skills.points + payload
+    },
+    setIsKnowledge(state, payload) {
+      state.isKnowledge = payload
     }
   },
   actions: {
@@ -169,6 +176,9 @@ export default new Vuex.Store({
     },
     addSkillsPoints(context, payload) {
       context.commit('addSkillsPoints', payload)
+    },
+    setIsKnowledge(context, payload) {
+      context.commit('setIsKnowledge', payload)
     }
   }
 })

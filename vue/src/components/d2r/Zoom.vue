@@ -47,10 +47,14 @@
       init() {
         const vm = this
         for (const [index, img] of this.imagesEl.entries()) {
-          img.style.cursor = 'zoom-in'
-          img.addEventListener('click', function () {
-            vm.zoomImage(index)
-          })
+          if (img.style.cursor !== 'zoom-in') {
+            img.style.cursor = 'zoom-in'
+            img.addEventListener('click', function () {
+              vm.zoomImage(index)
+            })
+          }
+          else
+            continue
         }
       },
       imgLoadedResolve() {
@@ -66,11 +70,9 @@
           this.fullStyle = `width: ${base}vw;max-width: ${ratio}vh;height: ${rRatio}vw;max-height: ${base}vh`
         }
       },
-
       imgLoadedReject() {
         this.imgLoaded.reject()
       },
-
       zoomImage(index) {
         const { indexZoomed } = this
 

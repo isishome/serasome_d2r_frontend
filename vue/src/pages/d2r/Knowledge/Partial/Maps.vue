@@ -25,7 +25,12 @@
   </div>
 </template>
 <script>
+  const d2rTapPanel = () => import(/* webpackChunkName: "d2r-tap-panel" */ '@/components/d2r/TapPanel')
+
   export default {
+    components: {
+      'd2r-tap-panel': d2rTapPanel
+    },
     data() {
       return {
         acts: ['Act1', 'Act2', 'Act3', 'Act4', 'Act5'],
@@ -65,5 +70,5 @@
   }
 </script>
 <style scoped>
- 
+
 </style>

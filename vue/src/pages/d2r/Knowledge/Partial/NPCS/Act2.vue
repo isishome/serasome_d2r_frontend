@@ -243,7 +243,13 @@
       voice: 'warriv'
     }
   ]
+
+  const d2rTable = () => import(/* webpackChunkName: "d2r-table" */ '@/components/d2r/Table')
+
   export default {
+    components: {
+      'd2r-table': d2rTable
+    },
     data() {
       return {
         locale: this.$i18n.locale || 'ko',

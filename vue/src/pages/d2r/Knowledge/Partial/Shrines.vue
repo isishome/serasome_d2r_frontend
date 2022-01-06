@@ -84,7 +84,14 @@
   </div>
 </template>
 <script>
+  const d2rTapPanel = () => import(/* webpackChunkName: "d2r-tap-panel" */ '@/components/d2r/TapPanel')
+  const d2rTable = () => import(/* webpackChunkName: "d2r-table" */ '@/components/d2r/Table')
+
   export default {
+    components: {
+      'd2r-tap-panel': d2rTapPanel,
+      'd2r-table': d2rTable
+    },
     data() {
       return {
         locale: this.$i18n.locale || 'ko',

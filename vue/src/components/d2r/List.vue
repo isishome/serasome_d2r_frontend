@@ -176,6 +176,7 @@
 </template>
 <script>
   import { mapGetters } from 'vuex'
+  const d2rTable = () => import(/* webpackChunkName: "d2r-table" */ '@/components/d2r/Table')
   export default {
     name: 'd2r-list',
     props: {
@@ -193,6 +194,9 @@
         type: String,
         default: 'default'
       }
+    },
+    components: {
+      'd2r-table': d2rTable
     },
     data() {
       return {

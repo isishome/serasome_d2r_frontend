@@ -113,3 +113,7 @@
   .q-list--dark, .q-item--dark {
     color: #DDDDDD !important;
   }
+
+  .io-img {
+    min-height: 100vh;
+  }

@@ -303,22 +303,25 @@
         <router-view name="carousel" />
         <div :class="['row q-mx-sm', $q.screen.lt.md ? 'q-mt-sm' : 'q-mt-lg']">
           <div class="gt-sm col row justify-end" style="padding:60px 6px 0 0;">
-            <adsense :visible="!noAD && $q.screen.gt.sm && isProduction && !isKnowledge"
+            <adsense v-if="noAD === false && $q.screen.gt.sm === true && isProduction === true && isKnowledge === false"
               data-ad-client="ca-pub-5110777286519562" data-ad-slot="4948790020" data-ad-format="vertical"
-              horizontal="right" :key="`al-${key}`" width="120px" height="600px">
+              horizontal="right" :key="`al-${key}`" random>
             </adsense>
           </div>
           <q-page class="col-xl-6 col-lg-8 col-md-10 col-12">
             <router-view />
           </q-page>
           <div class="gt-sm col column items-start q-gutter-y-sm" style="padding:60px 0 0 6px;">
-            <div v-if="$q.screen.gt.sm && isProduction" style="position: fixed;">
-              <adsense :visible="!noAD" data-ad-client="ca-pub-5110777286519562" data-ad-slot="9654321794"
-                data-ad-format="vertical" horizontal="left" :key="`ar-${key}`" width="120px" height="600px">
+            <div style="position: fixed;">
+              <adsense v-if="$q.screen.gt.sm === true && isProduction === true && noAD === false"
+                data-ad-client="ca-pub-5110777286519562" data-ad-slot="9654321794" data-ad-format="vertical"
+                horizontal="left" :key="`ar1-${key}`" random>
               </adsense>
-              <!-- <adsense :visible="!noAD && isKnowledge" data-ad-client="ca-pub-5110777286519562"
-                data-ad-slot="4948790020" style="margin-top: 10px;" data-ad-format="vertical" horizontal="left" :key="`al-${key}`" random>
-              </adsense> -->
+              <adsense
+                v-if="$q.screen.gt.sm === true && isProduction === true && noAD === false && isKnowledge === true"
+                data-ad-client="ca-pub-5110777286519562" data-ad-slot="4948790020" data-ad-format="vertical"
+                horizontal="left" :key="`ar2-${key}`" random>
+              </adsense>
             </div>
           </div>
         </div>
@@ -417,7 +420,8 @@
         d2rInfo: 'getD2RInfo',
         images: 'getD2RImages',
         independent: 'getIndependent',
-        noAD: 'getNoAD'
+        noAD: 'getNoAD',
+        isKnowledge: 'getIsKnowledge'
       }),
       list() {
         return this.$t('d2r.knowledge.list')
@@ -428,9 +432,6 @@
       carouselHeight() {
         const sm = this.$q.screen.lt.md
         return sm ? [0, '130px', '130px', '170px', '200px'][this.step] : [0, '90px', '140px', '190px'][this.step]
-      },
-      isKnowledge() {
-        return this.$route.matched.some(route => route.name.indexOf('d2r-knowledge') !== -1)
       }
     },
     methods: {

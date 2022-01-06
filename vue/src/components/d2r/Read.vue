@@ -42,12 +42,13 @@
       <q-separator inset />
       <q-card-section class="no-padding row justify-center items-center">
         <div class="q-pt-xs">
-          <adsense v-if="$q.platform.is.mobile" :visible="!noAD && isProduction"
-            data-ad-client="ca-pub-5110777286519562" data-ad-slot="9230987257" width="300px" height="50px"
-            :key="`ac-${key}`">
+          <adsense v-if="$q.platform.is.cordova !== true && $q.platform.is.mobile === true && !noAD && isProduction"
+            data-ad-client="ca-pub-5110777286519562" data-ad-slot="7643637446" data-ad-format="rectangle, horizontal"
+            width="300px" height="50px" :key="`acm-${key}`">
           </adsense>
-          <adsense v-else :visible="!noAD && isProduction" data-ad-client="ca-pub-5110777286519562"
-            data-ad-slot="9230987257" width="728px" height="90px" :key="`ac-${key}`">
+          <adsense v-if="$q.platform.is.cordova !== true && $q.platform.is.desktop === true && !noAD && isProduction"
+            data-ad-client="ca-pub-5110777286519562" data-ad-slot="7180603013" data-ad-format="rectangle, horizontal"
+            width="728px" height="90px" :key="`acd-${key}`">
           </adsense>
         </div>
       </q-card-section>
@@ -116,7 +117,7 @@
           {{reward.contents}}
         </q-card-section>
         <q-card-section class="no-padding overflow-hidden">
-          <adsense :visible="!noAD && isProduction" data-ad-client="ca-pub-5110777286519562" data-ad-slot="4748983001"
+          <adsense v-if="!noAD && isProduction" data-ad-client="ca-pub-5110777286519562" data-ad-slot="4748983001"
             width="300px" height="250px" :key="`ac-${key}`">
           </adsense>
         </q-card-section>
@@ -133,6 +134,17 @@
   import hljs from 'highlight.js'
   const d2rConfirm = () => import(/* webpackChunkName: "d2r-read" */ '@/components/d2r/Confirm')
   const d2rComments = () => import(/* webpackChunkName: "d2r-read" */ '@/components/d2r/Comments')
+  const zoomImages = []
+  const io = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.src = entry.target.dataset.src
+        entry.target.classList.remove('io-img')
+        observer.unobserve(entry.target)
+        zoomImages.push({ 'element': entry.target, 'src': entry.target.src })
+      }
+    })
+  })
 
   export default {
     name: 'd2r-read',
@@ -176,8 +188,7 @@
         },
         count: 5,
         current: 0,
-        key: 0,
-        contLoaded: false
+        key: 0
       }
     },
     computed: {
@@ -217,14 +228,15 @@
             pid: this.pid
           }
         }).then(function (response) {
+          vm.intersactionImage(response.data)
           vm.data = response.data
           document.title = (vm.$route.meta.title || document.title)
           document.title = document.title.concat(' - ', vm.data.title)
 
           vm.$nextTick(() => {
-            const images = vm.$refs.contents.getElementsByTagName('img')
-            vm.setImages([...images].map(i => { return { 'element': i, 'src': i.src } }))
-            vm.contLoaded = true
+            const images = vm.$refs.contents.querySelectorAll('.io-img')
+            images.forEach((el) => io.observe(el))
+            vm.setImages(zoomImages)
           })
         })
         .catch(function () { })
@@ -236,6 +248,9 @@
       ...mapActions({
         setImages: 'setD2RImages'
       }),
+      intersactionImage(info) {
+        info.contents = info.contents.replace(/(<img[^>]+)(src)([^>]+>)/gmi, '$1 class="io-img" data-src$3')
+      },
       getList() {
         const vm = this
         this.loading = true

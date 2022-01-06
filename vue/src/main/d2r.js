@@ -12,9 +12,6 @@ import vuePlugin from "@/plugin/highlight"
 import { Quasar, Notify, Cookies, Loading, Platform } from 'quasar'
 
 const Adsense = () => import(/* webpackChunkName: "d2r" */ '@/components/etc/AdSense')
-const d2rTable = () => import(/* webpackChunkName: "d2r-bbs" */ '@/components/d2r/Table')
-const d2rTh = () => import(/* webpackChunkName: "d2r-bbs" */'@/components/d2r/Th')
-const d2rTapPanel = () => import(/* webpackChunkName: "d2r-knowledge" */ '@/components/d2r/TapPanel')
 
 const lang = Cookies.has(process.env.VUE_APP_LANGUAGE_NAME) ? Cookies.get(process.env.VUE_APP_LANGUAGE_NAME) : Quasar.lang.getLocale().substring(0, 2) || 'ko'
 
@@ -54,6 +51,8 @@ router.beforeEach((to, from, next) => {
     delete findIndependent.components.default
   }
   store.dispatch('setIndependent', findIndependent !== undefined)
+
+  store.dispatch('setIsKnowledge', to.matched.some(route => route.name.indexOf('d2r-knowledge') !== -1))
 
   if (store.getters.getPageScroller !== true)
     store.dispatch('setPageScroller', true)
@@ -159,9 +158,6 @@ Vue.config.productionTip = false
 Vue.use(VueRouter)
 Vue.prototype.axios = axiosObject
 Vue.component('adsense', Adsense)
-Vue.component('d2r-table', d2rTable)
-Vue.component('d2r-th', d2rTh)
-Vue.component('d2r-tap-panel', d2rTapPanel)
 
 Vue.mixin(mixin)
 Vue.use(vuePlugin)

@@ -30,8 +30,12 @@
   import {
     mapGetters
   } from 'vuex'
+  const d2rTapPanel = () => import(/* webpackChunkName: "d2r-tap-panel" */ '@/components/d2r/TapPanel')
 
   export default {
+    components: {
+      'd2r-tap-panel': d2rTapPanel
+    },
     data() {
       return {
         loading: false,

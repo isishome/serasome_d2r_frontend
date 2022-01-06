@@ -96,6 +96,7 @@
 
   import { copyToClipboard } from 'quasar'
 
+  const d2rTapPanel = () => import(/* webpackChunkName: "d2r-tap-panel" */ '@/components/d2r/TapPanel')
   const d2rTree = () => import(/* webpackChunkName: "d2r-knowledge-skills" */ '@/components/d2r/Tree')
   const d2rSkill = () => import(/* webpackChunkName: "d2r-knowledge-skills" */ '@/components/d2r/Skill')
 
@@ -110,6 +111,7 @@
 
   export default {
     components: {
+      'd2r-tap-panel': d2rTapPanel,
       'd2r-tree': d2rTree,
       'd2r-skill': d2rSkill
     },

@@ -1,5 +1,5 @@
 <template>
-  <div v-if="visible" class="full-width" :style="`position:${fixed ? 'fixed' : ''};text-align:${horizontal}`">
+  <div class="full-width" :style="`position:${fixed ? 'fixed' : ''};text-align:${horizontal}`">
     <ins ref="adbox" class="adsbygoogle" :data-ad-client="dataAdClient" :data-ad-slot="dataAdSlot"
       :data-adtest="dataAdtest" :data-ad-format="dataAdFormat" :data-full-width-responsive="dataFullWidthResponsive"
       :style="`display:inline-block;width:${tempWidth};height:${tempHeight}`"></ins>
@@ -41,10 +41,6 @@
         type: Boolean,
         default: false
       },
-      visible: {
-        type: Boolean,
-        default: true
-      },
       random: {
         type: Boolean,
         default: false
@@ -61,25 +57,29 @@
         randomSize: [
           //{ width: '300px', height: '250px' },
           //{ width: '336px', height: '280px' },
-          { width: '250px', height: '250px' },
-          { width: '250px', height: '360px' },
-          { width: '240px', height: '400px' },
+          //{ width: '250px', height: '250px' },
+          //{ width: '250px', height: '360px' },
+          //{ width: '240px', height: '400px' },
           //{ width: '300px', height: '600px' },
           { width: '160px', height: '600px' },
           { width: '120px', height: '600px' },
-          { width: '120px', height: '240px' }
+          //{ width: '120px', height: '240px' }
         ]
       }
     },
     mounted() {
       this.setSize()
-      this.$nextTick(() => {
-        this.onWindowLoad()
-      })
+      if (document.readyState !== 'complete')
+        window.addEventListener("load", this.onWindowLoad)
+      else {
+        this.$nextTick(() => {
+          this.onWindowLoad()
+        })
+      }
     },
     methods: {
       onWindowLoad() {
-        if (this.$refs.adbox && !this.$refs.adbox.hasChildNodes())
+        if (this.$refs.adbox && this.$refs.adbox.style.display && this.$refs.adbox.style.display === 'inline-block' && !this.$refs.adbox.hasChildNodes())
           (window.adsbygoogle || []).push({})
       },
       setSize() {
@@ -93,6 +93,9 @@
           this.tempHeight = this.height
         }
       }
+    },
+    unmounted() {
+      window.removeEventListener("load", this.onWindowLoad)
     }
   }
 </script>
