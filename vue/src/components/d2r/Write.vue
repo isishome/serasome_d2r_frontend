@@ -68,16 +68,16 @@
               </div>
               <div>
                 <q-btn flat dense size="sm" icon="format_align_left"
-                  :class="{ 'is-active': getMarkAttrs('alignment').align === 'left' }"
+                  :class="{ 'is-active': isActive.alignment({ align: 'left' }) }"
                   @click="commands.alignment({ align: 'left' })" />
                 <q-btn flat dense size="sm" icon="format_align_center"
-                  :class="{ 'is-active': getMarkAttrs('alignment').align === 'center' }"
+                  :class="{ 'is-active': isActive.alignment({ align: 'center' }) }"
                   @click="commands.alignment({ align: 'center' })" />
                 <q-btn flat dense size="sm" icon="format_align_right"
-                  :class="{ 'is-active': getMarkAttrs('alignment').align === 'right' }"
+                  :class="{ 'is-active': isActive.alignment({ align: 'right' }) }"
                   @click="commands.alignment({ align: 'right' })" />
                 <q-btn flat dense size="sm" icon="format_align_justify"
-                  :class="{ 'is-active': getMarkAttrs('alignment').align === 'justify' }"
+                  :class="{ 'is-active': isActive.alignment({ align: 'justify' }) }"
                   @click="commands.alignment({ align: 'justify' })" />
               </div>
               <div>
@@ -112,17 +112,13 @@
             <div>
               <q-btn flat dense size="sm" icon="undo" @click="commands.undo" />
               <q-btn flat dense size="sm" icon="redo" @click="commands.redo" />
-              <q-btn flat dense size="sm" :icon="!fullScreen ? 'fullscreen' : 'fullscreen_exit'"
-                @click="fullScreen = !fullScreen" />
             </div>
           </q-toolbar>
         </editor-menu-bar>
-        <q-scroll-area class="contents editor-contents no-padding q-mt-sm" :thumb-style="thumbStyle"
-          :content-style="{'height':'100%'}">
+        <q-scroll-area class="contents editor-contents no-padding q-mt-sm" :thumb-style="thumbStyle">
           <label ref="contentLabel" class="contents-label">{{$t('post.contents')}}</label>
           <editor-content spellcheck="false" :editor="editor" class="q-pa-sm full-height textarea" />
         </q-scroll-area>
-        <div v-if="fullScreen" class="platform-ios-only" style="padding-bottom: 12vh;"></div>
       </div>
       <q-list separator v-if="sec !== 'trade'">
         <q-item dense class="input-place">

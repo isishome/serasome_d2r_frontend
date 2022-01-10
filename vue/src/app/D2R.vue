@@ -313,15 +313,17 @@
           </q-page>
           <div class="gt-sm col column items-start q-gutter-y-sm" style="padding:60px 0 0 6px;">
             <div style="position: fixed;">
-              <adsense v-if="$q.screen.gt.sm === true && isProduction === true && noAD === false"
-                data-ad-client="ca-pub-5110777286519562" data-ad-slot="9654321794" data-ad-format="vertical"
-                horizontal="left" :key="`ar1-${key}`" random>
-              </adsense>
-              <adsense
-                v-if="$q.screen.gt.sm === true && isProduction === true && noAD === false && isKnowledge === true"
-                data-ad-client="ca-pub-5110777286519562" data-ad-slot="4948790020" data-ad-format="vertical"
-                horizontal="left" :key="`ar2-${key}`" random>
-              </adsense>
+              <template>
+                <adsense v-if="$q.screen.gt.sm === true && isProduction === true && noAD === false"
+                  data-ad-client="ca-pub-5110777286519562" data-ad-slot="9654321794" data-ad-format="vertical"
+                  horizontal="left" :key="`ar1-${key}`" random>
+                </adsense>
+                <adsense
+                  v-if="$q.screen.gt.sm === true && isProduction === true && noAD === false && isKnowledge === true"
+                  data-ad-client="ca-pub-5110777286519562" data-ad-slot="4948790020" data-ad-format="vertical"
+                  horizontal="left" :key="`ar2-${key}`" width="120px" height="240px">
+                </adsense>
+              </template>
             </div>
           </div>
         </div>

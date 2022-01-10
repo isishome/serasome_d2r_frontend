@@ -1,15 +1,15 @@
-import { Mark } from 'tiptap'
-import { toggleMark, markInputRule } from 'tiptap-commands';
+import { Node } from 'tiptap'
+import { toggleBlockType } from 'tiptap-commands'
 
-export default class Alignment extends Mark {
+export default class Alignment extends Node {
 
   get name() {
-    return 'alignment';
+    return 'alignment'
   }
 
   get defaultOptions() {
     return {
-      levels: ["left", "center", "right", "justify"]
+      levels: ['left', 'center', 'right', 'justify']
     };
   }
 
@@ -17,30 +17,28 @@ export default class Alignment extends Mark {
     return {
       attrs: {
         align: {
-          default: 'right',
+          default: 'justify',
         },
       },
+      content: 'inline*',
+      group: 'block',
+      defining: true,
+      draggable: false,
       parseDOM: [{
         style: 'text-align',
         getAttrs: value => ({
           align: value
-        }),
-      },],
-      toDOM: mark => {
-        return ["span", {
-          style: `display:block;text-align:${mark.attrs.align}`
+        })
+      }],
+      toDOM: node => {
+        return ['p', {
+          style: `display:block;text-align:${node.attrs.align}`
         }, 0];
       }
-    };
+    }
   }
 
-  commands({ type }) {
-    return attrs => toggleMark(type, attrs);
-  }
-
-  inputRules({ type }) {
-    return [
-      markInputRule(/(?:\*\*|__)([^*_]+)(?:\*\*|__)$/, type),
-    ];
+  commands({ type, schema }) {
+    return attrs => toggleBlockType(type, schema.nodes.paragraph, attrs)
   }
 }
