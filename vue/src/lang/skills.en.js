@@ -42,7 +42,7 @@ export default {
                 { text: 'Mana Cost: {0}', value: [0, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12, 13, 13, 14, 14, 15, 15] }
               ],
               stat: [
-                { text: 'Attack Rating: +{0}%', value: [0, 100, 125, 150, 175, 200, 225, 250, 275, 300, 325, 350, 375, 400, 425, 450, 475, 500, 525, 550, 575] },
+                // { text: 'Attack Rating: +{0}%', value: [0, 100, 125, 150, 175, 200, 225, 250, 275, 300, 325, 350, 375, 400, 425, 450, 475, 500, 525, 550, 575] },
                 { text: 'Damage: +{0}%', value: [0, 300, 325, 350, 375, 400, 425, 450, 475, 500, 525, 550, 575, 600, 625, 650, 675, 700, 725, 750, 775] },
                 { text: 'Chance Of Losing Durability: {0}%', value: [0, 46, 42, 40, 37, 35, 34, 33, 32, 31, 30, 29, 29, 28, 27, 27, 26, 26, 26, 26, 25] }
               ]
@@ -57,6 +57,7 @@ export default {
               desc: ['Attacks All Adjacent Targets'],
               level: '24',
               add: [
+                { text: 'Attack Speed: +{0}%', value: [100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100] },
                 { text: 'Mana Cost: {0}', value: [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5] }
               ],
               stat: [
@@ -85,10 +86,10 @@ export default {
                 { text: 'Mana Cost: {0}', value: [0, 2, 2.2, 2.5, 2.7, 3, 3.2, 3.5, 3.7, 4, 4.2, 4.5, 4.7, 5, 5.2, 5.5, 5.7, 6, 6.2, 6.5, 6.7] }
               ],
               bonus: [
-                { treeId: 'js', skillId: 'lightningbolt', statIdx: [1], value: [10], type: ['rate'], text: '{n}: +{0}% Lightning Damage Per Level' },
-                { treeId: 'js', skillId: 'chargedstrike', statIdx: [1], value: [10], type: ['rate'], text: '{n}: +{0}% Lightning Damage Per Level' },
-                { treeId: 'js', skillId: 'lightningstrike', statIdx: [1], value: [10], type: ['rate'], text: '{n}: +{0}% Lightning Damage Per Level' },
-                { treeId: 'js', skillId: 'lightningfury', statIdx: [1], value: [10], type: ['rate'], text: '{n}: +{0}% Lightning Damage Per Level' }
+                { treeId: 'js', skillId: 'lightningbolt', statIdx: [1], value: [14], type: ['rate'], text: '{n}: +{0}% Lightning Damage Per Level' },
+                { treeId: 'js', skillId: 'chargedstrike', statIdx: [1], value: [14], type: ['rate'], text: '{n}: +{0}% Lightning Damage Per Level' },
+                { treeId: 'js', skillId: 'lightningstrike', statIdx: [1], value: [14], type: ['rate'], text: '{n}: +{0}% Lightning Damage Per Level' },
+                // { treeId: 'js', skillId: 'lightningfury', statIdx: [1], value: [10], type: ['rate'], text: '{n}: +{0}% Lightning Damage Per Level' }
               ]
             },
             {
@@ -112,10 +113,10 @@ export default {
                 { text: 'Mana Cost: {0}', value: [0, 4, 4.2, 4.5, 4.7, 5, 5.2, 5.5, 5.7, 6, 6.2, 6.5, 6.7, 7, 7.2, 7.5, 7.7, 8, 8.2, 8.5, 8.7] }
               ],
               bonus: [
-                { treeId: 'js', skillId: 'powerstrike', statIdx: [1], value: [10], type: ['rate'], text: '{n}: +{0}% Lightning Damage Per Level' },
-                { treeId: 'js', skillId: 'lightningbolt', statIdx: [1], value: [10], type: ['rate'], text: '{n}: +{0}% Lightning Damage Per Level' },
-                { treeId: 'js', skillId: 'lightningstrike', statIdx: [1], value: [10], type: ['rate'], text: '{n}: +{0}% Lightning Damage Per Level' },
-                { treeId: 'js', skillId: 'lightningfury', statIdx: [1], value: [10], type: ['rate'], text: '{n}: +{0}% Lightning Damage Per Level' }
+                { treeId: 'js', skillId: 'powerstrike', statIdx: [1], value: [14], type: ['rate'], text: '{n}: +{0}% Lightning Damage Per Level' },
+                { treeId: 'js', skillId: 'lightningbolt', statIdx: [1], value: [14], type: ['rate'], text: '{n}: +{0}% Lightning Damage Per Level' },
+                { treeId: 'js', skillId: 'lightningstrike', statIdx: [1], value: [14], type: ['rate'], text: '{n}: +{0}% Lightning Damage Per Level' },
+                // { treeId: 'js', skillId: 'lightningfury', statIdx: [1], value: [10], type: ['rate'], text: '{n}: +{0}% Lightning Damage Per Level' }
               ]
             },
             {
@@ -144,10 +145,10 @@ export default {
                 { text: 'Lightning Damage: {0}-{1}', value: [0, [1, 25], [1, 35], [1, 45], [1, 55], [1, 65], [1, 75], [1, 85], [1, 95], [1, 110], [1, 125], [1, 140], [1, 155], [1, 170], [1, 185], [1, 200], [1, 215], [1, 235], [1, 255], [1, 275], [1, 295]] }
               ],
               bonus: [
-                { treeId: 'js', skillId: 'powerstrike', statIdx: [1], value: [8], type: ['rate'], text: '{n}: +{0}% Lightning Damage Per Level' },
-                { treeId: 'js', skillId: 'lightningbolt', statIdx: [1], value: [8], type: ['rate'], text: '{n}: +{0}% Lightning Damage Per Level' },
-                { treeId: 'js', skillId: 'chargedstrike', statIdx: [1], value: [8], type: ['rate'], text: '{n}: +{0}% Lightning Damage Per Level' },
-                { treeId: 'js', skillId: 'lightningfury', statIdx: [1], value: [8], type: ['rate'], text: '{n}: +{0}% Lightning Damage Per Level' }
+                { treeId: 'js', skillId: 'powerstrike', statIdx: [1], value: [11], type: ['rate'], text: '{n}: +{0}% Lightning Damage Per Level' },
+                { treeId: 'js', skillId: 'lightningbolt', statIdx: [1], value: [11], type: ['rate'], text: '{n}: +{0}% Lightning Damage Per Level' },
+                { treeId: 'js', skillId: 'chargedstrike', statIdx: [1], value: [11], type: ['rate'], text: '{n}: +{0}% Lightning Damage Per Level' },
+                // { treeId: 'js', skillId: 'lightningfury', statIdx: [1], value: [8], type: ['rate'], text: '{n}: +{0}% Lightning Damage Per Level' }
               ]
             },
             {
@@ -212,14 +213,17 @@ export default {
               name: 'Plague Javelin',
               desc: ['Magically Enhances Your Javelin To Release', 'Expanding Clouds Of Poison Upon Impact'],
               level: '18',
+              add: [
+                { text: 'Over {0} Seconds', value: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3] }
+              ],
               stat: [
                 { text: 'Attack Rating: +{0}%', value: [0, 30, 39, 48, 57, 66, 75, 84, 93, 102, 111, 120, 129, 138, 147, 156, 165, 174, 183, 192, 201] },
                 { text: 'Poison Damage: {0}-{1}', value: [0, [23, 37], [42, 58], [65, 83], [91, 111], [122, 143], [156, 179], [194, 219], [235, 262], [310, 339], [391, 422], [481, 514], [578, 612], [682, 718], [794, 833], [913, 953], [1040, 1082], [1233, 1277], [1439, 1485], [1657, 1705], [1888, 1937]] },
-                { text: 'Over {0} Seconds', value: [0, 3, 3.4, 3.8, 4.2, 4.6, 5, 5.4, 5.8, 6.2, 6.6, 7, 7.4, 7.8, 8.2, 8.6, 9, 9.4, 9.8, 10.2, 10.6] },
+                // { text: 'Over {0} Seconds', value: [0, 3, 3.4, 3.8, 4.2, 4.6, 5, 5.4, 5.8, 6.2, 6.6, 7, 7.4, 7.8, 8.2, 8.6, 9, 9.4, 9.8, 10.2, 10.6] },
                 { text: 'Mana Cost: {0}', value: [0, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 13, 13, 13, 14, 14.5, 15, 15.5, 16, 16.5] }
               ],
               bonus: [
-                { treeId: 'js', skillId: 'poisonjavelin', statIdx: [1], value: [10], type: ['rate'], text: '{n}: +{0}% Poison Damage Per Level' }
+                { treeId: 'js', skillId: 'poisonjavelin', statIdx: [1], value: [14], type: ['rate'], text: '{n}: +{0}% Poison Damage Per Level' }
               ]
             },
             {
@@ -228,9 +232,9 @@ export default {
               left: '72.3',
               tooltip: 'right',
               affected: [
-                { treeId: 'js', skillId: 'powerstrike' },
-                { treeId: 'js', skillId: 'chargedstrike' },
-                { treeId: 'js', skillId: 'lightningstrike' },
+                // { treeId: 'js', skillId: 'powerstrike' },
+                // { treeId: 'js', skillId: 'chargedstrike' },
+                // { treeId: 'js', skillId: 'lightningstrike' },
                 { treeId: 'js', skillId: 'lightningbolt' }
               ],
               required: [{ treeId: 'js', skillId: 'plaguejavelin' }],
@@ -265,7 +269,7 @@ export default {
               desc: ['Illuminates Nearby Enemies', 'Making Them Easier To Hit', 'For You And Your Party'],
               level: '1',
               add: [
-                { text: 'Radius: {0} Yards', value: [13.3, 13.3, 13.3, 13.3, 13.3, 13.3, 13.3, 13.3, 13.3, 13.3, 13.3, 13.3, 13.3, 13.3, 13.3, 13.3, 13.3, 13.3, 13.3, 13.3, 13.3] },
+                { text: 'Radius: {0} Yards', value: [18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18] },
                 { text: 'Mana Cost: {0}', value: [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5] }
               ],
               stat: [
@@ -286,11 +290,13 @@ export default {
               desc: ['Illuminates Nearby Enemies And Slow Their Ranged Attacks'],
               level: '12',
               add: [
-                { text: 'Ranged Attacks Slowed To {0}%', value: [33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33] },
-                { text: 'Radius: {0} Yards', value: [13.3, 13.3, 13.3, 13.3, 13.3, 13.3, 13.3, 13.3, 13.3, 13.3, 13.3, 13.3, 13.3, 13.3, 13.3, 13.3, 13.3, 13.3, 13.3, 13.3, 13.3] },
+                // { text: 'Ranged Attacks Slowed To {0}%', value: [33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33] },
+                { text: 'Radius: {0} Yards', value: [18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18] },
                 { text: 'Mana Cost: {0}', value: [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5] }
               ],
               stat: [
+                { text: 'Ranged Attacks Slowed To {0}% (*TBD)', value: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] },
+                { text: 'Ranged Attacks Damage Lowered To {0}% (*TBD)', value: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] },
                 { text: 'Duration: {0} Seconds', value: [0, 12, 18, 24, 30, 36, 42, 48, 54, 60, 66, 72, 78, 84, 90, 96, 102, 108, 114, 120, 126] }
               ]
             },
@@ -504,7 +510,7 @@ export default {
                 { text: 'Attack Rating: +{0}%', value: [0, 40, 49, 58, 67, 76, 85, 94, 103, 112, 121, 130, 139, 148, 157, 166, 175, 184, 193, 202, 211] },
                 { text: 'Cold Damage: {0}-{1}', value: [0, [40, 50], [50, 60], [60, 70], [70, 80], [80, 90], [90, 100], [100, 110], [110, 120], [125, 135], [140, 150], [155, 165], [170, 180], [185, 195], [200, 210], [215, 225], [230, 240], [250, 260], [270, 280], [290, 300], [310, 320]] },
                 { text: 'Freezes For {0} Seconds', value: [0, 20, 29, 38, 47, 56, 65, 74, 83, 92, 101, 110, 119, 128, 137, 146, 155, 164, 173, 182, 191] },
-                { text: 'Mana Cost: {0}', value: [0, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14, 14.5, 15, 15.5, 16, 16.5, 17, 17.5, 18, 18.5] }
+                { text: 'Mana Cost: {0}', value: [0, 9, 9.25, 9.5, 9.75, 10, 10.25, 10.5, 10.75, 11, 11.25, 11.5, 11.75, 12, 12.25, 12.5, 12.75, 13, 13.25, 13.5, 13.75] }
               ],
               bonus: [
                 { treeId: 'bc', skillId: 'coldarrow', statIdx: [1], value: [12], type: ['rate'], text: '{n}: +{0}% Cold Damage Per Level' },
@@ -520,7 +526,7 @@ export default {
               desc: ['Creates A Magical Arrow Or Bolt', 'That Does Extra Damage'],
               level: '1',
               stat: [
-                { text: 'Converts {0}% Physical Damage To Magic Damage', value: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20] },
+                { text: 'Converts {0}% Physical Damage To Magic Damage (*TBD)', value: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20] },
                 { text: 'Attack Rating: +{0}%', value: [0, 10, 19, 28, 37, 46, 55, 64, 73, 82, 91, 100, 109, 118, 127, 136, 145, 154, 163, 172, 181] },
                 { text: 'Damage: +{0}', value: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20] },
                 { text: 'Mana Cost: {0}', value: [0, 1.5, 1.3, 1.2, 1.1, 1.0, 0.8, 0.7, 0.6, 0.5, 0.3, 0.2, 0.1, 0, 0, 0, 0, 0, 0, 0, 0] }
@@ -556,7 +562,7 @@ export default {
                 { text: 'Always Hits' }
               ],
               stat: [
-                { text: 'Damage: +{0}%', value: [0, 0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95] },
+                { text: 'Damage: +{0}%', value: [0, 0, 7, 14, 21, 28, 35, 42, 49, 57, 63, 70, 77, 84, 91, 98, 105, 112, 119, 126, 133] },
                 { text: 'Mana Cost: {0}', value: [0, 8, 7.7, 7.5, 7.2, 7, 6.7, 6.5, 6.2, 6, 5.7, 5.5, 5.2, 5, 4.7, 4.5, 4.2, 4, 3.7, 3.5, 3.2] }
               ]
             },
@@ -570,12 +576,13 @@ export default {
               desc: ['Magically Splits One Arrow Into Several', 'That Target Multiple Nearby Enemies'],
               level: '24',
               add: [
-                { text: '{0}% Weapon Damage', value: [75, 75, 75, 75, 75, 75, 75, 75, 75, 75, 75, 75, 75, 75, 75, 75, 75, 75, 75, 75, 75] },
+                { text: '{0}% Weapon Damage', value: [100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100] },
                 { text: 'Mana Cost: {0}', value: [11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11] }
               ],
               stat: [
                 { text: 'Attacks Up To {0} Targets', value: [0, 5, 6, 7, 8, 9, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10] },
-                { text: 'Damage: +{0}%', value: [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100] }
+                { text: 'Damage: +{0}%', value: [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100] },
+                { text: 'Attack Rating: +{0}%', value: [0, 30, 39, 48, 57, 66, 75, 84, 93, 102, 111, 120, 129, 138, 147, 156, 165, 174, 183, 192, 201] }
               ]
             },
             {
@@ -590,11 +597,13 @@ export default {
               name: 'Fire Arrow',
               desc: ['Magically Enhances Your Arrows', 'Or Bolts With Fire'],
               level: '1',
+              add: [
+                { text: 'Mana Cost: {0}', value: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3] }
+              ],
               stat: [
                 { text: 'Converts {0}% Physical Damage To Elemental Damage', value: [0, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41] },
                 { text: 'Attack Rating: +{0}%', value: [0, 10, 19, 28, 37, 46, 55, 64, 73, 82, 91, 100, 109, 118, 127, 136, 145, 154, 163, 172, 181] },
-                { text: 'Fire Damage: {0}-{1}', value: [0, [1, 4], [3, 6], [5, 8], [7, 10], [9, 12], [11, 14], [13, 16], [15, 18], [18, 21], [21, 24], [24, 27], [27, 30], [30, 33], [33, 36], [36, 39], [39, 42], [45, 49], [51, 56], [57, 63], [63, 70]] },
-                { text: 'Mana Cost: {0}', value: [0, 3, 3.1, 3.2, 3.3, 3.5, 3.6, 3.7, 3.8, 4, 4.1, 4.2, 4.3, 4.5, 4.6, 4.7, 4.8, 5, 5.1, 5.2, 5.3] }
+                { text: 'Fire Damage: {0}-{1}', value: [0, [1, 4], [3, 6], [5, 8], [7, 10], [9, 12], [11, 14], [13, 16], [15, 18], [18, 21], [21, 24], [24, 27], [27, 30], [30, 33], [33, 36], [36, 39], [39, 42], [45, 49], [51, 56], [57, 63], [63, 70]] }
               ],
               bonus: [
                 { treeId: 'bc', skillId: 'explodingarrow', statIdx: [2], value: [12], type: ['rate'], text: '{n}: +{0}% Fire Damage Per Level' }
@@ -615,11 +624,11 @@ export default {
               level: '12',
               stat: [
                 { text: 'Attack Rating: +{0}%', value: [0, 20, 29, 38, 47, 56, 65, 74, 83, 92, 101, 110, 119, 128, 137, 146, 155, 164, 173, 182, 191] },
-                { text: 'Fire Damage: {0}-{1}', value: [0, [2, 6], [7, 11], [12, 16], [17, 21], [22, 26], [27, 31], [32, 36], [37, 41], [44, 49], [51, 57], [58, 65], [65, 73], [72, 81], [79, 89], [86, 97], [93, 105], [102, 116], [111, 127], [120, 138], [129, 149]] },
-                { text: 'Mana Cost: {0}', value: [0, 5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14, 14.5] }
+                { text: 'Fire Damage: {0}-{1} (*TBD)', value: [0, [2, 6], [7, 11], [12, 16], [17, 21], [22, 26], [27, 31], [32, 36], [37, 41], [44, 49], [51, 57], [87, 98], [98, 110], [108, 122], [119, 134], [129, 146], [140, 158], [153, 174], [167, 191], [180, 207], [194, 224]] },
+                { text: 'Mana Cost: {0}', value: [0, 5, 5.25, 5.5, 5.75, 6, 6.25, 6.5, 6.75, 7, 7.25, 7.5, 7.75, 8, 8.25, 8.5, 8.75, 9, 9.25, 9.5, 9.75] }
               ],
               bonus: [
-                { treeId: 'bc', skillId: 'firearrow', statIdx: [1], value: [12], type: ['rate'], text: '{n}: +{0}% Fire Damage Per Level' }
+                { treeId: 'bc', skillId: 'firearrow', statIdx: [1], value: [14], type: ['rate'], text: '{n}: +{0}% Fire Damage Per Level' }
               ]
             },
             {
@@ -634,9 +643,9 @@ export default {
               stat: [
                 { text: 'Attack Rating: +{0}%', value: [0, 30, 39, 48, 57, 66, 75, 84, 93, 102, 111, 120, 129, 138, 147, 156, 165, 174, 183, 192, 201] },
                 { text: 'Fire Explosion Damage: {0}-{1}', value: [0, [12, 23], [24, 35], [36, 47], [48, 59], [60, 71], [72, 83], [84, 95], [96, 107], [119, 130], [142, 153], [165, 176], [188, 199], [211, 222], [234, 245], [257, 268], [280, 291], [314, 325], [348, 359], [382, 393], [416, 427]] },
-                { text: 'Average Fire Damage: {0}-{1} Per Second', value: [0, [8, 10], [14, 16], [19, 22], [26, 29], [32, 35], [38, 41], [44, 46], [51, 53], [57, 59], [63, 65], [69, 71], [76, 78], [82, 84], [87, 90], [93, 96], [100, 103], [106, 108], [107, 110], [112, 114], [118, 120]] },
+                { text: 'Average Fire Damage: {0}-{1} Per Second (*TBD)', value: [0, [16, 20], [28, 32], [38, 44], [52, 58], [64, 70], [76, 82], [88, 92], [102, 106], [114, 118], [126, 130], [138, 142], [152, 156], [164, 168], [174, 180], [186, 192], [200, 206], [212, 216], [214, 220], [224, 228], [236, 240]] },
                 { text: 'Fire Duration: {0} Seconds', value: [0, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4] },
-                { text: 'Mana Cost: {0}', value: [0, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14, 14.5, 15, 15.5] }
+                { text: 'Mana Cost: {0}', value: [0, 6, 6.25, 6.5, 6.75, 7, 7.25, 7.5, 7.75, 8, 8.25, 8.5, 8.75, 9, 9.25, 9.5, 9.75, 10, 10.25, 10.5, 10.75] }
               ],
               bonus: [
                 { treeId: 'bc', skillId: 'firearrow', statIdx: [2], value: [5], type: ['rate'], text: '{n}: +{0}% Average Fire Damage Per Second Per Level' },

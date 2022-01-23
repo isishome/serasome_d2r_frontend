@@ -1,6 +1,6 @@
 const pnf = () => import(/* webpackChunkName: "d2r-pnf" */ '@/pages/d2r/PNF')
 const d2rMain = () => import(/* webpackChunkName: "d2r-main" */ '@/pages/d2r/Main')
-const d2rCarousel = () => import(/* webpackChunkName: "d2r-main" */ '@/components/d2r/Carousel')
+const d2rCarousel = () => import(/* webpackChunkName: "d2r-carousel" */ '@/components/d2r/Carousel')
 
 const d2rBbs = () => import(/* webpackChunkName: "d2r-bbs" */ '@/pages/d2r/Bbs')
 const d2rAccount = () => import(/* webpackChunkName: "d2r-account" */ '@/pages/d2r/Account')
@@ -31,7 +31,7 @@ const routes = [
   },
   // {
   //   name: 'd2r-calc',
-  //   path: '/d2r/calc',
+  //   path: '/calc',
   //   component: d2rCalc,
   //   meta: {
   //     noAD: true,
@@ -110,6 +110,7 @@ const routes = [
     component: d2rKnowledge,
     props: true,
     meta: {
+      title: process.env.VUE_APP_D2R_TITLE.concat(' - ', 'Knowledge'),
       topScroll: true
     },
     children: [
@@ -126,7 +127,7 @@ const routes = [
               {
                 name: 'd2r-knowledge-data',
                 path: ':sid',
-                component: d2rKnowledge,
+                component: d2rKnowledge
               }
             ]
           }

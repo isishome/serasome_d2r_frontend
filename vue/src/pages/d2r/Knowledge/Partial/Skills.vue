@@ -97,8 +97,8 @@
   import { copyToClipboard } from 'quasar'
 
   const d2rTapPanel = () => import(/* webpackChunkName: "d2r-tap-panel" */ '@/components/d2r/TapPanel')
-  const d2rTree = () => import(/* webpackChunkName: "d2r-knowledge-skills" */ '@/components/d2r/Tree')
-  const d2rSkill = () => import(/* webpackChunkName: "d2r-knowledge-skills" */ '@/components/d2r/Skill')
+  const d2rTree = () => import(/* webpackChunkName: "d2r-knowledge-tree" */ '@/components/d2r/Tree')
+  const d2rSkill = () => import(/* webpackChunkName: "d2r-knowledge-skill" */ '@/components/d2r/Skill')
 
   String.prototype.format = function () {
     var formatted = this
@@ -150,7 +150,7 @@
         }
       },
       loaded: function (val, old) {
-        if (val !== old && this.cls && val === this.skillsData[this.cls.toLowerCase()].length && this.sid !== null)
+        if (val !== old && this.cls && this.skillsData[this.cls.toLowerCase()] && val === this.skillsData[this.cls.toLowerCase()].length && this.sid !== null)
           this.loadData(this.sid)
       }
     },

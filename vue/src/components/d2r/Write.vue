@@ -94,10 +94,9 @@
                 <q-btn flat dense size="sm" icon="image" @click="addImage(commands.image)" />
                 <q-btn flat dense size="sm" icon="code" :class="{ 'is-active': isActive.ccb() }">
                   <q-popup-proxy ref="codeBlockProxy" :breakpoint="599">
-                    <q-list :dark="false" class="bg-grey-1">
-                      <q-item :dark="false" dense clickable
-                        v-for="opt in isActive.ccb() ? removeWithOptions : codeBlock.options" :key="opt.value"
-                        :class="opt.value === 'remove' ? 'bg-red-12 text-white' : ''"
+                    <q-list>
+                      <q-item dense clickable v-for="opt in isActive.ccb() ? removeWithOptions : codeBlock.options"
+                        :key="opt.value" :class="opt.value === 'remove' ? 'bg-red-12 text-white' : ''"
                         @click="codeBlock.class = opt; $refs.codeBlockProxy.hide();codeBlockUpdate(commands.ccb, getNodeAttrs('ccb'), opt)">
                         <q-item-section>
                           <q-item-label>{{opt.label}}

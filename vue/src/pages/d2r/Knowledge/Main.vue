@@ -59,6 +59,7 @@
     },
     watch: {
       '$route': function (to, from) {
+        document.title = this.title()
         if (to.params.section !== from.params.section)
           this.init()
       },
@@ -68,6 +69,7 @@
       }
     },
     created() {
+      document.title = this.title()
       if (this.d2rClass.length === 0)
         this.$i18n.mergeLanguageAsync('class').then(() => {
           this.setD2RClass(this.$t('classData'))
@@ -88,10 +90,17 @@
       },
       load() {
         this.leftTabs = true
-        this.sectionComponent = () => import(/* webpackChunkName: "d2r-knowledge-main" */ `./Partial/${this.section}`)
+        this.sectionComponent = () => import(/* webpackChunkName: "d2r-knowledge-[request]" */ `./Partial/${this.section}`)
+          .catch(() => {
+            this.$router.replace({ name: 'pnf', params: { '0': this.$route.path } }).catch(() => { })
+            return false
+          })
       },
       swapSection(val) {
         this.$router.push({ name: 'd2r-knowledge-section', params: { section: val } }).catch(() => { })
+      },
+      title() {
+        return document.title.concat(` - ${this.pascalCase(this.$route.params.section)}${this.$route.params.part ? ' - '.concat(this.pascalCase(this.$route.params.part)) : ''}`)
       }
     }
   }

@@ -32,7 +32,7 @@
 </template>
 <script>
   import { mapGetters } from 'vuex'
-  const d2rSummary = () => import(/* webpackChunkName: "d2r-main" */ '@/components/d2r/Summary')
+  const d2rSummary = () => import(/* webpackChunkName: "d2r-summary" */ '@/components/d2r/Summary')
 
   export default {
     name: 'd2r-layout',

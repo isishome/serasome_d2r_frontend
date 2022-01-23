@@ -7,36 +7,58 @@
         <div class="row justify-center full-width text-body2">{{$t('d2r.knowledge.items.noData')}}</div>
       </template>
       <template v-slot:top>
-        <div class="row justify-end full-width">
-          <q-input dense debounce="400" :label="$t('btn.search')" color="title" v-model="filter">
-            <template v-slot:append>
-              <q-icon name="search" color="title" />
-            </template>
-          </q-input>
+        <div class="row justify-around q-gutter-x-sm items-end full-width">
+          <div class="gt-sm col-9 q-gutter-x-md">
+            <q-radio dense :size="$q.screen.lt.md ? 'xs' : 'sm'" v-for="c in classifies" :key="c.value" :val="c.value"
+              v-model="classify" :label="c.label" color="title" />
+          </div>
+          <div class="lt-md col-12 col-sm">
+            <q-select color="title" popup-content-style="border:solid 2px #b89c5b" v-model="classify"
+              :options="classifies" dropdown-icon="keyboard_arrow_down" :label="$t('d2r.knowledge.items.recipeType')"
+              behavior="menu" dense outlined emit-value map-options no-error-icon options-dense />
+          </div>
+          <div class="col">
+            <q-input dense debounce="400" :label="$t('btn.search')" color="title" v-model="filter">
+              <template v-slot:append>
+                <q-icon name="search" color="title" />
+              </template>
+            </q-input>
+          </div>
         </div>
       </template>
       <template #body="props">
-        <q-tr :props="props">
-          <q-td key="title" :props="props">
-            <div class="font-kodia text-h5 word-keep">{{props.row.title}}</div>
+        <q-tr no-hover :props="props">
+          <q-td key="title" :props="props" :rowspan="props.row.recipe ? 2 : 1"
+            :style="filtering.length-1 === props.rowIndex && props.row.recipe ? 'border:none' : ''">
+            <div class="text-title text-h6 text-weight-bold word-keep column">
+              <div class="font-kodia">{{props.row.title}}</div>
+              <div>
+                <q-badge color="yellow" text-color="black" v-if="props.row.version">{{'v'.concat(' ',
+                  props.row.version)}}
+                </q-badge>
+              </div>
+            </div>
           </q-td>
-          <q-td key="desc" :props="props">
-            <ul class="column text-subtitle1">
-              <li v-for="(n, idx) in props.row.notice" :key="idx" class="col word-keep" v-html="n">
+          <q-td key="desc" :props="props" :rowspan="props.row.recipe ? 2 : 1"
+            :style="filtering.length-1 === props.rowIndex && props.row.recipe ? 'border:none' : ''">
+            <ul class="column text-body">
+              <li v-for="(d, idx) in props.row.desc" :key="idx" class="col word-keep" v-html="d">
               </li>
             </ul>
           </q-td>
-          <q-td key="recipe" :props="props">
-            <div class="row justify-around items-center">
-              <div v-for="(img, idx) in props.row.recipe" :key="`img_${idx}`"
-                :class="`col${props.row.width ? '' : '-2'}`">
-                <img :src="require(`@/assets/images/d2r/items/${img}`)"
-                  :style="`max-width: ${props.row.width ? props.row.width : '100%'};`" />
-              </div>
+          <q-td key="images" :props="props" :style="props.row.recipe ? 'border: none;' : ''">
+            <div class="row justify-center items-center q-gutter-md">
+              <q-img v-for="(img, idx) in props.row.images" :key="`img_${idx}`"
+                :src="require(`@/assets/images/d2r/items/${img}`)"
+                :class="props.row.images.length > 1 ? 'col-2' :  'col-6'" />
             </div>
-            <div v-if="props.row.desc" class="row justify-center text-left">
-              <ul class="column text-subtitle1">
-                <li v-for="(d, idx) in props.row.desc" :key="idx" class="col word-keep" v-html="d">
+          </q-td>
+        </q-tr>
+        <q-tr v-if="props.row.recipe" no-hover :props="props">
+          <q-td key="recipe" :props="props">
+            <div v-if="props.row.desc" class="row justify-center">
+              <ul class="text-body">
+                <li v-for="(r, idx) in props.row.recipe" :key="idx" class="word-keep" v-html="r">
                 </li>
               </ul>
             </div>
@@ -46,25 +68,25 @@
       <template #item="props">
         <q-intersection transition="slide-up" once class="col-md-6 col-12 example-item">
           <q-card class="d2r-card" bordered>
-            <q-card-section class="font-kodia text-h6 word-keep">{{props.row.title}}</q-card-section>
+            <q-card-section class="font-kodia text-title text-weight-bold text-h6 word-keep text-center">
+              {{props.row.title}}
+            </q-card-section>
             <q-separator />
-            <q-card-section class="no-padding">
-              <ul class="no-margin column text-caption">
-                <li v-for="(n, idx) in props.row.notice" :key="idx" class="col word-keep" v-html="n">
+            <q-card-section class="no-padding row justify-center">
+              <ul class="no-margin text-caption">
+                <li v-for="(d, idx) in props.row.desc" :key="idx" class="word-keep" v-html="d">
                 </li>
               </ul>
             </q-card-section>
-            <q-card-section class="no-padding">
-              <div class="row justify-between items-center text-center">
-                <div v-for="(img, idx) in props.row.recipe" :key="`img_${idx}`"
-                  :class="`col${props.row.width ? '' : '-4'}`">
-                  <img :src="require(`@/assets/images/d2r/items/${img}`)"
-                    :style="`max-width: ${props.row.width ? props.row.width : '30px'};`" />
-                </div>
+            <q-card-section class="q-pa-sm">
+              <div class="row justify-center items-center q-gutter-x-md">
+                <q-img v-for="(img, idx) in props.row.images" :key="`img_${idx}`"
+                  :src="require(`@/assets/images/d2r/items/${img}`)"
+                  :class="props.row.images.length > 1 ? 'col-2' :  'col-6'" />
               </div>
-              <div v-if="props.row.desc" class="row justify-center">
-                <ul class="column text-caption">
-                  <li v-for="(d, idx) in props.row.desc" :key="idx" class="col word-keep" v-html="d">
+              <div v-if="props.row.recipe" class="row justify-center">
+                <ul class="text-caption">
+                  <li v-for="(r, idx) in props.row.recipe" :key="idx" class="word-keep" v-html="r">
                   </li>
                 </ul>
               </div>
@@ -93,22 +115,25 @@
         filter: '',
         columns: [
           { name: 'title', align: 'center', style: 'width:20%' },
-          { name: 'desc', align: 'left' },
-          { name: 'recipe', align: 'center', style: 'width:25%' }
+          { name: 'desc', align: 'left', style: 'width:50%' },
+          { name: 'images', align: 'center' },
+          { name: 'recipe', align: 'center' },
         ],
-        data: []
+        data: [],
+        classifies: [],
+        classify: 'socket'
       }
     },
     computed: {
-      pagesNumber() {
-        return Math.ceil(this.filtering.length / this.pagination.rowsPerPage)
-      },
       filtering() {
         let result = this.data
         if (this.filter !== '') {
           const terms = this.filter.toLowerCase().split(' ')
-          result = result.filter(c => new RegExp(terms.join('|'), 'gi').test(c.title) || new RegExp(terms.join('|'), 'gi').test(c.notice.join('|')) || (c.desc && new RegExp(terms.join('|'), 'gi').test(c.desc.join('|'))))
+          result = result.filter(c => new RegExp(terms.join('|'), 'gi').test(c.title) || new RegExp(terms.join('|'), 'gi').test(c.desc.join('|')) || (c.recipe && new RegExp(terms.join('|'), 'gi').test(c.recipe.join('|'))))
         }
+
+        if (this.classify !== 'all')
+          result = result.filter(r => r.classify === this.classify)
 
         return result
       }
@@ -116,9 +141,9 @@
     created() {
       this.$i18n.mergeLanguageAsync('cube').then(() => {
         setTimeout(() => {
+          this.classifies = this.$t('cubeClassifies')
           this.data = this.$t('cubeData')
         }, 0)
-
       })
     }
   }
@@ -138,6 +163,6 @@
   }
 
   .example-item {
-    min-height: 230px;
+    min-height: 210px;
   }
 </style>

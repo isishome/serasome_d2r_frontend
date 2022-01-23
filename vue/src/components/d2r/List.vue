@@ -223,6 +223,7 @@
       }
     },
     created() {
+      document.title = document.title.concat(' - ', this.pascalCase(this.secInfo.label))
       if (!this.$route.query.page && this.mode !== 'search')
         this.$router.replace({ name: this.$route.name, query: { page: 1 } }).catch(() => { })
     },
@@ -248,6 +249,7 @@
           this.search()
       },
       sec: function () {
+        document.title = document.title.concat(' - ', this.pascalCase(this.secInfo.label))
         this.filter.mine = false
         this.filter.filterBy = 'titleWithContents'
         this.filter.filter = null
@@ -278,6 +280,7 @@
         this.go(1)
       },
       go(page) {
+
         this.pagination.page = page || 1
         if (this.$refs.table)
           this.$refs.table.onRequest({ pagination: this.pagination })

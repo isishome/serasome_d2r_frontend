@@ -25,13 +25,15 @@ export default class Alignment extends Node {
       defining: true,
       draggable: false,
       parseDOM: [{
-        style: 'text-align',
-        getAttrs: value => ({
-          align: value
-        })
+        tag: 'div',
+        getAttrs: dom => {
+          return {
+            align: dom.style.textAlign
+          }
+        },
       }],
       toDOM: node => {
-        return ['p', {
+        return ['div', {
           style: `display:block;text-align:${node.attrs.align}`
         }, 0];
       }

@@ -1,5 +1,6 @@
 export default {
   "en": {
+    
     crafted: [
       {
         id: 'hit-power',

@@ -235,12 +235,15 @@ export default {
           }
         },
         items: {
+          recipeType: '조합유형',
+          craftType: '제작유형',
           cube: "호라드릭 큐브조합법",
           rune: "룬워드 아이템",
           craft: "제작 아이템",
           all: "전체",
           beginner: "초급자",
           runewordName: "이름",
+          version: "버전",
           runewordMaterial: "재료(소켓수)",
           own: "소유기준",
           runewordMaterialType: "재료타입",

@@ -7,9 +7,9 @@
   </div>
 </template>
 <script>
-  const d2rList = () => import(/* webpackChunkName: "d2r-bbs" */ '@/components/d2r/List')
-  const d2rRead = () => import(/* webpackChunkName: "d2r-bbs" */ '@/components/d2r/Read')
-  const d2rWrite = () => import(/* webpackChunkName: "d2r-bbs" */ '@/components/d2r/Write')
+  const d2rList = () => import(/* webpackChunkName: "d2r-bbs-list" */ '@/components/d2r/List')
+  const d2rRead = () => import(/* webpackChunkName: "d2r-bbs-read" */ '@/components/d2r/Read')
+  const d2rWrite = () => import(/* webpackChunkName: "d2r-bbs-write" */ '@/components/d2r/Write')
 
   export default {
     name: 'Bbs',

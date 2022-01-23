@@ -1,26 +1,36 @@
 <template>
   <div>
-    <div class="row justify-start items-center word-keep">
-      <template v-for="(n, idx) in notice">
-        <div :class="[$q.dark.isActive ? 'text-orange' : '', $q.screen.lt.md ? 'text-caption' : 'text-subtitle1']"
-          :key="`t_${idx}`">
-          {{n.desc}}
-        </div>
-        <ul
-          :class="[$q.dark.isActive ? 'text-amber-4' : 'text-grey-8', $q.screen.lt.md ? 'text-caption' : 'text-body2']"
-          :key="`d_${idx}`">
-          <li v-for="(d, idx2) in n.detail" :key="`d_${idx}_${idx2}`">
-            {{d}}
-          </li>
-        </ul>
-      </template>
+    <div class="row justify-end items-center">
+      <q-toggle dense color="title" v-model="visible" icon="help_outline" class="q-mb-sm" />
     </div>
-    <div class="row justify-between items-center q-col-gutter-sm">
-      <div class="col-12 col-sm-8 col-md-9">
-        <q-checkbox v-for="c in data" :key="c.id" v-model="c.selected" :label="c.name" :color="c.color"
-          @input="select" />
+    <q-slide-transition>
+      <div v-show="visible" class="row justify-start items-center word-keep">
+        <template v-for="(n, idx) in notice">
+          <div :class="[$q.dark.isActive ? 'text-orange' : '', $q.screen.lt.md ? 'text-caption' : 'text-subtitle1']"
+            :key="`t_${idx}`">
+            {{n.desc}}
+          </div>
+          <ul
+            :class="[$q.dark.isActive ? 'text-amber-4' : 'text-grey-8', $q.screen.lt.md ? 'text-caption' : 'text-body2']"
+            :key="`d_${idx}`">
+            <li v-for="(d, idx2) in n.detail" :key="`d_${idx}_${idx2}`">
+              {{d}}
+            </li>
+          </ul>
+        </template>
       </div>
-      <div class="col-12 col-sm-4 col-md-3">
+    </q-slide-transition>
+    <div class="row justify-around q-gutter-x-sm items-end full-width">
+      <div class="gt-sm col-9 q-gutter-x-md">
+        <q-radio v-for="ct in craftTypes" :key="ct.value" :val="ct.value" v-model="craftType" :label="ct.label"
+          :color="ct.color" />
+      </div>
+      <div class="lt-md col-12 col-sm">
+        <q-select color="title" popup-content-style="border:solid 2px #b89c5b" v-model="craftType" :options="craftTypes"
+          dropdown-icon="keyboard_arrow_down" :label="$t('d2r.knowledge.items.craftType')" behavior="menu" dense
+          outlined emit-value map-options no-error-icon options-dense />
+      </div>
+      <div class="col">
         <q-input dense debounce="400" :label="$t('btn.search')" color="title" v-model="filter">
           <template v-slot:append>
             <q-icon name="search" color="title" />
@@ -29,9 +39,10 @@
       </div>
     </div>
     <template v-for="c in filtering">
-      <q-table v-if="c.selected === true" :key="c.id" class="q-mt-lg bg-transparent" table-class="d2r-table"
-        card-container-class="q-col-gutter-md justify-center" :grid="$q.screen.lt.lg" :data="c.filterList"
-        :columns="columns" row-key="name" :pagination.sync="pagination" hide-pagination bordered>
+      <q-table v-if="c.id === craftType || craftType === 'all'" :key="c.id" class="q-mt-sm q-mb-lg bg-transparent"
+        table-class="d2r-table" card-container-class="q-col-gutter-md justify-center" :grid="$q.screen.lt.lg"
+        :data="c.filterList" :columns="columns" row-key="material" :pagination.sync="pagination" hide-pagination
+        bordered>
         <template v-slot:no-data>
           <div class="row justify-center full-width text-body2">{{$t('d2r.knowledge.items.noData')}}</div>
         </template>
@@ -45,7 +56,7 @@
         </template>
         <template #body="props">
           <q-tr :props="props">
-            <q-td key="material">
+            <q-td key="material" :props="props">
               <div class="row justify-center items-center">
                 <div class="col-12 font-kodia text-title text-h6 text-center text-weight-bold word-keep">
                   {{materials.find(m => m.no === props.row.material).name}}
@@ -55,7 +66,7 @@
                 </q-badge>
               </div>
             </q-td>
-            <q-td key="recipe">
+            <q-td key="recipe" :props="props">
               <div
                 class="row no-wrap justify-between items-stretch q-gutter-x-sm full-width text-body2 text-center word-keep q-py-md">
                 <div class="col-4 column items-center full-height">
@@ -101,7 +112,7 @@
                 </div>
               </div>
             </q-td>
-            <q-td key="effects">
+            <q-td key="effects" :props="props">
               <ul class="text-subtitle2 word-keep" style="color:rgba(100, 100, 250, 1)">
                 <li v-for="(ce, idx) in c.common.effects" :key="`ce_${idx}`">
                   {{ce}}
@@ -210,61 +221,55 @@
   export default {
     data() {
       return {
+        visible: false,
         pagination: {
           page: 1,
           rowsPerPage: 10000
         },
         filter: '',
         columns: [
-          { name: 'material', label: this.$t('d2r.knowledge.items.thCraft'), align: 'center', headerStyle: 'width:20%' },
+          { name: 'material', label: this.$t('d2r.knowledge.items.thCraft'), align: 'center', style: 'width:10%' },
           { name: 'recipe', label: this.$t('d2r.knowledge.items.thRecipe'), align: 'center' },
-          { name: 'effects', label: this.$t('d2r.knowledge.items.thFixedStats'), align: 'center', headerStyle: 'width:30%' }
+          { name: 'effects', label: this.$t('d2r.knowledge.items.thFixedStats'), align: 'center' }
         ],
         materials: this.$t('d2r.knowledge.items.materials'),
         runes: this.$t('d2r.knowledge.items.runeData'),
         notice: this.$t('d2r.knowledge.items.craftNotice'),
-        data: []
+        data: [],
+        craftType: 'caster',
+        craftTypes: []
       }
-    },
-    watch: {
     },
     created() {
       this.$i18n.mergeLanguageAsync('craft').then(() => {
         setTimeout(() => {
-          this.data = this.$t('crafted').map(c => ({ ...c, selected: false }))
-          this.data.find(c => c.id === 'caster').selected = true
+          this.data = this.$t('crafted')
+          this.craftTypes = [{ value: 'all', label: this.$t('d2r.knowledge.items.all'), color: 'title' }, ...this.data.map(c => ({ value: c.id, label: c.name, color: c.color }))]
         }, 0)
       })
     },
     computed: {
-      pagesNumber() {
-        return Math.ceil(this.filtering.length / this.pagination.rowsPerPage)
-      },
       filtering() {
-        const vm = this
-
-        if (this.filter !== '') {
-          const terms = this.filter.toLowerCase().split(' ')
-          const regEx = new RegExp(terms.join('|'), 'gi')
-          this.data.forEach(function (sec) {
-            sec.filterList = sec.list.filter(l => regEx.test(vm.materials.find(m => m.no === l.material).name) || regEx.test(l.recipe.equipment.name.split('<br>').join('|')) || regEx.test(l.effects.join('|')))
-          })
-        }
-        else
-          return this.data.map(d => ({ ...d, filterList: [...d.list] }))
+        const terms = this.filter.toLowerCase().split(' ')
+        const regEx = new RegExp(terms.join('|'), 'gi')
+        this.data.forEach((sec) => {
+          if (this.filter !== '') {
+            sec.filterList = sec.list.filter(l => regEx.test(this.materials.find(m => m.no === l.material).name) || regEx.test(l.recipe.equipment.name.map(n => n.split(' ').join('|')).join('|')) || regEx.test(l.effects.map(n => n.split(' ').join('|')).join('|')))
+          }
+          else
+            sec.filterList = sec.list
+        })
 
         return this.data
-      }
-    },
-    methods: {
-      select(val) {
-        if (val === false && this.data.filter(d => d.selected === true).length === 0)
-          this.data[0].selected = true
       }
     }
   }
 </script>
 <style scoped>
+  ul {
+    list-style: none;
+  }
+
   .example-item {
     min-height: 400px;
   }

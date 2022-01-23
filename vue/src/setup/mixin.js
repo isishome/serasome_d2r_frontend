@@ -30,6 +30,15 @@ const mixin = {
       const result = (match && match[7].length === 11) ? match[7] : null
 
       return result
+    },
+    pascalCase(str) {
+      const words = str ? str.match(/[a-z]+/gi) : false
+      if (!words) return str
+      return words
+        .map(function (word) {
+          return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
+        })
+        .join(' ')
     }
   }
 }

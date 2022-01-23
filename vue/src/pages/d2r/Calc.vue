@@ -58,7 +58,7 @@
             return false
           }
           else if (this.cType === 'rate')
-            calcStr = this.input.replace(/(\d{1,4})-(\d{1,4})/gi, `[Math.ceil($1 / 1.${this.calc.toString().padStart(2, '0')}),Math.ceil($2 / 1.${this.calc.toString().padStart(2, '0')})]`).replace(/\t/gi, ',').replace(/^(.*)$/, '[0, $1]')
+            calcStr = this.input.replace(/(\d{1,4})-(\d{1,4})/gi, `[Math.ceil($1 * ${this.calc}),Math.ceil($2 * ${this.calc})]`).replace(/\t/gi, ',').replace(/^(.*)$/, '[0, $1]')
           else if (this.cType === 'sum')
             calcStr = this.input.replace(/(\d{1,4})-(\d{1,4})/gi, `[$1 - ${this.calc},$2 - ${this.calc}]`).replace(/\t/gi, ',').replace(/^(.*)$/, '[0, $1]')
 

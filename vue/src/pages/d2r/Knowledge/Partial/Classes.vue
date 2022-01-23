@@ -72,6 +72,10 @@
       load() {
         this.loading = true
         this.partComponent = () => import(/* webpackChunkName: "d2r-knowledge-classes" */ `./Classes/${this.$route.params.part}`)
+          .catch(() => {
+            this.$router.replace({ name: 'pnf', params: { '0': this.$route.path } }).catch(() => { })
+            return false
+          })
       },
       swapPart(val) {
         this.$router.push({ name: 'd2r-knowledge-part', params: { section: 'Classes', part: val } }).catch(() => { })

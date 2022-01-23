@@ -1,7 +1,7 @@
 <template>
   <div class="full-width">
     <div class="row justify-end fit">
-      <q-btn dense icon="clear_all" class="text-weight-bold" padding="4px" :label="$t('d2r.knowledge.items.reset')"
+      <q-btn dense flat icon="clear_all" class="text-weight-bold" padding="4px" :label="$t('d2r.knowledge.items.reset')"
         :size="$q.screen.gt.sm ? 'md' : 'sm'" @click="refresh" />
     </div>
     <div class="row justify-start text-center q-col-gutter-sm rune-wrap full-width non-selectable">
@@ -16,9 +16,9 @@
         </q-btn>
       </div>
     </div>
-    <q-table dense class="bg-transparent" table-class="d2r-table" card-container-class="q-col-gutter-md justify-center"
-      :grid="$q.screen.lt.lg" :data="filtering" :columns="columns" row-key="name" :pagination.sync="pagination"
-      :hide-header="$q.screen.lt.sm" hide-pagination>
+    <q-table dense class="bg-transparent" table-class="d2r-table" table-header-class="word-keep"
+      card-container-class="q-col-gutter-md justify-center" :grid="$q.screen.lt.lg" :data="filtering" :columns="columns"
+      row-key="name" :pagination.sync="pagination" :hide-header="$q.screen.lt.sm" hide-pagination>
       <template v-slot:no-data>
         <div class="row justify-center full-width" :class="$q.screen.lt.md ? 'text-caption' : 'text-body2'">
           {{$t('d2r.knowledge.items.noData')}}</div>
@@ -31,18 +31,16 @@
                 :label="$t('d2r.knowledge.items.own')" />
             </div>
             <div class="col-12 col-lg-3">
-              <q-select :transition-show="$q.screen.lt.md ? 'slide-up' : 'none'"
-                :transition-hide="$q.screen.lt.md ? 'slide-down' : 'none'" menu-self="center left" color="amber-9"
-                popup-content-style="border:solid 1px #888888" v-model="selectedMaterial" :options="meterialOptions"
-                dropdown-icon="keyboard_arrow_down" :label="$t('d2r.knowledge.items.runewordMaterialType')" dense
-                outlined emit-value map-options no-error-icon menu-shrink options-dense />
+              <q-select color="title" popup-content-style="border:solid 2px #b89c5b" v-model="selectedMaterial"
+                :options="meterialOptions" dropdown-icon="keyboard_arrow_down"
+                :label="$t('d2r.knowledge.items.runewordMaterialType')" behavior="menu" dense outlined emit-value
+                map-options no-error-icon options-dense />
             </div>
             <div class="col-12 col-lg-3">
-              <q-select :transition-show="$q.screen.lt.md ? 'slide-up' : 'none'"
-                :transition-hide="$q.screen.lt.md ? 'slide-down' : 'none'" menu-self="center left" color="amber-9"
-                popup-content-style="border:solid 1px #888888" v-model="selectedClass" :options="d2rClassOptions"
-                :label="$t('d2r.knowledge.items.recommendedClass')" dropdown-icon="keyboard_arrow_down" dense outlined
-                emit-value map-options no-error-icon menu-shrink options-dense>
+              <q-select color="title" popup-content-style="border:solid 2px #b89c5b" v-model="selectedClass"
+                :options="d2rClassOptions" :label="$t('d2r.knowledge.items.recommendedClass')"
+                dropdown-icon="keyboard_arrow_down" behavior="menu" dense outlined emit-value map-options no-error-icon
+                options-dense>
                 <template v-slot:option="scope">
                   <q-item v-bind="scope.itemProps" v-on="scope.itemEvents">
                     <q-item-section avatar>
@@ -68,11 +66,9 @@
           </div>
           <div class="col-12 col-md-4 row justify-end q-col-gutter-sm">
             <div class="col-12 col-lg-5">
-              <q-select :transition-show="$q.screen.lt.md ? 'slide-up' : 'none'"
-                :transition-hide="$q.screen.lt.md ? 'slide-down' : 'none'" menu-self="center left" color="amber-9"
-                popup-content-style="border:solid 1px #888888" v-model="selectedSort" :options="sortOptions"
-                dropdown-icon="keyboard_arrow_down" :label="$t('d2r.knowledge.items.sort')" dense outlined emit-value
-                map-options no-error-icon menu-shrink options-dense />
+              <q-select color="title" popup-content-style="border:solid 2px #b89c5b" v-model="selectedSort"
+                :options="sortOptions" dropdown-icon="keyboard_arrow_down" :label="$t('d2r.knowledge.items.sort')"
+                behavior="menu" dense outlined emit-value map-options no-error-icon options-dense />
             </div>
             <div class="col-12 col-lg-5">
               <q-input dense debounce="400" :label="$t('btn.search')" color="title" v-model="filter">
@@ -101,6 +97,9 @@
                 </q-badge>
                 <q-badge color="blue" v-if="props.row.recc.includes('beginner')">{{$t('d2r.knowledge.items.beginner')}}
                 </q-badge>
+                <q-badge color="yellow" text-color="black" v-if="props.row.version">{{'v'.concat(' ',
+                  props.row.version)}}
+                </q-badge>
               </div>
             </div>
           </q-td>
@@ -122,14 +121,14 @@
             </ul>
           </q-td>
           <q-td key="runeword" :props="props">
-            <div class="row items-baseline">
+            <div class="row items-center">
               <template v-for="(rune, idx) in parsRuneWord(props.row.runeword)">
                 <div v-if="idx !== 0" class="word-keep" :key="`name_${idx}`">
-                  <q-icon size="sm" color="grey-8" name="add" />
+                  <q-icon size="xs" color="grey-8" name="add" />
                 </div>
                 <div class="col column items-center content-center" :key="`img_${idx}`" style="height:140px">
                   <div class="col">
-                    <img :src="require(`@/assets/images/d2r/items/runes/${rune.file}.png`)" />
+                    <img :src="require(`@/assets/images/d2r/items/runes/${rune.file}.png`)" style="max-width:50px" />
                   </div>
                   <div class="col-4 row items-center text-body1 word-keep">
                     {{rune.name}}
@@ -155,6 +154,12 @@
                 </div>
                 <div class="col q-gutter-x-xs">
                   <q-badge color="red" v-if="props.row.hot === true">{{$t('d2r.knowledge.items.hot')}}
+                  </q-badge>
+                  <q-badge color="blue" v-if="props.row.recc.includes('beginner')">
+                    {{$t('d2r.knowledge.items.beginner')}}
+                  </q-badge>
+                  <q-badge color="yellow" text-color="black" v-if="props.row.version">{{'v'.concat(' ',
+                    props.row.version)}}
                   </q-badge>
                 </div>
               </div>
@@ -222,8 +227,8 @@
         },
         filter: '',
         columns: [
-          { name: 'name', label: this.$t('d2r.knowledge.items.runewordName'), align: 'center', style: 'width:20%' },
-          { name: 'material', label: this.$t('d2r.knowledge.items.runewordMaterial'), align: 'center', style: 'width:10%' },
+          { name: 'name', label: this.$t('d2r.knowledge.items.runewordName'), align: 'center', style: 'width:16%' },
+          { name: 'material', label: this.$t('d2r.knowledge.items.runewordMaterial'), align: 'center', style: 'width:14%' },
           { name: 'stats', label: this.$t('d2r.knowledge.items.runewordStats'), align: 'center' },
           { name: 'runeword', label: this.$t('d2r.knowledge.items.runeword'), align: 'center', style: 'width:40%' },
         ],
@@ -231,7 +236,7 @@
         own: false,
         selectedMaterial: 0,
         selectedClass: 'all',
-        selectedSort: 'hot',
+        selectedSort: 'version',
         socket: {
           min: 2,
           max: 6
@@ -239,7 +244,7 @@
         materials: this.$t('d2r.knowledge.items.materials'),
         runeWords: [],
         meterialOptions: this.$t('d2r.knowledge.items.materials').map(m => { return { 'label': m.name, 'value': m.no } }),
-        sortOptions: [{ 'label': this.$t('d2r.knowledge.items.hot'), 'value': 'hot' }, { 'label': this.$t('d2r.knowledge.items.runewordName'), 'value': 'name' }, { 'label': this.$t('d2r.knowledge.items.level'), 'value': 'level' }]
+        sortOptions: [{ 'label': this.$t('d2r.knowledge.items.hot'), 'value': 'hot' }, { 'label': this.$t('d2r.knowledge.items.runewordName'), 'value': 'name' }, { 'label': this.$t('d2r.knowledge.items.level'), 'value': 'level' }, { 'label': this.$t('d2r.knowledge.items.version'), 'value': 'version' }]
       }
     },
     created() {
@@ -256,9 +261,6 @@
       d2rClassOptions() {
         return [{ 'value': 'all', 'label': this.$t('d2r.knowledge.items.all'), 'icon': 'groups' }, { 'value': 'beginner', 'label': this.$t('d2r.knowledge.items.beginner'), 'icon': 'person' }, ...this.d2rClass.map(c => ({ value: c.id, label: c.name, src: require(`@/assets/images/d2r/classes/face/${c.id}.png`) })), { 'value': 'mercenary', 'label': this.$t('d2r.knowledge.items.mercenary'), 'src': require('@/assets/images/d2r/items/etc/mercenary.png') }]
       },
-      pagesNumber() {
-        return Math.ceil(this.filtering.length / this.pagination.rowsPerPage)
-      },
       filtering() {
         let result = []
         const selectedRunes = this.runes.filter(r => r.selected === true).map(r => r.no)
@@ -267,7 +269,15 @@
         resultRuneWords = this.selectedClass === 'all' ? resultRuneWords : resultRuneWords.filter(r => r.recc.includes(this.selectedClass))
         resultRuneWords = resultRuneWords.filter(r => r.runeword.length >= this.socket.min && r.runeword.length <= this.socket.max)
 
-        if (this.selectedSort === 'name')
+        if (this.selectedSort === 'version')
+          resultRuneWords.sort((a, b) => {
+            a = a.version ? a.version.toLowerCase() : a.name.toLowerCase()
+            b = b.version ? b.version.toLowerCase() : b.name.toLowerCase()
+            if (a < b) return -1
+            if (a > b) return 1
+            return 0
+          })
+        else if (this.selectedSort === 'name')
           resultRuneWords.sort((a, b) => {
             a = a.name.toLowerCase()
             b = b.name.toLowerCase()

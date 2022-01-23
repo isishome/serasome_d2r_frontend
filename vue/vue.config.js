@@ -1,3 +1,5 @@
+//const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
+
 module.exports = {
   pages: {
     index: {
@@ -6,6 +8,9 @@ module.exports = {
       filename: 'index.html'
     }
   },
+  // configureWebpack: {
+  //   plugins: [new BundleAnalyzerPlugin()]
+  // },
   chainWebpack: (config) => {
     config.plugins.delete('prefetch')
     config.plugins.delete('prefetch-index')
@@ -22,8 +27,7 @@ module.exports = {
     'quasar',
     'highlight.js'
   ],
-
+  productionSourceMap: false,
   outputDir: '../dist',
-  assetsDir: 'static',
-  publicPath: ''
+  assetsDir: 'static'
 }

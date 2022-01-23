@@ -18,22 +18,25 @@
             </q-btn>
           </div>
           <!-- toolbar 2 -->
-          <q-tabs class="gt-md title-size" switch-indicator active-color="title" align="left">
-            <q-route-tab v-for="sec in section" :to="{name:'d2r-bbs', params:{sec:sec.value}, query:{page:1}}"
-              :key="sec.name">
-              <q-icon :name="sec.icon" class="q-ma-sm" size="20px" />
-              <div class="text-h7">{{sec.label}}</div>
-            </q-route-tab>
-            <q-route-tab :to="{name:'d2r-knowledge'}">
-              <q-icon name="fas fa-book" class="q-ma-sm" size="20px" />
-              <div class="text-h7">{{$t('d2r.knowledge.title')}}</div>
-            </q-route-tab>
-            <q-route-tab v-if="signStatus" :to="{name:'d2r-storage'}">
-              <q-icon name="inventory_2" class="q-ma-sm" size="20px" />
-              <div class="text-h7">{{$t('d2r.storage.title')}}</div>
-            </q-route-tab>
-          </q-tabs>
-          <div class="lt-lg absolute-center">
+          <div class="gt-md">
+            <q-tabs class="title-size" switch-indicator active-color="title" align="left">
+              <q-route-tab v-for="sec in section" :to="{name:'d2r-bbs', params:{sec:sec.value}, query:{page:1}}"
+                :key="sec.name">
+                <q-icon :name="sec.icon" class="q-ma-sm" size="20px" />
+                <div class="text-h7">{{sec.label}}</div>
+              </q-route-tab>
+              <q-route-tab :to="{name:'d2r-knowledge'}">
+                <q-icon name="fas fa-book" class="q-ma-sm" size="20px" />
+                <div class="text-h7">{{$t('d2r.knowledge.title')}}</div>
+              </q-route-tab>
+              <q-route-tab v-if="signStatus" :to="{name:'d2r-storage'}">
+                <q-icon name="inventory_2" class="q-ma-sm" size="20px" />
+                <div class="text-h7">{{$t('d2r.storage.title')}}</div>
+              </q-route-tab>
+            </q-tabs>
+          </div>
+
+          <div class="col lt-lg absolute-center">
             <q-btn @click="home" flat dense class="row justify-center items-center" size="22px">
               <q-avatar flat class="text-d2r d2r-logo-b" icon="fas fa-star-of-david" size="30px" />
               <div class="q-ml-sm q-pt-xs lt-lg gt-xs">
@@ -45,7 +48,7 @@
             </q-btn>
           </div>
           <!-- toolbar 3 -->
-          <div class="absolute-right col-xl-5 col-lg-4 col-md-3 row justify-end items-center q-gutter-x-sm">
+          <div class="col row justify-end items-center q-gutter-x-sm">
             <q-btn dense flat padding="0" :to="{name:'d2r-knowledge-part', params:{ section:'Items', part:'Cube' }}">
               <q-avatar size="sm" rounded>
                 <img :src="require('@/assets/images/d2r/items/cube.png')">
@@ -308,7 +311,7 @@
               horizontal="right" :key="`al-${key}`" random>
             </adsense>
           </div>
-          <q-page class="col-xl-6 col-lg-8 col-md-10 col-12">
+          <q-page class="col-xl-7 col-lg-8 col-md-10 col-12">
             <router-view />
           </q-page>
           <div class="gt-sm col column items-start q-gutter-y-sm" style="padding:60px 0 0 6px;">

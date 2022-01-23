@@ -132,8 +132,8 @@
 <script>
   import { mapGetters, mapActions } from 'vuex'
   import hljs from 'highlight.js'
-  const d2rConfirm = () => import(/* webpackChunkName: "d2r-read" */ '@/components/d2r/Confirm')
-  const d2rComments = () => import(/* webpackChunkName: "d2r-read" */ '@/components/d2r/Comments')
+  const d2rConfirm = () => import(/* webpackChunkName: "d2r-confirm" */ '@/components/d2r/Confirm')
+  const d2rComments = () => import(/* webpackChunkName: "d2r-comments" */ '@/components/d2r/Comments')
   const zoomImages = []
   const io = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {

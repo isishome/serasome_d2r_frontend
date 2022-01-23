@@ -235,13 +235,16 @@ export default {
           }
         },
         items: {
+          recipeType: 'Recipe Type',
+          craftType: 'Craft Type',
           cube: "Horadric Cube Recipes",
           rune: "Runewords Items",
           craft: "Crafted Items",
           all: "All",
           beginner: "Beginner",
           runewordName: "Name",
-          runewordMaterial: "Material(Socket)",
+          version: "Version",
+          runewordMaterial: "Material (Socket)",
           own: "based on ownership",
           runewordMaterialType: "Material Type",
           recommendedClass: "Recommended Class",
