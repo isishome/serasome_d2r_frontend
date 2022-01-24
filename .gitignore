@@ -22,13 +22,6 @@ pnpm-debug.log*
 *.sln
 *.sw?
 
-# Custome directories
-dist
-# Cordova
-/src-cordova/platforms
-/src-cordova/plugins
-/public/cordova.js
-
 # Cordova
 /src-cordova/platforms
 /src-cordova/plugins
