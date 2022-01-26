@@ -103,10 +103,6 @@ export default new Vuex.Store({
   },
   mutations: {
     setSignStatus(state, payload) {
-      if (payload === false || payload === null) {
-        state.someList = null
-      }
-
       state.signStatus = payload
     },
     setPageScroller(state, payload) {

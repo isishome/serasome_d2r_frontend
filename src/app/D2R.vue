@@ -401,10 +401,6 @@
     created() {
       const cookieIsDark = this.$q.cookies.has(process.env.VUE_APP_D2R_DARK_NAME) ? this.$q.cookies.get(process.env.VUE_APP_D2R_DARK_NAME) : true
       this.$q.dark.set(cookieIsDark)
-      this.loadD2RInfo()
-
-      if (!this.$q.platform.is.cordova)
-        this.checkSignStatus()
     },
     watch: {
       '$route': function (to, old) {
@@ -441,7 +437,6 @@
     },
     methods: {
       ...mapActions({
-        setSignStatus: 'setSignStatus',
         setBeginner: 'setBeginner',
         setD2RInfo: 'setD2RInfo'
       }),
@@ -456,32 +451,11 @@
         this.$q.cookies.set(process.env.VUE_APP_D2R_DARK_NAME, !this.$q.dark.isActive, { path: '/', expires: '7300d' })
         this.$q.dark.set(!this.$q.dark.isActive)
       },
-      checkSignStatus() {
-        const vm = this
-        this.loading = true
-        if (this.signStatus === null) {
-          this.axios
-            .get('/seras/account/signstatus?t=' + Date.now())
-            .then(function (response) {
-              vm.setSignStatus(response.data.status)
-            })
-            .catch(function () { })
-            .then(function () {
-              vm.loading = false
-            })
-        }
-      },
-      async loadD2RInfo() {
-        if (this.d2rInfo === null && !this.$q.platform.is.cordova) {
-          const d2rInfo = await this.axios.get("/d2r/account/info")
-          this.setD2RInfo(d2rInfo.data)
-        }
-      },
       home() {
         if (this.$q.platform.is.cordova)
           return
         else if (this.$router.currentRoute.name === 'd2r-main')
-          this.$router.go()
+          document.location.reload()
         else
           this.$router.push({ name: 'd2r-main' }).catch(() => { })
 
@@ -502,7 +476,7 @@
             .then(function () {
               vm.processSignOut = false
               vm.setD2RInfo(null)
-              vm.$router.go()
+              vm.home()
             })
         } else
           document.location.href = process.env.VUE_APP_URL.concat('/sign?d2r')
