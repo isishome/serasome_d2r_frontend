@@ -62,7 +62,7 @@ axiosObject.interceptors.response.use((response) => {
 
   if (statusCode === 401) {
     store.dispatch('setSignStatus', false)
-    document.location.href = statusCode === 401 ? '/sign' : '/join'
+    document.location.href = statusCode === 401 ? process.env.VUE_APP_URL.concat('/sign?d2r') : process.env.VUE_APP_URL.concat('/join?d2r')
   }
   else if (statusCode === 303) {
     if (router.currentRoute.name !== 'd2r-main')
@@ -166,7 +166,8 @@ router.beforeEach((to, from, next) => {
       message: i18n.t('system.message.requireSignIn')
     })
 
-    document.location.href = '/sign'
+    console.log('here')
+    document.location.href = process.env.VUE_APP_URL.concat('/sign?d2r')
   }
 
   next()

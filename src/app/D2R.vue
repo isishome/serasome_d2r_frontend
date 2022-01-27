@@ -469,14 +469,14 @@
         if (this.signStatus === true) {
           this.processSignOut = true
           this.axios
-            .get('/seras/account/signout')
-            .then(function () {
+            .get('/d2r/account/signout')
+            .then(function (response) {
+              vm.setD2RInfo(response.data)
             })
             .catch(function () { })
             .then(function () {
               vm.processSignOut = false
-              vm.setD2RInfo(null)
-              vm.home()
+              document.location.reload()
             })
         } else
           document.location.href = process.env.VUE_APP_URL.concat('/sign?d2r')

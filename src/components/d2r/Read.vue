@@ -56,7 +56,7 @@
         <div v-if="data && data.youtube">
           <q-video :ratio="16/9" :src="`https://www.youtube.com/embed/${getYoutubeId(data.youtube)}?rel=0`" />
         </div>
-        <p v-if="data" ref="contents" class="word-wrap contents" v-html="viewContents">
+        <p v-if="data" ref="contents" class="word-wrap contents" v-html="contents">
         </p>
       </q-card-section>
       <template v-if="isQuiz">
@@ -146,6 +146,15 @@
     })
   })
 
+  const co = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        hljs.highlightElement(entry.target)
+        observer.unobserve(entry.target)
+      }
+    })
+  })
+
   export default {
     name: 'd2r-read',
     props: {
@@ -202,6 +211,9 @@
       secInfo() {
         return this.getSecInfo(this.sec)
       },
+      contents() {
+        return this.data.contents ? this.data.contents.replace(/<p><\/p>/gi, '<p><br><p>') : ''
+      },
       viewContents() {
         let dom = document.createElement('contents')
         dom.innerHTML = this.data.contents
@@ -236,6 +248,8 @@
           vm.$nextTick(() => {
             const images = vm.$refs.contents.querySelectorAll('.io-img')
             images.forEach((el) => io.observe(el))
+            const codes = vm.$refs.contents.querySelectorAll('pre code')
+            codes.forEach((el) => co.observe(el))
             vm.setImages(zoomImages)
           })
         })
