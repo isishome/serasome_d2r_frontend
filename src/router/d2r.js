@@ -79,7 +79,6 @@ const routes = [
         path: 'write',
         component: d2rBbs,
         meta: {
-          requireAuth: true,
           checkGrade: 'write'
         },
         children: [
@@ -89,7 +88,6 @@ const routes = [
             component: d2rBbs,
             props: true,
             meta: {
-              requireAuth: true,
               checkGrade: 'write'
             }
           }]
@@ -99,10 +97,7 @@ const routes = [
   {
     name: 'd2r-account',
     path: '/account',
-    component: d2rAccount,
-    meta: {
-      requireAuth: true
-    }
+    component: d2rAccount
   },
   {
     name: 'd2r-knowledge',
@@ -140,9 +135,6 @@ const routes = [
     path: '/storage',
     component: d2rStorage,
     props: true,
-    meta: {
-      requireAuth: true
-    },
     children: [
       {
         name: 'd2r-storage-account',

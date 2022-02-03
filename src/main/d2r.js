@@ -62,11 +62,7 @@ axiosObject.interceptors.response.use((response) => {
 
   if (statusCode === 401) {
     store.dispatch('setSignStatus', false)
-    document.location.href = statusCode === 401 ? process.env.VUE_APP_URL.concat('/sign?d2r') : process.env.VUE_APP_URL.concat('/join?d2r')
-  }
-  else if (statusCode === 303) {
-    if (router.currentRoute.name !== 'd2r-main')
-      router.push({ name: 'd2r-main' }).catch(() => { })
+    document.location.href = process.env.VUE_APP_URL.concat('/sign?d2r')
   }
 
   return Promise.reject(error);
@@ -97,24 +93,6 @@ router.onError((error) => {
 router.beforeEach((to, from, next) => {
   Loading.hide()
   i18n.loadLanguageAsync(lang).then(() => next())
-})
-
-router.beforeEach((to, from, next) => {
-  const signedIn = store.getters.getSignStatus
-
-  if (signedIn === null) {
-    axiosObject
-      .get('/seras/account/signstatus')
-      .then(function (response) {
-        store.dispatch('setSignStatus', response.data.status)
-      })
-      .catch(function () { })
-      .then(function () {
-        next()
-      })
-  }
-  else
-    next()
 })
 
 router.beforeEach((to, from, next) => {
@@ -156,19 +134,6 @@ router.beforeEach((to, from, next) => {
 
   const findNoAD = to.matched.find(route => route.meta.noAD)
   store.dispatch('setNoAD', findNoAD !== undefined)
-
-  const requireAuth = to.matched.some(route => route.meta.requireAuth)
-  const signedIn = store.getters.getSignStatus
-  if (requireAuth && !signedIn) {
-    Notify.create({
-      type: 'negative',
-      color: 'negative',
-      message: i18n.t('system.message.requireSignIn')
-    })
-
-    console.log('here')
-    document.location.href = process.env.VUE_APP_URL.concat('/sign?d2r')
-  }
 
   next()
 })

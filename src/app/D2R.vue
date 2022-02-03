@@ -399,13 +399,16 @@
       }
     },
     created() {
+      this.checkStatus()
       const cookieIsDark = this.$q.cookies.has(process.env.VUE_APP_D2R_DARK_NAME) ? this.$q.cookies.get(process.env.VUE_APP_D2R_DARK_NAME) : true
       this.$q.dark.set(cookieIsDark)
     },
     watch: {
       '$route': function (to, old) {
-        if (to !== old && old.name !== null)
+        if (to !== old && old.name !== null) {
+          this.checkStatus()
           this.key++
+        }
       },
       lang: function (val, old) {
         if (val !== old) {
@@ -437,9 +440,23 @@
     },
     methods: {
       ...mapActions({
+        setSignStatus: 'setSignStatus',
         setBeginner: 'setBeginner',
         setD2RInfo: 'setD2RInfo'
       }),
+      checkStatus() {
+        const vm = this
+        if (this.signStatus === null || this.someList.length === 0) {
+          this.axios
+            .get('/seras/account/signstatus')
+            .then(function (response) {
+              vm.setSignStatus(response.data.status)
+              vm.setSomeList(response.data.someList)
+            })
+            .catch(function () { })
+            .then(function () { })
+        }
+      },
       onScroll(info) {
         let winHeight = window.innerHeight
         this.scrollTop = info.position
