@@ -446,12 +446,11 @@
       }),
       checkStatus() {
         const vm = this
-        if (this.signStatus === null || this.someList.length === 0) {
+        if (this.signStatus === null) {
           this.axios
             .get('/seras/account/signstatus')
             .then(function (response) {
               vm.setSignStatus(response.data.status)
-              vm.setSomeList(response.data.someList)
             })
             .catch(function () { })
             .then(function () { })
