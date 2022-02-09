@@ -117,3 +117,12 @@
   .io-img {
     min-height: 100vh;
   }
+
+  .mailto {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .mailto:hover {
+    text-decoration: underline;
+  }

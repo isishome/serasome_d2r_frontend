@@ -429,7 +429,8 @@ export default {
       message: {
         noPermission: "페이지 사용 권한이 없습니다",
         noPage: "페이지가 존재하지 않습니다"
-      }
+      },
+      mailto: "문의하기"
     },
     comments: {
       title: "댓글",

@@ -94,6 +94,7 @@
 }
 
 .contents pre > code {
+  display: block;
   background: #000 !important;
   overflow-x: auto;
   padding: 0px !important;

@@ -429,7 +429,8 @@ export default {
       message: {
         noPermission: "You don't have permission to use the page",
         noPage: "Page does not exist"
-      }
+      },
+      mailto: "Contact US"
     },
     comments: {
       title: "Comments",

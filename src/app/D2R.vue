@@ -350,7 +350,10 @@
           <div class="row justify-start items-center q-gutter-x-xs">
             <div class="lt-sm font-kodia">D2R</div>
             <div class="gt-xs font-kodia">Diablo® II Resurrected</div>
-            <div>by SeraSome @2021</div>
+            <div>by SeraSome @2022</div>
+            <div class="absolute-right q-mr-lg row items-center">
+              <a class="mailto" href="mailto:serasomething@gmail.com">{{$t('d2r.mailto')}}</a>
+            </div>
           </div>
         </div>
         <div class="col gt-sm row justify-end q-ma-sm">
@@ -448,7 +451,12 @@
         const vm = this
         if (this.signStatus === null) {
           this.axios
-            .get('/seras/account/signstatus')
+            .get('/seras/account/signstatus',
+              {
+                params: {
+                  t: Date.now()
+                }
+              })
             .then(function (response) {
               vm.setSignStatus(response.data.status)
             })
