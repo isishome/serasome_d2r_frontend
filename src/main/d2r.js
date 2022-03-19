@@ -8,7 +8,6 @@ import routes from '@/router/d2r'
 import routesCordova from '@/router/cordova'
 import store from '@/store/d2r'
 import axios from 'axios'
-import vuePlugin from "@/plugin/highlight"
 import { Quasar, Notify, Cookies, Loading, Platform } from 'quasar'
 
 const Adsense = () => import(/* webpackChunkName: "d2r" */ '@/components/etc/AdSense')
@@ -156,7 +155,6 @@ Vue.prototype.axios = axiosObject
 Vue.component('adsense', Adsense)
 
 Vue.mixin(mixin)
-Vue.use(vuePlugin)
 new Vue({
   render: h => h(App),
   router,

@@ -293,8 +293,7 @@
             { label: 'HTML', value: 'html' },
             { label: 'CSS', value: 'css' },
             { label: 'DOS', value: 'dos' },
-            { label: 'Bash', value: 'bash' },
-            { label: 'Auto', value: 'auto' }
+            { label: 'Bash', value: 'bash' }
           ]
         }
       }

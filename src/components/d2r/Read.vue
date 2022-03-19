@@ -131,15 +131,30 @@
 </template>
 <script>
   import { mapGetters, mapActions } from 'vuex'
-  import hljs from 'highlight.js'
+  import hljs from 'highlight.js/lib/core'
+  import javascript from 'highlight.js/lib/languages/javascript'
+  import html from 'highlight.js/lib/languages/xml'
+  import css from 'highlight.js/lib/languages/css'
+  import dos from 'highlight.js/lib/languages/dos'
+  import bash from 'highlight.js/lib/languages/bash'
+  hljs.registerLanguage('javascript', javascript)
+  hljs.registerLanguage('html', html)
+  hljs.registerLanguage('css', css)
+  hljs.registerLanguage('dos', dos)
+  hljs.registerLanguage('bash', bash)
+  import 'highlight.js/styles/vs2015.css'
   const d2rConfirm = () => import(/* webpackChunkName: "d2r-confirm" */ '@/components/d2r/Confirm')
   const d2rComments = () => import(/* webpackChunkName: "d2r-comments" */ '@/components/d2r/Comments')
   const zoomImages = []
   const io = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
+        entry.target.addEventListener('load', () => {
+          entry.target.removeAttribute('width')
+          entry.target.removeAttribute('height')
+          entry.target.classList.remove('io-img')
+        })
         entry.target.src = entry.target.dataset.src
-        entry.target.classList.remove('io-img')
         observer.unobserve(entry.target)
         zoomImages.push({ 'element': entry.target, 'src': entry.target.src })
       }
@@ -263,7 +278,7 @@
         setImages: 'setD2RImages'
       }),
       intersactionImage(info) {
-        info.contents = info.contents.replace(/(<img[^>]+)(src)([^>]+>)/gmi, '$1 class="io-img" data-src$3')
+        info.contents = info.contents.replace(/(<img[^>]+)(src)([^>]+>)/gmi, '$1 class="io-img" width="300" height="150" src="/images/d2r_og.jpg" data-src$3')
       },
       getList() {
         const vm = this

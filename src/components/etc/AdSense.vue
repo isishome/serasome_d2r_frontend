@@ -55,15 +55,15 @@
         tempWidth: '',
         tempHeight: '',
         randomSize: [
-          //{ width: '300px', height: '250px' },
-          //{ width: '336px', height: '280px' },
-          //{ width: '250px', height: '250px' },
-          //{ width: '250px', height: '360px' },
-          //{ width: '240px', height: '400px' },
-          //{ width: '300px', height: '600px' },
-          { width: '160px', height: '600px' },
+          { width: '120px', height: '240px' },
           { width: '120px', height: '600px' },
-          //{ width: '120px', height: '240px' }
+          { width: '160px', height: '600px' },
+          { width: '250px', height: '250px' },
+          { width: '250px', height: '360px' },
+          { width: '240px', height: '400px' },
+          { width: '300px', height: '250px' },
+          { width: '300px', height: '600px' },
+          { width: '336px', height: '280px' }
         ]
       }
     },
@@ -84,7 +84,7 @@
       },
       setSize() {
         if (this.random === true) {
-          const selectedRandomSize = this.randomSize[Math.floor(Math.random() * this.randomSize.length)]
+          const selectedRandomSize = this.randomSize[Math.floor(Math.random() * (this.$q.screen.gt.lg ? 9 : this.$q.screen.gt.md ? 6 : 3))]
           this.tempWidth = selectedRandomSize.width
           this.tempHeight = selectedRandomSize.height
         }

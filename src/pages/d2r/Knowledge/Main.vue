@@ -158,7 +158,7 @@
   .tab-btn {
     opacity: .3;
     padding: 4px 2px;
-    background: linear-gradient(to bottom, rgba(70, 70, 70, .7) 10%, rgba(20, 20, 20, .7) 60%, rgba(0, 0, 0, 1)), url('/static/images/rough.jpg') repeat !important;
+    background: linear-gradient(to bottom, rgba(70, 70, 70, .7) 10%, rgba(20, 20, 20, .7) 60%, rgba(0, 0, 0, 1)), url('/images/rough.jpg') repeat !important;
     box-shadow: inset 0 -1px 0 0 rgba(214, 139, 0, .7), inset 1px 1px 0 0 rgba(214, 139, 0, .7), inset 0 1px 0 0 rgba(214, 139, 0, .7), inset 0 0 1px 0 rgba(65, 44, 6, .7), inset 0 0 10px 3px rgba(0, 0, 0, 1);
     color: #b89c5b !important;
     font-weight: bold;
@@ -168,7 +168,7 @@
 
   .body--light .tab-btn {
     opacity: .5;
-    background: linear-gradient(to bottom, rgba(185, 185, 185, .5) 10%, rgba(235, 235, 235, .5) 60%, rgba(245, 245, 245, 1)), url('/static/images/rough.jpg') repeat !important;
+    background: linear-gradient(to bottom, rgba(185, 185, 185, .5) 10%, rgba(235, 235, 235, .5) 60%, rgba(245, 245, 245, 1)), url('/images/rough.jpg') repeat !important;
     box-shadow: inset 0 -1px 0 0 rgba(245, 245, 245, .7), inset 1px 1px 0 0 rgba(245, 245, 245, .7), inset 0 1px 0 0 rgba(245, 245, 245, .7), inset 0 0 1px 0 rgba(65, 44, 6, .7), inset 0 0 10px 3px rgba(0, 0, 0, 1);
     color: rgba(5, 5, 5, 1) !important;
   }
@@ -204,12 +204,12 @@
       background-size: 80vw !important;
       border-radius: 4px !important;
       box-shadow: none;
-      background: linear-gradient(to bottom, rgba(40, 40, 40, .7) 10%, rgba(20, 20, 20, .5) 80%, rgba(0, 0, 0, 1)), url('/static/images/rough.jpg') repeat !important;
+      background: linear-gradient(to bottom, rgba(40, 40, 40, .7) 10%, rgba(20, 20, 20, .5) 80%, rgba(0, 0, 0, 1)), url('/images/rough.jpg') repeat !important;
     }
 
     .body--light .tab-btn {
       color: inherit !important;
-      background: linear-gradient(to bottom, rgba(235, 235, 235, .5) 10%, rgba(150, 150, 150, .5) 80%, rgba(0, 0, 0, 1)), url('/static/images/rough.jpg') repeat !important;
+      background: linear-gradient(to bottom, rgba(235, 235, 235, .5) 10%, rgba(150, 150, 150, .5) 80%, rgba(0, 0, 0, 1)), url('/images/rough.jpg') repeat !important;
     }
   }
 

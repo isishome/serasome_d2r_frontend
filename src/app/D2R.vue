@@ -323,8 +323,8 @@
                 </adsense>
                 <adsense
                   v-if="$q.screen.gt.sm === true && isProduction === true && noAD === false && isKnowledge === true"
-                  data-ad-client="ca-pub-5110777286519562" data-ad-slot="4948790020" data-ad-format="vertical"
-                  horizontal="left" :key="`ar2-${key}`" width="120px" height="240px">
+                  data-ad-client="ca-pub-5110777286519562" data-ad-slot="4948790020" horizontal="left"
+                  :key="`ar2-${key}`" class="q-mt-sm" random>
                 </adsense>
               </template>
             </div>
@@ -341,7 +341,7 @@
             round size="md" icon="keyboard_arrow_up" color="d2r" />
         </q-page-scroller>
       </q-page-container>
-      <q-footer class="gt-sm ss-footer row justify-between items-center q-dark" height-hint="56">
+      <q-footer v-if="$q.screen.gt.sm" class="ss-footer row justify-between items-center q-dark" height-hint="56">
         <div class="col-4 gt-sm"></div>
         <div class="col q-ma-none col-md-4 row justify-center items-center q-gutter-x-xs text-caption">
           <q-avatar size="md">
@@ -359,9 +359,9 @@
         <div class="col gt-sm row justify-end q-ma-sm">
         </div>
       </q-footer>
-      <d2r-zoom :images="images"></d2r-zoom>
     </q-layout>
     <router-view name="independent" v-else />
+    <d2r-zoom :images="images"></d2r-zoom>
   </div>
 </template>
 <script>
