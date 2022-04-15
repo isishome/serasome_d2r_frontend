@@ -43,12 +43,12 @@
       <q-card-section class="no-padding row justify-center items-center">
         <div class="q-pt-xs">
           <adsense v-if="$q.platform.is.cordova !== true && $q.platform.is.mobile === true && !noAD && isProduction"
-            data-ad-client="ca-pub-5110777286519562" data-ad-slot="7643637446" data-ad-format="rectangle, horizontal"
-            width="300px" height="50px" :key="`acm-${key}`">
+            data-ad-client="ca-pub-5110777286519562" data-ad-slot="7643637446" width="300px" height="50px"
+            :key="`acm-${key}`">
           </adsense>
           <adsense v-if="$q.platform.is.cordova !== true && $q.platform.is.desktop === true && !noAD && isProduction"
-            data-ad-client="ca-pub-5110777286519562" data-ad-slot="7180603013" data-ad-format="rectangle, horizontal"
-            width="728px" height="90px" :key="`acd-${key}`">
+            data-ad-client="ca-pub-5110777286519562" data-ad-slot="7180603013" width="728px" height="90px"
+            :key="`acd-${key}`">
           </adsense>
         </div>
       </q-card-section>
@@ -142,21 +142,23 @@
   hljs.registerLanguage('css', css)
   hljs.registerLanguage('dos', dos)
   hljs.registerLanguage('bash', bash)
-  import 'highlight.js/styles/vs2015.css'
+  import '@/assets/styles/vs2015.css'
+
   const d2rConfirm = () => import(/* webpackChunkName: "d2r-confirm" */ '@/components/d2r/Confirm')
   const d2rComments = () => import(/* webpackChunkName: "d2r-comments" */ '@/components/d2r/Comments')
+
   const zoomImages = []
+
   const io = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        entry.target.addEventListener('load', () => {
-          entry.target.removeAttribute('width')
-          entry.target.removeAttribute('height')
-          entry.target.classList.remove('io-img')
-        })
-        entry.target.src = entry.target.dataset.src
         observer.unobserve(entry.target)
         zoomImages.push({ 'element': entry.target, 'src': entry.target.src })
+        const img = new Image()
+        img.src = entry.target.dataset.src
+        img.onload = () => {
+          entry.target.replaceWith(img)
+        }
       }
     })
   })
@@ -278,7 +280,7 @@
         setImages: 'setD2RImages'
       }),
       intersactionImage(info) {
-        info.contents = info.contents.replace(/(<img[^>]+)(src)([^>]+>)/gmi, '$1 class="io-img" width="300" height="150" src="/images/d2r_og.jpg" data-src$3')
+        info.contents = info.contents.replace(/(<img[^>]+)(src)([^>]+>)/gmi, '$1 class="io-img" src="/images/d2r_og.jpg" data-src$3')
       },
       getList() {
         const vm = this

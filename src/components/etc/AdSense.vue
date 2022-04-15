@@ -1,7 +1,7 @@
 <template>
   <div class="full-width" :style="`position:${fixed ? 'fixed' : ''};text-align:${horizontal}`">
     <ins ref="adbox" class="adsbygoogle" :data-ad-client="dataAdClient" :data-ad-slot="dataAdSlot"
-      :data-adtest="dataAdtest" :data-ad-format="dataAdFormat" :data-full-width-responsive="dataFullWidthResponsive"
+      :data-ad-format="dataAdFormat" :data-full-width-responsive="dataFullWidthResponsive"
       :style="`display:inline-block;width:${tempWidth};height:${tempHeight}`"></ins>
   </div>
 </template>
@@ -17,17 +17,13 @@
         type: String,
         required: true
       },
-      dataAdtest: {
-        type: String,
-        default: 'off'
-      },
       dataAdFormat: {
         type: String,
-        default: 'auto'
+        default: null
       },
       dataFullWidthResponsive: {
         type: String,
-        default: 'false'
+        default: null
       },
       width: {
         type: String,

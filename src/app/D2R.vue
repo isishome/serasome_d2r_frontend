@@ -305,26 +305,22 @@
         </q-dialog>
         <router-view name="carousel" />
         <div :class="['row q-mx-sm', $q.screen.lt.md ? 'q-mt-sm' : 'q-mt-lg']">
-          <div class="gt-sm col row justify-end" style="padding:60px 6px 0 0;">
+          <div class="gt-sm col row justify-end" :style="`padding:${isKnowledge ? '70px' : '0'} 6px 0 0`">
             <adsense v-if="noAD === false && $q.screen.gt.sm === true && isProduction === true && isKnowledge === false"
-              data-ad-client="ca-pub-5110777286519562" data-ad-slot="4948790020" data-ad-format="vertical"
-              horizontal="right" :key="`al-${key}`" random>
+              data-ad-client="ca-pub-5110777286519562" data-ad-slot="4948790020" width="160px" height="600px"
+              horizontal="right" :key="`al-${key}`">
             </adsense>
           </div>
           <q-page class="col-xl-7 col-lg-8 col-md-10 col-12">
             <router-view />
           </q-page>
-          <div class="gt-sm col column items-start q-gutter-y-sm" style="padding:60px 0 0 6px;">
+          <div class="gt-sm col column items-start q-gutter-y-sm"
+            :style="`padding:${isKnowledge ? '70px' : '0'} 0 0 6px`">
             <div style="position: fixed;">
               <template>
                 <adsense v-if="$q.screen.gt.sm === true && isProduction === true && noAD === false"
-                  data-ad-client="ca-pub-5110777286519562" data-ad-slot="9654321794" data-ad-format="vertical"
-                  horizontal="left" :key="`ar1-${key}`" random>
-                </adsense>
-                <adsense
-                  v-if="$q.screen.gt.sm === true && isProduction === true && noAD === false && isKnowledge === true"
-                  data-ad-client="ca-pub-5110777286519562" data-ad-slot="4948790020" horizontal="left"
-                  :key="`ar2-${key}`" class="q-mt-sm" random>
+                  data-ad-client="ca-pub-5110777286519562" data-ad-slot="9654321794" width="160px" height="600px"
+                  horizontal="left" :key="`ar1-${key}`">
                 </adsense>
               </template>
             </div>
