@@ -280,7 +280,6 @@
         this.go(1)
       },
       go(page) {
-
         this.pagination.page = page || 1
         if (this.$refs.table)
           this.$refs.table.onRequest({ pagination: this.pagination })

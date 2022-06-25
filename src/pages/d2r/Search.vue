@@ -6,7 +6,7 @@
           <q-icon name="fas fa-search" size="xs" color="yellow-10" />
           <div class="font-title text-h6 text-grey-6 q-ml-sm">{{$t('search.result')}}</div>
         </div>
-        <q-input dark dense standout outlined color="yellow-10" :label="$t('search.title')" v-model="text"
+        <q-input dense standout outlined color="yellow-10" :label="$t('search.title')" v-model="text"
           input-class="text-left" class="col-12 col-md-4" @keyup.enter="search"
           :rules="[ val => check(val) || $t('search.message.invalidWord') ]" maxlength="20" :autofocus="$q.screen.gt.xs"
           no-error-icon>

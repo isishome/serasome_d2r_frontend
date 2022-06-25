@@ -39,9 +39,9 @@
     data() {
       return {
         loading: {
-          lastest: false,
-          top: false,
-          storage: false
+          lastest: true,
+          top: true,
+          storage: true
         },
         lastest: [],
         top: [],
@@ -65,7 +65,6 @@
     methods: {
       getLastest() {
         const vm = this
-        this.loading.lastest = true
         let tempLastest = []
         this.axios
           .get('/d2r/board/lastest').then(function (response) {
@@ -79,7 +78,6 @@
       },
       getTop() {
         const vm = this
-        this.loading.top = true
         let tempTop = []
         this.axios
           .get('/d2r/board/top').then(function (response) {
@@ -93,7 +91,6 @@
       },
       getStorage() {
         const vm = this
-        this.loading.storage = true
         let tempStorage = []
         this.axios
           .get('/d2r/storage/summary').then(function (response) {

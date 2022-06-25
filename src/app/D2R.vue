@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <q-layout view="hHh lpR lfr" v-if="!independent">
-      <q-header class="q-dark q-py-xs text-grey-5 text-weight-bold font-kodia" elevated>
-        <q-toolbar class="row justify-start items-center q-col-gutter-x-sm">
+      <q-header class="header q-dark q-py-xs text-grey-5 text-weight-bold">
+        <q-toolbar class="row justify-start items-center q-col-gutter-x-sm font-kodia">
           <!-- toolbar 1 -->
           <div class="row justify-start">
             <q-btn dense flat class="lt-lg" @click="drawer = !drawer">
@@ -35,7 +35,6 @@
               </q-route-tab>
             </q-tabs>
           </div>
-
           <div class="col lt-lg absolute-center">
             <q-btn @click="home" flat dense class="row justify-center items-center" size="22px">
               <q-avatar flat class="text-d2r d2r-logo-b" icon="fas fa-star-of-david" size="30px" />
@@ -51,13 +50,13 @@
           <div class="col row justify-end items-center q-gutter-x-sm">
             <q-btn dense flat padding="0" :to="{name:'d2r-knowledge-part', params:{ section:'Items', part:'Cube' }}">
               <q-avatar size="sm" rounded>
-                <img :src="require('@/assets/images/d2r/items/cube.png')">
+                <img src="@/assets/images/d2r/items/cube.png">
               </q-avatar>
               <span class="gt-lg q-ml-xs">{{$t('d2r.cube')}}</span>
             </q-btn>
             <q-btn dense flat padding="0" :to="{name:'d2r-knowledge-part', params:{ section:'Items', part:'Rune' }}">
               <q-avatar size="sm" rounded>
-                <img :src="require('@/assets/images/d2r/items/rune.png')">
+                <img src="@/assets/images/d2r/items/rune.png">
               </q-avatar>
               <span class="gt-lg q-ml-xs">{{$t('d2r.rune')}}</span>
             </q-btn>
@@ -75,22 +74,20 @@
               <q-icon :name="signStatus ? 'fas fa-sign-out-alt' : 'fas fa-user-circle'" size="20px" />
               <span class="gt-lg q-ml-xs">{{ signStatus ? $t('signOut.title') : $t('signIn.title') }}</span>
             </q-btn>
-            <q-btn-dropdown class="gt-md" dense dropdown-icon="language" no-icon-animation size="md"
-              content-style="background-color:rgba(20,20,20,1) !important;box-shadow: 0 0 4px 0 rgba(200,200,200,0.6)">
-              <q-list class="text-grey-7" separator>
+            <q-btn-dropdown class="gt-md" dense flat dropdown-icon="language" no-icon-animation size="md">
+              <q-list separator bordered>
                 <q-item dense v-for="(option, index) in options" :key="index" clickable v-close-popup
-                  @click="lang = option.value" :active="lang === option.value"
-                  active-class="text-grey-2 text-weight-bold">
+                  @click="lang = option.value" :active="lang === option.value" active-class="text-red">
                   <q-item-section>
                     <q-item-label>{{option.label}}</q-item-label>
                   </q-item-section>
                 </q-item>
               </q-list>
             </q-btn-dropdown>
-            <q-input dark v-if="$route.name !== 'd2r-search'" dense standout outlined color="yellow-10"
-              :label="$t('btn.search')" v-model="text" input-class="text-left" input-style="width:50vw"
-              class="col-3 q-ml-md gt-lg" @keyup.enter="search" :error="text.length > 20" hide-bottom-space
-              no-error-icon>
+            <q-input v-if="$route.name !== 'd2r-search'" dense standout outlined color="yellow-10"
+              :label="$t('btn.search')" v-model="text" input-class="text-left"
+              :input-style="{width:'50vw', fontFamily:'inherits !important'}" class="col-3 q-ml-md gt-lg"
+              @keyup.enter="search" :error="text.length > 20" hide-bottom-space no-error-icon>
               <template v-slot:append>
                 <q-icon v-if="text === ''" name="search" />
                 <q-icon v-else name="close" class="cursor-pointer" @click="text = ''" />
@@ -119,8 +116,8 @@
               <q-item v-if="$route.name !== 'd2r-search'">
                 <q-item-section>
                   <q-input dense standout outlined :label="$t('btn.search')" color="title" v-model="text"
-                    input-class="text-left" @keyup.enter="search" :error="text.length > 20" hide-bottom-space
-                    no-error-icon>
+                    input-class="text-left" :input-style="{fontFamily:'inherits !important'}" @keyup.enter="search"
+                    :error="text.length > 20" hide-bottom-space no-error-icon>
                     <template v-slot:append>
                       <q-icon v-if="text === ''" name="search" />
                       <q-icon v-else name="close" class="cursor-pointer" @click="text = ''" />
@@ -307,20 +304,19 @@
         <div :class="['row q-mx-sm', $q.screen.lt.md ? 'q-mt-sm' : 'q-mt-lg']">
           <div class="gt-sm col row justify-end" :style="`padding:${isKnowledge ? '70px' : '0'} 6px 0 0`">
             <adsense v-if="noAD === false && $q.screen.gt.sm === true && isProduction === true && isKnowledge === false"
-              data-ad-client="ca-pub-5110777286519562" data-ad-slot="4948790020" width="160px" height="600px"
-              horizontal="right" :key="`al-${key}`">
+              class="overflow-hidden" data-ad-client="ca-pub-5110777286519562" data-ad-slot="4948790020"
+              :width="$q.screen.gt.md ? '160px' : '120px'" height="600px" horizontal="right" :key="`al-${key}`">
             </adsense>
           </div>
           <q-page class="col-xl-7 col-lg-8 col-md-10 col-12">
             <router-view />
           </q-page>
-          <div class="gt-sm col column items-start q-gutter-y-sm"
-            :style="`padding:${isKnowledge ? '70px' : '0'} 0 0 6px`">
+          <div class="gt-sm col row items-start" :style="`padding:${isKnowledge ? '70px' : '0'} 0 0 6px`">
             <div style="position: fixed;">
               <template>
                 <adsense v-if="$q.screen.gt.sm === true && isProduction === true && noAD === false"
-                  data-ad-client="ca-pub-5110777286519562" data-ad-slot="9654321794" width="160px" height="600px"
-                  horizontal="left" :key="`ar1-${key}`">
+                  data-ad-client="ca-pub-5110777286519562" data-ad-slot="9654321794"
+                  :width="$q.screen.gt.md ? '160px' : '120px'" height="600px" horizontal="left" :key="`ar1-${key}`">
                 </adsense>
               </template>
             </div>
@@ -414,6 +410,10 @@
           this.$q.cookies.set(process.env.VUE_APP_LANGUAGE_NAME, val, { path: '/', expires: '7300d' })
           document.location.reload()
         }
+      },
+      '$q.screen.gt.md': function (val, old) {
+        if (val !== old)
+          this.key++
       }
     },
     computed: {
@@ -636,6 +636,10 @@
   }
 </script>
 <style scoped>
+  .header {
+    box-shadow: 0 1px 1px 0 rgba(150, 150, 150, .1);
+  }
+
   .d2r-flame {
     font-size: 27px;
     font-weight: bolder !important;
@@ -649,6 +653,12 @@
     line-height: 16px;
     color: rgb(240, 156, 0);
     text-shadow: 0 0 1px rgb(251, 255, 0), 0 -1px 2px rgb(255, 136, 0), 0 -3px 8px rgb(255, 38, 0);
+  }
+
+  .body--light .d2r-flame,
+  .body--light .d2r-sub-title {
+    text-shadow: none;
+    color: #000000;
   }
 
   .text-h7 {

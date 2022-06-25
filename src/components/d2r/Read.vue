@@ -40,7 +40,7 @@
         </div>
       </q-card-section>
       <q-separator inset />
-      <q-card-section class="no-padding row justify-center items-center">
+      <!-- <q-card-section class="no-padding row justify-center items-center">
         <div class="q-pt-xs">
           <adsense v-if="$q.platform.is.cordova !== true && $q.platform.is.mobile === true && !noAD && isProduction"
             data-ad-client="ca-pub-5110777286519562" data-ad-slot="7643637446" width="300px" height="50px"
@@ -51,7 +51,7 @@
             :key="`acd-${key}`">
           </adsense>
         </div>
-      </q-card-section>
+      </q-card-section> -->
       <q-card-section class="read-contents">
         <div v-if="data && data.youtube">
           <q-video :ratio="16/9" :src="`https://www.youtube.com/embed/${getYoutubeId(data.youtube)}?rel=0`" />
@@ -496,6 +496,11 @@
   }
 
   @media screen and (max-width:599px) {
+    .contents {
+      font-size: 1em !important;
+      line-height: 1.4em !important;
+    }
+
     .comments-wrap {
       padding: 0 !important;
     }

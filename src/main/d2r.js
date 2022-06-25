@@ -73,13 +73,17 @@ const router = new VueRouter({
   //mode: 'history',
   routes: Platform.is.cordova ? routesCordova : routes,
   scrollBehavior(to, from, savedPosition) {
-    const findTopScroll = to.matched.find(route => route.meta.topScroll)
-    if (findTopScroll)
-      return { x: 0, y: 0 }
-    else if (savedPosition)
-      return savedPosition
-    else
-      return
+    return new Promise((resolve) => {
+      const isTopScroll = to.matched.find(route => route.meta.topScroll === true)
+      setTimeout(() => {
+        if (isTopScroll)
+          resolve({ x: 0, y: 0 })
+        else if (savedPosition)
+          resolve(savedPosition)
+        else
+          resolve()
+      }, 100)
+    })
   }
 })
 
