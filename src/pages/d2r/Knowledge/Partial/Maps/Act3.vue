@@ -19,7 +19,7 @@
             </q-card>
           </div>
         </q-timeline-entry>
-        <q-timeline-entry color="green-10" side="right" icon="fas fa-tree">
+        <q-timeline-entry color="green-10" side="right" icon="park">
           <div class="q-mb-lg row">
             <q-card bordered class="map-card bg-knowledge text-weight-bold" style="float:left;clear:both;">
               <q-card-section class="text-center">
@@ -66,7 +66,7 @@
             <div class="col gt-sm"></div>
           </div>
         </q-timeline-entry>
-        <q-timeline-entry color="grey-9" side="left" icon="fas fa-dungeon">
+        <q-timeline-entry color="grey-9" side="left" icon="door_open">
           <div class="row q-mb-lg">
             <div class="col gt-sm"></div>
             <q-card bordered class="map-card bg-knowledge text-weight-bold">
@@ -98,7 +98,7 @@
             </q-card>
           </div>
         </q-timeline-entry>
-        <q-timeline-entry color="indigo-10" side="right" icon="fas fa-landmark">
+        <q-timeline-entry color="indigo-10" side="right" icon="fort">
           <div class="q-mb-lg row">
             <q-card bordered class="map-card bg-knowledge text-weight-bold" style="float:left;clear:both;">
               <q-card-section class="text-center">
@@ -145,7 +145,7 @@
             <div class="col gt-sm"></div>
           </div>
         </q-timeline-entry>
-        <q-timeline-entry color="grey-6" side="left" icon="fas fa-archway">
+        <q-timeline-entry color="grey-6" side="left" icon="house_siding">
           <div class="row">
             <div class="col gt-sm"></div>
             <q-card bordered class="map-card bg-knowledge text-weight-bold">
@@ -162,7 +162,7 @@
             </q-card>
           </div>
         </q-timeline-entry>
-        <q-timeline-entry color="brown-5" side="right" icon="fas fa-dungeon">
+        <q-timeline-entry color="brown-5" side="right" icon="door_open">
           <div class="row">
             <q-card bordered class="map-card bg-knowledge text-weight-bold" style="float:left;clear:both;">
               <q-card-section class="text-center">
@@ -179,7 +179,7 @@
             <div class="col gt-sm"></div>
           </div>
         </q-timeline-entry>
-        <q-timeline-entry color="grey-7" side="left" icon="fas fa-kaaba">
+        <q-timeline-entry color="grey-7" side="left" icon="line_style">
           <div class="row">
             <div class="col gt-sm"></div>
             <q-card bordered class="map-card bg-knowledge text-weight-bold">
@@ -196,7 +196,7 @@
             </q-card>
           </div>
         </q-timeline-entry>
-        <q-timeline-entry color="red-10" side="right" icon="fas fa-kaaba">
+        <q-timeline-entry color="red-10" side="right" icon="line_style">
           <div class="row">
             <q-card bordered class="map-card bg-knowledge text-weight-bold" style="float:left;clear:both;">
               <q-card-section class="text-center">
@@ -237,7 +237,7 @@
             </q-card>
           </div>
         </q-timeline-entry>
-        <q-timeline-entry color="green-10" side="right" icon="fas fa-tree">
+        <q-timeline-entry color="green-10" side="right" icon="park">
           <div class="q-mb-lg row">
             <q-card bordered class="map-card bg-knowledge text-weight-bold" style="float:left;clear:both;">
               <q-card-section class="text-center">
@@ -284,7 +284,7 @@
             <div class="col gt-sm"></div>
           </div>
         </q-timeline-entry>
-        <q-timeline-entry color="grey-9" side="left" icon="fas fa-dungeon">
+        <q-timeline-entry color="grey-9" side="left" icon="door_open">
           <div class="row q-mb-lg">
             <div class="col gt-sm"></div>
             <q-card bordered class="map-card bg-knowledge text-weight-bold">
@@ -316,7 +316,7 @@
             </q-card>
           </div>
         </q-timeline-entry>
-        <q-timeline-entry color="indigo-10" side="right" icon="fas fa-landmark">
+        <q-timeline-entry color="indigo-10" side="right" icon="fort">
           <div class="q-mb-lg row">
             <q-card bordered class="map-card bg-knowledge text-weight-bold" style="float:left;clear:both;">
               <q-card-section class="text-center">
@@ -363,7 +363,7 @@
             <div class="col gt-sm"></div>
           </div>
         </q-timeline-entry>
-        <q-timeline-entry color="grey-6" side="left" icon="fas fa-archway">
+        <q-timeline-entry color="grey-6" side="left" icon="house_siding">
           <div class="row">
             <div class="col gt-sm"></div>
             <q-card bordered class="map-card bg-knowledge text-weight-bold">
@@ -380,7 +380,7 @@
             </q-card>
           </div>
         </q-timeline-entry>
-        <q-timeline-entry color="brown-5" side="right" icon="fas fa-dungeon">
+        <q-timeline-entry color="brown-5" side="right" icon="door_open">
           <div class="row">
             <q-card bordered class="map-card bg-knowledge text-weight-bold" style="float:left;clear:both;">
               <q-card-section class="text-center">
@@ -397,7 +397,7 @@
             <div class="col gt-sm"></div>
           </div>
         </q-timeline-entry>
-        <q-timeline-entry color="grey-7" side="left" icon="fas fa-kaaba">
+        <q-timeline-entry color="grey-7" side="left" icon="line_style">
           <div class="row">
             <div class="col gt-sm"></div>
             <q-card bordered class="map-card bg-knowledge text-weight-bold">
@@ -414,7 +414,7 @@
             </q-card>
           </div>
         </q-timeline-entry>
-        <q-timeline-entry color="red-10" side="right" icon="fas fa-kaaba">
+        <q-timeline-entry color="red-10" side="right" icon="line_style">
           <div class="row">
             <q-card bordered class="map-card bg-knowledge text-weight-bold" style="float:left;clear:both;">
               <q-card-section class="text-center">
@@ -437,62 +437,62 @@
       </q-timeline>
     </template>
     <p class="q-mt-xl text-right text-grey-6" :class="$q.screen.lt.md ? 'text-caption' : ''">
-      {{$t('d2r.knowledge.source')}} :
+      {{ $t('d2r.knowledge.source') }} :
       <a style="text-decoration: none;" class="text-title" target="_blank"
-        href="http://classic.battle.net/diablo2exp/maps/act3.shtml">{{$t('d2r.knowledge.arreatSummit')}}</a>
+        href="http://classic.battle.net/diablo2exp/maps/act3.shtml">{{ $t('d2r.knowledge.arreatSummit') }}</a>
     </p>
   </div>
 </template>
 <script>
-  import {
-    mapActions
-  } from 'vuex'
+import {
+  mapActions
+} from 'vuex'
 
-  export default {
-    computed: {
-      layout() {
-        return this.$q.screen.lt.sm ? 'dense' : (this.$q.screen.lt.md ? 'comfortable' : 'loose')
-      }
-    },
-    mounted() {
-      this.injectImg()
-    },
-    methods: {
-      ...mapActions({
-        setImages: 'setD2RImages'
-      }),
-      injectImg() {
-        let images = []
-        let i = 0
-        while (i < 200) {
-          if (this.$refs[`img${i}`]) {
-            images.push(this.$refs[`img${i}`])
-            i++
-          }
-          else
-            break
-
+export default {
+  computed: {
+    layout() {
+      return this.$q.screen.lt.sm ? 'dense' : (this.$q.screen.lt.md ? 'comfortable' : 'loose')
+    }
+  },
+  mounted() {
+    this.injectImg()
+  },
+  methods: {
+    ...mapActions({
+      setImages: 'setD2RImages'
+    }),
+    injectImg() {
+      let images = []
+      let i = 0
+      while (i < 200) {
+        if (this.$refs[`img${i}`]) {
+          images.push(this.$refs[`img${i}`])
+          i++
         }
-        this.setImages(images.map(e => { return { 'element': e.$el, 'src': e.src } }))
+        else
+          break
+
       }
+      this.setImages(images.map(e => { return { 'element': e.$el, 'src': e.src } }))
     }
   }
+}
 </script>
 <style scoped>
+.map-card {
+  width: 410px;
+  max-width: 100%;
+}
+
+.body--light .map-card {
+  background-color: rgba(245, 245, 245, 1) !important;
+}
+
+@media screen and (max-width:599px) {
   .map-card {
-    width: 410px;
-    max-width: 100%;
+    font-size: 0.7em;
+    word-break: keep-all;
+    line-height: 1.4em;
   }
-
-  .body--light .map-card {
-    background-color: rgba(245, 245, 245, 1) !important;
-  }
-
-  @media screen and (max-width:599px) {
-    .map-card {
-      font-size: 0.7em;
-      word-break: keep-all;
-      line-height: 1.4em;
-    }
-  }
+}
 </style>

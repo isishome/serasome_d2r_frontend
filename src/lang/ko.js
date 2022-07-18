@@ -218,7 +218,7 @@ export default {
           {
             "value": "Shrines",
             "name": "성소",
-            "icon": "fas fa-campground"
+            "icon": "change_history"
           },
           {
             "value": "Maps",

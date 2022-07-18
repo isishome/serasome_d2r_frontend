@@ -218,7 +218,7 @@ export default {
           {
             "value": "Shrines",
             "name": "Shrines",
-            "icon": "fas fa-campground"
+            "icon": "change_history"
           },
           {
             "value": "Maps",

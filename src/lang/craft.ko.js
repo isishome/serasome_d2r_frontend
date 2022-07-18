@@ -4,7 +4,7 @@ export default {
       {
         id: 'hit-power',
         name: '힛 파워',
-        icon: 'far fa-hand-rock',
+        icon: 'assistant',
         color: 'blue-9',
         common: { recipe: [{ name: '최상급<br>사파이어', img: 'gems/perfect_saphire.png' }, { name: '주얼', img: 'jewels/jewel.png' }], effects: ['피격 시 5% 확률로 4 레벨 서릿발 시전', '공격자가 피해를 3~7 받음'] },
         list: [

@@ -19,7 +19,7 @@
             </q-card>
           </div>
         </q-timeline-entry>
-        <q-timeline-entry color="green-10" side="left" icon="fas fa-swimming-pool">
+        <q-timeline-entry color="green-10" side="left" icon="tools_ladder">
           <div class="row">
             <div class="col gt-sm"></div>
             <q-card bordered class="map-card bg-knowledge text-weight-bold">
@@ -36,7 +36,7 @@
             </q-card>
           </div>
         </q-timeline-entry>
-        <q-timeline-entry color="yellow-9" side="right" icon="fas fa-mountain">
+        <q-timeline-entry color="yellow-9" side="right" icon="landscape">
           <div class="row">
             <q-card bordered class="map-card bg-knowledge text-weight-bold" style="float:left;clear:both;">
               <q-card-section class="text-center">
@@ -53,7 +53,7 @@
             <div class="col gt-sm"></div>
           </div>
         </q-timeline-entry>
-        <q-timeline-entry color="yellow-10" side="left" icon="fas fa-dungeon">
+        <q-timeline-entry color="yellow-10" side="left" icon="door_open">
           <div class="row q-mb-lg">
             <div class="col gt-sm"></div>
             <q-card bordered class="map-card bg-knowledge text-weight-bold">
@@ -85,7 +85,7 @@
             </q-card>
           </div>
         </q-timeline-entry>
-        <q-timeline-entry color="green-5" side="right" icon="fas fa-bug">
+        <q-timeline-entry color="green-5" side="right" icon="pest_control">
           <div class="q-mb-lg row">
             <q-card bordered class="map-card bg-knowledge text-weight-bold" style="float:left;clear:both;">
               <q-card-section class="text-center">
@@ -134,7 +134,7 @@
             </q-card>
           </div>
         </q-timeline-entry>
-        <q-timeline-entry color="orange-5" side="right" icon="fas fa-university">
+        <q-timeline-entry color="orange-5" side="right" icon="fort">
           <div class="row">
             <q-card bordered class="map-card bg-knowledge text-weight-bold" style="float:left;clear:both;">
               <q-card-section class="text-center">
@@ -173,7 +173,7 @@
             </q-card>
           </div>
         </q-timeline-entry>
-        <q-timeline-entry color="purple" side="right" icon="fas fa-church">
+        <q-timeline-entry color="purple" side="right" icon="church">
           <div class="row">
             <q-card bordered class="map-card bg-knowledge text-weight-bold" style="float:left;clear:both;">
               <q-card-section class="text-center">
@@ -190,7 +190,7 @@
             <div class="col gt-sm"></div>
           </div>
         </q-timeline-entry>
-        <q-timeline-entry color="red-6" side="left" icon="fas fa-church">
+        <q-timeline-entry color="red-6" side="left" icon="church">
           <div class="row">
             <div class="col gt-sm"></div>
             <q-card bordered class="map-card bg-knowledge text-weight-bold">
@@ -224,7 +224,7 @@
             <div class="col gt-sm"></div>
           </div>
         </q-timeline-entry>
-        <q-timeline-entry color="orange-5" side="left" icon="fas fa-university">
+        <q-timeline-entry color="orange-5" side="left" icon="fort">
           <div class="row">
             <div class="col gt-sm"></div>
             <q-card bordered class="map-card bg-knowledge text-weight-bold">
@@ -241,7 +241,7 @@
             </q-card>
           </div>
         </q-timeline-entry>
-        <q-timeline-entry color="purple-8" side="right" icon="fas fa-cross">
+        <q-timeline-entry color="purple-8" side="right" icon="local_hospital">
           <div class="row">
             <q-card bordered class="map-card bg-knowledge text-weight-bold" style="float:left;clear:both;">
               <q-card-section class="text-center">
@@ -258,7 +258,7 @@
             <div class="col gt-sm"></div>
           </div>
         </q-timeline-entry>
-        <q-timeline-entry color="purple-10" side="left" icon="fas fa-cross">
+        <q-timeline-entry color="purple-10" side="left" icon="local_hospital">
           <div class="row">
             <div class="col gt-sm"></div>
             <q-card bordered class="map-card bg-knowledge text-weight-bold">
@@ -299,7 +299,7 @@
             </q-card>
           </div>
         </q-timeline-entry>
-        <q-timeline-entry color="green-10" side="left" icon="fas fa-swimming-pool">
+        <q-timeline-entry color="green-10" side="left" icon="tools_ladder">
           <div class="row">
             <div class="col gt-sm"></div>
             <q-card bordered class="map-card bg-knowledge text-weight-bold">
@@ -316,7 +316,7 @@
             </q-card>
           </div>
         </q-timeline-entry>
-        <q-timeline-entry color="yellow-9" side="right" icon="fas fa-mountain">
+        <q-timeline-entry color="yellow-9" side="right" icon="landscape">
           <div class="row">
             <q-card bordered class="map-card bg-knowledge text-weight-bold" style="float:left;clear:both;">
               <q-card-section class="text-center">
@@ -333,7 +333,7 @@
             <div class="col gt-sm"></div>
           </div>
         </q-timeline-entry>
-        <q-timeline-entry color="yellow-10" side="left" icon="fas fa-dungeon">
+        <q-timeline-entry color="yellow-10" side="left" icon="door_open">
           <div class="row q-mb-lg">
             <div class="col gt-sm"></div>
             <q-card bordered class="map-card bg-knowledge text-weight-bold">
@@ -365,7 +365,7 @@
             </q-card>
           </div>
         </q-timeline-entry>
-        <q-timeline-entry color="green-5" side="right" icon="fas fa-bug">
+        <q-timeline-entry color="green-5" side="right" icon="pest_control">
           <div class="q-mb-lg row">
             <q-card bordered class="map-card bg-knowledge text-weight-bold" style="float:left;clear:both;">
               <q-card-section class="text-center">
@@ -414,7 +414,7 @@
             </q-card>
           </div>
         </q-timeline-entry>
-        <q-timeline-entry color="orange-5" side="right" icon="fas fa-university">
+        <q-timeline-entry color="orange-5" side="right" icon="fort">
           <div class="row">
             <q-card bordered class="map-card bg-knowledge text-weight-bold" style="float:left;clear:both;">
               <q-card-section class="text-center">
@@ -453,7 +453,7 @@
             </q-card>
           </div>
         </q-timeline-entry>
-        <q-timeline-entry color="purple" side="right" icon="fas fa-church">
+        <q-timeline-entry color="purple" side="right" icon="church">
           <div class="row">
             <q-card bordered class="map-card bg-knowledge text-weight-bold" style="float:left;clear:both;">
               <q-card-section class="text-center">
@@ -470,7 +470,7 @@
             <div class="col gt-sm"></div>
           </div>
         </q-timeline-entry>
-        <q-timeline-entry color="red-6" side="left" icon="fas fa-church">
+        <q-timeline-entry color="red-6" side="left" icon="church">
           <div class="row">
             <div class="col gt-sm"></div>
             <q-card bordered class="map-card bg-knowledge text-weight-bold">
@@ -504,7 +504,7 @@
             <div class="col gt-sm"></div>
           </div>
         </q-timeline-entry>
-        <q-timeline-entry color="orange-5" side="left" icon="fas fa-university">
+        <q-timeline-entry color="orange-5" side="left" icon="fort">
           <div class="row">
             <div class="col gt-sm"></div>
             <q-card bordered class="map-card bg-knowledge text-weight-bold">
@@ -521,7 +521,7 @@
             </q-card>
           </div>
         </q-timeline-entry>
-        <q-timeline-entry color="purple-8" side="right" icon="fas fa-cross">
+        <q-timeline-entry color="purple-8" side="right" icon="local_hospital">
           <div class="row">
             <q-card bordered class="map-card bg-knowledge text-weight-bold" style="float:left;clear:both;">
               <q-card-section class="text-center">
@@ -538,7 +538,7 @@
             <div class="col gt-sm"></div>
           </div>
         </q-timeline-entry>
-        <q-timeline-entry color="purple-10" side="left" icon="fas fa-cross">
+        <q-timeline-entry color="purple-10" side="left" icon="local_hospital">
           <div class="row">
             <div class="col gt-sm"></div>
             <q-card bordered class="map-card bg-knowledge text-weight-bold">
@@ -561,62 +561,62 @@
       </q-timeline>
     </template>
     <p class="q-mt-xl text-right text-grey-6" :class="$q.screen.lt.md ? 'text-caption' : ''">
-      {{$t('d2r.knowledge.source')}} :
+      {{ $t('d2r.knowledge.source') }} :
       <a style="text-decoration: none;" class="text-title" target="_blank"
-        href="http://classic.battle.net/diablo2exp/maps/act2.shtml">{{$t('d2r.knowledge.arreatSummit')}}</a>
+        href="http://classic.battle.net/diablo2exp/maps/act2.shtml">{{ $t('d2r.knowledge.arreatSummit') }}</a>
     </p>
   </div>
 </template>
 <script>
-  import {
-    mapActions
-  } from 'vuex'
+import {
+  mapActions
+} from 'vuex'
 
-  export default {
-    computed: {
-      layout() {
-        return this.$q.screen.lt.sm ? 'dense' : (this.$q.screen.lt.md ? 'comfortable' : 'loose')
-      }
-    },
-    mounted() {
-      this.injectImg()
-    },
-    methods: {
-      ...mapActions({
-        setImages: 'setD2RImages'
-      }),
-      injectImg() {
-        let images = []
-        let i = 0
-        while (i < 200) {
-          if (this.$refs[`img${i}`]) {
-            images.push(this.$refs[`img${i}`])
-            i++
-          }
-          else
-            break
-
+export default {
+  computed: {
+    layout() {
+      return this.$q.screen.lt.sm ? 'dense' : (this.$q.screen.lt.md ? 'comfortable' : 'loose')
+    }
+  },
+  mounted() {
+    this.injectImg()
+  },
+  methods: {
+    ...mapActions({
+      setImages: 'setD2RImages'
+    }),
+    injectImg() {
+      let images = []
+      let i = 0
+      while (i < 200) {
+        if (this.$refs[`img${i}`]) {
+          images.push(this.$refs[`img${i}`])
+          i++
         }
-        this.setImages(images.map(e => { return { 'element': e.$el, 'src': e.src } }))
+        else
+          break
+
       }
+      this.setImages(images.map(e => { return { 'element': e.$el, 'src': e.src } }))
     }
   }
+}
 </script>
 <style scoped>
+.map-card {
+  width: 410px;
+  max-width: 100%;
+}
+
+.body--light .map-card {
+  background-color: rgba(245, 245, 245, 1) !important;
+}
+
+@media screen and (max-width:599px) {
   .map-card {
-    width: 410px;
-    max-width: 100%;
+    font-size: 0.7em;
+    word-break: keep-all;
+    line-height: 1.4em;
   }
-
-  .body--light .map-card {
-    background-color: rgba(245, 245, 245, 1) !important;
-  }
-
-  @media screen and (max-width:599px) {
-    .map-card {
-      font-size: 0.7em;
-      word-break: keep-all;
-      line-height: 1.4em;
-    }
-  }
+}
 </style>

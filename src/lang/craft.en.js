@@ -1,11 +1,11 @@
 export default {
   "en": {
-    
+
     crafted: [
       {
         id: 'hit-power',
         name: 'Hit Power',
-        icon: 'far fa-hand-rock',
+        icon: 'assistant',
         color: 'blue-9',
         common: { recipe: [{ name: 'Perfect<br>Sapphire', img: 'gems/perfect_saphire.png' }, { name: 'Jewel', img: 'jewels/jewel.png' }], effects: ['5% Chance To Cast Level 4 Frost Nova When Struck', 'Attacker Takes Damage of (3-7)'] },
         list: [
