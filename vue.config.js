@@ -44,6 +44,6 @@ module.exports = {
     'highlight.js'
   ],
   productionSourceMap: false,
-  outputDir: '../../../publish/serasome_d2r_frontend',
+  outputDir: './d2r',
   assetsDir: 'static'
 }
