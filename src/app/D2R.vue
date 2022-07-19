@@ -37,7 +37,7 @@
           </div>
           <div class="col lt-lg absolute-center">
             <q-btn @click="home" flat dense class="row justify-center items-center" size="22px">
-              <q-avatar flat class="text-d2r d2r-logo-b" icon="fas fa-star-of-david" size="30px" />
+              <q-avatar flat class="text-d2r d2r-logo-b rotate-180" icon="align_vertical_center" size="30px" />
               <div class="q-ml-sm q-pt-xs lt-lg gt-xs">
                 <span class="d2r-flame">DIA II-R</span>
               </div>
