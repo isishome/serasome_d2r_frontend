@@ -6,7 +6,7 @@
           <!-- toolbar 1 -->
           <div class="row justify-start">
             <q-btn dense flat class="lt-lg" @click="drawer = !drawer">
-              <q-icon name="menu" size="16px" />
+              <q-icon name="menu" size="sm" />
             </q-btn>
             <q-btn @click="home" flat class="gt-md">
               <q-avatar flat class="text-d2r d2r-logo-b rotate-180" icon="align_vertical_center" size="lg" />
