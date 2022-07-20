@@ -78,6 +78,8 @@
 }
 
 .contents pre {
+  display: table;
+  table-layout: fixed;
   padding: 2em 1em 1em 1em !important;
   border-radius: 5px;
   background: #000;
