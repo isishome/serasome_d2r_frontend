@@ -47,7 +47,11 @@ router.beforeEach(async (to) => {
   else
     oldOgTitle.replaceWith(ogTitle)
 
-  const locale = Cookies.has(import.meta.env.VITE_APP_LANGUAGE_NAME) ? Cookies.get(import.meta.env.VITE_APP_LANGUAGE_NAME) : Quasar.lang.getLocale().substring(0, 2)
+  let locale = Cookies.has(import.meta.env.VITE_APP_LANGUAGE_NAME) ? Cookies.get(import.meta.env.VITE_APP_LANGUAGE_NAME) : Quasar.lang.getLocale().substring(0, 2)
+  if (!['ko', 'en'].includes(locale)) {
+    locale = 'en'
+    Cookies.set(import.meta.env.VITE_APP_LANGUAGE_NAME, locale, { path: '/', expires: '7300d' })
+  }
 
   // load locale messages
   await loadLocaleMessages(locale)
