@@ -1,5 +1,6 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
+import { useI18n } from 'vue-i18n'
 
 const props = defineProps({
   modelValue: {
@@ -24,9 +25,7 @@ const props = defineProps({
   },
   confirmLabel: {
     type: String,
-    default: function () {
-      return this.$t('btn.confirm')
-    }
+    default: null
   },
   color: {
     type: String,
@@ -44,6 +43,8 @@ const props = defineProps({
 
 const emit = defineEmits(['update:modelValue', 'cancel', 'ok'])
 
+const { t } = useI18n()
+const confirmLabelText = computed(() => props.confirmLabel ? props.confirmLabel : t('btn.confirm'))
 const value = computed({
   get() {
     return props.modelValue
@@ -72,8 +73,8 @@ const url = ref(props.contents)
           </q-input>
         </q-card-section>
         <q-card-actions align="right" class="text-primary">
-          <q-btn flat :label="$t('btn.cancel')" @click="emit('cancel')" />
-          <q-btn flat :label="confirmLabel" @click="emit('ok', url)" />
+          <q-btn flat :label="t('btn.cancel')" @click="emit('cancel')" />
+          <q-btn flat :label="confirmLabelText" @click="emit('ok', url)" />
         </q-card-actions>
       </q-card>
     </q-dialog>

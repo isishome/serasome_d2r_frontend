@@ -48,6 +48,7 @@ const bonuses = reactive([])
 const adds = reactive([])
 const stats = reactive([])
 const nexts = reactive([])
+const scrollTarget = ref(null)
 
 const update = () => {
   // clear calcs
@@ -215,7 +216,7 @@ onMounted(() => {
       <img class="img" :class="points > 0 ? 'learned' : ''"
         :src="`/images/knowledge/skills/${part}/${treeId}/${skillId}.jpg`" />
       <q-tooltip v-if="!platform.is.mobile" class="skill-tooltip font-kodia text-body2 text-center"
-        :scroll-target="$refs.scrollTarget" size="xs" :anchor="`bottom ${info.position || 'middle'}`"
+        :scroll-target="scrollTarget" size="xs" :anchor="`bottom ${info.position || 'middle'}`"
         :self="`top ${info.position || 'middle'}`" :offset="[0,0]" transition-show="none" transition-hide="none">
         <div class="full-width column items-center word-keep"
           :class="[disable ? 'text-red-5' : 'text-grey-4', screen.lt.sm ? 'q-gutter-xs' : 'q-gutter-md']">

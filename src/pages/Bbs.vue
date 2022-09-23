@@ -46,7 +46,7 @@ const reset = () => {
   <div>
     <Read v-if="routeName === 'd2r-read'" :sec="sec" :pid="pid" :filter="filter" />
     <Write v-else-if="['d2r-write', 'd2r-modify'].includes(routeName)" :sec="sec" :pid="pid" />
-    <List v-else :sec="sec" :filter="filter" @reset="reset" :search="false" />
+    <List v-else :sec="sec" :filter="filter" @reset="reset" />
     <div class="bg-transparent q-py-lg"></div>
   </div>
 </template>

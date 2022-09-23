@@ -4,7 +4,7 @@ import { useI18n } from 'vue-i18n'
 import { useStore } from '@/stores'
 import { useQuasar } from 'quasar'
 
-const { locale } = useI18n()
+const { locale, t } = useI18n()
 const store = useStore()
 const $q = useQuasar()
 
@@ -456,9 +456,9 @@ onMounted(() => {
       </q-timeline>
     </template>
     <p class="q-mt-xl text-right text-grey-6" :class="$q.screen.lt.md ? 'text-caption' : ''">
-      {{ $t('d2r.knowledge.source') }} :
+      {{ t('d2r.knowledge.source') }} :
       <a style="text-decoration: none;" target="_blank" href="http://classic.battle.net/diablo2exp/maps/act3.shtml">{{
-      $t('d2r.knowledge.arreatSummit') }}</a>
+      t('d2r.knowledge.arreatSummit') }}</a>
     </p>
   </div>
 </template>

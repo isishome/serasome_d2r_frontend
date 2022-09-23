@@ -5,7 +5,7 @@ import { useI18n } from 'vue-i18n'
 import { mergeSection } from '@/i18n'
 
 const route = useRoute()
-const { tm } = useI18n()
+const { t, tm } = useI18n()
 
 const part = route.params.part ? route.params.part.toLowerCase() : 'act1'
 const pagination = reactive({
@@ -87,9 +87,9 @@ mergeSection('npcs', part).then(() => {
         </q-intersection>
       </template>
     </q-table>
-    <p class="q-mt-xl text-right text-grey-6 text-body2">{{$t('d2r.knowledge.source')}} : <a
+    <p class="q-mt-xl text-right text-grey-6 text-body2">{{t('d2r.knowledge.source')}} : <a
         style="text-decoration: none;" target="_blank"
-        :href="`http://classic.battle.net/diablo2exp/npcs/${part}.shtml`">{{$t('d2r.knowledge.arreatSummit')}}</a></p>
+        :href="`http://classic.battle.net/diablo2exp/npcs/${part}.shtml`">{{t('d2r.knowledge.arreatSummit')}}</a></p>
   </div>
 </template>
   

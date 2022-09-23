@@ -5,7 +5,7 @@ import { useRoute, useRouter } from 'vue-router'
 import { useStore } from '@/stores'
 import { useI18n } from 'vue-i18n'
 import { computed } from '@vue/reactivity'
-import { pascalCase, isNew, isView, parsDateTime } from '@/common'
+import { isNew, isView, parsDateTime } from '@/common'
 
 // components
 const Table = defineAsyncComponent(() => import('@/components/bbs/Table.vue'))
@@ -44,6 +44,7 @@ const screen = computed(() => $q.screen)
 const loading = ref(false)
 const signStatus = computed(() => store.signStatus)
 const authority = computed(() => store.getAuthority)
+const searchObj = ref(null)
 
 // about board
 const table = ref(null)
@@ -174,7 +175,7 @@ watch(() => route.query.page, (val, old) => {
         </div>
       </template>
       <template #search>
-        <q-form ref="search" class="q-pt-md row" :class="screen.gt.xs ? 'justify-start' : 'justify-end'"
+        <q-form ref="searchObj" class="q-pt-md row" :class="screen.gt.xs ? 'justify-start' : 'justify-end'"
           @submit="request(1)">
           <div class="row justify-start items-start q-col-gutter-sm">
             <div class="col" style="max-width:170px;">
@@ -186,7 +187,7 @@ watch(() => route.query.page, (val, old) => {
               <q-input :disable="loading" v-model="filter.filter" :label="t('d2r.bbs.filter')" outlined
                 color="secondary"
                 :rules="[val => /^(\s*|[ㄱ-ㅎㅏ-ㅣ가-힣a-zA-Z0-9\s]{2,20})$/.test(val) || t('search.message.invalidWord')]"
-                dense no-error-icon clearable @keyup.enter="$refs.search.submit()" />
+                dense no-error-icon clearable @keyup.enter="searchObj.submit()" />
             </div>
           </div>
         </q-form>
