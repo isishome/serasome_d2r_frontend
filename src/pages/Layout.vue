@@ -290,14 +290,14 @@ watch(() => route.params.part, (val, old) => {
 
 <style scoped>
 .header {
-  background-color: var(--q-light-cloud);
+  background-color: rgba(255, 255, 255, .8);
   color: var(--q-dark-text) !important;
   -webkit-backdrop-filter: blur(7px);
   backdrop-filter: blur(7px);
 }
 
 .body--dark .header {
-  background-color: var(--q-dark-cloud);
+  background-color: var(--q-dark-half);
 }
 
 .light {
