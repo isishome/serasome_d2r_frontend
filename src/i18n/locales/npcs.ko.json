@@ -1,0 +1,29 @@
+{
+  "npcs": [
+    {
+      "value": "act1",
+      "label": "액트 I",
+      "img": "/images/knowledge/maps/act1/thumbnail.jpg"
+    },
+    {
+      "value": "act2",
+      "label": "액트 II",
+      "img": "/images/knowledge/maps/act2/thumbnail.jpg"
+    },
+    {
+      "value": "act3",
+      "label": "액트 III",
+      "img": "/images/knowledge/maps/act3/thumbnail.jpg"
+    },
+    {
+      "value": "act4",
+      "label": "액트 IV",
+      "img": "/images/knowledge/maps/act4/thumbnail.jpg"
+    },
+    {
+      "value": "act5",
+      "label": "액트 V",
+      "img": "/images/knowledge/maps/act5/thumbnail.jpg"
+    }
+  ]
+}

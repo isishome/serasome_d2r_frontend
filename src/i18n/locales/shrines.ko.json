@@ -1,0 +1,186 @@
+{
+  "shrines": [
+    {
+      "value": "shrines",
+      "label": "Shrines",
+      "img": ""
+    }
+  ],
+  "shrinesData": [
+    {
+      "image": "/images/knowledge/shrines/manarecharge.png",
+      "name": "마나 재충전의 성소",
+      "effect": [
+        "+ 400% 마나 회복률"
+      ],
+      "regeneration": 5,
+      "duration": 96
+    },
+    {
+      "image": "/images/knowledge/shrines/armor.png",
+      "name": "방어의 성소",
+      "effect": [
+        "+ 100% 방어력 상승"
+      ],
+      "regeneration": 5,
+      "duration": 96
+    },
+    {
+      "image": "/images/knowledge/shrines/combat.png",
+      "name": "전투의 성소",
+      "effect": [
+        "+ 200% to 공격등급",
+        "+ 200% 최소, 최대 데미지"
+      ],
+      "regeneration": 5,
+      "duration": 96
+    },
+    {
+      "image": "/images/knowledge/shrines/resistfire.png",
+      "name": "파이어 저항력의 성소",
+      "effect": [
+        "+ 75% 파이어 저항력 상승"
+      ],
+      "regeneration": 5,
+      "duration": 144
+    },
+    {
+      "image": "/images/knowledge/shrines/resistcold.png",
+      "name": "콜드 저항력의 성소",
+      "effect": [
+        "+ 75% 콜드 저항력 상승"
+      ],
+      "regeneration": 5,
+      "duration": 144
+    },
+    {
+      "image": "/images/knowledge/shrines/resistlightning.png",
+      "name": "라이트닝 저항력의 성소",
+      "effect": [
+        "+ 75% 라이트닝 저항력 상승"
+      ],
+      "regeneration": 5,
+      "duration": 144
+    },
+    {
+      "image": "/images/knowledge/shrines/resistpoison.png",
+      "name": "포이즌 저항력의 성소",
+      "effect": [
+        "+ 75% 포이즌 저항력 상승"
+      ],
+      "regeneration": 5,
+      "duration": 144
+    },
+    {
+      "image": "/images/knowledge/shrines/skill.png",
+      "name": "기술의 성소",
+      "effect": [
+        "+ 2 모든 스킬 레벨(활성화된) 업"
+      ],
+      "regeneration": 5,
+      "duration": 96
+    },
+    {
+      "image": "/images/knowledge/shrines/stamina.png",
+      "name": "스태미나의 성소",
+      "effect": [
+        "스태미나 무제한"
+      ],
+      "regeneration": 5,
+      "duration": 192
+    },
+    {
+      "image": "/images/knowledge/shrines/experience.png",
+      "name": "경험의 성소",
+      "effect": [
+        "50% 몬스터 경험치 상승"
+      ],
+      "regeneration": 0,
+      "duration": 144
+    },
+    {
+      "image": "/images/knowledge/shrines/well.png",
+      "name": "보충의 성소",
+      "effect": [
+        "체력과 마나를 모두 채움"
+      ],
+      "regeneration": 2,
+      "duration": 0
+    },
+    {
+      "image": "/images/knowledge/shrines/shrine-health.png",
+      "name": "생명의 성소",
+      "effect": [
+        "체력을 모두 체움"
+      ],
+      "regeneration": 2,
+      "duration": 0
+    },
+    {
+      "image": "/images/knowledge/shrines/shrine-mana.png",
+      "name": "마나의 성소",
+      "effect": [
+        "마나를 모두 채움"
+      ],
+      "regeneration": 2,
+      "duration": 0
+    },
+    {
+      "image": "/images/knowledge/shrines/shrine1.png",
+      "name": "포탈의 성소",
+      "effect": [
+        "해당 액트의 마을로 가는 포탈 생성"
+      ],
+      "regeneration": 0,
+      "duration": 0
+    },
+    {
+      "image": "/images/knowledge/shrines/shrine2.png",
+      "name": "불의 성소",
+      "effect": [
+        "모든 플레이어 몬스터에게 현재 체력의 절반의 데미지를 주는 파이어볼을 사방으로 발사"
+      ],
+      "regeneration": 0,
+      "duration": 0
+    },
+    {
+      "image": "/images/knowledge/shrines/shrine3.png",
+      "name": "몬스터의 성소",
+      "effect": [
+        "가장 가까이에 있는 몬스터를 유니크 또는 챔피언 몹으로 변경"
+      ],
+      "regeneration": 0,
+      "duration": 0
+    },
+    {
+      "image": "/images/knowledge/shrines/shrine4.png",
+      "name": "보석의 성소",
+      "effect": [
+        "인벤토리에 있는 젬이나 스컬을 한단계 업그레이드",
+        "최하급 ~ 최상급 보석이나 스컬을 하나 지급"
+      ],
+      "regeneration": 0,
+      "duration": 0
+    },
+    {
+      "image": "/images/knowledge/shrines/shrine5.png",
+      "name": "폭발의 성소",
+      "effect": [
+        "플레이어에게 5~10개의 폭발 포션 지급, 성소주변으로 5개의 폭발 포션을 방향/거리 랜덤하게 난사"
+      ],
+      "regeneration": 5,
+      "duration": 96
+    },
+    {
+      "image": "/images/knowledge/shrines/shrine6.png",
+      "name": "독의 성소",
+      "effect": [
+        "플레이어에게 5~10개의 독 포션 지급",
+        "성소주변으로 독가스 띠 생성",
+        "독의 성소는 독 지속을 0으로 만드는 (숨겨진) 보너스 능력을 가짐"
+      ],
+      "regeneration": 5,
+      "duration": 96
+    }
+  ]
+}

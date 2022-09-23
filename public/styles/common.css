@@ -1,30 +1,59 @@
-/** font place **********************************************************************************************************************/
-.font-logo {
-  font-weight: 900 !important;
+:root {
+  --q-primary: #121212 !important;
+  --q-secondary: #b89c5b !important;
+  --q-light-page: #dadada !important;
+  --q-dark-page: #121212 !important;
+  --q-light-alpha: #dadadacc !important;
+  --q-dark-alpha: #121212cc !important;
+  --q-light-half: #dadada80 !important;
+  --q-dark-half: #12121280 !important;
+  --q-light-cloud: #dadada20 !important;
+  --q-dark-cloud: #12121220 !important;
+  --q-info: #880000 !important;
 }
 
-.font-title {
-  font-weight: 700 !important;
-  font-size: 1.4em !important;
+@font-face {
+  font-family: 'Kodia';
+  src: url('/fonts/kodia.woff2') format('woff2'),
+    url('/fonts/kodia.woff') format('woff');
+}
+
+.font-kodia {
+  font-family: 'Kodia';
 }
 
 body {
-  /* font-family: 'Noto Sans KR', sans-serif !important; */
-  word-break: keep-all;
+  overflow-y: scroll;
+  width: 100%;
+  min-width: 320px;
+  min-height: 100vh;
+  letter-spacing: .2px;
+  line-height: 24px;
+  font-size: 16px;
+  font-weight: 400;
+  direction: ltr;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/** app place **********************************************************************************************************************/
-.ss-header img {
-  width: 40px !important;
-  height: auto !important;
-  padding: 2px;
+.body--light {
+  color: var(--q-dark-page) !important;
 }
 
-.ss-footer img {
-  width: 30px !important;
-  height: auto !important;
-  filter: grayscale(100%);
-  -webkit-filter: grayscale(100%);
+.body--dark {
+  color: var(--q-light-page) !important;
+}
+
+.bg-invert {
+  color: var(--q-light-page) !important;
+  background-color: var(--q-dark-alpha) !important;
+}
+
+.body--dark .bg-invert {
+  color: var(--q-dark-page) !important;
+  background-color: var(--q-light-alpha) !important;
 }
 
 .word-wrap {
@@ -35,94 +64,151 @@ body {
   word-break: keep-all;
 }
 
-.q-tabs__arrow {
-  display: none !important;
+.no-hover .q-focus-helper {
+  display: none;
 }
 
-.q-toolbar .q-btn {
-  font-weight: bold !important;
+.q-field--dark .q-field__control:before {
+  border-color: rgba(255, 255, 255, 0.2) !important;
 }
 
-/** post place **********************************************************************************************************************/
-.card-title {
-  font-size: 1em;
-  font-weight: bold;
+.q-card,
+.q-list,
+.q-item,
+.q-table__card {
+  color: inherit !important;
 }
 
-.card-author {
-  font-size: .9em;
+.q-list,
+.q-item {
+  color: inherit !important;
 }
 
-@media screen and (max-width:599px) {
-  .card-title {
-    font-weight: normal !important;
-    font-size: .8em !important;
-  }
-
-  .card-author {
-    font-size: .7em !important;
-  }
+.avatar {
+  background-color: transparent;
 }
 
-.comment-avatar {
-  min-width: 24px !important;
-  padding-right: 10px !important;
+.contents-wrap {
+  padding: 1em 1em 2em 1em;
+  box-shadow: 0 0 0 1px rgba(220, 220, 220, 1);
+  background-color: rgba(250, 250, 250, 1);
 }
 
-.body--light .font-ss {
-  color: #17213b !important;
+.body--dark .contents-wrap {
+  box-shadow: 0 0 0 1px rgba(40, 40, 40, 1) !important;
+  background-color: rgba(24, 24, 24, 1) !important;
 }
 
-.body--dark .font-ss {
-  color: #DDDDDD !important;
+.contents-on {
+  background-color: rgba(254, 254, 254, .8) !important;
+  box-shadow: none !important;
 }
 
-.q-chip__icon--left {
-  margin-right: .3em !important;
+.body--dark .contents-on {
+  background-color: rgba(20, 20, 20, .5) !important;
 }
 
-.btn-place .q-fab__actions .q-btn--fab .q-icon,
-.btn-place .q-fab__actions .q-btn--fab-mini .q-icon {
-  font-size: 17.14px !important;
-  margin: 1vw;
+.contents-on img {
+  max-width: 100%;
 }
 
-.btn-place .q-fab__actions {
+.box {
+  box-shadow: inset 0 0 0 1px rgba(220, 220, 220, 1);
+  background-color: rgba(250, 250, 250, 1);
+  position: relative;
+}
+
+.body--dark .box {
+  box-shadow: inset 0 0 0 1px rgba(40, 40, 40, 1) !important;
+  background-color: rgba(24, 24, 24, 1) !important;
+}
+
+
+.knowledge-table th,
+.knowledge-table td {
+  padding: 10px !important;
+}
+
+.knowledge-table th {
+  font-size: 1.2em !important;
+}
+
+.knowledge-table,
+.knowledge-table td {
+  border-color: var(--q-dark-cloud) !important;
+}
+
+.body--dark .knowledge-table,
+.body--dark .knowledge-table td {
+  border-color: var(--q-light-cloud) !important;
+}
+
+.knowledge-table ul {
+  list-style: inside;
+  padding: 0;
   margin: 0;
-  padding: 2vw;
 }
 
-.btn-place .q-fab__actions .q-btn {
-  margin: 3px !important;
+.knowledge-table li {
+  padding: 2px;
+  list-style-position: inside;
+  text-indent: -20px;
+  padding-left: 20px;
 }
 
-.q-field__messages {
-  line-height: 1.6 !important;
+.knowledge-table .q-table__bottom--nodata {
+  border-top: none !important;
 }
 
-.q-body--prevent-scroll.platform-ios {
-  overflow: hidden;
-  height: 1px;
-  position: relative !important;
+.knowledge-item .q-card {
+  box-shadow: 0 0 0 1px var(--q-dark-cloud) !important;
 }
 
-.q-list--dark,
-.q-item--dark {
-  color: #DDDDDD !important;
+.body--dark .knowledge-item .q-card {
+  box-shadow: 0 0 0 1px var(--q-light-cloud) !important;
 }
 
-.io-img {
-  filter: grayscale(1);
-  opacity: .5;
+.knowledge-item .q-separator {
+  background-color: var(--q-dark-cloud) !important;
+}
+
+.body--dark .knowledge-item .q-separator {
+  background-color: var(--q-light-cloud) !important;
+}
+
+.frame-rate td {
+  text-align: center;
+}
+
+.q-tree {
+  color: inherit !important;
+}
+
+.quests img {
+  border-radius: 4px !important;
+}
+
+p {
+  text-indent: 1em;
+  line-height: 1.8;
+  margin-bottom: 10px !important;
+}
+
+.q-tree__node-header:before,
+.q-tree__node:after {
+  border-color: rgba(200, 200, 200, 1) !important;
+}
+
+.body--dark .q-tree__node-header:before,
+.body--dark .q-tree__node:after {
+  border-color: rgba(50, 50, 50, 1) !important;
+}
+
+.map-card {
   width: 100%;
-  height: auto;
+  max-width: 400px;
 }
 
-.mailto {
-  text-decoration: none;
-  color: inherit;
-}
-
-.mailto:hover {
-  text-decoration: underline;
+.q-timeline {
+  color: inherit !important;
 }

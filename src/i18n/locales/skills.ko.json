@@ -1,0 +1,98 @@
+{
+  "skills": [
+    {
+      "value": "amazon",
+      "label": "아마존",
+      "img": "/images/knowledge/classes/amazon.png",
+      "over": "/images/knowledge/classes/over/amazon.png"
+    },
+    {
+      "value": "assassin",
+      "label": "암살자",
+      "img": "/images/knowledge/classes/assassin.png",
+      "over": "/images/knowledge/classes/over/assassin.png"
+    },
+    {
+      "value": "necromancer",
+      "label": "강령술사",
+      "img": "/images/knowledge/classes/necromancer.png",
+      "over": "/images/knowledge/classes/over/necromancer.png"
+    },
+    {
+      "value": "barbarian",
+      "label": "야만용사",
+      "img": "/images/knowledge/classes/barbarian.png",
+      "over": "/images/knowledge/classes/over/barbarian.png"
+    },
+    {
+      "value": "paladin",
+      "label": "성기사",
+      "img": "/images/knowledge/classes/paladin.png",
+      "over": "/images/knowledge/classes/over/paladin.png"
+    },
+    {
+      "value": "sorceress",
+      "label": "원소술사",
+      "img": "/images/knowledge/classes/sorceress.png",
+      "over": "/images/knowledge/classes/over/sorceress.png"
+    },
+    {
+      "value": "druid",
+      "label": "드루이드",
+      "img": "/images/knowledge/classes/druid.png",
+      "over": "/images/knowledge/classes/over/druid.png"
+    }
+  ],
+  "lang": {
+    "notLearned": "아직 이 기술을 배우지 않았습니다.",
+    "remain": "남은 스킬 선택",
+    "required": "요구 레벨:",
+    "reached": "최대 레벨 도달",
+    "first": "처음",
+    "next": "다음",
+    "level": "레벨",
+    "current": "현재 스킬 레벨",
+    "bonus": "에 보너스 적용",
+    "max": "최대치",
+    "back": "반환",
+    "info": "정보보기",
+    "reset": "초기화"
+  },
+  "desc": {
+    "desktop": [
+      {
+        "img": [
+          "left-click.png"
+        ],
+        "text": "스킬 추가"
+      },
+      {
+        "img": [
+          "right-click.png"
+        ],
+        "text": "스킬 반환"
+      },
+      {
+        "key": [
+          "시프트키"
+        ],
+        "img": [
+          "left-click.png",
+          "right-click.png"
+        ],
+        "text": "가능한 스킬 최대치 추가 / 반환"
+      }
+    ],
+    "mobile": [
+      {
+        "text": "- 최대치 체크 : 스킬 추가/반환시 최대치가 적용"
+      },
+      {
+        "text": "- 반환 체크 : 스킬 반환"
+      },
+      {
+        "text": "- 정보보기 체크 : 스킬 정보보기"
+      }
+    ]
+  }
+}

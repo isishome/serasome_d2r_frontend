@@ -1,0 +1,19 @@
+{
+  "items": [
+    {
+      "value": "cube",
+      "label": "호라드릭 큐브조합법",
+      "img": "/images/knowledge/items/cube.webp"
+    },
+    {
+      "value": "rune",
+      "label": "룬워드 아이템",
+      "img": "/images/knowledge/items/rune.webp"
+    },
+    {
+      "value": "craft",
+      "label": "제작 아이템",
+      "img": "/images/knowledge/items/craft.webp"
+    }
+  ]
+}

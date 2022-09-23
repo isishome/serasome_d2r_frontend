@@ -1,0 +1,383 @@
+{
+  "questsData": {
+    "act": [
+      {
+        "label": "ACT I : The Sightless Eye",
+        "header": "root",
+        "children": [
+          {
+            "label": "덴 오브 이블|Den of Evil",
+            "avatar": "/images/knowledge/quests/act1/act1q1.gif",
+            "image": "/images/knowledge/quests/act1/act1q1.jpg",
+            "header": "generic",
+            "body": "info",
+            "desc": [
+              "Kashya's rogue scouts have found a nearby cave filled with shadowy creatures and horrors from beyond the grave. Akara fears that these creatures are massing for an attack against the encampment. Destroy all of the monsters in the Den of Evil including any Champions or Unique monsters."
+            ],
+            "given": "by first talking to Akara.",
+            "tip": "Search Blood Moor for the Den of Evil."
+          },
+          {
+            "label": "베리얼 그라운드|Sisters' Burial Grounds",
+            "avatar": "/images/knowledge/quests/act1/act1q2.gif",
+            "image": "/images/knowledge/quests/act1/act1q2.jpg",
+            "header": "generic",
+            "body": "info",
+            "desc": [
+              "Kashya's Rogue scouts have reported an abomination in the Monastery graveyard.Blood Raven, one of the Rogue's finest captains in the battle against Diablo at Tristram, has been corrupted by Andariel.She can be found in the Monastery graveyard raising the Rogue's dead as zombies.You must help the Rogues destroy her."
+            ],
+            "given": "by Kashya after completing the Den of Evil Quest or by encountering the Burial Grounds.",
+            "tip": "Search the Cold Plains for the path leading to the Burial Grounds."
+          },
+          {
+            "label": "케인을 찾아서|The Search for Cain",
+            "avatar": "/images/knowledge/quests/act1/act1q3.gif",
+            "image": "/images/knowledge/quests/act1/act1q3.jpg",
+            "header": "generic",
+            "body": "info",
+            "desc": [
+              "Akara informs you that you are facing an evil difficult to comprehend and there is one Horadrim Sage, schooled in the most arcane history and lore who could help you. He is known as Deckard Cain. You must travel to Tristram to find him. To begin your quest the people of the Rogue encampment tell you to find bark from the Tree of Inifuss which holds mystical runes. Take the bark to Akara. Once she has translated it she tells that you find the Cairn Stones and touch them in the order written."
+            ],
+            "given": "by Akara after killing Blood Raven or by encountering the Tree of Inifuss.",
+            "tip": "Search Dark Wood for the Tree of Inifuss (through the Underground Passage), find the Cairn Stones in the Stony Field."
+          },
+          {
+            "label": "포가튼 타워|The Forgotten Tower",
+            "avatar": "/images/knowledge/quests/act1/act1q4.gif",
+            "image": "/images/knowledge/quests/act1/act1q4.jpg",
+            "header": "generic",
+            "body": "info",
+            "desc": [
+              "The Tower Tome recounts a story of a Countess who was buried alive. Her castle in which so many cruel deeds took place fell rapidly to ruin. Rising over the buried dungeons, a solitary tower is all that remains. The Countess's fortune was said to be divided among the clergy, although some say that more remains unfound, still buried in the tower.",
+              "The levels of the Forgotten Tower are larger in Nightmare and Hell difficulty levels."
+            ],
+            "given": "by finding the Moldy Tome in the Stony Field.",
+            "tip": "Search the Stony Field for the tome and locate the tower in the Black Marsh.",
+            "reward": "Free-For-All."
+          },
+          {
+            "label": "찰시의 연장|Tools of the Trade",
+            "avatar": "/images/knowledge/quests/act1/act1q5.gif",
+            "image": "/images/knowledge/quests/act1/act1q5.jpg",
+            "header": "generic",
+            "body": "info",
+            "desc": [
+              "When Charsi fled the Monastery she left behind her Horadric Malus, an enchanted smithing hammer. If you can retrieve it for her, she will use its magic to strengthen one of your items with magical powers. The Malus is guarded by the Smith."
+            ],
+            "given": "by Charsi after completing the Forgotten Tower quest or by entering the Inner Cloister.",
+            "tip": "Search the Barracks. Choose wisely which item you want to imbue.",
+            "reward": "All players in the party receive the award.",
+            "note": "You must be at least level 8 before you can complete this quest."
+          },
+          {
+            "label": "로그 자매들의 학살자|Sisters to the Slaughter",
+            "avatar": "/images/knowledge/quests/act1/act1q6.gif",
+            "image": "/images/knowledge/quests/act1/act1q6.jpg",
+            "header": "generic",
+            "body": "info",
+            "desc": [
+              "It's time to face the demon queen Andariel, who has corrupted the rogue sisterhood and defiled their ancient monastery. You must kill her before the Monastery becomes a permanent outpost of hell and the way east lost forever."
+            ],
+            "given": "by Cain or by entering Catacombs 4.",
+            "tip": "Find Catacombs Level 4."
+          }
+        ]
+      },
+      {
+        "label": "ACT II : The Secret of the Vizjerei",
+        "header": "root",
+        "children": [
+          {
+            "label": "라다먼트의 소굴|Radament's Lair",
+            "avatar": "/images/knowledge/quests/act2/act2q1.gif",
+            "image": "/images/knowledge/quests/act2/act2q1.jpg",
+            "header": "generic",
+            "body": "info",
+            "desc": [
+              "In the sewers below Lut Gholein lurks a horrid creature that hungers for human flesh. The creature has killed many including Atma's son and husband. If you destroy it she will reward you."
+            ],
+            "given": "by Atma.",
+            "tip": "Search the Sewers below Lut Gholein."
+          },
+          {
+            "label": "호라드릭 지팡이|The Horadric Staff",
+            "avatar": "/images/knowledge/quests/act2/act2q2.gif",
+            "image": "/images/knowledge/quests/act2/act2q2.jpg",
+            "header": "generic",
+            "body": "info",
+            "desc": [
+              "Cain tells you that The Horadric Mages, after binding Baal within Tal Rasha, magically sealed off his Burial Chamber from the mortal realm. Those same Mages also crafted fearsome Horadric Staves and imbued them with the special power to open the Chamber's hidden door.",
+              "After nearly losing one to the thievery of a rogue sorcerer, they divided all the Horadric Staves into two parts - wooden shaft and metal headpiece - hiding them separately to safeguard them.",
+              "The Horadrim foresaw our current plight and designed the hiding places to reveal themselves to worthy heroes like you.",
+              "Collect both parts of a Horadric Staff and unite them using a Horadric Cube. Then, you may enter Tal Rasha's Burial Chamber."
+            ],
+            "given": "by Cain after returning the Horadric Scroll that is found in Radament's Lair.",
+            "tip": "Search the Halls of the Dead for the Horadric Cube, search the Sand Maggot Lair for the Horadric Shaft (Staff of Kings), search the Claw Viper Temple for the Horadric Amulet (Amulet of the Viper). Find Tal Rasha's Burial Chamber."
+          },
+          {
+            "label": "오염된 태양|The Tainted Sun",
+            "avatar": "/images/knowledge/quests/act2/act2q3.gif",
+            "image": "/images/knowledge/quests/act2/act2q3.jpg",
+            "header": "generic",
+            "body": "info",
+            "desc": [
+              "After entering the Lost City the sky turns dark. Drognan has been researching this phenomenon and believes it to be the work of the Claw Vipers. Find their temple beneath the desert sands and find the source of this curse."
+            ],
+            "tip": "Search the Lost City for a clue to the whereabouts of the Claw Vipers."
+          },
+          {
+            "label": "비전의 성역|The Arcane Sanctuary",
+            "avatar": "/images/knowledge/quests/act2/act2q4.gif",
+            "image": "/images/knowledge/quests/act2/act2q4.jpg",
+            "header": "generic",
+            "body": "info",
+            "desc": [
+              "Drognan has been researching the old records, trying to find the location of Tal Rasha's Tomb. Though he has not found the Tomb itself, he has a good lead for you.",
+              "The great Vizjerei Summoner, Horazon, built his Arcane Sanctuary somewhere around here. He was a powerful spellcaster and kept demons as slaves within the Sanctuary. If you could find Horazon's Sanctuary, Drognan is sure it will hold some clue as to the Tomb's location.",
+              "Drognan instructs you to talk to Lord Jerhyn who may know of a secret entrance or the like. Lord Jerhyn tells you that when the troubles began he allowed the terrified Harem guilds to join him within the safety of the palace.",
+              "Once night screams echoed up the stairwells from the Harem. Jerhyn's guards found the poor girls being slaughtered by a merciless band of hell-spawned demons. His brave guardsman tried to push the demons back into the mysterious rift from which they came. However, they have been fighting a losing battle.",
+              "Demons continue to pour through the rift into the palace. Jerhyn opens up the place for you to explore. Find the Arcane Sanctuary."
+            ],
+            "given": "by Drognan and Lord Jerhyn after The Seven Tombs quest is activated.",
+            "tip": "Search the Palace for information about the Arcane Sanctuary."
+          },
+          {
+            "label": "소환술사|The Summoner",
+            "avatar": "/images/knowledge/quests/act2/act2q5.gif",
+            "image": "/images/knowledge/quests/act2/act2q5.jpg",
+            "header": "generic",
+            "body": "info",
+            "desc": [
+              "It seems the Summoner is impersonating Horazon in the Arcane Sanctuary. Kill him."
+            ],
+            "given": "when you encounter the Summoner."
+          },
+          {
+            "label": "일곱개의 무덤|The Seven Tombs",
+            "avatar": "/images/knowledge/quests/act2/act2q6.gif",
+            "image": "/images/knowledge/quests/act2/act2q6.jpg",
+            "header": "generic",
+            "body": "info",
+            "desc": [
+              "Your many deeds of skill and bravery have convinced Jerhyn to trust you with something he has been hesitant to speak of... Drognan and Jerhyn have concluded that the Dark Wanderer who passed through here recently was Diablo, himself! Drognan believes that Diablo is searching the desert for the secret tomb where the great Horadrim, Tal Rasha, keeps Baal imprisoned. Find the True Tomb of Tal Rasha."
+            ],
+            "given": "by Jerhyn after reaching level 20, or after having completed The Radament's Lair Quest, The Horadric Staff or the Tainted Sun Quest.",
+            "tip": "Find the Arcane Sanctuary and destroy the Summoner. Find the True Tomb of Tal Rasha."
+          }
+        ]
+      },
+      {
+        "label": "ACT III : The Infernal Gate",
+        "header": "root",
+        "children": [
+          {
+            "label": "황금새|The Golden Bird",
+            "avatar": "/images/knowledge/quests/act3/act3q1.gif",
+            "image": "/images/knowledge/quests/act3/act3q1.jpg",
+            "header": "generic",
+            "body": "info",
+            "desc": [
+              "Alkor asks who has not dreamt of immortality. One man is rumored to have done more than merely dream. Find the Golden Bird of Ku Y'leh and you might find the secret to everlasting life."
+            ],
+            "given": "by finding a Jade Figurine.",
+            "tip": "Look for a Unique Monster"
+          },
+          {
+            "label": "고대 종교의 칼날|Blade of the Old Religion",
+            "avatar": "/images/knowledge/quests/act3/act3q2.gif",
+            "image": "/images/knowledge/quests/act3/act3q2.jpg",
+            "header": "generic",
+            "body": "info",
+            "desc": [
+              "Hratli tells you he has placed an enchantment upon the dockside in order to keep the demons at bay. But lately, the enchantment seems to be weakening. If memory serves Hratli correctly, there is a holy Skatsimi blade that could revitalize the enchantment. The blade is called Gidbinn. Find it, and our sanctuary here will remain safe."
+            ],
+            "given": "after completing the Golden Bird Quest or by entering the Flayer Jungle.",
+            "tip": "Find the Pygmy Village in the Flayer Jungle."
+          },
+          {
+            "label": "칼림의 의지|Khalim's Will",
+            "avatar": "/images/knowledge/quests/act3/act3q3.gif",
+            "image": "/images/knowledge/quests/act3/act3q3.jpg",
+            "header": "generic",
+            "body": "info",
+            "desc": [
+              "Alkor tells you there is a very special book you must find for him. It was written long ago by a sage known as Lam Esen, who studied Skatsimi magic and the effects of the Prime Evils on the mortal world. The Black Book was lost when the Children of Zakarum took over this land. Now, you must reclaim it without delay! Its knowledge may aid us in this dark time ahead."
+            ],
+            "given": "by Cain after completing the Golden Bird quest or by entering the Great Marsh",
+            "tip": "The Eye is in Spider Cavern. The Heart is in the Sewers. The Brain is in Flayer Dungeon. The Flail is dropped by one of the High Council members."
+          },
+          {
+            "label": "람 에센의 책|Lam Esen's Tome",
+            "avatar": "/images/knowledge/quests/act3/act3q4.gif",
+            "image": "/images/knowledge/quests/act3/act3q4.jpg",
+            "header": "generic",
+            "body": "info",
+            "desc": [
+              "Alkor tells you there is a very special book you must find for him. It was written long ago by a sage known as Lam Esen, who studied Skatsimi magic and the effects of the Prime Evils on the mortal world. The Black Book was lost when the Children of Zakarum took over this land. Now, you must reclaim it without delay! Its knowledge may aid us in this dark time ahead."
+            ],
+            "given": "by Alkor after completion of the Blade of the Old Religion. You must also have entered the Kurast Bazaar before the quest will trigger.",
+            "tip": "The Tome is always in the Ruined Temple."
+          },
+          {
+            "label": "저주받은 신전|The Blackened Temple",
+            "avatar": "/images/knowledge/quests/act3/act3q5.gif",
+            "image": "/images/knowledge/quests/act3/act3q5.jpg",
+            "header": "generic",
+            "body": "info",
+            "desc": [
+              "Ormus tells you that you have done well. Your courage and valor are an inspiration. But now the time has come to face those responsible for the evil that has stifled the land. You must destroy the High Council of Zakarum! Long ago, these elders were charged with the stewardship of Mephisto, the Lord of Hatred, who was imprisoned within the Guardian Tower. Through the generations, these pious men slowly fell more and more under the sway of Mephisto's malevolent power and the Council became an evil mockery of its former glory."
+            ],
+            "given": "by Ormus after completing the Lam Esen's Tome Quest or by entering the Kurast Causeway.",
+            "tip": "Search Travincal."
+          },
+          {
+            "label": "수호자|The Guardian",
+            "avatar": "/images/knowledge/quests/act3/act3q6.gif",
+            "image": "/images/knowledge/quests/act3/act3q6.jpg",
+            "header": "generic",
+            "body": "info",
+            "desc": [
+              "Ormus tells you that Diablo and Baal have surely found the Temple City by now. They seek to free their brother, Mephisto, who was imprisoned by the Horadrim in the Temple's Guardian Tower. You must reach him before his brothers do and prevent them from releasing Hatred upon the world."
+            ],
+            "given": "by Ormus after smashing the Compelling Orb.",
+            "tip": "Search the Durance of Hate in Travincal."
+          }
+        ]
+      },
+      {
+        "label": "ACT IV : The Harrowing",
+        "header": "root",
+        "children": [
+          {
+            "label": "타락한 천사|The Fallen Angel",
+            "avatar": "/images/knowledge/quests/act4/act4q1.gif",
+            "image": "/images/knowledge/quests/act4/act4q1.jpg",
+            "header": "generic",
+            "body": "info",
+            "desc": [
+              "Tyrael tells you that there is a dark, tortured soul who was trapped within this forsaken realm long ago. He was called Izual by mortal men, and in ages past he was his most trusted Lieutenant. Yet against Tyrael's wishes he led an ill-fated assault upon the fiery Hellforge itself.",
+              "Despite his valor and strength, Izual was captured by the Prime Evils and twisted by their perverse power. They forced him to betray his own kind and give up Heaven's most guarded secrets. He became a corrupt shadow of his former self; a fallen angel trusted neither by Heaven nor Hell.",
+              "For his transgressions, Izual's spirit was bound within the form of a terrible creature which was summoned from the Abyss. His maddened spirit has resided within that tortured husk for many ages now.",
+              "Find Izual and release him from his cruel imprisonment. Put an end to his guilt and suffering."
+            ],
+            "given": "by Tyrael",
+            "tip": "Search The Plains of Despair."
+          },
+          {
+            "label": "헬 포지|The Hellforge",
+            "avatar": "/images/knowledge/quests/act4/act4q2.gif",
+            "image": "/images/knowledge/quests/act4/act4q2.jpg",
+            "header": "generic",
+            "body": "info",
+            "desc": [
+              "The time has come for you to destroy Mephisto's Soulstone! Take the Stone to the Hellforge. Place it upon the forge and strike it soundly with the Hammer. Only by doing this can you prevent Mephisto from manifesting in this world ever again."
+            ],
+            "given": "by Cain as soon as you enter Act IV.",
+            "tip": "Search the River of Flame.",
+            "reward": "Gems are given according to the number of party members, but be careful as there is only one rune."
+          },
+          {
+            "label": "공포의 결말|Terror's End",
+            "avatar": "/images/knowledge/quests/act4/act4q3.gif",
+            "image": "/images/knowledge/quests/act4/act4q3.jpg",
+            "header": "generic",
+            "body": "info",
+            "desc": [
+              "Tyrael tells you that the time has come to hunt down and destroy Diablo himself. But beware, the Lord of Terror is not to be underestimated. He single-handedly destroyed the town of Tristram and corrupted the last noble hero who tried to stop him. This time, you must defeat him for good. Only by destroying the Soulstone which he carries will his spirit be banished forever. Good luck. Though this be our darkest hour, it may yet be your greatest moment."
+            ],
+            "given": "by Tyrael after destroying Mephisto's Soulstone.",
+            "tip": "Enter the Chaos Sanctuary and break the Seals.",
+            "reward": "Free-For-All"
+          }
+        ]
+      },
+      {
+        "label": "ACT V : Lord of Destruction",
+        "header": "root",
+        "children": [
+          {
+            "label": "포위당한 해로개쓰|Siege on Harrogath",
+            "avatar": "/images/knowledge/quests/act5/act5q1.gif",
+            "image": "/images/knowledge/quests/act5/act5q1.jpg",
+            "header": "generic",
+            "body": "info",
+            "desc": [
+              "Harrogath is under siege by Baal's demons. If you wish to make good on your promise and prove yourself to Larzuk and the others bring those infernal catapults to a halt. They are threatening to bring down the very walls around us."
+            ],
+            "given": "by Larzuk or by entering the siege area near Shenk the Overseer.",
+            "tip": "If you reach the wooded bridge to the Frigid Highlands you have gone too far. Search the Bloody Foothills for a SuperUnique Monster (Shenk the Overseer) in a special area surrounded by many minions. Kill him."
+          },
+          {
+            "label": "아리앗 산의 구조|Rescue on Mount Arreat",
+            "avatar": "/images/knowledge/quests/act5/act5q2.gif",
+            "image": "/images/knowledge/quests/act5/act5q2.jpg",
+            "header": "generic",
+            "body": "info",
+            "desc": [
+              "Since the siege has ended, Qual-Kehk has turned his concern toward his men still imprisoned among the demons. The gods only know what's being done with them.In your journey up the mountain keep your eyes open for Qual - Kehk's soldiers and bring them back to him if you can."
+            ],
+            "given": "by Qual-Kehk after defeating Shenk the Overseer, or by entering the Frigid Highlands.",
+            "tip": "Search the many fortress areas for special areas on the Automap. They will appear in white. Knock the doors down to release the Barbarians. It is possible to fail this quest. If it says unable to complete quest, you have failed. Create a new game and try again.."
+          },
+          {
+            "label": "얼음 감옥|Prison of Ice",
+            "avatar": "/images/knowledge/quests/act5/act5q3.gif",
+            "image": "/images/knowledge/quests/act5/act5q3.jpg",
+            "header": "generic",
+            "body": "info",
+            "desc": [
+              "Anya, a young alchemist and daughter to one of our slain elders, has disappeared. She is a strong crafty woman with a spirit like no others, except for maybe your own. One night just before your arrival Malah saw her and Nihlathak arguing about something. The next morning she was gone.",
+              "Nihlathak has his own stories as to where she went, but Malah fears he is hiding something, something Anya knows about.",
+              "Find Anya and bring her back to Harrogath. If something is wrong with Nihlathak, she'll know what to do."
+            ],
+            "given": "by Malah or get within range of Anya in the area known as the Frozen River.",
+            "tip": "Find and search the Frozen River."
+          },
+          {
+            "label": "배신의 장소 해로개쓰|Betrayal of Harrogath",
+            "avatar": "/images/knowledge/quests/act5/act5q4.gif",
+            "image": "/images/knowledge/quests/act5/act5q4.jpg",
+            "header": "generic",
+            "body": "info",
+            "desc": [
+              "Nihlathak plans to make a deal with Baal to protect this town. He is giving Baal the relic of the Ancients, our most holy token. It allows anyone to walk unfettered into the mountain. Anya tried to stop him but he imprisoned her among the hordes.",
+              "Nihlathak must be stopped before he dooms us all. His delirium is no excuse for his actions. As much as Anya would love to strangle the life out of him herself, her imprisonment has left her too weak.",
+              "You must kill him. Stop him from destroying everything we have fought for aeons to protect."
+            ],
+            "given": "by Anya.",
+            "tip": "Find the Halls of Vaught. There are four areas. Find the extension of the cross where Nihilathak is located. Nihlathak will raise Minions to help him out. Don't waste your time battling these if possible because he can send an endless stream of them against you. Nihlathak uses Corpse Explosion very effectively. Even players with insane amounts of life can be instantly killed. It's best to use spells and skills on the Minion Corpses so that they can't be exploded. Try to 'rush' Nihlathak and destroy him as quickly as possible."
+          },
+          {
+            "label": "고대인의 통과의례|Rite of Passage",
+            "avatar": "/images/knowledge/quests/act5/act5q5.gif",
+            "image": "/images/knowledge/quests/act5/act5q5.jpg",
+            "header": "generic",
+            "body": "info",
+            "desc": [
+              "You are making your way up to the top of the mountain. None here would ever dare get as close to it as you have. It is sacred to those of Harrogath; our most holy place. The legends say that it is guarded by the Ancient Ones. They block the path of all the unworthy.",
+              "It makes no difference what Qual-Kehk or the others think of you. It will be the Ancients that decide if you are worthy of this battle. Good luck."
+            ],
+            "given": "by Qual-Kehk or reach the top of the mountain.",
+            "tip": "You must destroy all 3 Ancients without leaving the area. If you leave they will be reset. If you open a Town Portal the Ancients will be reset. If no one is alive on the Summit (everyone is dead or in town), the Ancients will be reset. The Ancients are very tough. Try to focus on killing the easiest or weakest one (depends on your class, skills or party) and finish them off. Static Field works great on Ancients without Lightning Immune or Resistance. Next move on to the next weakest Ancient.",
+            "reward": "The maximum experience gain is limited to 1 character level.",
+            "note": "You cannot get credit for this quest unless your Character Level is at least 20 on Normal difficulty, at least 40 in Nightmare, and at least 60 on Hell difficulty."
+          },
+          {
+            "label": "파멸의 전야|Eve of Destruction",
+            "avatar": "/images/knowledge/quests/act5/act5q6.gif",
+            "image": "/images/knowledge/quests/act5/act5q6.jpg",
+            "header": "generic",
+            "body": "info",
+            "desc": [
+              "Beware. As you enter the gates to the mountain you will not be alone. Baal, the Lord of Destruction, is already inside.",
+              "Tyrael has always been our protector, but even he cannot help us now. Baal has blocked our spiritual presence from entering the chamber of the Worldstone. Only you mortal have any chance of defeating him now.",
+              "He threatens the Worldstone and with it the world itself. You must stop Baal before it is too late. If he gains control of the Worldstone all is lost."
+            ],
+            "given": "by the Ancients.",
+            "tip": "Find the Throne of Destruction. Defeat all Monsters in Baal's Throne Room. Then enter the Worldstone Chamber and defeat Baal. Baal can spawn in duplicates of himself. Try to keep track of the real Baal (like the shell game) and do not waste your time attacking the 'fake' Baal. Static Field works very nicely on Baal to bring him down. Baal has many special abilities. Just focus on heading directly for him and beat him up!"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "quests": [
+    {
+      "value": "act",
+      "label": "액트",
+      "img": "/images/knowledge/quests/act/thumbnail.jpg"
+    },
+    {
+      "value": "secret1",
+      "label": "카우 레벨",
+      "img": "/images/knowledge/quests/secret1/thumbnail.jpg"
+    },
+    {
+      "value": "secret2",
+      "label": "위버 디아",
+      "img": "/images/knowledge/quests/secret2/thumbnail.jpg"
+    },
+    {
+      "value": "secret3",
+      "label": "횃불 퀘스트",
+      "img": "/images/knowledge/quests/secret3/thumbnail.jpg"
+    }
+  ]
+}

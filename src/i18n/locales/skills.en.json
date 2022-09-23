@@ -1,0 +1,98 @@
+{
+  "skills": [
+    {
+      "value": "amazon",
+      "label": "Amazon",
+      "img": "/images/knowledge/classes/amazon.png",
+      "over": "/images/knowledge/classes/over/amazon.png"
+    },
+    {
+      "value": "assassin",
+      "label": "Assassin",
+      "img": "/images/knowledge/classes/assassin.png",
+      "over": "/images/knowledge/classes/over/assassin.png"
+    },
+    {
+      "value": "necromancer",
+      "label": "Necromancer",
+      "img": "/images/knowledge/classes/necromancer.png",
+      "over": "/images/knowledge/classes/over/necromancer.png"
+    },
+    {
+      "value": "barbarian",
+      "label": "Barbarian",
+      "img": "/images/knowledge/classes/barbarian.png",
+      "over": "/images/knowledge/classes/over/barbarian.png"
+    },
+    {
+      "value": "paladin",
+      "label": "Paladin",
+      "img": "/images/knowledge/classes/paladin.png",
+      "over": "/images/knowledge/classes/over/paladin.png"
+    },
+    {
+      "value": "sorceress",
+      "label": "Sorceress",
+      "img": "/images/knowledge/classes/sorceress.png",
+      "over": "/images/knowledge/classes/over/sorceress.png"
+    },
+    {
+      "value": "druid",
+      "label": "Druid",
+      "img": "/images/knowledge/classes/druid.png",
+      "over": "/images/knowledge/classes/over/druid.png"
+    }
+  ],
+  "lang": {
+    "notLearned": "You have not learned this skill yet",
+    "remain": "Skill Choices Remaining",
+    "required": "Required Level",
+    "reached": "Maximum Level Reached",
+    "first": "First",
+    "next": "Next",
+    "level": "Level",
+    "current": "Current Skill Level",
+    "bonus": "Receives Bonuses From",
+    "max": "Max",
+    "back": "Back",
+    "info": "Info",
+    "reset": "Reset"
+  },
+  "desc": {
+    "desktop": [
+      {
+        "img": [
+          "left-click.png"
+        ],
+        "text": "Add skill points"
+      },
+      {
+        "img": [
+          "right-click.png"
+        ],
+        "text": "Back skill points"
+      },
+      {
+        "key": [
+          "Shift Key"
+        ],
+        "img": [
+          "left-click.png",
+          "right-click.png"
+        ],
+        "text": "additionally or returns the maximum possible skill"
+      }
+    ],
+    "mobile": [
+      {
+        "text": "- Max check : When skill is added/back, the maximum value is applied"
+      },
+      {
+        "text": "- Back check : Back skill points"
+      },
+      {
+        "text": "- Info check : View skill information"
+      }
+    ]
+  }
+}

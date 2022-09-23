@@ -1,0 +1,46 @@
+{
+  "classes": [
+    {
+      "value": "amazon",
+      "label": "아마존",
+      "img": "/images/knowledge/classes/amazon.png",
+      "over": "/images/knowledge/classes/over/amazon.png"
+    },
+    {
+      "value": "assassin",
+      "label": "암살자",
+      "img": "/images/knowledge/classes/assassin.png",
+      "over": "/images/knowledge/classes/over/assassin.png"
+    },
+    {
+      "value": "necromancer",
+      "label": "강령술사",
+      "img": "/images/knowledge/classes/necromancer.png",
+      "over": "/images/knowledge/classes/over/necromancer.png"
+    },
+    {
+      "value": "barbarian",
+      "label": "야만용사",
+      "img": "/images/knowledge/classes/barbarian.png",
+      "over": "/images/knowledge/classes/over/barbarian.png"
+    },
+    {
+      "value": "paladin",
+      "label": "성기사",
+      "img": "/images/knowledge/classes/paladin.png",
+      "over": "/images/knowledge/classes/over/paladin.png"
+    },
+    {
+      "value": "sorceress",
+      "label": "원소술사",
+      "img": "/images/knowledge/classes/sorceress.png",
+      "over": "/images/knowledge/classes/over/sorceress.png"
+    },
+    {
+      "value": "druid",
+      "label": "드루이드",
+      "img": "/images/knowledge/classes/druid.png",
+      "over": "/images/knowledge/classes/over/druid.png"
+    }
+  ]
+}

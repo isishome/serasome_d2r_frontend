@@ -1,0 +1,111 @@
+{
+  "npcsData": {
+    "act2": [
+      {
+        "image": "/images/knowledge/npcs/atma.gif",
+        "name": "Atma",
+        "desc": "A comely woman who recently lost her family to the evils that attacked Lut Gholein, she is the owner of the public house. She has a strong spirit that is being consumed by grief and hatred. She is hoping to find a hero to avenge her murdered husband and son.",
+        "work": [
+          "Heals - Atma will refill your Life, Mana and Stamina for free."
+        ],
+        "voice": "atma"
+      },
+      {
+        "image": "/images/knowledge/npcs/deckardcain.gif",
+        "name": "Deckard Cain",
+        "desc": "A Horadrim sage, schooled in the most arcane history and lore, who can advise you.",
+        "work": [
+          "Identify Items - Cain will Identify all of the unidentified Items in your Inventory and Horadric Cube."
+        ],
+        "voice": "cain"
+      },
+      {
+        "image": "/images/knowledge/npcs/drognan.gif",
+        "name": "Drognan",
+        "desc": "An aged wizard of an unknown Mage Clan. A man of few and private words, not many have even heard him speak. If he does, it is for a good reason, and one should listen.",
+        "work": [
+          "Trade - Sells Staves, Scepters, Wands, Tomes, Scrolls, and Potions."
+        ],
+        "voice": "drognan"
+      },
+      {
+        "image": "/images/knowledge/npcs/elzix.gif",
+        "name": "Elzix",
+        "desc": "The innkeeper was once a bandit king, but gave up the life after surviving a third assassination attempt. He lost his left eye before fleeing to this city. He then traded key facts regarding the dreaded band to which he formerly belonged for his freedom and the money to found this Inn. He has keen ears, and knows a lot of what goes on in the desert.",
+        "work": [
+          "Trade - Sells Armor, Weapons, Bolts and Arrows.",
+          "Gamble - For a price, Elzix will sell you an unidentified item. Once purchased, the item will be identified and you will see what item you received."
+        ],
+        "voice": "elzix"
+      },
+      {
+        "image": "/images/knowledge/npcs/fara.gif",
+        "name": "Fara",
+        "desc": "Once a Holy warrior for the Church of Light, she retired after learning of corruption and greed within the Church. She now makes a living selling and repairing armor for the city's guards and mercenaries.While no longer of Zakarum, she carries forth the ideals of Order and Right. She has a positive attitude and great inner strength.",
+        "work": [
+          "Heals - Fara will refill your Life, Mana and Stamina for free.",
+          "Repair - Repair damaged Weapons and Armor for a price.",
+          "Trade - Sells Armor, Weapons, Bolts, and Arrows."
+        ],
+        "voice": "fara"
+      },
+      {
+        "image": "/images/knowledge/npcs/geglash.gif",
+        "name": "Geglash",
+        "desc": "A fearless, drunken blowhard. He is afraid of one thing however, Water, and he will not go near it or ships for any reason.",
+        "work": [],
+        "voice": "geglash"
+      },
+      {
+        "image": "/images/knowledge/npcs/greiz.gif",
+        "name": "Greiz",
+        "desc": "Captain of the town's hired guards. He takes crap from no one, and he doesn't mind busting a few skulls to make a point. He wears chain armor despite the unbearable heat.",
+        "work": [
+          "Hire - Allows you to hire Mercenaries."
+        ],
+        "voice": "greiz"
+      },
+      {
+        "image": "/images/knowledge/npcs/jerhyn.gif",
+        "name": "Jerhyn",
+        "desc": "He is trying in vain to devise a strategy against the encroaching evil. But his resources are limited and time is short, without more men his current plan is doomed to failure. He is young, has good leadership ability, and he is well liked by his people.",
+        "work": [],
+        "voice": "jerhyn"
+      },
+      {
+        "image": "/images/knowledge/npcs/guard.gif",
+        "name": "Kaelan",
+        "desc": "Guards the entrance to Jerhyn's palace.",
+        "work": [],
+        "voice": "guard"
+      },
+      {
+        "image": "/images/knowledge/npcs/lysander.gif",
+        "name": "Lysander",
+        "desc": "An exclusive potion dealer and alchemist, Lysander is short-tempered and nearly deaf, due to explosive failures in the mixing of ingredients. He will want to know why you are always wasting his time, even if you have never met before.",
+        "work": [
+          "Trade - Sells Keys and Potions."
+        ],
+        "voice": "lysander"
+      },
+      {
+        "image": "/images/knowledge/npcs/meshif.gif",
+        "name": "Meshif",
+        "desc": "A ship's captain, he is friendly, but quite keen for anything of value - gold, gems, and jade statuettes.",
+        "work": [
+          "Sail East - Once Act II has been completed, allows players to travel to Act III."
+        ],
+        "voice": "meshif"
+      },
+      {
+        "image": "/images/knowledge/npcs/warriv-act2.gif",
+        "name": "Warriv",
+        "desc": "Warriv is a large man with a stern demeanor. Now that the pass from East to West is open, he is bit more friendly.",
+        "work": [
+          "Go West - Go west back to the Rogue Encampment."
+        ],
+        "voice": "warriv"
+      }
+    ]
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "npcsData": {
+    "act4": [
+      {
+        "image": "/images/knowledge/npcs/deckardcain.gif",
+        "name": "Deckard Cain",
+        "desc": "A Horadrim sage, schooled in the most arcane history and lore, who can advise you.",
+        "work": [
+          "Identify Items - Cain will Identify all of the unidentified Items in your Inventory and Horadric Cube."
+        ],
+        "voice": "cain"
+      },
+      {
+        "image": "/images/knowledge/npcs/hadriel.gif",
+        "name": "Hadriel",
+        "desc": "Guards the way into the Chaos Sanctuary.",
+        "work": [],
+        "voice": "hadriel"
+      },
+      {
+        "image": "/images/knowledge/npcs/halbu.gif",
+        "name": "Halbu",
+        "desc": "Male warrior shopkeeper.",
+        "work": [
+          "Repair - Repair damaged Weapons and Armor for a price.",
+          "Trade - Sells Armor, Weapons, Bolts and Arrows."
+        ],
+        "voice": "halbu"
+      },
+      {
+        "image": "/images/knowledge/npcs/jamella.gif",
+        "name": "Jamella",
+        "desc": "Female warrior shopkeeper.",
+        "work": [
+          "Heals - Jamella will refill your Life, Mana and Stamina for free.",
+          "Trade - Sells Armor, Weapons, Staves, Wands, Scepters, Tomes, Potions, and Scrolls.",
+          "Gamble - For a price, Jamella will sell you an unidentified item. Once purchased, the item will be identified and you will see what item you received."
+        ],
+        "voice": "jamella"
+      },
+      {
+        "image": "/images/knowledge/npcs/izual.gif",
+        "name": "Izual",
+        "desc": "Once a trusted companion of Tyrael, Izual fell from the graces of heaven. Now trapped within a demonic husk in the forsaken realms beyond the Pandemonium Fortress, you must find and release him to find out the dark secrets he holds.",
+        "work": [],
+        "voice": "izual"
+      },
+      {
+        "image": "/images/knowledge/npcs/tyrael.gif",
+        "name": "Tyrael",
+        "desc": "The Archangel Tyrael. He came here to prevent Diablo from freeing his brother, Baal, but he has failed. Now Terror and Destruction roam free throughout the world.",
+        "work": [],
+        "voice": "tyrael"
+      }
+    ]
+  }
+}

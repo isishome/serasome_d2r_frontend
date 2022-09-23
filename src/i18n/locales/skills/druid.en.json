@@ -1,0 +1,5877 @@
+{
+  "skillsData": {
+    "druid": [
+      {
+        "id": "em",
+        "name": "Elemental",
+        "src": "back.jpg",
+        "skills": [
+          {
+            "id": "firestorm",
+            "top": "3.4",
+            "left": "13.2",
+            "position": "left",
+            "affected": [
+              {
+                "treeId": "em",
+                "skillId": "moltenboulder"
+              },
+              {
+                "treeId": "em",
+                "skillId": "fissure"
+              },
+              {
+                "treeId": "em",
+                "skillId": "armageddon"
+              },
+              {
+                "treeId": "ss",
+                "skillId": "fireclaws"
+              }
+            ],
+            "name": "Fire Storm",
+            "desc": [
+              "Unleash Fiery Chaos To Burn Your Enemies"
+            ],
+            "level": "1",
+            "add": [
+              {
+                "text": "Mana Cost {0}",
+                "value": [
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4
+                ]
+              }
+            ],
+            "stat": [
+              {
+                "text": "Average Fire Damage {0}-{1} Per Second",
+                "value": [
+                  0,
+                  [
+                    3,
+                    7
+                  ],
+                  [
+                    7,
+                    10
+                  ],
+                  [
+                    10,
+                    14
+                  ],
+                  [
+                    14,
+                    17
+                  ],
+                  [
+                    17,
+                    21
+                  ],
+                  [
+                    21,
+                    24
+                  ],
+                  [
+                    24,
+                    28
+                  ],
+                  [
+                    28,
+                    31
+                  ],
+                  [
+                    33,
+                    38
+                  ],
+                  [
+                    39,
+                    45
+                  ],
+                  [
+                    45,
+                    52
+                  ],
+                  [
+                    51,
+                    59
+                  ],
+                  [
+                    57,
+                    66
+                  ],
+                  [
+                    63,
+                    73
+                  ],
+                  [
+                    69,
+                    80
+                  ],
+                  [
+                    75,
+                    87
+                  ],
+                  [
+                    83,
+                    97
+                  ],
+                  [
+                    91,
+                    106
+                  ],
+                  [
+                    99,
+                    116
+                  ],
+                  [
+                    107,
+                    125
+                  ]
+                ]
+              }
+            ],
+            "bonus": [
+              {
+                "treeId": "em",
+                "skillId": "moltenboulder",
+                "statIdx": [
+                  0
+                ],
+                "value": [
+                  23
+                ],
+                "type": [
+                  "rate"
+                ],
+                "text": "{n}: +{0}% Fire Damage Per Level"
+              },
+              {
+                "treeId": "em",
+                "skillId": "fissure",
+                "statIdx": [
+                  0
+                ],
+                "value": [
+                  23
+                ],
+                "type": [
+                  "rate"
+                ],
+                "text": "{n}: +{0}% Fire Damage Per Level"
+              }
+            ]
+          },
+          {
+            "id": "moltenboulder",
+            "top": "19.6",
+            "left": "13.2",
+            "position": "left",
+            "affected": [
+              {
+                "treeId": "em",
+                "skillId": "firestorm"
+              },
+              {
+                "treeId": "em",
+                "skillId": "volcano"
+              },
+              {
+                "treeId": "em",
+                "skillId": "armageddon"
+              },
+              {
+                "treeId": "ss",
+                "skillId": "fireclaws"
+              }
+            ],
+            "required": [
+              {
+                "treeId": "em",
+                "skillId": "firestorm"
+              }
+            ],
+            "name": "Molten Boulder",
+            "desc": [
+              "Launch A Boulder Of Flaming Hot Magma",
+              "That Knocks Back Your Enemies"
+            ],
+            "level": "6",
+            "stat": [
+              {
+                "text": "Damage: {0}-{1}",
+                "value": [
+                  0,
+                  [
+                    6,
+                    12
+                  ],
+                  [
+                    10,
+                    17
+                  ],
+                  [
+                    14,
+                    22
+                  ],
+                  [
+                    18,
+                    27
+                  ],
+                  [
+                    22,
+                    32
+                  ],
+                  [
+                    26,
+                    37
+                  ],
+                  [
+                    30,
+                    42
+                  ],
+                  [
+                    34,
+                    47
+                  ],
+                  [
+                    41,
+                    55
+                  ],
+                  [
+                    48,
+                    63
+                  ],
+                  [
+                    55,
+                    71
+                  ],
+                  [
+                    62,
+                    79
+                  ],
+                  [
+                    69,
+                    87
+                  ],
+                  [
+                    76,
+                    95
+                  ],
+                  [
+                    83,
+                    103
+                  ],
+                  [
+                    90,
+                    111
+                  ],
+                  [
+                    100,
+                    122
+                  ],
+                  [
+                    110,
+                    133
+                  ],
+                  [
+                    120,
+                    144
+                  ],
+                  [
+                    130,
+                    155
+                  ]
+                ]
+              },
+              {
+                "text": "Fire Damage {0}-{1}",
+                "value": [
+                  0,
+                  [
+                    6,
+                    12
+                  ],
+                  [
+                    10,
+                    17
+                  ],
+                  [
+                    14,
+                    22
+                  ],
+                  [
+                    18,
+                    27
+                  ],
+                  [
+                    22,
+                    32
+                  ],
+                  [
+                    26,
+                    37
+                  ],
+                  [
+                    30,
+                    42
+                  ],
+                  [
+                    34,
+                    47
+                  ],
+                  [
+                    41,
+                    55
+                  ],
+                  [
+                    48,
+                    63
+                  ],
+                  [
+                    55,
+                    71
+                  ],
+                  [
+                    62,
+                    79
+                  ],
+                  [
+                    69,
+                    87
+                  ],
+                  [
+                    76,
+                    95
+                  ],
+                  [
+                    83,
+                    103
+                  ],
+                  [
+                    90,
+                    111
+                  ],
+                  [
+                    100,
+                    122
+                  ],
+                  [
+                    110,
+                    133
+                  ],
+                  [
+                    120,
+                    144
+                  ],
+                  [
+                    130,
+                    155
+                  ]
+                ]
+              },
+              {
+                "text": "Average Fire Damage {0}-{1} Per Second",
+                "value": [
+                  0,
+                  [
+                    12,
+                    16
+                  ],
+                  [
+                    19,
+                    24
+                  ],
+                  [
+                    25,
+                    30
+                  ],
+                  [
+                    33,
+                    38
+                  ],
+                  [
+                    40,
+                    45
+                  ],
+                  [
+                    47,
+                    51
+                  ],
+                  [
+                    54,
+                    59
+                  ],
+                  [
+                    61,
+                    65
+                  ],
+                  [
+                    69,
+                    74
+                  ],
+                  [
+                    77,
+                    82
+                  ],
+                  [
+                    86,
+                    90
+                  ],
+                  [
+                    94,
+                    99
+                  ],
+                  [
+                    102,
+                    107
+                  ],
+                  [
+                    110,
+                    115
+                  ],
+                  [
+                    118,
+                    123
+                  ],
+                  [
+                    126,
+                    131
+                  ],
+                  [
+                    136,
+                    140
+                  ],
+                  [
+                    145,
+                    150
+                  ],
+                  [
+                    155,
+                    160
+                  ],
+                  [
+                    164,
+                    169
+                  ]
+                ]
+              },
+              {
+                "text": "Mana Cost {0}",
+                "value": [
+                  0,
+                  10,
+                  10.5,
+                  11,
+                  11.5,
+                  12,
+                  12,
+                  13,
+                  13,
+                  14,
+                  14,
+                  15,
+                  15,
+                  16,
+                  16,
+                  17,
+                  17,
+                  18,
+                  18,
+                  19,
+                  19
+                ]
+              }
+            ],
+            "bonus": [
+              {
+                "treeId": "em",
+                "skillId": "volcano",
+                "statIdx": [
+                  0
+                ],
+                "value": [
+                  10
+                ],
+                "type": [
+                  "rate"
+                ],
+                "text": "{n}: +{0}% Damage Per Level"
+              },
+              {
+                "treeId": "em",
+                "skillId": "firestorm",
+                "statIdx": [
+                  1,
+                  2
+                ],
+                "value": [
+                  8,
+                  8
+                ],
+                "type": [
+                  "rate",
+                  "rate"
+                ],
+                "text": "{n}: +{0}% Fire Damage Per Level"
+              }
+            ]
+          },
+          {
+            "id": "fissure",
+            "top": "35.6",
+            "left": "13.2",
+            "position": "left",
+            "affected": [
+              {
+                "treeId": "em",
+                "skillId": "firestorm"
+              },
+              {
+                "treeId": "em",
+                "skillId": "volcano"
+              },
+              {
+                "treeId": "em",
+                "skillId": "armageddon"
+              },
+              {
+                "treeId": "ss",
+                "skillId": "fireclaws"
+              }
+            ],
+            "required": [
+              {
+                "treeId": "em",
+                "skillId": "moltenboulder"
+              }
+            ],
+            "name": "Fissure",
+            "desc": [
+              "Open Volcanic Vents Below Your Enemies,",
+              "Burning Them To A Crisp"
+            ],
+            "level": "12",
+            "add": [
+              {
+                "text": "Duration: {0} Seconds",
+                "value": [
+                  1.6,
+                  1.6,
+                  1.6,
+                  1.6,
+                  1.6,
+                  1.6,
+                  1.6,
+                  1.6,
+                  1.6,
+                  1.6,
+                  1.6,
+                  1.6,
+                  1.6,
+                  1.6,
+                  1.6,
+                  1.6,
+                  1.6,
+                  1.6,
+                  1.6,
+                  1.6,
+                  1.6
+                ]
+              },
+              {
+                "text": "Mana Cost {0}",
+                "value": [
+                  15,
+                  15,
+                  15,
+                  15,
+                  15,
+                  15,
+                  15,
+                  15,
+                  15,
+                  15,
+                  15,
+                  15,
+                  15,
+                  15,
+                  15,
+                  15,
+                  15,
+                  15,
+                  15,
+                  15,
+                  15
+                ]
+              }
+            ],
+            "stat": [
+              {
+                "text": "Fire Damage {0}-{1}",
+                "value": [
+                  0,
+                  [
+                    15,
+                    25
+                  ],
+                  [
+                    21,
+                    31
+                  ],
+                  [
+                    27,
+                    37
+                  ],
+                  [
+                    33,
+                    43
+                  ],
+                  [
+                    39,
+                    49
+                  ],
+                  [
+                    45,
+                    55
+                  ],
+                  [
+                    51,
+                    61
+                  ],
+                  [
+                    57,
+                    67
+                  ],
+                  [
+                    69,
+                    79
+                  ],
+                  [
+                    81,
+                    91
+                  ],
+                  [
+                    93,
+                    103
+                  ],
+                  [
+                    105,
+                    115
+                  ],
+                  [
+                    117,
+                    127
+                  ],
+                  [
+                    129,
+                    139
+                  ],
+                  [
+                    141,
+                    151
+                  ],
+                  [
+                    153,
+                    163
+                  ],
+                  [
+                    169,
+                    179
+                  ],
+                  [
+                    185,
+                    195
+                  ],
+                  [
+                    201,
+                    211
+                  ],
+                  [
+                    217,
+                    227
+                  ]
+                ]
+              }
+            ],
+            "bonus": [
+              {
+                "treeId": "em",
+                "skillId": "firestorm",
+                "statIdx": [
+                  0
+                ],
+                "value": [
+                  12
+                ],
+                "type": [
+                  "rate"
+                ],
+                "text": "{n}: +{0}% Fire Damage Per Level"
+              },
+              {
+                "treeId": "em",
+                "skillId": "volcano",
+                "statIdx": [
+                  0
+                ],
+                "value": [
+                  12
+                ],
+                "type": [
+                  "rate"
+                ],
+                "text": "{n}: +{0}% Fire Damage Per Level"
+              }
+            ]
+          },
+          {
+            "id": "volcano",
+            "top": "68.4",
+            "left": "13.2",
+            "position": "left",
+            "affected": [
+              {
+                "treeId": "em",
+                "skillId": "moltenboulder"
+              },
+              {
+                "treeId": "em",
+                "skillId": "fissure"
+              },
+              {
+                "treeId": "em",
+                "skillId": "armageddon"
+              },
+              {
+                "treeId": "ss",
+                "skillId": "fireclaws"
+              }
+            ],
+            "required": [
+              {
+                "treeId": "em",
+                "skillId": "fissure"
+              }
+            ],
+            "name": "Volcano",
+            "desc": [
+              "Summon Forth A Volcano To Rain Death",
+              "And Destruction Over Your Enemies"
+            ],
+            "level": "24",
+            "add": [
+              {
+                "text": "Mana Cost {0}",
+                "value": [
+                  25,
+                  25,
+                  25,
+                  25,
+                  25,
+                  25,
+                  25,
+                  25,
+                  25,
+                  25,
+                  25,
+                  25,
+                  25,
+                  25,
+                  25,
+                  25,
+                  25,
+                  25,
+                  25,
+                  25,
+                  25
+                ]
+              }
+            ],
+            "stat": [
+              {
+                "text": "Damage: {0}-{1}",
+                "value": [
+                  0,
+                  [
+                    8,
+                    10
+                  ],
+                  [
+                    10,
+                    12
+                  ],
+                  [
+                    12,
+                    14
+                  ],
+                  [
+                    14,
+                    16
+                  ],
+                  [
+                    16,
+                    18
+                  ],
+                  [
+                    18,
+                    20
+                  ],
+                  [
+                    20,
+                    22
+                  ],
+                  [
+                    22,
+                    24
+                  ],
+                  [
+                    26,
+                    28
+                  ],
+                  [
+                    30,
+                    32
+                  ],
+                  [
+                    34,
+                    36
+                  ],
+                  [
+                    38,
+                    40
+                  ],
+                  [
+                    42,
+                    44
+                  ],
+                  [
+                    46,
+                    48
+                  ],
+                  [
+                    50,
+                    52
+                  ],
+                  [
+                    54,
+                    56
+                  ],
+                  [
+                    60,
+                    62
+                  ],
+                  [
+                    66,
+                    68
+                  ],
+                  [
+                    72,
+                    74
+                  ],
+                  [
+                    78,
+                    80
+                  ]
+                ]
+              },
+              {
+                "text": "Fire Damage {0}-{1}",
+                "value": [
+                  0,
+                  [
+                    8,
+                    10
+                  ],
+                  [
+                    10,
+                    12
+                  ],
+                  [
+                    12,
+                    14
+                  ],
+                  [
+                    14,
+                    16
+                  ],
+                  [
+                    16,
+                    18
+                  ],
+                  [
+                    18,
+                    20
+                  ],
+                  [
+                    20,
+                    22
+                  ],
+                  [
+                    22,
+                    24
+                  ],
+                  [
+                    26,
+                    28
+                  ],
+                  [
+                    30,
+                    32
+                  ],
+                  [
+                    34,
+                    36
+                  ],
+                  [
+                    38,
+                    40
+                  ],
+                  [
+                    42,
+                    44
+                  ],
+                  [
+                    46,
+                    48
+                  ],
+                  [
+                    50,
+                    52
+                  ],
+                  [
+                    54,
+                    56
+                  ],
+                  [
+                    60,
+                    62
+                  ],
+                  [
+                    66,
+                    68
+                  ],
+                  [
+                    72,
+                    74
+                  ],
+                  [
+                    78,
+                    80
+                  ]
+                ]
+              }
+            ],
+            "bonus": [
+              {
+                "treeId": "em",
+                "skillId": "moltenboulder",
+                "statIdx": [
+                  0
+                ],
+                "value": [
+                  12
+                ],
+                "type": [
+                  "rate"
+                ],
+                "text": "{n}: +{0}% Damage Per Level"
+              },
+              {
+                "treeId": "em",
+                "skillId": "fissure",
+                "statIdx": [
+                  1
+                ],
+                "value": [
+                  12
+                ],
+                "type": [
+                  "rate"
+                ],
+                "text": "{n}: +{0}% Fire Damage Per Level"
+              },
+              {
+                "treeId": "em",
+                "skillId": "armageddon",
+                "statIdx": [
+                  1
+                ],
+                "value": [
+                  12
+                ],
+                "type": [
+                  "rate"
+                ],
+                "text": "{n}: +{0}% Fire Damage Per Level"
+              }
+            ]
+          },
+          {
+            "id": "armageddon",
+            "top": "84.3",
+            "left": "13.2",
+            "position": "left",
+            "affected": [
+              {
+                "treeId": "em",
+                "skillId": "volcano"
+              }
+            ],
+            "required": [
+              {
+                "treeId": "em",
+                "skillId": "volcano"
+              },
+              {
+                "treeId": "em",
+                "skillId": "hurricane"
+              }
+            ],
+            "name": "Armageddon",
+            "desc": [
+              "Create A Meteor Shower To Rain Fiery",
+              "Destruction On Nearby Enemies"
+            ],
+            "level": "30",
+            "add": [
+              {
+                "text": "Duration: {0} Seconds",
+                "value": [
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10
+                ]
+              },
+              {
+                "text": "Radius: {0} Yards",
+                "value": [
+                  5.3,
+                  5.3,
+                  5.3,
+                  5.3,
+                  5.3,
+                  5.3,
+                  5.3,
+                  5.3,
+                  5.3,
+                  5.3,
+                  5.3,
+                  5.3,
+                  5.3,
+                  5.3,
+                  5.3,
+                  5.3,
+                  5.3,
+                  5.3,
+                  5.3,
+                  5.3,
+                  5.3
+                ]
+              },
+              {
+                "text": "Mana Cost {0}",
+                "value": [
+                  35,
+                  35,
+                  35,
+                  35,
+                  35,
+                  35,
+                  35,
+                  35,
+                  35,
+                  35,
+                  35,
+                  35,
+                  35,
+                  35,
+                  35,
+                  35,
+                  35,
+                  35,
+                  35,
+                  35,
+                  35
+                ]
+              }
+            ],
+            "stat": [
+              {
+                "text": "Fire Damage {0}-{1}",
+                "value": [
+                  0,
+                  [
+                    25,
+                    75
+                  ],
+                  [
+                    40,
+                    91
+                  ],
+                  [
+                    55,
+                    107
+                  ],
+                  [
+                    70,
+                    123
+                  ],
+                  [
+                    85,
+                    139
+                  ],
+                  [
+                    100,
+                    155
+                  ],
+                  [
+                    115,
+                    171
+                  ],
+                  [
+                    130,
+                    187
+                  ],
+                  [
+                    150,
+                    209
+                  ],
+                  [
+                    170,
+                    231
+                  ],
+                  [
+                    190,
+                    253
+                  ],
+                  [
+                    210,
+                    275
+                  ],
+                  [
+                    230,
+                    297
+                  ],
+                  [
+                    250,
+                    319
+                  ],
+                  [
+                    270,
+                    341
+                  ],
+                  [
+                    290,
+                    363
+                  ],
+                  [
+                    315,
+                    390
+                  ],
+                  [
+                    340,
+                    417
+                  ],
+                  [
+                    365,
+                    444
+                  ],
+                  [
+                    390,
+                    471
+                  ]
+                ]
+              },
+              {
+                "text": "Average Fire Damage {0}-{1} Per Second",
+                "value": [
+                  0,
+                  [
+                    10,
+                    13
+                  ],
+                  [
+                    16,
+                    20
+                  ],
+                  [
+                    22,
+                    26
+                  ],
+                  [
+                    27,
+                    31
+                  ],
+                  [
+                    34,
+                    37
+                  ],
+                  [
+                    40,
+                    44
+                  ],
+                  [
+                    46,
+                    50
+                  ],
+                  [
+                    51,
+                    55
+                  ],
+                  [
+                    59,
+                    63
+                  ],
+                  [
+                    65,
+                    70
+                  ],
+                  [
+                    73,
+                    77
+                  ],
+                  [
+                    79,
+                    84
+                  ],
+                  [
+                    87,
+                    91
+                  ],
+                  [
+                    93,
+                    98
+                  ],
+                  [
+                    100,
+                    105
+                  ],
+                  [
+                    108,
+                    112
+                  ],
+                  [
+                    116,
+                    120
+                  ],
+                  [
+                    124,
+                    127
+                  ],
+                  [
+                    131,
+                    136
+                  ],
+                  [
+                    140,
+                    143
+                  ]
+                ]
+              }
+            ],
+            "bonus": [
+              {
+                "treeId": "em",
+                "skillId": "fissure",
+                "addIdx": [
+                  0
+                ],
+                "value": [
+                  2
+                ],
+                "type": [
+                  "rate"
+                ],
+                "text": "{n}: +{0} Seconds Per Level"
+              },
+              {
+                "treeId": "em",
+                "skillId": "firestorm",
+                "statIdx": [
+                  0,
+                  1
+                ],
+                "value": [
+                  14,
+                  14
+                ],
+                "type": [
+                  "rate",
+                  "rate"
+                ],
+                "text": "{n}: +{0}% Fire Damage Per Level"
+              },
+              {
+                "treeId": "em",
+                "skillId": "moltenboulder",
+                "statIdx": [
+                  0,
+                  1
+                ],
+                "value": [
+                  14,
+                  14
+                ],
+                "type": [
+                  "rate",
+                  "rate"
+                ],
+                "text": "{n}: +{0}% Fire Damage Per Level"
+              },
+              {
+                "treeId": "em",
+                "skillId": "volcano",
+                "statIdx": [
+                  0,
+                  1
+                ],
+                "value": [
+                  14,
+                  14
+                ],
+                "type": [
+                  "rate",
+                  "rate"
+                ],
+                "text": "{n}: +{0}% Fire Damage Per Level"
+              }
+            ]
+          },
+          {
+            "id": "twister",
+            "top": "52",
+            "left": "42.9",
+            "position": "middle",
+            "affected": [
+              {
+                "treeId": "em",
+                "skillId": "tornado"
+              },
+              {
+                "treeId": "em",
+                "skillId": "hurricane"
+              },
+              {
+                "treeId": "em",
+                "skillId": "cyclonearmor"
+              }
+            ],
+            "required": [
+              {
+                "treeId": "em",
+                "skillId": "cyclonearmor"
+              }
+            ],
+            "name": "Twister",
+            "desc": [
+              "Release Several Small Whirlwinds That",
+              "Cut A Path Through Your Enemies"
+            ],
+            "level": "18",
+            "add": [
+              {
+                "text": "Stun Length {0} Seconds",
+                "value": [
+                  0.4,
+                  0.4,
+                  0.4,
+                  0.4,
+                  0.4,
+                  0.4,
+                  0.4,
+                  0.4,
+                  0.4,
+                  0.4,
+                  0.4,
+                  0.4,
+                  0.4,
+                  0.4,
+                  0.4,
+                  0.4,
+                  0.4,
+                  0.4,
+                  0.4,
+                  0.4,
+                  0.4
+                ]
+              },
+              {
+                "text": "Mana Cost {0}",
+                "value": [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ]
+              }
+            ],
+            "stat": [
+              {
+                "text": "Damage: {0}-{1}",
+                "value": [
+                  0,
+                  [
+                    6,
+                    8
+                  ],
+                  [
+                    8,
+                    10
+                  ],
+                  [
+                    10,
+                    12
+                  ],
+                  [
+                    12,
+                    14
+                  ],
+                  [
+                    14,
+                    16
+                  ],
+                  [
+                    16,
+                    18
+                  ],
+                  [
+                    18,
+                    20
+                  ],
+                  [
+                    20,
+                    22
+                  ],
+                  [
+                    23,
+                    25
+                  ],
+                  [
+                    27,
+                    29
+                  ],
+                  [
+                    30,
+                    32
+                  ],
+                  [
+                    34,
+                    36
+                  ],
+                  [
+                    37,
+                    39
+                  ],
+                  [
+                    41,
+                    43
+                  ],
+                  [
+                    44,
+                    46
+                  ],
+                  [
+                    48,
+                    50
+                  ],
+                  [
+                    53,
+                    55
+                  ],
+                  [
+                    58,
+                    61
+                  ],
+                  [
+                    63,
+                    66
+                  ],
+                  [
+                    68,
+                    72
+                  ]
+                ]
+              }
+            ],
+            "bonus": [
+              {
+                "treeId": "em",
+                "skillId": "tornado",
+                "statIdx": [
+                  0
+                ],
+                "value": [
+                  10
+                ],
+                "type": [
+                  "rate"
+                ],
+                "text": "{n}: +{0}% Damage Per Level"
+              },
+              {
+                "treeId": "em",
+                "skillId": "hurricane",
+                "statIdx": [
+                  0
+                ],
+                "value": [
+                  10
+                ],
+                "type": [
+                  "rate"
+                ],
+                "text": "{n}: +{0}% Damage Per Level"
+              }
+            ]
+          },
+          {
+            "id": "tornado",
+            "top": "68.4",
+            "left": "42.9",
+            "position": "middle",
+            "affected": [
+              {
+                "treeId": "em",
+                "skillId": "twister"
+              },
+              {
+                "treeId": "em",
+                "skillId": "hurricane"
+              },
+              {
+                "treeId": "em",
+                "skillId": "cyclonearmor"
+              }
+            ],
+            "required": [
+              {
+                "treeId": "em",
+                "skillId": "twister"
+              }
+            ],
+            "name": "Tornado",
+            "desc": [
+              "Create A Funnel Of Wind And Debris",
+              "To Blast Your Enemies"
+            ],
+            "level": "24",
+            "add": [
+              {
+                "text": "Mana Cost {0}",
+                "value": [
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10
+                ]
+              }
+            ],
+            "stat": [
+              {
+                "text": "Damage: {0}-{1}",
+                "value": [
+                  0,
+                  [
+                    25,
+                    35
+                  ],
+                  [
+                    33,
+                    43
+                  ],
+                  [
+                    41,
+                    51
+                  ],
+                  [
+                    49,
+                    59
+                  ],
+                  [
+                    57,
+                    67
+                  ],
+                  [
+                    65,
+                    75
+                  ],
+                  [
+                    73,
+                    83
+                  ],
+                  [
+                    81,
+                    91
+                  ],
+                  [
+                    95,
+                    106
+                  ],
+                  [
+                    109,
+                    121
+                  ],
+                  [
+                    123,
+                    136
+                  ],
+                  [
+                    137,
+                    151
+                  ],
+                  [
+                    151,
+                    166
+                  ],
+                  [
+                    165,
+                    181
+                  ],
+                  [
+                    179,
+                    196
+                  ],
+                  [
+                    193,
+                    211
+                  ],
+                  [
+                    213,
+                    232
+                  ],
+                  [
+                    233,
+                    253
+                  ],
+                  [
+                    253,
+                    274
+                  ],
+                  [
+                    273,
+                    295
+                  ]
+                ]
+              }
+            ],
+            "bonus": [
+              {
+                "treeId": "em",
+                "skillId": "cyclonearmor",
+                "statIdx": [
+                  0
+                ],
+                "value": [
+                  9
+                ],
+                "type": [
+                  "rate"
+                ],
+                "text": "{n}: +{0}% Damage Per Level"
+              },
+              {
+                "treeId": "em",
+                "skillId": "twister",
+                "statIdx": [
+                  0
+                ],
+                "value": [
+                  9
+                ],
+                "type": [
+                  "rate"
+                ],
+                "text": "{n}: +{0}% Damage Per Level"
+              },
+              {
+                "treeId": "em",
+                "skillId": "hurricane",
+                "statIdx": [
+                  0
+                ],
+                "value": [
+                  9
+                ],
+                "type": [
+                  "rate"
+                ],
+                "text": "{n}: +{0}% Damage Per Level"
+              }
+            ]
+          },
+          {
+            "id": "hurricane",
+            "top": "84.3",
+            "left": "42.9",
+            "position": "middle",
+            "affected": [
+              {
+                "treeId": "em",
+                "skillId": "twister"
+              },
+              {
+                "treeId": "em",
+                "skillId": "tornado"
+              },
+              {
+                "treeId": "em",
+                "skillId": "arcticblast"
+              },
+              {
+                "treeId": "em",
+                "skillId": "cyclonearmor"
+              }
+            ],
+            "required": [
+              {
+                "treeId": "em",
+                "skillId": "tornado"
+              }
+            ],
+            "name": "Hurricane",
+            "desc": [
+              "Create A Massive Storm Of Wind And",
+              "Debris To Pound Your Enemies To Bits"
+            ],
+            "level": "30",
+            "add": [
+              {
+                "text": "Duration: {0} Seconds",
+                "value": [
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10
+                ]
+              },
+              {
+                "text": "Radius: {0} Yards",
+                "value": [
+                  6,
+                  6,
+                  6,
+                  6,
+                  6,
+                  6,
+                  6,
+                  6,
+                  6,
+                  6,
+                  6,
+                  6,
+                  6,
+                  6,
+                  6,
+                  6,
+                  6,
+                  6,
+                  6,
+                  6,
+                  6
+                ]
+              },
+              {
+                "text": "Mana Cost {0}",
+                "value": [
+                  30,
+                  30,
+                  30,
+                  30,
+                  30,
+                  30,
+                  30,
+                  30,
+                  30,
+                  30,
+                  30,
+                  30,
+                  30,
+                  30,
+                  30,
+                  30,
+                  30,
+                  30,
+                  30,
+                  30,
+                  30
+                ]
+              }
+            ],
+            "stat": [
+              {
+                "text": "Cold Damage {0}-{1}",
+                "value": [
+                  0,
+                  [
+                    25,
+                    50
+                  ],
+                  [
+                    32,
+                    57
+                  ],
+                  [
+                    39,
+                    64
+                  ],
+                  [
+                    46,
+                    71
+                  ],
+                  [
+                    53,
+                    78
+                  ],
+                  [
+                    60,
+                    85
+                  ],
+                  [
+                    67,
+                    92
+                  ],
+                  [
+                    74,
+                    99
+                  ],
+                  [
+                    84,
+                    109
+                  ],
+                  [
+                    94,
+                    119
+                  ],
+                  [
+                    104,
+                    129
+                  ],
+                  [
+                    114,
+                    139
+                  ],
+                  [
+                    124,
+                    149
+                  ],
+                  [
+                    134,
+                    159
+                  ],
+                  [
+                    144,
+                    169
+                  ],
+                  [
+                    154,
+                    179
+                  ],
+                  [
+                    166,
+                    191
+                  ],
+                  [
+                    178,
+                    203
+                  ],
+                  [
+                    190,
+                    215
+                  ],
+                  [
+                    202,
+                    227
+                  ]
+                ]
+              }
+            ],
+            "bonus": [
+              {
+                "treeId": "em",
+                "skillId": "cyclonearmor",
+                "addIdx": [
+                  0
+                ],
+                "value": [
+                  2
+                ],
+                "type": [
+                  "sum"
+                ],
+                "text": "{n}: +{0} Seconds Per Level"
+              },
+              {
+                "treeId": "em",
+                "skillId": "twister",
+                "statIdx": [
+                  0
+                ],
+                "value": [
+                  9
+                ],
+                "type": [
+                  "rate"
+                ],
+                "text": "{n}: +{0}% Damage Per Level"
+              },
+              {
+                "treeId": "em",
+                "skillId": "tornado",
+                "statIdx": [
+                  0
+                ],
+                "value": [
+                  9
+                ],
+                "type": [
+                  "rate"
+                ],
+                "text": "{n}: +{0}% Damage Per Level"
+              }
+            ]
+          },
+          {
+            "id": "arcticblast",
+            "top": "19.6",
+            "left": "72.4",
+            "position": "right",
+            "name": "Arctic Blast",
+            "desc": [
+              "Blast A Continuous Jet Of Ice",
+              "To Burn Your Enemies With Frost"
+            ],
+            "level": "6",
+            "add": [
+              {
+                "text": "Minimum Mana Required To Cast {0}",
+                "value": [
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4
+                ]
+              }
+            ],
+            "stat": [
+              {
+                "text": "Average Cold Damage {0}-{1} Per Second",
+                "value": [
+                  0,
+                  [
+                    8,
+                    15
+                  ],
+                  [
+                    14,
+                    21
+                  ],
+                  [
+                    20,
+                    28
+                  ],
+                  [
+                    26,
+                    34
+                  ],
+                  [
+                    33,
+                    40
+                  ],
+                  [
+                    39,
+                    46
+                  ],
+                  [
+                    45,
+                    53
+                  ],
+                  [
+                    51,
+                    59
+                  ],
+                  [
+                    58,
+                    66
+                  ],
+                  [
+                    66,
+                    74
+                  ],
+                  [
+                    73,
+                    81
+                  ],
+                  [
+                    80,
+                    89
+                  ],
+                  [
+                    87,
+                    96
+                  ],
+                  [
+                    94,
+                    103
+                  ],
+                  [
+                    101,
+                    111
+                  ],
+                  [
+                    108,
+                    118
+                  ],
+                  [
+                    116,
+                    126
+                  ],
+                  [
+                    123,
+                    135
+                  ],
+                  [
+                    131,
+                    143
+                  ],
+                  [
+                    139,
+                    151
+                  ]
+                ]
+              },
+              {
+                "text": "Cold Length {0} Seconds",
+                "value": [
+                  0,
+                  4,
+                  4.6,
+                  5.2,
+                  5.8,
+                  6.4,
+                  7,
+                  7.6,
+                  8.2,
+                  8.8,
+                  9.4,
+                  10,
+                  10.6,
+                  11.2,
+                  11.8,
+                  12.4,
+                  13,
+                  13.6,
+                  14.2,
+                  14.8,
+                  15.4
+                ]
+              },
+              {
+                "text": "Range: {0} Yards",
+                "value": [
+                  0,
+                  5.3,
+                  6,
+                  6,
+                  6.6,
+                  6.6,
+                  7.3,
+                  7.3,
+                  8,
+                  8,
+                  8.6,
+                  8.6,
+                  9.3,
+                  9.3,
+                  10,
+                  10,
+                  10.6,
+                  10.6,
+                  11.3,
+                  11.3,
+                  12
+                ]
+              },
+              {
+                "text": "Mana Cost {0} Per Second",
+                "value": [
+                  0,
+                  4,
+                  5,
+                  6,
+                  7,
+                  7,
+                  8,
+                  9,
+                  10,
+                  10,
+                  11,
+                  12,
+                  13,
+                  14,
+                  14,
+                  15,
+                  16,
+                  17,
+                  17,
+                  18,
+                  19
+                ]
+              }
+            ],
+            "bonus": [
+              {
+                "treeId": "em",
+                "skillId": "hurricane",
+                "statIdx": [
+                  0
+                ],
+                "value": [
+                  15
+                ],
+                "type": [
+                  "rate"
+                ],
+                "text": "{n}: +{0}% Cold Damage Per Level"
+              },
+              {
+                "treeId": "em",
+                "skillId": "cyclonearmor",
+                "statIdx": [
+                  0
+                ],
+                "value": [
+                  15
+                ],
+                "type": [
+                  "rate"
+                ],
+                "text": "{n}: +{0}% Cold Damage Per Level"
+              }
+            ]
+          },
+          {
+            "id": "cyclonearmor",
+            "top": "35.6",
+            "left": "72.4",
+            "position": "right",
+            "affected": [
+              {
+                "treeId": "em",
+                "skillId": "tornado"
+              },
+              {
+                "treeId": "em",
+                "skillId": "hurricane"
+              },
+              {
+                "treeId": "em",
+                "skillId": "arcticblast"
+              }
+            ],
+            "required": [
+              {
+                "treeId": "em",
+                "skillId": "arcticblast"
+              }
+            ],
+            "name": "Cyclone Armor",
+            "desc": [
+              "Shield Yourself From Damage Caused By",
+              "Fire, Cold, And Lightning"
+            ],
+            "level": "12",
+            "stat": [
+              {
+                "text": "Absorbs {0} Damage",
+                "value": [
+                  0,
+                  40,
+                  52,
+                  64,
+                  76,
+                  88,
+                  100,
+                  112,
+                  124,
+                  136,
+                  148,
+                  160,
+                  172,
+                  184,
+                  196,
+                  208,
+                  220,
+                  232,
+                  244,
+                  256,
+                  268
+                ]
+              },
+              {
+                "text": "Mana Cost {0}",
+                "value": [
+                  0,
+                  5,
+                  6,
+                  7,
+                  8,
+                  9,
+                  10,
+                  11,
+                  12,
+                  13,
+                  14,
+                  15,
+                  16,
+                  17,
+                  18,
+                  19,
+                  20,
+                  21,
+                  22,
+                  23,
+                  24
+                ]
+              }
+            ],
+            "bonus": [
+              {
+                "treeId": "em",
+                "skillId": "twister",
+                "statIdx": [
+                  0
+                ],
+                "value": [
+                  7
+                ],
+                "type": [
+                  "rate"
+                ],
+                "text": "{n}: +{0}% Damage Per Level"
+              },
+              {
+                "treeId": "em",
+                "skillId": "tornado",
+                "statIdx": [
+                  0
+                ],
+                "value": [
+                  7
+                ],
+                "type": [
+                  "rate"
+                ],
+                "text": "{n}: +{0}% Damage Per Level"
+              },
+              {
+                "treeId": "em",
+                "skillId": "hurricane",
+                "statIdx": [
+                  0
+                ],
+                "value": [
+                  7
+                ],
+                "type": [
+                  "rate"
+                ],
+                "text": "{n}: +{0}% Damage Per Level"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ss",
+        "name": "Shape Shifting",
+        "src": "back.jpg",
+        "skills": [
+          {
+            "id": "werewolf",
+            "top": "3.4",
+            "left": "13.1",
+            "position": "left",
+            "name": "Werewolf",
+            "desc": [
+              "Transform Into A Werewolf"
+            ],
+            "level": "1",
+            "add": [
+              {
+                "text": "Mana Cost {0}",
+                "value": [
+                  15,
+                  15,
+                  15,
+                  15,
+                  15,
+                  15,
+                  15,
+                  15,
+                  15,
+                  15,
+                  15,
+                  15,
+                  15,
+                  15,
+                  15,
+                  15,
+                  15,
+                  15,
+                  15,
+                  15,
+                  15
+                ]
+              },
+              {
+                "text": "Max Life +{0}%",
+                "value": [
+                  25,
+                  25,
+                  25,
+                  25,
+                  25,
+                  25,
+                  25,
+                  25,
+                  25,
+                  25,
+                  25,
+                  25,
+                  25,
+                  25,
+                  25,
+                  25,
+                  25,
+                  25,
+                  25,
+                  25,
+                  25
+                ]
+              },
+              {
+                "text": "Max Stamina +{0}%",
+                "value": [
+                  25,
+                  25,
+                  25,
+                  25,
+                  25,
+                  25,
+                  25,
+                  25,
+                  25,
+                  25,
+                  25,
+                  25,
+                  25,
+                  25,
+                  25,
+                  25,
+                  25,
+                  25,
+                  25,
+                  25,
+                  25
+                ]
+              },
+              {
+                "text": "Duration: {0} Seconds",
+                "value": [
+                  40,
+                  40,
+                  40,
+                  40,
+                  40,
+                  40,
+                  40,
+                  40,
+                  40,
+                  40,
+                  40,
+                  40,
+                  40,
+                  40,
+                  40,
+                  40,
+                  40,
+                  40,
+                  40,
+                  40,
+                  40
+                ]
+              }
+            ],
+            "stat": [
+              {
+                "text": "Attack Rating +{0}%",
+                "value": [
+                  0,
+                  50,
+                  65,
+                  80,
+                  95,
+                  110,
+                  125,
+                  140,
+                  155,
+                  170,
+                  185,
+                  200,
+                  215,
+                  230,
+                  245,
+                  260,
+                  275,
+                  290,
+                  305,
+                  320,
+                  335
+                ]
+              },
+              {
+                "text": "Attack Speed +{0}%",
+                "value": [
+                  0,
+                  20,
+                  28,
+                  35,
+                  40,
+                  45,
+                  48,
+                  51,
+                  53,
+                  56,
+                  57,
+                  59,
+                  61,
+                  62,
+                  63,
+                  64,
+                  66,
+                  66,
+                  67,
+                  68,
+                  68
+                ]
+              }
+            ],
+            "bonus": [
+              {
+                "treeId": "ss",
+                "skillId": "lycanthropy"
+              }
+            ]
+          },
+          {
+            "id": "feralrage",
+            "top": "35.7",
+            "left": "13.1",
+            "position": "left",
+            "required": [
+              {
+                "treeId": "ss",
+                "skillId": "werewolf"
+              }
+            ],
+            "name": "Feral Rage",
+            "desc": [
+              "When In Werewolf From,",
+              "Go Into A Frenzied Rage To Steal",
+              "Increasing Amounts Of Life From Your Enemies"
+            ],
+            "level": "12",
+            "add": [
+              {
+                "text": "Mana Cost {0}",
+                "value": [
+                  3,
+                  3,
+                  3,
+                  3,
+                  3,
+                  3,
+                  3,
+                  3,
+                  3,
+                  3,
+                  3,
+                  3,
+                  3,
+                  3,
+                  3,
+                  3,
+                  3,
+                  3,
+                  3,
+                  3,
+                  3
+                ]
+              },
+              {
+                "text": "Duration: {0} Seconds",
+                "value": [
+                  20,
+                  20,
+                  20,
+                  20,
+                  20,
+                  20,
+                  20,
+                  20,
+                  20,
+                  20,
+                  20,
+                  20,
+                  20,
+                  20,
+                  20,
+                  20,
+                  20,
+                  20,
+                  20,
+                  20,
+                  20
+                ]
+              }
+            ],
+            "stat": [
+              {
+                "text": "Attack Rating +{0}%",
+                "value": [
+                  0,
+                  20,
+                  30,
+                  40,
+                  50,
+                  60,
+                  70,
+                  80,
+                  90,
+                  100,
+                  110,
+                  120,
+                  130,
+                  140,
+                  150,
+                  160,
+                  170,
+                  180,
+                  190,
+                  200,
+                  210
+                ]
+              },
+              {
+                "text": "Run/Walk Speed: +{0}-{1}%",
+                "value": [
+                  0,
+                  [
+                    19,
+                    31
+                  ],
+                  [
+                    19,
+                    36
+                  ],
+                  [
+                    19,
+                    36
+                  ],
+                  [
+                    19,
+                    40
+                  ],
+                  [
+                    19,
+                    40
+                  ],
+                  [
+                    19,
+                    43
+                  ],
+                  [
+                    19,
+                    43
+                  ],
+                  [
+                    19,
+                    45
+                  ],
+                  [
+                    19,
+                    45
+                  ],
+                  [
+                    19,
+                    47
+                  ],
+                  [
+                    19,
+                    47
+                  ],
+                  [
+                    19,
+                    49
+                  ],
+                  [
+                    19,
+                    49
+                  ],
+                  [
+                    19,
+                    50
+                  ],
+                  [
+                    19,
+                    50
+                  ],
+                  [
+                    19,
+                    52
+                  ],
+                  [
+                    19,
+                    52
+                  ],
+                  [
+                    19,
+                    53
+                  ],
+                  [
+                    19,
+                    53
+                  ],
+                  [
+                    19,
+                    55
+                  ]
+                ]
+              },
+              {
+                "text": "Life Steal +{0}-{1}%",
+                "value": [
+                  0,
+                  [
+                    4,
+                    12
+                  ],
+                  [
+                    4,
+                    16
+                  ],
+                  [
+                    4,
+                    20
+                  ],
+                  [
+                    4,
+                    24
+                  ],
+                  [
+                    4,
+                    28
+                  ],
+                  [
+                    4,
+                    32
+                  ],
+                  [
+                    4,
+                    36
+                  ],
+                  [
+                    4,
+                    40
+                  ],
+                  [
+                    4,
+                    44
+                  ],
+                  [
+                    4,
+                    48
+                  ],
+                  [
+                    4,
+                    52
+                  ],
+                  [
+                    4,
+                    56
+                  ],
+                  [
+                    4,
+                    60
+                  ],
+                  [
+                    4,
+                    64
+                  ],
+                  [
+                    4,
+                    68
+                  ],
+                  [
+                    4,
+                    72
+                  ],
+                  [
+                    4,
+                    76
+                  ],
+                  [
+                    4,
+                    80
+                  ],
+                  [
+                    4,
+                    84
+                  ],
+                  [
+                    4,
+                    88
+                  ]
+                ]
+              },
+              {
+                "text": "Damage: +{0}%",
+                "value": [
+                  0,
+                  50,
+                  55,
+                  60,
+                  65,
+                  70,
+                  75,
+                  80,
+                  85,
+                  90,
+                  95,
+                  100,
+                  105,
+                  110,
+                  115,
+                  120,
+                  125,
+                  130,
+                  135,
+                  140,
+                  145
+                ]
+              }
+            ]
+          },
+          {
+            "id": "rabies",
+            "top": "52.1",
+            "left": "13.1",
+            "position": "left",
+            "required": [
+              {
+                "treeId": "ss",
+                "skillId": "feralrage"
+              }
+            ],
+            "name": "Rabies",
+            "desc": [
+              "When In Werewolf Form,",
+              "Bite Your Enemies",
+              "To Inflict Them With Disease",
+              "That Spreads To Other Monsters"
+            ],
+            "level": "18",
+            "add": [
+              {
+                "text": "Mana Cost {0}",
+                "value": [
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10
+                ]
+              }
+            ],
+            "stat": [
+              {
+                "text": "Attack Rating +{0}%",
+                "value": [
+                  0,
+                  50,
+                  57,
+                  64,
+                  71,
+                  78,
+                  85,
+                  92,
+                  99,
+                  106,
+                  113,
+                  120,
+                  127,
+                  134,
+                  141,
+                  148,
+                  155,
+                  162,
+                  169,
+                  176,
+                  183
+                ]
+              },
+              {
+                "text": "Poison Damage {0}-{1}",
+                "value": [
+                  0,
+                  [
+                    18,
+                    43
+                  ],
+                  [
+                    34,
+                    61
+                  ],
+                  [
+                    52,
+                    82
+                  ],
+                  [
+                    73,
+                    105
+                  ],
+                  [
+                    96,
+                    131
+                  ],
+                  [
+                    121,
+                    159
+                  ],
+                  [
+                    150,
+                    190
+                  ],
+                  [
+                    180,
+                    223
+                  ],
+                  [
+                    219,
+                    264
+                  ],
+                  [
+                    261,
+                    308
+                  ],
+                  [
+                    306,
+                    356
+                  ],
+                  [
+                    354,
+                    406
+                  ],
+                  [
+                    405,
+                    460
+                  ],
+                  [
+                    460,
+                    517
+                  ],
+                  [
+                    517,
+                    577
+                  ],
+                  [
+                    578,
+                    640
+                  ],
+                  [
+                    658,
+                    723
+                  ],
+                  [
+                    742,
+                    810
+                  ],
+                  [
+                    831,
+                    901
+                  ],
+                  [
+                    924,
+                    996
+                  ]
+                ]
+              },
+              {
+                "text": "Over {0} Seconds",
+                "value": [
+                  0,
+                  4,
+                  4.4,
+                  4.8,
+                  5.2,
+                  5.6,
+                  6,
+                  6.4,
+                  6.8,
+                  7.2,
+                  7.6,
+                  8,
+                  8.4,
+                  8.8,
+                  9.2,
+                  9.6,
+                  10,
+                  10.4,
+                  10.8,
+                  11.2,
+                  11.6
+                ]
+              }
+            ],
+            "bonus": [
+              {
+                "treeId": "sm",
+                "skillId": "poisoncreeper",
+                "statIdx": [
+                  1
+                ],
+                "value": [
+                  18
+                ],
+                "type": [
+                  "rate"
+                ],
+                "text": "{n}: +{0}% Poison Damage Per Level"
+              }
+            ]
+          },
+          {
+            "id": "fury",
+            "top": "84.4",
+            "left": "13.1",
+            "position": "left",
+            "required": [
+              {
+                "treeId": "ss",
+                "skillId": "rabies"
+              }
+            ],
+            "name": "Fury",
+            "desc": [
+              "When In Werewolf Form, Attack",
+              "Either Multiple Adjacent Targets",
+              "Or One Target Multiple Times"
+            ],
+            "level": "30",
+            "add": [
+              {
+                "text": "Mana Cost {0}",
+                "value": [
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4
+                ]
+              }
+            ],
+            "stat": [
+              {
+                "text": "{0} Hits",
+                "value": [
+                  0,
+                  2,
+                  3,
+                  4,
+                  5,
+                  5,
+                  5,
+                  5,
+                  5,
+                  5,
+                  5,
+                  5,
+                  5,
+                  5,
+                  5,
+                  5,
+                  5,
+                  5,
+                  5,
+                  5,
+                  5
+                ]
+              },
+              {
+                "text": "Attack Rating +{0}%",
+                "value": [
+                  0,
+                  50,
+                  57,
+                  64,
+                  71,
+                  78,
+                  85,
+                  92,
+                  99,
+                  106,
+                  113,
+                  120,
+                  127,
+                  134,
+                  141,
+                  148,
+                  155,
+                  162,
+                  169,
+                  176,
+                  183
+                ]
+              },
+              {
+                "text": "Damage: +{0}%",
+                "value": [
+                  0,
+                  100,
+                  117,
+                  134,
+                  151,
+                  168,
+                  185,
+                  202,
+                  219,
+                  236,
+                  253,
+                  270,
+                  287,
+                  304,
+                  321,
+                  338,
+                  355,
+                  372,
+                  389,
+                  406,
+                  423
+                ]
+              }
+            ]
+          },
+          {
+            "id": "lycanthropy",
+            "top": "3.4",
+            "left": "42.8",
+            "position": "middle",
+            "affected": [
+              {
+                "treeId": "ss",
+                "skillId": "werewolf"
+              },
+              {
+                "treeId": "ss",
+                "skillId": "werebear"
+              }
+            ],
+            "required": [
+              {
+                "treeId": "ss",
+                "skillId": "werewolf"
+              }
+            ],
+            "name": "Lycanthropy",
+            "desc": [
+              "Passive - Improves Duration And Life",
+              "When In Werewolf Or Werebear Form"
+            ],
+            "level": "1",
+            "stat": [
+              {
+                "text": "Max Life +{0}%",
+                "value": [
+                  0,
+                  20,
+                  25,
+                  30,
+                  35,
+                  40,
+                  45,
+                  50,
+                  55,
+                  60,
+                  65,
+                  70,
+                  75,
+                  80,
+                  85,
+                  90,
+                  95,
+                  100,
+                  105,
+                  110,
+                  115
+                ]
+              },
+              {
+                "text": "Duration: +{0} Seconds",
+                "value": [
+                  0,
+                  40,
+                  60,
+                  80,
+                  100,
+                  120,
+                  140,
+                  160,
+                  180,
+                  200,
+                  220,
+                  240,
+                  260,
+                  280,
+                  300,
+                  320,
+                  340,
+                  360,
+                  380,
+                  400,
+                  420
+                ]
+              }
+            ]
+          },
+          {
+            "id": "fireclaws",
+            "top": "52.1",
+            "left": "42.8",
+            "position": "middle",
+            "required": [
+              {
+                "treeId": "ss",
+                "skillId": "feralrage"
+              },
+              {
+                "treeId": "ss",
+                "skillId": "maul"
+              }
+            ],
+            "name": "Fire Claws",
+            "desc": [
+              "When In Werewolf Or Werebear",
+              "Form, Maul Your Enemies",
+              "With A Fiery Claw Attack"
+            ],
+            "level": "18",
+            "add": [
+              {
+                "text": "Mana Cost {0}",
+                "value": [
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4
+                ]
+              }
+            ],
+            "stat": [
+              {
+                "text": "Attack Rating +{0}%",
+                "value": [
+                  0,
+                  50,
+                  65,
+                  80,
+                  95,
+                  110,
+                  125,
+                  140,
+                  155,
+                  170,
+                  185,
+                  200,
+                  215,
+                  230,
+                  245,
+                  260,
+                  275,
+                  290,
+                  305,
+                  320,
+                  335
+                ]
+              },
+              {
+                "text": "Fire Damage {0}-{1}",
+                "value": [
+                  0,
+                  [
+                    15,
+                    20
+                  ],
+                  [
+                    23,
+                    28
+                  ],
+                  [
+                    31,
+                    36
+                  ],
+                  [
+                    39,
+                    44
+                  ],
+                  [
+                    47,
+                    52
+                  ],
+                  [
+                    55,
+                    60
+                  ],
+                  [
+                    63,
+                    68
+                  ],
+                  [
+                    71,
+                    76
+                  ],
+                  [
+                    83,
+                    88
+                  ],
+                  [
+                    95,
+                    100
+                  ],
+                  [
+                    107,
+                    112
+                  ],
+                  [
+                    119,
+                    124
+                  ],
+                  [
+                    131,
+                    136
+                  ],
+                  [
+                    143,
+                    148
+                  ],
+                  [
+                    155,
+                    160
+                  ],
+                  [
+                    167,
+                    172
+                  ],
+                  [
+                    187,
+                    194
+                  ],
+                  [
+                    207,
+                    216
+                  ],
+                  [
+                    227,
+                    238
+                  ],
+                  [
+                    247,
+                    260
+                  ]
+                ]
+              }
+            ],
+            "bonus": [
+              {
+                "treeId": "em",
+                "skillId": "firestorm",
+                "statIdx": [
+                  1
+                ],
+                "value": [
+                  22
+                ],
+                "type": [
+                  "rate"
+                ],
+                "text": "{n}: +{0}% Fire Damage Per Level"
+              },
+              {
+                "treeId": "em",
+                "skillId": "moltenboulder",
+                "statIdx": [
+                  1
+                ],
+                "value": [
+                  22
+                ],
+                "type": [
+                  "rate"
+                ],
+                "text": "{n}: +{0}% Fire Damage Per Level"
+              },
+              {
+                "treeId": "em",
+                "skillId": "fissure",
+                "statIdx": [
+                  1
+                ],
+                "value": [
+                  22
+                ],
+                "type": [
+                  "rate"
+                ],
+                "text": "{n}: +{0}% Fire Damage Per Level"
+              },
+              {
+                "treeId": "em",
+                "skillId": "volcano",
+                "statIdx": [
+                  1
+                ],
+                "value": [
+                  22
+                ],
+                "type": [
+                  "rate"
+                ],
+                "text": "{n}: +{0}% Fire Damage Per Level"
+              }
+            ]
+          },
+          {
+            "id": "hunger",
+            "top": "68.4",
+            "left": "42.8",
+            "position": "middle",
+            "required": [
+              {
+                "treeId": "ss",
+                "skillId": "fireclaws"
+              }
+            ],
+            "name": "Hunger",
+            "desc": [
+              "When In Werewolf Or Werebear",
+              "Form, Bite your Enemies",
+              "To Gain Life And Mana"
+            ],
+            "level": "24",
+            "add": [
+              {
+                "text": "Damage: -{0}%",
+                "value": [
+                  75,
+                  75,
+                  75,
+                  75,
+                  75,
+                  75,
+                  75,
+                  75,
+                  75,
+                  75,
+                  75,
+                  75,
+                  75,
+                  75,
+                  75,
+                  75,
+                  75,
+                  75,
+                  75,
+                  75,
+                  75
+                ]
+              },
+              {
+                "text": "Mana Cost {0}",
+                "value": [
+                  3,
+                  3,
+                  3,
+                  3,
+                  3,
+                  3,
+                  3,
+                  3,
+                  3,
+                  3,
+                  3,
+                  3,
+                  3,
+                  3,
+                  3,
+                  3,
+                  3,
+                  3,
+                  3,
+                  3,
+                  3
+                ]
+              }
+            ],
+            "stat": [
+              {
+                "text": "Attack Rating +{0}%",
+                "value": [
+                  0,
+                  50,
+                  60,
+                  70,
+                  80,
+                  90,
+                  100,
+                  110,
+                  120,
+                  130,
+                  140,
+                  150,
+                  160,
+                  170,
+                  180,
+                  190,
+                  200,
+                  210,
+                  220,
+                  230,
+                  240
+                ]
+              },
+              {
+                "text": "Life Steal +{0}%",
+                "value": [
+                  0,
+                  72,
+                  90,
+                  104,
+                  116,
+                  125,
+                  132,
+                  138,
+                  143,
+                  149,
+                  152,
+                  156,
+                  159,
+                  162,
+                  165,
+                  167,
+                  170,
+                  171,
+                  173,
+                  174,
+                  176
+                ]
+              },
+              {
+                "text": "Mana Steal +{0}%",
+                "value": [
+                  0,
+                  72,
+                  90,
+                  104,
+                  116,
+                  125,
+                  132,
+                  138,
+                  143,
+                  149,
+                  152,
+                  156,
+                  159,
+                  162,
+                  165,
+                  167,
+                  170,
+                  171,
+                  173,
+                  174,
+                  176
+                ]
+              }
+            ]
+          },
+          {
+            "id": "werebear",
+            "top": "19.7",
+            "left": "72.2",
+            "position": "right",
+            "name": "Werebear",
+            "desc": [
+              "Transform Into Werebear"
+            ],
+            "level": "6",
+            "add": [
+              {
+                "text": "Mana Cost {0}",
+                "value": [
+                  15,
+                  15,
+                  15,
+                  15,
+                  15,
+                  15,
+                  15,
+                  15,
+                  15,
+                  15,
+                  15,
+                  15,
+                  15,
+                  15,
+                  15,
+                  15,
+                  15,
+                  15,
+                  15,
+                  15,
+                  15
+                ]
+              },
+              {
+                "text": "Max Life +{0}%",
+                "value": [
+                  75,
+                  75,
+                  75,
+                  75,
+                  75,
+                  75,
+                  75,
+                  75,
+                  75,
+                  75,
+                  75,
+                  75,
+                  75,
+                  75,
+                  75,
+                  75,
+                  75,
+                  75,
+                  75,
+                  75,
+                  75
+                ]
+              },
+              {
+                "text": "Duration: {0} Seconds",
+                "value": [
+                  40,
+                  40,
+                  40,
+                  40,
+                  40,
+                  40,
+                  40,
+                  40,
+                  40,
+                  40,
+                  40,
+                  40,
+                  40,
+                  40,
+                  40,
+                  40,
+                  40,
+                  40,
+                  40,
+                  40,
+                  40
+                ]
+              }
+            ],
+            "stat": [
+              {
+                "text": "Damage: +{0}%",
+                "value": [
+                  0,
+                  55,
+                  63,
+                  71,
+                  79,
+                  87,
+                  95,
+                  103,
+                  111,
+                  119,
+                  127,
+                  135,
+                  143,
+                  151,
+                  159,
+                  167,
+                  175,
+                  183,
+                  191,
+                  199,
+                  207
+                ]
+              },
+              {
+                "text": "Defense: +{0}%",
+                "value": [
+                  0,
+                  25,
+                  31,
+                  37,
+                  43,
+                  49,
+                  55,
+                  61,
+                  67,
+                  73,
+                  79,
+                  85,
+                  91,
+                  97,
+                  103,
+                  109,
+                  115,
+                  121,
+                  127,
+                  133,
+                  139
+                ]
+              }
+            ],
+            "bonus": [
+              {
+                "treeId": "ss",
+                "skillId": "lycanthropy"
+              }
+            ]
+          },
+          {
+            "id": "maul",
+            "top": "35.7",
+            "left": "72.2",
+            "position": "right",
+            "affected": [
+              {
+                "treeId": "ss",
+                "skillId": "shockwave"
+              }
+            ],
+            "required": [
+              {
+                "treeId": "ss",
+                "skillId": "werebear"
+              }
+            ],
+            "name": "Maul",
+            "desc": [
+              "When In Werebear Form,",
+              "Maul Your Enemies",
+              "For Increasing Extra Damage",
+              "With Succenssive Hits"
+            ],
+            "level": "12",
+            "add": [
+              {
+                "text": "Mana Cost {0}",
+                "value": [
+                  3,
+                  3,
+                  3,
+                  3,
+                  3,
+                  3,
+                  3,
+                  3,
+                  3,
+                  3,
+                  3,
+                  3,
+                  3,
+                  3,
+                  3,
+                  3,
+                  3,
+                  3,
+                  3,
+                  3,
+                  3
+                ]
+              },
+              {
+                "text": "Duration: {0} Seconds",
+                "value": [
+                  20,
+                  20,
+                  20,
+                  20,
+                  20,
+                  20,
+                  20,
+                  20,
+                  20,
+                  20,
+                  20,
+                  20,
+                  20,
+                  20,
+                  20,
+                  20,
+                  20,
+                  20,
+                  20,
+                  20,
+                  20
+                ]
+              }
+            ],
+            "stat": [
+              {
+                "text": "Attack Rating +{0}%",
+                "value": [
+                  0,
+                  20,
+                  30,
+                  40,
+                  50,
+                  60,
+                  70,
+                  80,
+                  90,
+                  100,
+                  110,
+                  120,
+                  130,
+                  140,
+                  150,
+                  160,
+                  170,
+                  180,
+                  190,
+                  200,
+                  210
+                ]
+              },
+              {
+                "text": "Damage: +{0}-{1}%",
+                "value": [
+                  0,
+                  [
+                    20,
+                    60
+                  ],
+                  [
+                    20,
+                    80
+                  ],
+                  [
+                    20,
+                    80
+                  ],
+                  [
+                    20,
+                    100
+                  ],
+                  [
+                    20,
+                    100
+                  ],
+                  [
+                    20,
+                    120
+                  ],
+                  [
+                    20,
+                    120
+                  ],
+                  [
+                    20,
+                    140
+                  ],
+                  [
+                    20,
+                    140
+                  ],
+                  [
+                    20,
+                    160
+                  ],
+                  [
+                    20,
+                    160
+                  ],
+                  [
+                    20,
+                    180
+                  ],
+                  [
+                    20,
+                    180
+                  ],
+                  [
+                    20,
+                    200
+                  ],
+                  [
+                    20,
+                    200
+                  ],
+                  [
+                    20,
+                    220
+                  ],
+                  [
+                    20,
+                    220
+                  ],
+                  [
+                    20,
+                    240
+                  ],
+                  [
+                    20,
+                    240
+                  ],
+                  [
+                    20,
+                    260
+                  ]
+                ]
+              },
+              {
+                "text": "Stun Length {0} Seconds",
+                "value": [
+                  0,
+                  0.9,
+                  1.3,
+                  1.6,
+                  1.9,
+                  2.2,
+                  2.3,
+                  2.5,
+                  2.6,
+                  2.7,
+                  2.8,
+                  2.9,
+                  3,
+                  3,
+                  3.1,
+                  3.2,
+                  3.2,
+                  3.2,
+                  3.3,
+                  3.3,
+                  3.4
+                ]
+              }
+            ]
+          },
+          {
+            "id": "shockwave",
+            "top": "68.4",
+            "left": "72.2",
+            "position": "right",
+            "required": [
+              {
+                "treeId": "ss",
+                "skillId": "maul"
+              }
+            ],
+            "name": "Shock Wave",
+            "desc": [
+              "When In Werebear Form,",
+              "Create A Shock Wave",
+              "That Stuns Nearby Enemies"
+            ],
+            "level": "24",
+            "add": [
+              {
+                "text": "Mana Cost {0}",
+                "value": [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ]
+              }
+            ],
+            "stat": [
+              {
+                "text": "Damage: {0}-{1}",
+                "value": [
+                  0,
+                  [
+                    10,
+                    20
+                  ],
+                  [
+                    13,
+                    23
+                  ],
+                  [
+                    16,
+                    26
+                  ],
+                  [
+                    19,
+                    29
+                  ],
+                  [
+                    22,
+                    32
+                  ],
+                  [
+                    25,
+                    35
+                  ],
+                  [
+                    28,
+                    38
+                  ],
+                  [
+                    31,
+                    41
+                  ],
+                  [
+                    36,
+                    46
+                  ],
+                  [
+                    41,
+                    51
+                  ],
+                  [
+                    46,
+                    56
+                  ],
+                  [
+                    51,
+                    61
+                  ],
+                  [
+                    56,
+                    66
+                  ],
+                  [
+                    61,
+                    71
+                  ],
+                  [
+                    66,
+                    76
+                  ],
+                  [
+                    71,
+                    81
+                  ],
+                  [
+                    78,
+                    88
+                  ],
+                  [
+                    85,
+                    95
+                  ],
+                  [
+                    92,
+                    102
+                  ],
+                  [
+                    99,
+                    109
+                  ]
+                ]
+              },
+              {
+                "text": "Stun Length {0} Seconds",
+                "value": [
+                  0,
+                  1.6,
+                  2.2,
+                  2.8,
+                  3.4,
+                  4,
+                  4.6,
+                  5.2,
+                  5.8,
+                  6.4,
+                  7,
+                  7.6,
+                  8.2,
+                  8.8,
+                  9.4,
+                  10,
+                  10.6,
+                  11.2,
+                  11.8,
+                  12.4,
+                  13
+                ]
+              }
+            ],
+            "bonus": [
+              {
+                "treeId": "ss",
+                "skillId": "maul",
+                "statIdx": [
+                  0
+                ],
+                "value": [
+                  5
+                ],
+                "type": [
+                  "rate"
+                ],
+                "text": "{n}: +{0}% Damage Per Level"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "sm",
+        "name": "Summoning",
+        "src": "back.jpg",
+        "skills": [
+          {
+            "id": "oaksage",
+            "top": "19.7",
+            "left": "13.2",
+            "position": "left",
+            "name": "Oak Sage",
+            "desc": [
+              "Summon A Spirit Pet That Increases",
+              "Life For You And Your Party"
+            ],
+            "level": "6",
+            "stat": [
+              {
+                "text": "Life: {0}",
+                "value": [
+                  0,
+                  60,
+                  78,
+                  96,
+                  114,
+                  132,
+                  150,
+                  168,
+                  186,
+                  204,
+                  222,
+                  240,
+                  258,
+                  276,
+                  294,
+                  312,
+                  330,
+                  348,
+                  366,
+                  384,
+                  402
+                ]
+              },
+              {
+                "text": "Max Life +{0}%",
+                "value": [
+                  0,
+                  30,
+                  35,
+                  40,
+                  45,
+                  50,
+                  55,
+                  60,
+                  65,
+                  70,
+                  75,
+                  80,
+                  85,
+                  90,
+                  95,
+                  100,
+                  105,
+                  110,
+                  115,
+                  120,
+                  125
+                ]
+              },
+              {
+                "text": "Radius: {0} Yards",
+                "value": [
+                  0,
+                  20,
+                  21.3,
+                  22.6,
+                  24,
+                  25.3,
+                  26.6,
+                  28,
+                  29.3,
+                  30.6,
+                  32,
+                  33.3,
+                  34.6,
+                  36,
+                  37.3,
+                  38.6,
+                  40,
+                  41.3,
+                  42.6,
+                  44,
+                  45.3
+                ]
+              },
+              {
+                "text": "Mana Cost {0}",
+                "value": [
+                  0,
+                  15,
+                  16,
+                  17,
+                  18,
+                  19,
+                  20,
+                  21,
+                  22,
+                  23,
+                  24,
+                  25,
+                  26,
+                  27,
+                  28,
+                  29,
+                  30,
+                  31,
+                  32,
+                  33,
+                  34
+                ]
+              }
+            ]
+          },
+          {
+            "id": "heartofwolverine",
+            "top": "52.1",
+            "left": "13.2",
+            "position": "left",
+            "required": [
+              {
+                "treeId": "sm",
+                "skillId": "oaksage"
+              }
+            ],
+            "name": "Heart Of Wolverine",
+            "desc": [
+              "Summon A Spirit Pet That Adds",
+              "To The Damage And Attack Rating",
+              "Of You And Your Party"
+            ],
+            "level": "18",
+            "stat": [
+              {
+                "text": "Life: {0}",
+                "value": [
+                  0,
+                  136,
+                  170,
+                  204,
+                  238,
+                  272,
+                  306,
+                  340,
+                  374,
+                  408,
+                  442,
+                  476,
+                  510,
+                  544,
+                  578,
+                  612,
+                  646,
+                  680,
+                  714,
+                  748,
+                  782
+                ]
+              },
+              {
+                "text": "Attack Rating +{0}%",
+                "value": [
+                  0,
+                  25,
+                  32,
+                  39,
+                  46,
+                  53,
+                  60,
+                  67,
+                  74,
+                  81,
+                  88,
+                  95,
+                  102,
+                  109,
+                  116,
+                  123,
+                  130,
+                  137,
+                  144,
+                  151,
+                  158
+                ]
+              },
+              {
+                "text": "Damage: +{0}%",
+                "value": [
+                  0,
+                  20,
+                  27,
+                  34,
+                  41,
+                  48,
+                  55,
+                  62,
+                  69,
+                  76,
+                  83,
+                  90,
+                  97,
+                  104,
+                  111,
+                  118,
+                  125,
+                  132,
+                  139,
+                  146,
+                  153
+                ]
+              },
+              {
+                "text": "Radius: {0} Yards",
+                "value": [
+                  0,
+                  1.6,
+                  2.2,
+                  2.8,
+                  3.4,
+                  4,
+                  4.6,
+                  5.2,
+                  5.8,
+                  6.4,
+                  7,
+                  7.6,
+                  8.2,
+                  8.8,
+                  9.4,
+                  10,
+                  10.6,
+                  11.2,
+                  11.8,
+                  12.4,
+                  13
+                ]
+              },
+              {
+                "text": "Mana Cost {0}",
+                "value": [
+                  0,
+                  20,
+                  21,
+                  22,
+                  23,
+                  24,
+                  25,
+                  26,
+                  27,
+                  28,
+                  29,
+                  30,
+                  31,
+                  32,
+                  33,
+                  34,
+                  35,
+                  36,
+                  37,
+                  38,
+                  39
+                ]
+              }
+            ]
+          },
+          {
+            "id": "spiritofbarbs",
+            "top": "84.4",
+            "left": "13.2",
+            "position": "left",
+            "required": [
+              {
+                "treeId": "sm",
+                "skillId": "heartofwolverine"
+              }
+            ],
+            "name": "Spirit Of Barbs",
+            "desc": [
+              "Summon Spirit Pet That Reflects Damage",
+              "Taken By Your And Your Party",
+              "Back At Your Enemies"
+            ],
+            "level": "30",
+            "stat": [
+              {
+                "text": "Life: {0}",
+                "value": [
+                  0,
+                  213,
+                  266,
+                  319,
+                  372,
+                  426,
+                  479,
+                  532,
+                  585,
+                  639,
+                  692,
+                  745,
+                  798,
+                  852,
+                  905,
+                  958,
+                  1011,
+                  1065,
+                  1118,
+                  1171,
+                  1224
+                ]
+              },
+              {
+                "text": "{0}% Damage Returned",
+                "value": [
+                  0,
+                  50,
+                  70,
+                  90,
+                  110,
+                  130,
+                  150,
+                  170,
+                  190,
+                  210,
+                  230,
+                  250,
+                  270,
+                  290,
+                  310,
+                  330,
+                  350,
+                  370,
+                  390,
+                  410,
+                  430
+                ]
+              },
+              {
+                "text": "Radius: {0} Yards",
+                "value": [
+                  0,
+                  20,
+                  21.3,
+                  22.6,
+                  24,
+                  25.3,
+                  26.6,
+                  28,
+                  29.3,
+                  30.6,
+                  32,
+                  33.3,
+                  34.6,
+                  36,
+                  37.3,
+                  38.6,
+                  40,
+                  41.3,
+                  42.6,
+                  44,
+                  45.3
+                ]
+              },
+              {
+                "text": "Mana Cost {0}",
+                "value": [
+                  0,
+                  25,
+                  26,
+                  27,
+                  28,
+                  29,
+                  30,
+                  31,
+                  32,
+                  33,
+                  34,
+                  35,
+                  36,
+                  37,
+                  38,
+                  39,
+                  40,
+                  41,
+                  42,
+                  43,
+                  44
+                ]
+              }
+            ]
+          },
+          {
+            "id": "raven",
+            "top": "3.3",
+            "left": "42.9",
+            "position": "middle",
+            "name": "Raven",
+            "desc": [
+              "Summon Ravens To Peck Out",
+              "The Eyes Of Your Enemies"
+            ],
+            "level": "1",
+            "add": [
+              {
+                "text": "Mana Cost {0}",
+                "value": [
+                  6,
+                  6,
+                  6,
+                  6,
+                  6,
+                  6,
+                  6,
+                  6,
+                  6,
+                  6,
+                  6,
+                  6,
+                  6,
+                  6,
+                  6,
+                  6,
+                  6,
+                  6,
+                  6,
+                  6,
+                  6
+                ]
+              }
+            ],
+            "stat": [
+              {
+                "text": "Damage: {0}-{1}",
+                "value": [
+                  0,
+                  [
+                    2,
+                    4
+                  ],
+                  [
+                    3,
+                    5
+                  ],
+                  [
+                    4,
+                    6
+                  ],
+                  [
+                    5,
+                    7
+                  ],
+                  [
+                    6,
+                    8
+                  ],
+                  [
+                    7,
+                    9
+                  ],
+                  [
+                    8,
+                    10
+                  ],
+                  [
+                    9,
+                    11
+                  ],
+                  [
+                    10,
+                    12
+                  ],
+                  [
+                    11,
+                    13
+                  ],
+                  [
+                    12,
+                    14
+                  ],
+                  [
+                    13,
+                    15
+                  ],
+                  [
+                    14,
+                    16
+                  ],
+                  [
+                    15,
+                    17
+                  ],
+                  [
+                    16,
+                    18
+                  ],
+                  [
+                    17,
+                    19
+                  ],
+                  [
+                    18,
+                    20
+                  ],
+                  [
+                    19,
+                    21
+                  ],
+                  [
+                    20,
+                    22
+                  ],
+                  [
+                    21,
+                    23
+                  ]
+                ]
+              },
+              {
+                "text": "{0} Hits",
+                "value": [
+                  0,
+                  12,
+                  13,
+                  14,
+                  15,
+                  16,
+                  17,
+                  18,
+                  19,
+                  20,
+                  21,
+                  22,
+                  23,
+                  24,
+                  25,
+                  26,
+                  27,
+                  28,
+                  29,
+                  30,
+                  31
+                ]
+              },
+              {
+                "text": "Ravens: {0}",
+                "value": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  5,
+                  5,
+                  5,
+                  5,
+                  5,
+                  5,
+                  5,
+                  5,
+                  5,
+                  5,
+                  5,
+                  5,
+                  5,
+                  5,
+                  5
+                ]
+              }
+            ]
+          },
+          {
+            "id": "summonspiritwolf",
+            "top": "19.7",
+            "left": "42.9",
+            "position": "middle",
+            "affected": [
+              {
+                "treeId": "sm",
+                "skillId": "summondirewolf"
+              },
+              {
+                "treeId": "sm",
+                "skillId": "summongrizzly"
+              }
+            ],
+            "required": [
+              {
+                "treeId": "sm",
+                "skillId": "raven"
+              }
+            ],
+            "name": "Summon Spirit Wolf",
+            "desc": [
+              "Summon A Wolf With Teleporting Ability",
+              "To Fight By Your Side"
+            ],
+            "level": "6",
+            "add": [
+              {
+                "text": "Mana Cost {0}",
+                "value": [
+                  15,
+                  15,
+                  15,
+                  15,
+                  15,
+                  15,
+                  15,
+                  15,
+                  15,
+                  15,
+                  15,
+                  15,
+                  15,
+                  15,
+                  15,
+                  15,
+                  15,
+                  15,
+                  15,
+                  15,
+                  15
+                ]
+              },
+              {
+                "text": "Life: {0}",
+                "value": [
+                  71,
+                  71,
+                  71,
+                  71,
+                  71,
+                  71,
+                  71,
+                  71,
+                  71,
+                  71,
+                  71,
+                  71,
+                  71,
+                  71,
+                  71,
+                  71,
+                  71,
+                  71,
+                  71,
+                  71,
+                  71
+                ]
+              }
+            ],
+            "stat": [
+              {
+                "text": "Damage: {0}-{1}",
+                "value": [
+                  0,
+                  [
+                    2,
+                    6
+                  ],
+                  [
+                    3,
+                    7
+                  ],
+                  [
+                    4,
+                    8
+                  ],
+                  [
+                    6,
+                    9
+                  ],
+                  [
+                    7,
+                    10
+                  ],
+                  [
+                    8,
+                    12
+                  ],
+                  [
+                    9,
+                    13
+                  ],
+                  [
+                    10,
+                    14
+                  ],
+                  [
+                    13,
+                    16
+                  ],
+                  [
+                    15,
+                    19
+                  ],
+                  [
+                    18,
+                    21
+                  ],
+                  [
+                    20,
+                    24
+                  ],
+                  [
+                    22,
+                    26
+                  ],
+                  [
+                    25,
+                    28
+                  ],
+                  [
+                    27,
+                    31
+                  ],
+                  [
+                    30,
+                    33
+                  ],
+                  [
+                    34,
+                    38
+                  ],
+                  [
+                    39,
+                    43
+                  ],
+                  [
+                    44,
+                    48
+                  ],
+                  [
+                    49,
+                    52
+                  ]
+                ]
+              },
+              {
+                "text": "Wolves: {0}",
+                "value": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  5,
+                  5,
+                  5,
+                  5,
+                  5,
+                  5,
+                  5,
+                  5,
+                  5,
+                  5,
+                  5,
+                  5,
+                  5,
+                  5,
+                  5
+                ]
+              },
+              {
+                "text": "Attack Rating +{0}%",
+                "value": [
+                  0,
+                  50,
+                  75,
+                  100,
+                  125,
+                  150,
+                  175,
+                  200,
+                  225,
+                  250,
+                  275,
+                  300,
+                  325,
+                  350,
+                  375,
+                  400,
+                  425,
+                  450,
+                  475,
+                  500,
+                  550
+                ]
+              },
+              {
+                "text": "Defense: +{0}%",
+                "value": [
+                  0,
+                  50,
+                  60,
+                  70,
+                  80,
+                  90,
+                  100,
+                  110,
+                  120,
+                  130,
+                  140,
+                  150,
+                  160,
+                  170,
+                  180,
+                  190,
+                  200,
+                  210,
+                  220,
+                  230,
+                  240
+                ]
+              }
+            ],
+            "bonus": [
+              {
+                "treeId": "sm",
+                "skillId": "summondirewolf"
+              },
+              {
+                "treeId": "sm",
+                "skillId": "summongrizzly"
+              }
+            ]
+          },
+          {
+            "id": "summondirewolf",
+            "top": "52.1",
+            "left": "42.9",
+            "position": "middle",
+            "affected": [
+              {
+                "treeId": "sm",
+                "skillId": "summonspiritwolf"
+              },
+              {
+                "treeId": "sm",
+                "skillId": "summongrizzly"
+              }
+            ],
+            "required": [
+              {
+                "treeId": "sm",
+                "skillId": "oaksage"
+              },
+              {
+                "treeId": "sm",
+                "skillId": "summonspiritwolf"
+              }
+            ],
+            "name": "Summon Dire Wolf",
+            "desc": [
+              "Summon A Wolf That Becomes Enraged,",
+              "Eating Corpses To Increase Damage",
+              "It Does To Enemies"
+            ],
+            "level": "18",
+            "add": [
+              {
+                "text": "Mana Cost {0}",
+                "value": [
+                  20,
+                  20,
+                  20,
+                  20,
+                  20,
+                  20,
+                  20,
+                  20,
+                  20,
+                  20,
+                  20,
+                  20,
+                  20,
+                  20,
+                  20,
+                  20,
+                  20,
+                  20,
+                  20,
+                  20,
+                  20
+                ]
+              }
+            ],
+            "stat": [
+              {
+                "text": "Life: {0}",
+                "value": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  5,
+                  5,
+                  5,
+                  5,
+                  5,
+                  5,
+                  5,
+                  5,
+                  5,
+                  5,
+                  5,
+                  5,
+                  5,
+                  5,
+                  5
+                ]
+              },
+              {
+                "text": "Damage: {0}-{1}",
+                "value": [
+                  0,
+                  [
+                    8,
+                    13
+                  ],
+                  [
+                    10,
+                    16
+                  ],
+                  [
+                    12,
+                    18
+                  ],
+                  [
+                    14,
+                    20
+                  ],
+                  [
+                    17,
+                    23
+                  ],
+                  [
+                    19,
+                    25
+                  ],
+                  [
+                    21,
+                    27
+                  ],
+                  [
+                    24,
+                    29
+                  ],
+                  [
+                    27,
+                    33
+                  ],
+                  [
+                    31,
+                    36
+                  ],
+                  [
+                    34,
+                    40
+                  ],
+                  [
+                    37,
+                    43
+                  ],
+                  [
+                    41,
+                    47
+                  ],
+                  [
+                    44,
+                    50
+                  ],
+                  [
+                    48,
+                    54
+                  ],
+                  [
+                    51,
+                    57
+                  ],
+                  [
+                    58,
+                    64
+                  ],
+                  [
+                    65,
+                    71
+                  ],
+                  [
+                    72,
+                    78
+                  ],
+                  [
+                    79,
+                    85
+                  ]
+                ]
+              },
+              {
+                "text": "Wolves: {0}",
+                "value": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  3,
+                  3,
+                  3,
+                  3,
+                  3,
+                  3,
+                  3,
+                  3,
+                  3,
+                  3,
+                  3,
+                  3,
+                  3,
+                  3,
+                  3,
+                  3,
+                  3
+                ]
+              },
+              {
+                "text": "Max Life +{0}%",
+                "value": [
+                  0,
+                  50,
+                  75,
+                  100,
+                  125,
+                  150,
+                  175,
+                  200,
+                  225,
+                  250,
+                  275,
+                  300,
+                  325,
+                  350,
+                  375,
+                  400,
+                  425,
+                  450,
+                  475,
+                  500,
+                  525
+                ]
+              }
+            ],
+            "bonus": [
+              {
+                "treeId": "sm",
+                "skillId": "summonspiritwolf"
+              },
+              {
+                "treeId": "sm",
+                "skillId": "summongrizzly"
+              }
+            ]
+          },
+          {
+            "id": "summongrizzly",
+            "top": "84.4",
+            "left": "42.9",
+            "position": "middle",
+            "affected": [
+              {
+                "treeId": "sm",
+                "skillId": "summonspiritwolf"
+              },
+              {
+                "treeId": "sm",
+                "skillId": "summondirewolf"
+              }
+            ],
+            "required": [
+              {
+                "treeId": "sm",
+                "skillId": "summondirewolf"
+              }
+            ],
+            "name": "Summon Grizzly",
+            "desc": [
+              "Summon A Ferocious Grizzly Bear"
+            ],
+            "level": "30",
+            "add": [
+              {
+                "text": "Mana Cost {0}",
+                "value": [
+                  40,
+                  40,
+                  40,
+                  40,
+                  40,
+                  40,
+                  40,
+                  40,
+                  40,
+                  40,
+                  40,
+                  40,
+                  40,
+                  40,
+                  40,
+                  40,
+                  40,
+                  40,
+                  40,
+                  40,
+                  40
+                ]
+              },
+              {
+                "text": "Life: {0}",
+                "value": [
+                  650,
+                  650,
+                  650,
+                  650,
+                  650,
+                  650,
+                  650,
+                  650,
+                  650,
+                  650,
+                  650,
+                  650,
+                  650,
+                  650,
+                  650,
+                  650,
+                  650,
+                  650,
+                  650,
+                  650,
+                  650
+                ]
+              }
+            ],
+            "stat": [
+              {
+                "text": "Damage: {0}-{1}",
+                "value": [
+                  0,
+                  [
+                    37,
+                    75
+                  ],
+                  [
+                    54,
+                    94
+                  ],
+                  [
+                    72,
+                    116
+                  ],
+                  [
+                    93,
+                    139
+                  ],
+                  [
+                    115,
+                    165
+                  ],
+                  [
+                    140,
+                    192
+                  ],
+                  [
+                    166,
+                    222
+                  ],
+                  [
+                    195,
+                    253
+                  ],
+                  [
+                    235,
+                    297
+                  ],
+                  [
+                    279,
+                    344
+                  ],
+                  [
+                    326,
+                    393
+                  ],
+                  [
+                    376,
+                    446
+                  ],
+                  [
+                    428,
+                    502
+                  ],
+                  [
+                    484,
+                    561
+                  ],
+                  [
+                    543,
+                    622
+                  ],
+                  [
+                    605,
+                    687
+                  ],
+                  [
+                    684,
+                    769
+                  ],
+                  [
+                    767,
+                    855
+                  ],
+                  [
+                    854,
+                    945
+                  ],
+                  [
+                    945,
+                    1039
+                  ]
+                ]
+              },
+              {
+                "text": "Damage: +{0}%",
+                "value": [
+                  0,
+                  25,
+                  35,
+                  45,
+                  55,
+                  65,
+                  75,
+                  85,
+                  95,
+                  105,
+                  115,
+                  125,
+                  135,
+                  145,
+                  155,
+                  165,
+                  175,
+                  185,
+                  195,
+                  205,
+                  215
+                ]
+              }
+            ],
+            "bonus": [
+              {
+                "treeId": "sm",
+                "skillId": "summonspiritwolf"
+              },
+              {
+                "treeId": "sm",
+                "skillId": "summondirewolf"
+              }
+            ]
+          },
+          {
+            "id": "poisoncreeper",
+            "top": "3.3",
+            "left": "72.3",
+            "position": "right",
+            "affected": [
+              {
+                "treeId": "ss",
+                "skillId": "rabies"
+              }
+            ],
+            "name": "Poison Creeper",
+            "desc": [
+              "Summon A Vine That Spreads",
+              "Disease To All It Contacts"
+            ],
+            "level": "1",
+            "add": [
+              {
+                "text": "Mana Cost {0}",
+                "value": [
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8
+                ]
+              }
+            ],
+            "stat": [
+              {
+                "text": "Life: {0}",
+                "value": [
+                  0,
+                  50,
+                  62,
+                  75,
+                  87,
+                  100,
+                  112,
+                  125,
+                  137,
+                  150,
+                  162,
+                  175,
+                  187,
+                  200,
+                  212,
+                  225,
+                  237,
+                  250,
+                  262,
+                  275,
+                  287
+                ]
+              },
+              {
+                "text": "Poison Damage {0}-{1}",
+                "value": [
+                  0,
+                  [
+                    4,
+                    6
+                  ],
+                  [
+                    7,
+                    8
+                  ],
+                  [
+                    10,
+                    11
+                  ],
+                  [
+                    12,
+                    14
+                  ],
+                  [
+                    15,
+                    17
+                  ],
+                  [
+                    18,
+                    19
+                  ],
+                  [
+                    21,
+                    22
+                  ],
+                  [
+                    23,
+                    25
+                  ],
+                  [
+                    28,
+                    30
+                  ],
+                  [
+                    33,
+                    34
+                  ],
+                  [
+                    37,
+                    39
+                  ],
+                  [
+                    42,
+                    44
+                  ],
+                  [
+                    47,
+                    48
+                  ],
+                  [
+                    51,
+                    53
+                  ],
+                  [
+                    56,
+                    58
+                  ],
+                  [
+                    61,
+                    62
+                  ],
+                  [
+                    67,
+                    68
+                  ],
+                  [
+                    73,
+                    74
+                  ],
+                  [
+                    78,
+                    80
+                  ],
+                  [
+                    84,
+                    86
+                  ]
+                ]
+              },
+              {
+                "text": "Over {0} Seconds",
+                "value": [
+                  0,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4
+                ]
+              }
+            ]
+          },
+          {
+            "id": "carrionvine",
+            "top": "35.7",
+            "left": "72.3",
+            "position": "right",
+            "required": [
+              {
+                "treeId": "sm",
+                "skillId": "poisoncreeper"
+              }
+            ],
+            "name": "Carrion Vine",
+            "desc": [
+              "Summon A Vine That Eats Corpses",
+              "And Replenishes Your Life"
+            ],
+            "level": "12",
+            "add": [
+              {
+                "text": "Mana Cost {0}",
+                "value": [
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10
+                ]
+              }
+            ],
+            "stat": [
+              {
+                "text": "Life: {0}",
+                "value": [
+                  0,
+                  95,
+                  118,
+                  142,
+                  166,
+                  190,
+                  213,
+                  237,
+                  261,
+                  285,
+                  308,
+                  332,
+                  356,
+                  380,
+                  403,
+                  427,
+                  451,
+                  475,
+                  498,
+                  522,
+                  546
+                ]
+              },
+              {
+                "text": "Heals: +{0}%",
+                "value": [
+                  0,
+                  4,
+                  5,
+                  6,
+                  6,
+                  7,
+                  7,
+                  8,
+                  8,
+                  8,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10
+                ]
+              }
+            ]
+          },
+          {
+            "id": "solarcreeper",
+            "top": "68.4",
+            "left": "72.3",
+            "position": "right",
+            "required": [
+              {
+                "treeId": "sm",
+                "skillId": "carrionvine"
+              }
+            ],
+            "name": "Solar Creeper",
+            "desc": [
+              "Summon A Vine That Eats Corpses",
+              "And Replenishes Your Mana"
+            ],
+            "level": "24",
+            "stat": [
+              {
+                "text": "Life: {0}",
+                "value": [
+                  0,
+                  165,
+                  198,
+                  231,
+                  264,
+                  297,
+                  330,
+                  363,
+                  396,
+                  429,
+                  462,
+                  495,
+                  528,
+                  561,
+                  594,
+                  627,
+                  660,
+                  693,
+                  726,
+                  759,
+                  792
+                ]
+              },
+              {
+                "text": "Mana Recovery Rate +{0}%",
+                "value": [
+                  0,
+                  2,
+                  2,
+                  3,
+                  4,
+                  4,
+                  4,
+                  5,
+                  5,
+                  5,
+                  5,
+                  5,
+                  6,
+                  6,
+                  6,
+                  6,
+                  6,
+                  6,
+                  6,
+                  6,
+                  6
+                ]
+              },
+              {
+                "text": "Mana Cost {0}",
+                "value": [
+                  0,
+                  14,
+                  15,
+                  16,
+                  17,
+                  18,
+                  19,
+                  20,
+                  21,
+                  22,
+                  23,
+                  24,
+                  25,
+                  26,
+                  27,
+                  28,
+                  29,
+                  30,
+                  31,
+                  32,
+                  33
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

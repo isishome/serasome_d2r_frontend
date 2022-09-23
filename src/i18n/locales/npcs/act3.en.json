@@ -1,0 +1,71 @@
+{
+  "npcsData": {
+    "act3": [
+      {
+        "image": "/images/knowledge/npcs/alkor.gif",
+        "name": "Alkor",
+        "desc": "Potion dealer who would rather be somewhere else. He is pleasant, but seems distracted, perhaps even bored- always reading a book and mumbling strange words.",
+        "work": [
+          "Trade - Sells Potions.",
+          "Gamble - For a price, Alkor will sell you an unidentified item. Once purchased, the item will be identified and you will see what item you received."
+        ],
+        "voice": "alkor"
+      },
+      {
+        "image": "/images/knowledge/npcs/asheara.gif",
+        "name": "Asheara",
+        "desc": "This is the leader of the mercenary company known as 'The Iron Wolves'. She is tough but friendly and is always looking for ways to pay her expenses. She's the kind who would be on the front lines with her comrades, and getting into drunken brawls with them at the taverns.",
+        "work": [
+          "Hire - Allows you to hire Iron Wolves.",
+          "Trade - Sells Armor, Weapons, Bolts, and Arrows."
+        ],
+        "voice": "asheara"
+      },
+      {
+        "image": "/images/knowledge/npcs/deckardcain.gif",
+        "name": "Deckard Cain",
+        "desc": "A Horadrim sage, schooled in the most arcane history and lore, who can advise you.",
+        "work": [
+          "Identify Items - Cain will Identify all of the unidentified Items in your Inventory and Horadric Cube."
+        ],
+        "voice": "cain"
+      },
+      {
+        "image": "/images/knowledge/npcs/hratli.gif",
+        "name": "Hratli",
+        "desc": "This sorcerer has mastered the ability to meld metal with magic. He claims a much higher price than most blacksmiths, but his work is the best of any mortal. Also his tongue is sharp as a blade and quick as a whip.",
+        "work": [
+          "Repair - Repair damaged Weapons and Armor for a price.",
+          "Trade - Sells Armor, Weapons, Bolts, Arrows, and Keys."
+        ],
+        "voice": "hratli"
+      },
+      {
+        "image": "/images/knowledge/npcs/meshif.gif",
+        "name": "Meshif",
+        "desc": "Shocked by the turn of events in Kurast, once the greatest city in the world, and his home-away-from-home.",
+        "work": [
+          "Sail West - Allows players to sail west to Lut Gholein."
+        ],
+        "voice": "meshif"
+      },
+      {
+        "image": "/images/knowledge/npcs/natalya.gif",
+        "name": "Natalya",
+        "desc": "A female assassin on a mercenary mission.",
+        "work": [],
+        "voice": "natalya"
+      },
+      {
+        "image": "/images/knowledge/npcs/ormus.gif",
+        "name": "Ormus",
+        "desc": "He is known as the mad poet, always talking in rhymes and riddles. He is a member of a mighty order of magi, and has useful information, if you can decipher his riddles.",
+        "work": [
+          "Heals - Ormus will refill your Life, Mana and Stamina for free",
+          "Trade - Sells Armor, Staves, Wands, Scepters, Tomes, Healing Potions, and Scrolls."
+        ],
+        "voice": "ormus"
+      }
+    ]
+  }
+}

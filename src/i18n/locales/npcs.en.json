@@ -1,0 +1,29 @@
+{
+  "npcs": [
+    {
+      "value": "act1",
+      "label": "Act I",
+      "img": "/images/knowledge/maps/act1/thumbnail.jpg"
+    },
+    {
+      "value": "act2",
+      "label": "Act II",
+      "img": "/images/knowledge/maps/act2/thumbnail.jpg"
+    },
+    {
+      "value": "act3",
+      "label": "Act III",
+      "img": "/images/knowledge/maps/act3/thumbnail.jpg"
+    },
+    {
+      "value": "act4",
+      "label": "Act IV",
+      "img": "/images/knowledge/maps/act4/thumbnail.jpg"
+    },
+    {
+      "value": "act5",
+      "label": "Act V",
+      "img": "/images/knowledge/maps/act5/thumbnail.jpg"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "quests": [
+    {
+      "value": "act",
+      "label": "Act",
+      "img": "/images/knowledge/quests/act/thumbnail.jpg"
+    },
+    {
+      "value": "secret1",
+      "label": "The Secret Cow Level",
+      "img": "/images/knowledge/quests/secret1/thumbnail.jpg"
+    },
+    {
+      "value": "secret2",
+      "label": "Uber Diablo Quest",
+      "img": "/images/knowledge/quests/secret2/thumbnail.jpg"
+    },
+    {
+      "value": "secret3",
+      "label": "Pandemonium Event",
+      "img": "/images/knowledge/quests/secret3/thumbnail.jpg"
+    }
+  ]
+}

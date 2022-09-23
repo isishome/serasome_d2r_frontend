@@ -1,0 +1,186 @@
+{
+  "shrines": [
+    {
+      "value": "shrines",
+      "label": "성소",
+      "img": ""
+    }
+  ],
+  "shrinesData": [
+    {
+      "image": "/images/knowledge/shrines/manarecharge.png",
+      "name": "Mana Recharge Shrine",
+      "effect": [
+        "+ 400% mana recharge rate"
+      ],
+      "regeneration": 5,
+      "duration": 96
+    },
+    {
+      "image": "/images/knowledge/shrines/armor.png",
+      "name": "Armor Boost",
+      "effect": [
+        "+ 100% Defense"
+      ],
+      "regeneration": 5,
+      "duration": 96
+    },
+    {
+      "image": "/images/knowledge/shrines/combat.png",
+      "name": "Combat Boost",
+      "effect": [
+        "+ 200% to Attack Rating",
+        "+ 200% min and max damage"
+      ],
+      "regeneration": 5,
+      "duration": 96
+    },
+    {
+      "image": "/images/knowledge/shrines/resistfire.png",
+      "name": "Resist Fire Boost",
+      "effect": [
+        "+ 75% to resist fire"
+      ],
+      "regeneration": 5,
+      "duration": 144
+    },
+    {
+      "image": "/images/knowledge/shrines/resistcold.png",
+      "name": "Resist Cold Boost",
+      "effect": [
+        "+ 75% to resist cold"
+      ],
+      "regeneration": 5,
+      "duration": 144
+    },
+    {
+      "image": "/images/knowledge/shrines/resistlightning.png",
+      "name": "Resist Lightning Boos",
+      "effect": [
+        "+ 75% to resist lightning"
+      ],
+      "regeneration": 5,
+      "duration": 144
+    },
+    {
+      "image": "/images/knowledge/shrines/resistpoison.png",
+      "name": "Resist Poison Boost",
+      "effect": [
+        "+ 75% to resist poison"
+      ],
+      "regeneration": 5,
+      "duration": 144
+    },
+    {
+      "image": "/images/knowledge/shrines/skill.png",
+      "name": "Skill Shrine",
+      "effect": [
+        "+ 2 to all skill levels"
+      ],
+      "regeneration": 5,
+      "duration": 96
+    },
+    {
+      "image": "/images/knowledge/shrines/stamina.png",
+      "name": "Stamina Boost",
+      "effect": [
+        "Unlimited Stamina"
+      ],
+      "regeneration": 5,
+      "duration": 192
+    },
+    {
+      "image": "/images/knowledge/shrines/experience.png",
+      "name": "Experience Boost",
+      "effect": [
+        "50% more experience per kill"
+      ],
+      "regeneration": 0,
+      "duration": 144
+    },
+    {
+      "image": "/images/knowledge/shrines/well.png",
+      "name": "Refilling Shrine",
+      "effect": [
+        "Fills health and Mana"
+      ],
+      "regeneration": 2,
+      "duration": 0
+    },
+    {
+      "image": "/images/knowledge/shrines/shrine-health.png",
+      "name": "Health Shrine",
+      "effect": [
+        "Fully refills Health"
+      ],
+      "regeneration": 2,
+      "duration": 0
+    },
+    {
+      "image": "/images/knowledge/shrines/shrine-mana.png",
+      "name": "Mana Shrine",
+      "effect": [
+        "Fully refills Mana"
+      ],
+      "regeneration": 2,
+      "duration": 0
+    },
+    {
+      "image": "/images/knowledge/shrines/shrine1.png",
+      "name": "Portal Shrine",
+      "effect": [
+        "Opens a portal to the Town in the act"
+      ],
+      "regeneration": 0,
+      "duration": 0
+    },
+    {
+      "image": "/images/knowledge/shrines/shrine2.png",
+      "name": "Fire Shrine",
+      "effect": [
+        "All players and monsters lose 1/2 current HP, Fireballs"
+      ],
+      "regeneration": 0,
+      "duration": 0
+    },
+    {
+      "image": "/images/knowledge/shrines/shrine3.png",
+      "name": "Monster Shrine",
+      "effect": [
+        "The nearest monster becomes a Unique or Champion monster"
+      ],
+      "regeneration": 0,
+      "duration": 0
+    },
+    {
+      "image": "/images/knowledge/shrines/shrine4.png",
+      "name": "Gem Shrine",
+      "effect": [
+        "Upgrades a Random Gem or Skull in your Inventory",
+        "gives a chipped Gem or Skull"
+      ],
+      "regeneration": 0,
+      "duration": 0
+    },
+    {
+      "image": "/images/knowledge/shrines/shrine5.png",
+      "name": "Exploding Shrine",
+      "effect": [
+        "Gives player 5-10 exploding potions and tosses out 5 exploding potions in random directions/distances"
+      ],
+      "regeneration": 5,
+      "duration": 96
+    },
+    {
+      "image": "/images/knowledge/shrines/shrine6.png",
+      "name": "Poison Shrine",
+      "effect": [
+        "Gives player 5-10 Poison gas Potions",
+        "Creates ring of Poison gas around shrine.",
+        "The Poison Shrine also has another (hidden) bonus of making Poison Duration = 0"
+      ],
+      "regeneration": 5,
+      "duration": 96
+    }
+  ]
+}

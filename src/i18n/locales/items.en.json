@@ -1,0 +1,19 @@
+{
+  "items": [
+    {
+      "value": "cube",
+      "label": "Horadric Cube Recipes",
+      "img": "/images/knowledge/items/cube.webp"
+    },
+    {
+      "value": "rune",
+      "label": "Runewords Items",
+      "img": "/images/knowledge/items/rune.webp"
+    },
+    {
+      "value": "craft",
+      "label": "Crafted Items",
+      "img": "/images/knowledge/items/craft.webp"
+    }
+  ]
+}

@@ -1,0 +1,5332 @@
+{
+  "skillsData": {
+    "necromancer": [
+      {
+        "id": "sm",
+        "name": "Summoning",
+        "src": "back.jpg",
+        "skills": [
+          {
+            "id": "skeletonmastery",
+            "top": "3.6",
+            "left": "13.1",
+            "position": "left",
+            "affected": [
+              {
+                "treeId": "sm",
+                "skillId": "raiseskeleton"
+              },
+              {
+                "treeId": "sm",
+                "skillId": "raiseskeletalmage"
+              },
+              {
+                "treeId": "sm",
+                "skillId": "revive"
+              }
+            ],
+            "required": [
+              {
+                "treeId": "sm",
+                "skillId": "raiseskeleton"
+              }
+            ],
+            "name": "Skeleton Mastery",
+            "desc": [
+              "Passive - Increases Life And Damage",
+              "Of Raised Skeletons And Revived Creatures"
+            ],
+            "level": "1",
+            "stat": [
+              {
+                "text": "Skeletons: Life: +{0}",
+                "value": [
+                  0,
+                  8,
+                  16,
+                  24,
+                  32,
+                  40,
+                  48,
+                  56,
+                  64,
+                  72,
+                  80,
+                  88,
+                  96,
+                  104,
+                  112,
+                  120,
+                  128,
+                  136,
+                  144,
+                  152,
+                  160
+                ]
+              },
+              {
+                "text": "Skeletons: Damage: +{0}",
+                "value": [
+                  0,
+                  2,
+                  4,
+                  6,
+                  8,
+                  10,
+                  12,
+                  14,
+                  16,
+                  18,
+                  20,
+                  22,
+                  24,
+                  26,
+                  28,
+                  30,
+                  32,
+                  34,
+                  36,
+                  38,
+                  40
+                ]
+              },
+              {
+                "text": "Magi: Life: +{0}",
+                "value": [
+                  0,
+                  8,
+                  16,
+                  24,
+                  32,
+                  40,
+                  48,
+                  56,
+                  64,
+                  72,
+                  80,
+                  88,
+                  96,
+                  104,
+                  112,
+                  120,
+                  128,
+                  136,
+                  144,
+                  152,
+                  160
+                ]
+              },
+              {
+                "text": "Magi: Improved Missile Damage"
+              },
+              {
+                "text": "Monsters: Life: +{0}%",
+                "value": [
+                  0,
+                  5,
+                  10,
+                  15,
+                  20,
+                  25,
+                  30,
+                  35,
+                  40,
+                  45,
+                  50,
+                  55,
+                  60,
+                  65,
+                  70,
+                  75,
+                  80,
+                  85,
+                  90,
+                  95,
+                  100
+                ]
+              },
+              {
+                "text": "Monsters: Damage: +{0}%",
+                "value": [
+                  0,
+                  10,
+                  20,
+                  30,
+                  40,
+                  50,
+                  60,
+                  70,
+                  80,
+                  90,
+                  100,
+                  110,
+                  120,
+                  130,
+                  140,
+                  150,
+                  160,
+                  170,
+                  180,
+                  190,
+                  200
+                ]
+              }
+            ]
+          },
+          {
+            "id": "golemmastery",
+            "top": "35.8",
+            "left": "13.1",
+            "position": "left",
+            "affected": [
+              {
+                "treeId": "sm",
+                "skillId": "claygolem"
+              },
+              {
+                "treeId": "sm",
+                "skillId": "bloodgolem"
+              },
+              {
+                "treeId": "sm",
+                "skillId": "irongolem"
+              },
+              {
+                "treeId": "sm",
+                "skillId": "firegolem"
+              }
+            ],
+            "required": [
+              {
+                "treeId": "sm",
+                "skillId": "claygolem"
+              }
+            ],
+            "name": "Golem Mastery",
+            "desc": [
+              "Enhances Speed And Life Of All Your Golems"
+            ],
+            "level": "12",
+            "stat": [
+              {
+                "text": "Life: +{0}%",
+                "value": [
+                  0,
+                  20,
+                  40,
+                  60,
+                  80,
+                  100,
+                  120,
+                  140,
+                  160,
+                  180,
+                  200,
+                  220,
+                  240,
+                  260,
+                  280,
+                  300,
+                  320,
+                  340,
+                  360,
+                  380,
+                  400
+                ]
+              },
+              {
+                "text": "Attack Rating {0}",
+                "value": [
+                  0,
+                  25,
+                  50,
+                  75,
+                  100,
+                  125,
+                  150,
+                  175,
+                  200,
+                  225,
+                  250,
+                  275,
+                  300,
+                  325,
+                  350,
+                  375,
+                  400,
+                  425,
+                  450,
+                  475,
+                  500
+                ]
+              },
+              {
+                "text": "Run/Walk Speed: +{0}%",
+                "value": [
+                  0,
+                  6,
+                  10,
+                  14,
+                  17,
+                  20,
+                  22,
+                  23,
+                  24,
+                  26,
+                  27,
+                  28,
+                  29,
+                  30,
+                  30,
+                  31,
+                  32,
+                  32,
+                  32,
+                  33,
+                  33
+                ]
+              }
+            ]
+          },
+          {
+            "id": "summonresist",
+            "top": "68.5",
+            "left": "13.1",
+            "position": "left",
+            "affected": [
+              {
+                "treeId": "sm",
+                "skillId": "claygolem"
+              },
+              {
+                "treeId": "sm",
+                "skillId": "bloodgolem"
+              },
+              {
+                "treeId": "sm",
+                "skillId": "irongolem"
+              },
+              {
+                "treeId": "sm",
+                "skillId": "firegolem"
+              },
+              {
+                "treeId": "sm",
+                "skillId": "raiseskeleton"
+              },
+              {
+                "treeId": "sm",
+                "skillId": "raiseskeletalmage"
+              },
+              {
+                "treeId": "sm",
+                "skillId": "revive"
+              }
+            ],
+            "required": [
+              {
+                "treeId": "sm",
+                "skillId": "golemmastery"
+              }
+            ],
+            "name": "Summon Resist",
+            "desc": [
+              "Passive - Increases The Resistances",
+              "Of All Summoned Creatures"
+            ],
+            "level": "24",
+            "stat": [
+              {
+                "text": "Resist All +{0}%",
+                "value": [
+                  0,
+                  28,
+                  34,
+                  39,
+                  44,
+                  47,
+                  50,
+                  52,
+                  54,
+                  56,
+                  57,
+                  59,
+                  60,
+                  61,
+                  62,
+                  62,
+                  64,
+                  64,
+                  65,
+                  65,
+                  66
+                ]
+              }
+            ]
+          },
+          {
+            "id": "claygolem",
+            "top": "19.8",
+            "left": "42.8",
+            "position": "middle",
+            "affected": [
+              {
+                "treeId": "sm",
+                "skillId": "bloodgolem"
+              },
+              {
+                "treeId": "sm",
+                "skillId": "irongolem"
+              },
+              {
+                "treeId": "sm",
+                "skillId": "firegolem"
+              }
+            ],
+            "name": "Clay Golem",
+            "desc": [
+              "Creates A Golem From The Earth",
+              "To Fight By Your Side"
+            ],
+            "level": "6",
+            "add": [
+              {
+                "text": "Attack Rating {0}",
+                "value": [
+                  60,
+                  60,
+                  80,
+                  100,
+                  120,
+                  140,
+                  160,
+                  180,
+                  200,
+                  220,
+                  240,
+                  260,
+                  280,
+                  300,
+                  320,
+                  340,
+                  360,
+                  380,
+                  400,
+                  420,
+                  440
+                ]
+              },
+              {
+                "text": "Defense: {0}",
+                "value": [
+                  100,
+                  100,
+                  100,
+                  100,
+                  100,
+                  100,
+                  100,
+                  100,
+                  100,
+                  100,
+                  100,
+                  100,
+                  100,
+                  100,
+                  100,
+                  100,
+                  100,
+                  100,
+                  100,
+                  100,
+                  100
+                ]
+              }
+            ],
+            "stat": [
+              {
+                "text": "Life: {0}",
+                "value": [
+                  0,
+                  275,
+                  371,
+                  467,
+                  563,
+                  660,
+                  756,
+                  852,
+                  948,
+                  1045,
+                  1141,
+                  1237,
+                  1333,
+                  1430,
+                  1526,
+                  1622,
+                  1718,
+                  1815,
+                  1911,
+                  2007,
+                  2103
+                ]
+              },
+              {
+                "text": "Attack Rating +{0}",
+                "value": [
+                  0,
+                  20,
+                  40,
+                  60,
+                  80,
+                  100,
+                  120,
+                  140,
+                  160,
+                  180,
+                  200,
+                  220,
+                  240,
+                  260,
+                  280,
+                  300,
+                  320,
+                  340,
+                  360,
+                  380,
+                  400
+                ]
+              },
+              {
+                "text": "Damage: {0}-{1}",
+                "value": [
+                  0,
+                  [
+                    3,
+                    7
+                  ],
+                  [
+                    4,
+                    9
+                  ],
+                  [
+                    5,
+                    11
+                  ],
+                  [
+                    6,
+                    14
+                  ],
+                  [
+                    7,
+                    16
+                  ],
+                  [
+                    8,
+                    19
+                  ],
+                  [
+                    9,
+                    21
+                  ],
+                  [
+                    10,
+                    24
+                  ],
+                  [
+                    11,
+                    26
+                  ],
+                  [
+                    12,
+                    29
+                  ],
+                  [
+                    13,
+                    31
+                  ],
+                  [
+                    14,
+                    33
+                  ],
+                  [
+                    15,
+                    36
+                  ],
+                  [
+                    16,
+                    38
+                  ],
+                  [
+                    17,
+                    41
+                  ],
+                  [
+                    18,
+                    43
+                  ],
+                  [
+                    19,
+                    46
+                  ],
+                  [
+                    20,
+                    48
+                  ],
+                  [
+                    21,
+                    51
+                  ],
+                  [
+                    22,
+                    53
+                  ]
+                ]
+              },
+              {
+                "text": "Slows Enemies {0}%",
+                "value": [
+                  0,
+                  11,
+                  20,
+                  27,
+                  33,
+                  37,
+                  41,
+                  44,
+                  46,
+                  49,
+                  51,
+                  53,
+                  54,
+                  56,
+                  57,
+                  58,
+                  60,
+                  60,
+                  61,
+                  62,
+                  63
+                ]
+              },
+              {
+                "text": "Mana Cost {0}",
+                "value": [
+                  0,
+                  15,
+                  18,
+                  21,
+                  24,
+                  27,
+                  30,
+                  33,
+                  36,
+                  39,
+                  42,
+                  45,
+                  48,
+                  51,
+                  54,
+                  57,
+                  60,
+                  63,
+                  66,
+                  69,
+                  72
+                ]
+              }
+            ],
+            "bonus": [
+              {
+                "treeId": "sm",
+                "skillId": "golemmastery",
+                "addIdx": [
+                  0
+                ],
+                "value": [
+                  25
+                ],
+                "type": [
+                  "sum"
+                ]
+              },
+              {
+                "treeId": "sm",
+                "skillId": "golemmastery",
+                "statIdx": [
+                  1
+                ],
+                "value": [
+                  20
+                ],
+                "type": [
+                  "sum"
+                ]
+              },
+              {
+                "treeId": "sm",
+                "skillId": "summonresist"
+              },
+              {
+                "treeId": "sm",
+                "skillId": "bloodgolem",
+                "statIdx": [
+                  0
+                ],
+                "value": [
+                  5
+                ],
+                "type": [
+                  "sum"
+                ],
+                "text": "{n}: +{0}% Life Per Level"
+              },
+              {
+                "treeId": "sm",
+                "skillId": "irongolem",
+                "addIdx": [
+                  1
+                ],
+                "value": [
+                  35
+                ],
+                "type": [
+                  "sum"
+                ],
+                "text": "{n}: +{0} Defense Per Level"
+              },
+              {
+                "treeId": "sm",
+                "skillId": "firegolem",
+                "statIdx": [
+                  2
+                ],
+                "value": [
+                  6
+                ],
+                "type": [
+                  "rate"
+                ],
+                "text": "{n}: +{0}% Damage Per Level"
+              }
+            ]
+          },
+          {
+            "id": "bloodgolem",
+            "top": "52.3",
+            "left": "42.8",
+            "position": "middle",
+            "affected": [
+              {
+                "treeId": "sm",
+                "skillId": "claygolem"
+              },
+              {
+                "treeId": "sm",
+                "skillId": "irongolem"
+              },
+              {
+                "treeId": "sm",
+                "skillId": "firegolem"
+              }
+            ],
+            "required": [
+              {
+                "treeId": "sm",
+                "skillId": "claygolem"
+              }
+            ],
+            "name": "Blood Golem",
+            "desc": [
+              "Creates A Golem That Shares With You The Life",
+              "It Steals"
+            ],
+            "level": "18",
+            "add": [
+              {
+                "text": "Life: {0}",
+                "value": [
+                  637,
+                  637,
+                  637,
+                  637,
+                  637,
+                  637,
+                  637,
+                  637,
+                  637,
+                  637,
+                  637,
+                  637,
+                  637,
+                  637,
+                  637,
+                  637,
+                  637,
+                  637,
+                  637,
+                  637,
+                  637
+                ]
+              },
+              {
+                "text": "Attack Rating {0}",
+                "value": [
+                  80,
+                  80,
+                  80,
+                  80,
+                  80,
+                  80,
+                  80,
+                  80,
+                  80,
+                  80,
+                  80,
+                  80,
+                  80,
+                  80,
+                  80,
+                  80,
+                  80,
+                  80,
+                  80,
+                  80,
+                  80
+                ]
+              },
+              {
+                "text": "Defense: {0}",
+                "value": [
+                  120,
+                  120,
+                  120,
+                  120,
+                  120,
+                  120,
+                  120,
+                  120,
+                  120,
+                  120,
+                  120,
+                  120,
+                  120,
+                  120,
+                  120,
+                  120,
+                  120,
+                  120,
+                  120,
+                  120,
+                  120
+                ]
+              }
+            ],
+            "stat": [
+              {
+                "text": "Converts {0}% Damage To Life",
+                "value": [
+                  0,
+                  86,
+                  95,
+                  102,
+                  108,
+                  112,
+                  116,
+                  119,
+                  121,
+                  124,
+                  126,
+                  128,
+                  129,
+                  131,
+                  132,
+                  133,
+                  135,
+                  135,
+                  136,
+                  137,
+                  138
+                ]
+              },
+              {
+                "text": "Damage: {0}-{1}",
+                "value": [
+                  0,
+                  [
+                    10,
+                    27
+                  ],
+                  [
+                    13,
+                    36
+                  ],
+                  [
+                    17,
+                    45
+                  ],
+                  [
+                    20,
+                    55
+                  ],
+                  [
+                    24,
+                    64
+                  ],
+                  [
+                    27,
+                    74
+                  ],
+                  [
+                    31,
+                    83
+                  ],
+                  [
+                    34,
+                    93
+                  ],
+                  [
+                    38,
+                    102
+                  ],
+                  [
+                    41,
+                    112
+                  ],
+                  [
+                    45,
+                    121
+                  ],
+                  [
+                    48,
+                    130
+                  ],
+                  [
+                    52,
+                    140
+                  ],
+                  [
+                    55,
+                    149
+                  ],
+                  [
+                    59,
+                    159
+                  ],
+                  [
+                    62,
+                    168
+                  ],
+                  [
+                    66,
+                    178
+                  ],
+                  [
+                    69,
+                    187
+                  ],
+                  [
+                    73,
+                    197
+                  ],
+                  [
+                    76,
+                    206
+                  ]
+                ]
+              },
+              {
+                "text": "Mana Cost {0}",
+                "value": [
+                  0,
+                  25,
+                  29,
+                  33,
+                  37,
+                  41,
+                  45,
+                  49,
+                  53,
+                  57,
+                  61,
+                  65,
+                  69,
+                  73,
+                  77,
+                  81,
+                  85,
+                  89,
+                  93,
+                  97,
+                  101
+                ]
+              }
+            ],
+            "bonus": [
+              {
+                "treeId": "sm",
+                "skillId": "golemmastery",
+                "addIdx": [
+                  0,
+                  1
+                ],
+                "value": [
+                  20,
+                  25
+                ],
+                "type": [
+                  "rate",
+                  "sum"
+                ]
+              },
+              {
+                "treeId": "sm",
+                "skillId": "summonresist"
+              },
+              {
+                "treeId": "sm",
+                "skillId": "claygolem",
+                "addIdx": [
+                  1
+                ],
+                "value": [
+                  20
+                ],
+                "type": [
+                  "sum"
+                ],
+                "text": "{n}: +{0} Attack Rating Per Level"
+              },
+              {
+                "treeId": "sm",
+                "skillId": "irongolem",
+                "addIdx": [
+                  2
+                ],
+                "value": [
+                  35
+                ],
+                "type": [
+                  "sum"
+                ],
+                "text": "{n}: +{0} Defense Per Level"
+              },
+              {
+                "treeId": "sm",
+                "skillId": "firegolem",
+                "statIdx": [
+                  1
+                ],
+                "value": [
+                  6
+                ],
+                "type": [
+                  "rate"
+                ],
+                "text": "{n}: +{0}% Damage Per Level"
+              }
+            ]
+          },
+          {
+            "id": "irongolem",
+            "top": "68.5",
+            "left": "42.8",
+            "position": "middle",
+            "affected": [
+              {
+                "treeId": "sm",
+                "skillId": "claygolem"
+              },
+              {
+                "treeId": "sm",
+                "skillId": "bloodgolem"
+              },
+              {
+                "treeId": "sm",
+                "skillId": "firegolem"
+              }
+            ],
+            "required": [
+              {
+                "treeId": "sm",
+                "skillId": "bloodgolem"
+              }
+            ],
+            "name": "Iron Golem",
+            "desc": [
+              "Transforms A Metallic Item Into A Golem That Gains",
+              "The Properties Of The Item"
+            ],
+            "level": "24",
+            "add": [
+              {
+                "text": "Life: {0}",
+                "value": [
+                  1029,
+                  1029,
+                  1029,
+                  1029,
+                  1029,
+                  1029,
+                  1029,
+                  1029,
+                  1029,
+                  1029,
+                  1029,
+                  1029,
+                  1029,
+                  1029,
+                  1029,
+                  1029,
+                  1029,
+                  1029,
+                  1029,
+                  1029,
+                  1029
+                ]
+              },
+              {
+                "text": "Damage: {0}-{1}",
+                "value": [
+                  [
+                    12,
+                    33
+                  ],
+                  [
+                    12,
+                    33
+                  ],
+                  [
+                    12,
+                    33
+                  ],
+                  [
+                    12,
+                    33
+                  ],
+                  [
+                    12,
+                    33
+                  ],
+                  [
+                    12,
+                    33
+                  ],
+                  [
+                    12,
+                    33
+                  ],
+                  [
+                    12,
+                    33
+                  ],
+                  [
+                    12,
+                    33
+                  ],
+                  [
+                    12,
+                    33
+                  ],
+                  [
+                    12,
+                    33
+                  ],
+                  [
+                    12,
+                    33
+                  ],
+                  [
+                    12,
+                    33
+                  ],
+                  [
+                    12,
+                    33
+                  ],
+                  [
+                    12,
+                    33
+                  ],
+                  [
+                    12,
+                    33
+                  ],
+                  [
+                    12,
+                    33
+                  ],
+                  [
+                    12,
+                    33
+                  ],
+                  [
+                    12,
+                    33
+                  ],
+                  [
+                    12,
+                    33
+                  ],
+                  [
+                    12,
+                    33
+                  ]
+                ]
+              },
+              {
+                "text": "Attack Rating {0}",
+                "value": [
+                  80,
+                  80,
+                  80,
+                  80,
+                  80,
+                  80,
+                  80,
+                  80,
+                  80,
+                  80,
+                  80,
+                  80,
+                  80,
+                  80,
+                  80,
+                  80,
+                  80,
+                  80,
+                  80,
+                  80,
+                  80
+                ]
+              },
+              {
+                "text": "Defense: {0}",
+                "value": [
+                  140,
+                  140,
+                  140,
+                  140,
+                  140,
+                  140,
+                  140,
+                  140,
+                  140,
+                  140,
+                  140,
+                  140,
+                  140,
+                  140,
+                  140,
+                  140,
+                  140,
+                  140,
+                  140,
+                  140,
+                  140
+                ]
+              },
+              {
+                "text": "Mana Cost {0}",
+                "value": [
+                  35,
+                  35,
+                  35,
+                  35,
+                  35,
+                  35,
+                  35,
+                  35,
+                  35,
+                  35,
+                  35,
+                  35,
+                  35,
+                  35,
+                  35,
+                  35,
+                  35,
+                  35,
+                  35,
+                  35,
+                  35
+                ]
+              }
+            ],
+            "stat": [
+              {
+                "text": "Thorns Damage"
+              },
+              {
+                "text": "{0}% Damage Returned",
+                "value": [
+                  0,
+                  150,
+                  150,
+                  165,
+                  180,
+                  195,
+                  210,
+                  225,
+                  240,
+                  255,
+                  270,
+                  285,
+                  300,
+                  315,
+                  330,
+                  345,
+                  360,
+                  375,
+                  390,
+                  405,
+                  420
+                ]
+              },
+              {
+                "text": "Defense: +{0}",
+                "value": [
+                  0,
+                  35,
+                  70,
+                  105,
+                  140,
+                  175,
+                  210,
+                  245,
+                  280,
+                  315,
+                  350,
+                  385,
+                  420,
+                  455,
+                  490,
+                  525,
+                  560,
+                  595,
+                  630,
+                  665,
+                  700
+                ]
+              }
+            ],
+            "bonus": [
+              {
+                "treeId": "sm",
+                "skillId": "golemmastery",
+                "addIdx": [
+                  0,
+                  1
+                ],
+                "value": [
+                  20,
+                  25
+                ],
+                "type": [
+                  "rate",
+                  "sum"
+                ]
+              },
+              {
+                "treeId": "sm",
+                "skillId": "summonresist"
+              },
+              {
+                "treeId": "sm",
+                "skillId": "claygolem",
+                "addIdx": [
+                  2
+                ],
+                "value": [
+                  20
+                ],
+                "type": [
+                  "sum"
+                ],
+                "text": "{n}: +{0} Attack Rating Per Level"
+              },
+              {
+                "treeId": "sm",
+                "skillId": "bloodgolem",
+                "addIdx": [
+                  0
+                ],
+                "value": [
+                  5
+                ],
+                "type": [
+                  "sum"
+                ],
+                "text": "{n}: +{0} Life Per Level"
+              },
+              {
+                "treeId": "sm",
+                "skillId": "firegolem",
+                "statIdx": [
+                  1
+                ],
+                "value": [
+                  6
+                ],
+                "type": [
+                  "rate"
+                ],
+                "text": "{n}: +{0}% Damage Per Level"
+              }
+            ]
+          },
+          {
+            "id": "firegolem",
+            "top": "84.4",
+            "left": "42.8",
+            "position": "middle",
+            "affected": [
+              {
+                "treeId": "sm",
+                "skillId": "claygolem"
+              },
+              {
+                "treeId": "sm",
+                "skillId": "bloodgolem"
+              },
+              {
+                "treeId": "sm",
+                "skillId": "irongolem"
+              }
+            ],
+            "required": [
+              {
+                "treeId": "sm",
+                "skillId": "irongolem"
+              }
+            ],
+            "name": "Fire Golem",
+            "desc": [
+              "Creates A Golem That Converts The Damage",
+              "It Receives From Fire Into Life"
+            ],
+            "level": "30",
+            "add": [
+              {
+                "text": "Life: {0}",
+                "value": [
+                  1029,
+                  1029,
+                  1029,
+                  1029,
+                  1029,
+                  1029,
+                  1029,
+                  1029,
+                  1029,
+                  1029,
+                  1029,
+                  1029,
+                  1029,
+                  1029,
+                  1029,
+                  1029,
+                  1029,
+                  1029,
+                  1029,
+                  1029,
+                  1029
+                ]
+              },
+              {
+                "text": "Attack Rating {0}",
+                "value": [
+                  80,
+                  80,
+                  80,
+                  80,
+                  80,
+                  80,
+                  80,
+                  80,
+                  80,
+                  80,
+                  80,
+                  80,
+                  80,
+                  80,
+                  80,
+                  80,
+                  80,
+                  80,
+                  80,
+                  80,
+                  80
+                ]
+              },
+              {
+                "text": "Defense: {0}",
+                "value": [
+                  140,
+                  140,
+                  140,
+                  140,
+                  140,
+                  140,
+                  140,
+                  140,
+                  140,
+                  140,
+                  140,
+                  140,
+                  140,
+                  140,
+                  140,
+                  140,
+                  140,
+                  140,
+                  140,
+                  140,
+                  140
+                ]
+              }
+            ],
+            "stat": [
+              {
+                "text": "Absorbs {0}% Fire Damage",
+                "value": [
+                  0,
+                  36,
+                  45,
+                  52,
+                  58,
+                  62,
+                  66,
+                  69,
+                  71,
+                  74,
+                  76,
+                  78,
+                  79,
+                  81,
+                  82,
+                  83,
+                  85,
+                  85,
+                  86,
+                  87,
+                  88
+                ]
+              },
+              {
+                "text": "Fire Damage {0}-{1}",
+                "value": [
+                  0,
+                  [
+                    52,
+                    110
+                  ],
+                  [
+                    67,
+                    126
+                  ],
+                  [
+                    82,
+                    142
+                  ],
+                  [
+                    97,
+                    158
+                  ],
+                  [
+                    112,
+                    174
+                  ],
+                  [
+                    127,
+                    190
+                  ],
+                  [
+                    142,
+                    206
+                  ],
+                  [
+                    157,
+                    222
+                  ],
+                  [
+                    173,
+                    239
+                  ],
+                  [
+                    195,
+                    262
+                  ],
+                  [
+                    211,
+                    279
+                  ],
+                  [
+                    233,
+                    302
+                  ],
+                  [
+                    249,
+                    319
+                  ],
+                  [
+                    271,
+                    342
+                  ],
+                  [
+                    287,
+                    359
+                  ],
+                  [
+                    315,
+                    388
+                  ],
+                  [
+                    338,
+                    412
+                  ],
+                  [
+                    367,
+                    442
+                  ],
+                  [
+                    390,
+                    466
+                  ],
+                  [
+                    419,
+                    496
+                  ]
+                ]
+              },
+              {
+                "text": "Holy Fire {0}-{1}",
+                "value": [
+                  0,
+                  [
+                    4,
+                    6
+                  ],
+                  [
+                    5,
+                    7
+                  ],
+                  [
+                    6,
+                    8
+                  ],
+                  [
+                    7,
+                    9
+                  ],
+                  [
+                    8,
+                    10
+                  ],
+                  [
+                    9,
+                    11
+                  ],
+                  [
+                    10,
+                    12
+                  ],
+                  [
+                    11,
+                    13
+                  ],
+                  [
+                    12,
+                    14
+                  ],
+                  [
+                    14,
+                    16
+                  ],
+                  [
+                    15,
+                    17
+                  ],
+                  [
+                    17,
+                    19
+                  ],
+                  [
+                    18,
+                    20
+                  ],
+                  [
+                    20,
+                    22
+                  ],
+                  [
+                    21,
+                    23
+                  ],
+                  [
+                    24,
+                    26
+                  ],
+                  [
+                    26,
+                    28
+                  ],
+                  [
+                    29,
+                    31
+                  ],
+                  [
+                    31,
+                    33
+                  ],
+                  [
+                    34,
+                    36
+                  ]
+                ]
+              },
+              {
+                "text": "Mana Cost {0}",
+                "value": [
+                  0,
+                  50,
+                  60,
+                  70,
+                  80,
+                  90,
+                  100,
+                  110,
+                  120,
+                  130,
+                  140,
+                  150,
+                  160,
+                  170,
+                  180,
+                  190,
+                  200,
+                  210,
+                  220,
+                  230,
+                  240
+                ]
+              }
+            ],
+            "bonus": [
+              {
+                "treeId": "sm",
+                "skillId": "golemmastery",
+                "addIdx": [
+                  0,
+                  1
+                ],
+                "value": [
+                  20,
+                  25
+                ],
+                "type": [
+                  "rate",
+                  "sum"
+                ]
+              },
+              {
+                "treeId": "sm",
+                "skillId": "summonresist"
+              },
+              {
+                "treeId": "sm",
+                "skillId": "claygolem",
+                "addIdx": [
+                  1
+                ],
+                "value": [
+                  20
+                ],
+                "type": [
+                  "sum"
+                ],
+                "text": "{n}: +{0} Attack Rating Per Level"
+              },
+              {
+                "treeId": "sm",
+                "skillId": "bloodgolem",
+                "addIdx": [
+                  0
+                ],
+                "value": [
+                  5
+                ],
+                "type": [
+                  "sum"
+                ],
+                "text": "{n}: +{0} Life Per Level"
+              },
+              {
+                "treeId": "sm",
+                "skillId": "irongolem",
+                "addIdx": [
+                  2
+                ],
+                "value": [
+                  35
+                ],
+                "type": [
+                  "sum"
+                ],
+                "text": "{n}: +{0} Defense Per Level"
+              }
+            ]
+          },
+          {
+            "id": "raiseskeleton",
+            "top": "3.6",
+            "left": "72.2",
+            "position": "right",
+            "name": "Raise Skeleton",
+            "desc": [
+              "Cast On The Corpse Of A Slain Monster,",
+              "This Raises A Skeleton Warrior That",
+              "Fights For You"
+            ],
+            "level": "1",
+            "add": [
+              {
+                "text": "Damage: {0}-{1}",
+                "value": [
+                  [
+                    1,
+                    2
+                  ],
+                  [
+                    1,
+                    2
+                  ],
+                  [
+                    1,
+                    2
+                  ],
+                  [
+                    1,
+                    2
+                  ],
+                  [
+                    1,
+                    2
+                  ],
+                  [
+                    1,
+                    2
+                  ],
+                  [
+                    1,
+                    2
+                  ],
+                  [
+                    1,
+                    2
+                  ],
+                  [
+                    2,
+                    4
+                  ],
+                  [
+                    4,
+                    5
+                  ],
+                  [
+                    6,
+                    7
+                  ],
+                  [
+                    8,
+                    9
+                  ],
+                  [
+                    10,
+                    11
+                  ],
+                  [
+                    12,
+                    14
+                  ],
+                  [
+                    14,
+                    16
+                  ],
+                  [
+                    17,
+                    19
+                  ],
+                  [
+                    21,
+                    23
+                  ],
+                  [
+                    26,
+                    28
+                  ],
+                  [
+                    31,
+                    33
+                  ],
+                  [
+                    37,
+                    39
+                  ],
+                  [
+                    37,
+                    39
+                  ]
+                ]
+              }
+            ],
+            "stat": [
+              {
+                "text": "Life: {0}",
+                "value": [
+                  0,
+                  21,
+                  21,
+                  21,
+                  31,
+                  42,
+                  52,
+                  63,
+                  73,
+                  84,
+                  94,
+                  105,
+                  115,
+                  126,
+                  136,
+                  147,
+                  157,
+                  168,
+                  178,
+                  189,
+                  199
+                ]
+              },
+              {
+                "text": "Attack Rating {0}",
+                "value": [
+                  0,
+                  20,
+                  35,
+                  50,
+                  65,
+                  80,
+                  95,
+                  110,
+                  125,
+                  140,
+                  155,
+                  170,
+                  185,
+                  200,
+                  215,
+                  230,
+                  245,
+                  260,
+                  275,
+                  290,
+                  305
+                ]
+              },
+              {
+                "text": "Damage: +{0}%",
+                "value": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  7,
+                  14,
+                  21,
+                  28,
+                  35,
+                  42,
+                  49,
+                  56,
+                  63,
+                  70,
+                  77,
+                  84,
+                  91,
+                  98,
+                  105,
+                  112,
+                  119
+                ]
+              },
+              {
+                "text": "Defense: {0}",
+                "value": [
+                  0,
+                  20,
+                  35,
+                  50,
+                  65,
+                  80,
+                  95,
+                  110,
+                  125,
+                  140,
+                  155,
+                  170,
+                  185,
+                  200,
+                  215,
+                  230,
+                  245,
+                  260,
+                  275,
+                  290,
+                  305
+                ]
+              },
+              {
+                "text": "{0} Skeletons Total",
+                "value": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  3,
+                  3,
+                  4,
+                  4,
+                  4,
+                  5,
+                  5,
+                  5,
+                  6,
+                  6,
+                  6,
+                  7,
+                  7,
+                  7,
+                  8,
+                  8,
+                  8
+                ]
+              },
+              {
+                "text": "Mana Cost {0}",
+                "value": [
+                  0,
+                  6,
+                  7,
+                  8,
+                  9,
+                  10,
+                  11,
+                  12,
+                  13,
+                  14,
+                  15,
+                  16,
+                  17,
+                  18,
+                  19,
+                  20,
+                  21,
+                  22,
+                  23,
+                  24,
+                  25
+                ]
+              }
+            ],
+            "bonus": [
+              {
+                "treeId": "sm",
+                "skillId": "skeletonmastery",
+                "addIdx": [
+                  0
+                ],
+                "value": [
+                  20
+                ],
+                "type": [
+                  "rate"
+                ]
+              },
+              {
+                "treeId": "sm",
+                "skillId": "skeletonmastery",
+                "statIdx": [
+                  0,
+                  1,
+                  3
+                ],
+                "value": [
+                  8,
+                  15,
+                  15
+                ],
+                "type": [
+                  "sum",
+                  "sum",
+                  "sum"
+                ]
+              },
+              {
+                "treeId": "sm",
+                "skillId": "summonresist"
+              }
+            ]
+          },
+          {
+            "id": "raiseskeletalmage",
+            "top": "35.8",
+            "left": "72.3",
+            "position": "right",
+            "required": [
+              {
+                "treeId": "sm",
+                "skillId": "raiseskeleton"
+              }
+            ],
+            "name": "Raise Skeletal Mage",
+            "desc": [
+              "Cast On The Corpse Of A Slain Monster,",
+              "This Raises A Skeleton Mage That",
+              "Fights For You"
+            ],
+            "level": "12",
+            "add": [
+              {
+                "text": "Life: {0}",
+                "value": [
+                  123,
+                  123,
+                  123,
+                  123,
+                  123,
+                  123,
+                  123,
+                  123,
+                  123,
+                  123,
+                  123,
+                  123,
+                  123,
+                  123,
+                  123,
+                  123,
+                  123,
+                  123,
+                  123,
+                  123,
+                  123
+                ]
+              }
+            ],
+            "stat": [
+              {
+                "text": "Defense: {0}",
+                "value": [
+                  0,
+                  10,
+                  20,
+                  30,
+                  40,
+                  50,
+                  60,
+                  70,
+                  80,
+                  90,
+                  100,
+                  110,
+                  120,
+                  130,
+                  140,
+                  150,
+                  160,
+                  170,
+                  180,
+                  190,
+                  200
+                ]
+              },
+              {
+                "text": "{0} Skeleton Magi",
+                "value": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  3,
+                  3,
+                  4,
+                  4,
+                  4,
+                  5,
+                  5,
+                  5,
+                  6,
+                  6,
+                  6,
+                  7,
+                  7,
+                  7,
+                  8,
+                  8,
+                  8
+                ]
+              },
+              {
+                "text": "Mana Cost {0}",
+                "value": [
+                  0,
+                  8,
+                  9,
+                  10,
+                  11,
+                  12,
+                  13,
+                  14,
+                  15,
+                  16,
+                  17,
+                  18,
+                  19,
+                  20,
+                  21,
+                  22,
+                  23,
+                  24,
+                  25,
+                  26,
+                  27
+                ]
+              }
+            ],
+            "bonus": [
+              {
+                "treeId": "sm",
+                "skillId": "skeletonmastery",
+                "statIdx": [
+                  0
+                ],
+                "value": [
+                  8
+                ],
+                "type": [
+                  "sum"
+                ]
+              },
+              {
+                "treeId": "sm",
+                "skillId": "summonresist"
+              }
+            ]
+          },
+          {
+            "id": "revive",
+            "top": "84.5",
+            "left": "72.2",
+            "position": "right",
+            "required": [
+              {
+                "treeId": "sm",
+                "skillId": "irongolem"
+              },
+              {
+                "treeId": "sm",
+                "skillId": "raiseskeletalmage"
+              }
+            ],
+            "name": "Revive",
+            "desc": [
+              "Returns A Monster To Life",
+              "To Fight By Your Side"
+            ],
+            "level": "30",
+            "add": [
+              {
+                "text": "Life: +{0}%",
+                "value": [
+                  200,
+                  200,
+                  200,
+                  200,
+                  200,
+                  200,
+                  200,
+                  200,
+                  200,
+                  200,
+                  200,
+                  200,
+                  200,
+                  200,
+                  200,
+                  200,
+                  200,
+                  200,
+                  200,
+                  200,
+                  200
+                ]
+              },
+              {
+                "text": "Damage: +{0}%",
+                "value": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ]
+              },
+              {
+                "text": "Duration: {0} Seconds",
+                "value": [
+                  180,
+                  180,
+                  180,
+                  180,
+                  180,
+                  180,
+                  180,
+                  180,
+                  180,
+                  180,
+                  180,
+                  180,
+                  180,
+                  180,
+                  180,
+                  180,
+                  180,
+                  180,
+                  180,
+                  180,
+                  180
+                ]
+              },
+              {
+                "text": "Mana Cost {0}",
+                "value": [
+                  45,
+                  45,
+                  45,
+                  45,
+                  45,
+                  45,
+                  45,
+                  45,
+                  45,
+                  45,
+                  45,
+                  45,
+                  45,
+                  45,
+                  45,
+                  45,
+                  45,
+                  45,
+                  45,
+                  45,
+                  45
+                ]
+              }
+            ],
+            "stat": [
+              {
+                "text": "Monsters: {0}",
+                "value": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7,
+                  8,
+                  9,
+                  10,
+                  11,
+                  12,
+                  13,
+                  14,
+                  15,
+                  16,
+                  17,
+                  18,
+                  19,
+                  20
+                ]
+              }
+            ],
+            "bonus": [
+              {
+                "treeId": "sm",
+                "skillId": "skeletonmastery",
+                "addIdx": [
+                  0,
+                  1
+                ],
+                "value": [
+                  5,
+                  10
+                ],
+                "type": [
+                  "sum",
+                  "sum"
+                ]
+              },
+              {
+                "treeId": "sm",
+                "skillId": "summonresist"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "pb",
+        "name": "Poison And Bone",
+        "src": "back.jpg",
+        "skills": [
+          {
+            "id": "poisondagger",
+            "top": "19.7",
+            "left": "12.9",
+            "position": "left",
+            "affected": [
+              {
+                "treeId": "pb",
+                "skillId": "poisonexplosion"
+              },
+              {
+                "treeId": "pb",
+                "skillId": "poisonnova"
+              }
+            ],
+            "name": "Poison Dagger",
+            "desc": [
+              "Adds Poison To Your Dagger Attacks"
+            ],
+            "level": "6",
+            "stat": [
+              {
+                "text": "Attack Rating +{0}%",
+                "value": [
+                  0,
+                  30,
+                  50,
+                  70,
+                  90,
+                  110,
+                  130,
+                  150,
+                  170,
+                  190,
+                  210,
+                  230,
+                  250,
+                  270,
+                  290,
+                  310,
+                  330,
+                  350,
+                  370,
+                  390,
+                  410
+                ]
+              },
+              {
+                "text": "Poison Damage {0}-{1}",
+                "value": [
+                  0,
+                  [
+                    7,
+                    15
+                  ],
+                  [
+                    13,
+                    23
+                  ],
+                  [
+                    20,
+                    32
+                  ],
+                  [
+                    30,
+                    43
+                  ],
+                  [
+                    40,
+                    56
+                  ],
+                  [
+                    53,
+                    70
+                  ],
+                  [
+                    67,
+                    85
+                  ],
+                  [
+                    82,
+                    103
+                  ],
+                  [
+                    104,
+                    126
+                  ],
+                  [
+                    129,
+                    153
+                  ],
+                  [
+                    155,
+                    181
+                  ],
+                  [
+                    185,
+                    212
+                  ],
+                  [
+                    216,
+                    245
+                  ],
+                  [
+                    250,
+                    281
+                  ],
+                  [
+                    286,
+                    319
+                  ],
+                  [
+                    325,
+                    359
+                  ],
+                  [
+                    374,
+                    410
+                  ],
+                  [
+                    426,
+                    464
+                  ],
+                  [
+                    481,
+                    521
+                  ],
+                  [
+                    540,
+                    581
+                  ]
+                ]
+              },
+              {
+                "text": "Over {0} Seconds",
+                "value": [
+                  0,
+                  2,
+                  2.4,
+                  2.8,
+                  3.2,
+                  3.6,
+                  4,
+                  4.4,
+                  4.8,
+                  5.2,
+                  5.6,
+                  6,
+                  6.4,
+                  6.8,
+                  7.2,
+                  7.6,
+                  8,
+                  8.4,
+                  8.8,
+                  9.2,
+                  9.6
+                ]
+              },
+              {
+                "text": "Mana Cost {0}",
+                "value": [
+                  0,
+                  3,
+                  3.2,
+                  3.5,
+                  3.7,
+                  4.0,
+                  4.2,
+                  4.5,
+                  4.7,
+                  5.0,
+                  5.2,
+                  5.5,
+                  5.7,
+                  6.0,
+                  6.2,
+                  6.5,
+                  6.7,
+                  7.0,
+                  7.2,
+                  7.5,
+                  7.7
+                ]
+              }
+            ],
+            "bonus": [
+              {
+                "treeId": "pb",
+                "skillId": "poisonexplosion",
+                "statIdx": [
+                  1
+                ],
+                "value": [
+                  20
+                ],
+                "type": [
+                  "rate"
+                ],
+                "text": "{n}: +{0}% Poison Damage Per Level"
+              },
+              {
+                "treeId": "pb",
+                "skillId": "poisonnova",
+                "statIdx": [
+                  1
+                ],
+                "value": [
+                  20
+                ],
+                "type": [
+                  "rate"
+                ],
+                "text": "{n}: +{0}% Poison Damage Per Level"
+              }
+            ]
+          },
+          {
+            "id": "poisonexplosion",
+            "top": "52",
+            "left": "12.9",
+            "position": "left",
+            "affected": [
+              {
+                "treeId": "pb",
+                "skillId": "poisondagger"
+              },
+              {
+                "treeId": "pb",
+                "skillId": "poisonnova"
+              }
+            ],
+            "required": [
+              {
+                "treeId": "pb",
+                "skillId": "poisondagger"
+              },
+              {
+                "treeId": "pb",
+                "skillId": "corpse"
+              }
+            ],
+            "name": "Poison Explosion",
+            "desc": [
+              "Cast On The Corpse Of A Slain Monster",
+              "Toxic Gas Is Released",
+              "That Poisons Nearby Monsters"
+            ],
+            "level": "18",
+            "add": [
+              {
+                "text": "Mana Cost {0}",
+                "value": [
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8
+                ]
+              }
+            ],
+            "stat": [
+              {
+                "text": "Poison Damage {0}-{1}",
+                "value": [
+                  0,
+                  [
+                    25,
+                    75
+                  ],
+                  [
+                    37,
+                    97
+                  ],
+                  [
+                    52,
+                    122
+                  ],
+                  [
+                    70,
+                    150
+                  ],
+                  [
+                    90,
+                    180
+                  ],
+                  [
+                    112,
+                    212
+                  ],
+                  [
+                    137,
+                    247
+                  ],
+                  [
+                    165,
+                    285
+                  ],
+                  [
+                    211,
+                    341
+                  ],
+                  [
+                    262,
+                    402
+                  ],
+                  [
+                    318,
+                    468
+                  ],
+                  [
+                    380,
+                    540
+                  ],
+                  [
+                    446,
+                    616
+                  ],
+                  [
+                    517,
+                    697
+                  ],
+                  [
+                    593,
+                    783
+                  ],
+                  [
+                    675,
+                    875
+                  ],
+                  [
+                    787,
+                    997
+                  ],
+                  [
+                    907,
+                    1127
+                  ],
+                  [
+                    1035,
+                    1265
+                  ],
+                  [
+                    1170,
+                    1410
+                  ]
+                ]
+              },
+              {
+                "text": "Over {0} Seconds",
+                "value": [
+                  0,
+                  2,
+                  2.4,
+                  2.8,
+                  3.2,
+                  3.6,
+                  4,
+                  4.4,
+                  4.8,
+                  5.2,
+                  5.6,
+                  6,
+                  6.4,
+                  6.8,
+                  7.2,
+                  7.6,
+                  8,
+                  8.4,
+                  8.8,
+                  9.2,
+                  9.6
+                ]
+              }
+            ],
+            "bonus": [
+              {
+                "treeId": "pb",
+                "skillId": "poisondagger",
+                "statIdx": [
+                  0
+                ],
+                "value": [
+                  15
+                ],
+                "type": [
+                  "rate"
+                ],
+                "text": "{n}: +{0}% Poison Damage Per Level"
+              },
+              {
+                "treeId": "pb",
+                "skillId": "poisonnova",
+                "statIdx": [
+                  0
+                ],
+                "value": [
+                  15
+                ],
+                "type": [
+                  "rate"
+                ],
+                "text": "{n}: +{0}% Poison Damage Per Level"
+              }
+            ]
+          },
+          {
+            "id": "poisonnova",
+            "top": "84.3",
+            "left": "13",
+            "position": "left",
+            "affected": [
+              {
+                "treeId": "pb",
+                "skillId": "poisondagger"
+              },
+              {
+                "treeId": "pb",
+                "skillId": "poisonexplosion"
+              }
+            ],
+            "required": [
+              {
+                "treeId": "pb",
+                "skillId": "poisonexplosion"
+              }
+            ],
+            "name": "Poison Nova",
+            "desc": [
+              "Emits An Expanding Ring Of Concentrated Poison"
+            ],
+            "level": "30",
+            "add": [
+              {
+                "text": "Mana Cost {0}",
+                "value": [
+                  20,
+                  20,
+                  20,
+                  20,
+                  20,
+                  20,
+                  20,
+                  20,
+                  20,
+                  20,
+                  20,
+                  20,
+                  20,
+                  20,
+                  20,
+                  20,
+                  20,
+                  20,
+                  20,
+                  20,
+                  20
+                ]
+              }
+            ],
+            "stat": [
+              {
+                "text": "Poison Damage {0}-{1}",
+                "value": [
+                  0,
+                  [
+                    50,
+                    90
+                  ],
+                  [
+                    62.5,
+                    102.5
+                  ],
+                  [
+                    74.2,
+                    115
+                  ],
+                  [
+                    87.5,
+                    127.5
+                  ],
+                  [
+                    100,
+                    140
+                  ],
+                  [
+                    112.5,
+                    152.5
+                  ],
+                  [
+                    125,
+                    165
+                  ],
+                  [
+                    137.5,
+                    177.5
+                  ],
+                  [
+                    155.8,
+                    196.7
+                  ],
+                  [
+                    174.2,
+                    215
+                  ],
+                  [
+                    193.3,
+                    234.2
+                  ],
+                  [
+                    211.7,
+                    252.5
+                  ],
+                  [
+                    230.8,
+                    271.7
+                  ],
+                  [
+                    250,
+                    290
+                  ],
+                  [
+                    268.3,
+                    309.2
+                  ],
+                  [
+                    286.7,
+                    327.5
+                  ],
+                  [
+                    315,
+                    355.8
+                  ],
+                  [
+                    343.3,
+                    384.2
+                  ],
+                  [
+                    371.67,
+                    412.5
+                  ],
+                  [
+                    400,
+                    440
+                  ]
+                ]
+              },
+              {
+                "text": "Over {0} Seconds",
+                "value": [
+                  0,
+                  2,
+                  2,
+                  2,
+                  2,
+                  2,
+                  2,
+                  2,
+                  2,
+                  2,
+                  2,
+                  2,
+                  2,
+                  2,
+                  2,
+                  2,
+                  2,
+                  2,
+                  2,
+                  2,
+                  2
+                ]
+              }
+            ],
+            "bonus": [
+              {
+                "treeId": "pb",
+                "skillId": "poisondagger",
+                "statIdx": [
+                  0
+                ],
+                "value": [
+                  10
+                ],
+                "type": [
+                  "rate"
+                ],
+                "text": "{n}: +{0}% Poison Damage Per Level"
+              },
+              {
+                "treeId": "pb",
+                "skillId": "poisonexplosion",
+                "statIdx": [
+                  0
+                ],
+                "value": [
+                  10
+                ],
+                "type": [
+                  "rate"
+                ],
+                "text": "{n}: +{0}% Poison Damage Per Level"
+              }
+            ]
+          },
+          {
+            "id": "teeth",
+            "top": "3.4",
+            "left": "42.6",
+            "position": "middle",
+            "affected": [
+              {
+                "treeId": "pb",
+                "skillId": "bonespear"
+              },
+              {
+                "treeId": "pb",
+                "skillId": "bonespirit"
+              }
+            ],
+            "name": "Teeth",
+            "desc": [
+              "Fires A Barrage Of Summoned Barbed Teeth"
+            ],
+            "level": "1",
+            "stat": [
+              {
+                "text": "{0} Teeth",
+                "value": [
+                  0,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7,
+                  8,
+                  9,
+                  10,
+                  11,
+                  12,
+                  13,
+                  14,
+                  15,
+                  16,
+                  17,
+                  18,
+                  19,
+                  20,
+                  21
+                ]
+              },
+              {
+                "text": "Magic Damage {0}-{1}",
+                "value": [
+                  0,
+                  [
+                    2,
+                    4
+                  ],
+                  [
+                    3,
+                    5
+                  ],
+                  [
+                    4,
+                    6
+                  ],
+                  [
+                    5,
+                    7
+                  ],
+                  [
+                    6,
+                    8
+                  ],
+                  [
+                    7,
+                    9
+                  ],
+                  [
+                    8,
+                    10
+                  ],
+                  [
+                    9,
+                    11
+                  ],
+                  [
+                    10,
+                    12
+                  ],
+                  [
+                    11,
+                    14
+                  ],
+                  [
+                    12,
+                    15
+                  ],
+                  [
+                    13,
+                    17
+                  ],
+                  [
+                    14,
+                    18
+                  ],
+                  [
+                    15,
+                    20
+                  ],
+                  [
+                    16,
+                    21
+                  ],
+                  [
+                    17,
+                    23
+                  ],
+                  [
+                    18,
+                    25
+                  ],
+                  [
+                    20,
+                    27
+                  ],
+                  [
+                    21,
+                    29
+                  ],
+                  [
+                    23,
+                    31
+                  ]
+                ]
+              },
+              {
+                "text": "Mana Cost {0}",
+                "value": [
+                  0,
+                  3,
+                  3.5,
+                  4,
+                  4.5,
+                  5,
+                  5.5,
+                  6,
+                  6.5,
+                  7,
+                  7.5,
+                  8,
+                  8.5,
+                  9,
+                  9.5,
+                  10,
+                  10.5,
+                  11,
+                  11.5,
+                  12,
+                  12.5
+                ]
+              }
+            ],
+            "bonus": [
+              {
+                "treeId": "pb",
+                "skillId": "bonewall",
+                "statIdx": [
+                  1
+                ],
+                "value": [
+                  15
+                ],
+                "type": [
+                  "rate"
+                ],
+                "text": "{n}: +{0}% Magic Damage Per Level"
+              },
+              {
+                "treeId": "pb",
+                "skillId": "bonespear",
+                "statIdx": [
+                  1
+                ],
+                "value": [
+                  15
+                ],
+                "type": [
+                  "rate"
+                ],
+                "text": "{n}: +{0}% Magic Damage Per Level"
+              },
+              {
+                "treeId": "pb",
+                "skillId": "boneprison",
+                "statIdx": [
+                  1
+                ],
+                "value": [
+                  15
+                ],
+                "type": [
+                  "rate"
+                ],
+                "text": "{n}: +{0}% Magic Damage Per Level"
+              },
+              {
+                "treeId": "pb",
+                "skillId": "bonespirit",
+                "statIdx": [
+                  1
+                ],
+                "value": [
+                  15
+                ],
+                "type": [
+                  "rate"
+                ],
+                "text": "{n}: +{0}% Magic Damage Per Level"
+              }
+            ]
+          },
+          {
+            "id": "corpse",
+            "top": "19.7",
+            "left": "42.6",
+            "position": "middle",
+            "required": [
+              {
+                "treeId": "pb",
+                "skillId": "teeth"
+              }
+            ],
+            "name": "Corpse Explosion",
+            "desc": [
+              "Cast On The Corpse Of A Slain Monster,",
+              "It Explodes, Damaging Nearby Enemies"
+            ],
+            "level": "6",
+            "add": [
+              {
+                "text": "Damage: {0}-{1}% Of Corpse Life",
+                "value": [
+                  [
+                    70,
+                    120
+                  ],
+                  [
+                    70,
+                    120
+                  ],
+                  [
+                    70,
+                    120
+                  ],
+                  [
+                    70,
+                    120
+                  ],
+                  [
+                    70,
+                    120
+                  ],
+                  [
+                    70,
+                    120
+                  ],
+                  [
+                    70,
+                    120
+                  ],
+                  [
+                    70,
+                    120
+                  ],
+                  [
+                    70,
+                    120
+                  ],
+                  [
+                    70,
+                    120
+                  ],
+                  [
+                    70,
+                    120
+                  ],
+                  [
+                    70,
+                    120
+                  ],
+                  [
+                    70,
+                    120
+                  ],
+                  [
+                    70,
+                    120
+                  ],
+                  [
+                    70,
+                    120
+                  ],
+                  [
+                    70,
+                    120
+                  ],
+                  [
+                    70,
+                    120
+                  ],
+                  [
+                    70,
+                    120
+                  ],
+                  [
+                    70,
+                    120
+                  ],
+                  [
+                    70,
+                    120
+                  ],
+                  [
+                    70,
+                    120
+                  ]
+                ]
+              }
+            ],
+            "stat": [
+              {
+                "text": "Radius: {0} Yards",
+                "value": [
+                  0,
+                  2.6,
+                  3,
+                  3.3,
+                  3.6,
+                  4,
+                  4.3,
+                  4.6,
+                  5,
+                  5.3,
+                  5.6,
+                  6,
+                  6.3,
+                  6.6,
+                  7,
+                  7.3,
+                  7.6,
+                  8,
+                  8.3,
+                  8.6,
+                  9
+                ]
+              },
+              {
+                "text": "Mana Cost {0}",
+                "value": [
+                  0,
+                  15,
+                  16,
+                  17,
+                  18,
+                  19,
+                  20,
+                  21,
+                  22,
+                  23,
+                  24,
+                  25,
+                  26,
+                  27,
+                  28,
+                  29,
+                  30,
+                  31,
+                  32,
+                  33,
+                  34
+                ]
+              }
+            ]
+          },
+          {
+            "id": "bonespear",
+            "top": "52",
+            "left": "42.6",
+            "position": "middle",
+            "affected": [
+              {
+                "treeId": "pb",
+                "skillId": "teeth"
+              },
+              {
+                "treeId": "pb",
+                "skillId": "bonespirit"
+              }
+            ],
+            "required": [
+              {
+                "treeId": "pb",
+                "skillId": "corpse"
+              }
+            ],
+            "name": "Bone Spear",
+            "desc": [
+              "Summons A Deadly Spike Of Bone To Impale Your Enemies"
+            ],
+            "level": "18",
+            "stat": [
+              {
+                "text": "Magic Damage {0}-{1}",
+                "value": [
+                  0,
+                  [
+                    12,
+                    18
+                  ],
+                  [
+                    19,
+                    25
+                  ],
+                  [
+                    26,
+                    32
+                  ],
+                  [
+                    33,
+                    39
+                  ],
+                  [
+                    40,
+                    46
+                  ],
+                  [
+                    47,
+                    53
+                  ],
+                  [
+                    54,
+                    60
+                  ],
+                  [
+                    61,
+                    67
+                  ],
+                  [
+                    70,
+                    76
+                  ],
+                  [
+                    79,
+                    85
+                  ],
+                  [
+                    88,
+                    94
+                  ],
+                  [
+                    97,
+                    103
+                  ],
+                  [
+                    106,
+                    112
+                  ],
+                  [
+                    115,
+                    121
+                  ],
+                  [
+                    124,
+                    130
+                  ],
+                  [
+                    133,
+                    139
+                  ],
+                  [
+                    145,
+                    152
+                  ],
+                  [
+                    157,
+                    165
+                  ],
+                  [
+                    169,
+                    178
+                  ],
+                  [
+                    181,
+                    191
+                  ]
+                ]
+              },
+              {
+                "text": "Mana Cost {0}",
+                "value": [
+                  0,
+                  7,
+                  7.2,
+                  7.5,
+                  7.7,
+                  8,
+                  8.2,
+                  8.5,
+                  8.7,
+                  9,
+                  9.2,
+                  9.5,
+                  9.7,
+                  10,
+                  10.2,
+                  10.5,
+                  10.7,
+                  11,
+                  11.2,
+                  11.5,
+                  11.7
+                ]
+              }
+            ],
+            "bonus": [
+              {
+                "treeId": "pb",
+                "skillId": "teeth",
+                "statIdx": [
+                  0
+                ],
+                "value": [
+                  7
+                ],
+                "type": [
+                  "rate"
+                ],
+                "text": "{n}: +{0}% Magic Damage Per Level"
+              },
+              {
+                "treeId": "pb",
+                "skillId": "bonewall",
+                "statIdx": [
+                  0
+                ],
+                "value": [
+                  7
+                ],
+                "type": [
+                  "rate"
+                ],
+                "text": "{n}: +{0}% Magic Damage Per Level"
+              },
+              {
+                "treeId": "pb",
+                "skillId": "boneprison",
+                "statIdx": [
+                  0
+                ],
+                "value": [
+                  7
+                ],
+                "type": [
+                  "rate"
+                ],
+                "text": "{n}: +{0}% Magic Damage Per Level"
+              },
+              {
+                "treeId": "pb",
+                "skillId": "bonespirit",
+                "statIdx": [
+                  0
+                ],
+                "value": [
+                  7
+                ],
+                "type": [
+                  "rate"
+                ],
+                "text": "{n}: +{0}% Magic Damage Per Level"
+              }
+            ]
+          },
+          {
+            "id": "bonespirit",
+            "top": "84.3",
+            "left": "42.7",
+            "position": "middle",
+            "affected": [
+              {
+                "treeId": "pb",
+                "skillId": "teeth"
+              },
+              {
+                "treeId": "pb",
+                "skillId": "bonespear"
+              }
+            ],
+            "required": [
+              {
+                "treeId": "pb",
+                "skillId": "bonespear"
+              }
+            ],
+            "name": "Bone Spirit",
+            "desc": [
+              "Releases A Spirit Of The Restless Undead That",
+              "Tracks Its Target Or Finds One Of Its Own"
+            ],
+            "level": "30",
+            "stat": [
+              {
+                "text": "Magic Damage {0}-{1}",
+                "value": [
+                  0,
+                  [
+                    20,
+                    30
+                  ],
+                  [
+                    36,
+                    47
+                  ],
+                  [
+                    52,
+                    64
+                  ],
+                  [
+                    68,
+                    81
+                  ],
+                  [
+                    84,
+                    98
+                  ],
+                  [
+                    100,
+                    115
+                  ],
+                  [
+                    116,
+                    132
+                  ],
+                  [
+                    132,
+                    149
+                  ],
+                  [
+                    149,
+                    167
+                  ],
+                  [
+                    166,
+                    185
+                  ],
+                  [
+                    183,
+                    203
+                  ],
+                  [
+                    200,
+                    221
+                  ],
+                  [
+                    217,
+                    239
+                  ],
+                  [
+                    234,
+                    257
+                  ],
+                  [
+                    251,
+                    275
+                  ],
+                  [
+                    268,
+                    293
+                  ],
+                  [
+                    286,
+                    312
+                  ],
+                  [
+                    304,
+                    331
+                  ],
+                  [
+                    322,
+                    350
+                  ],
+                  [
+                    340,
+                    369
+                  ]
+                ]
+              },
+              {
+                "text": "Mana Cost {0}",
+                "value": [
+                  0,
+                  12,
+                  12.5,
+                  13,
+                  13.5,
+                  14,
+                  14.5,
+                  15,
+                  15.5,
+                  16,
+                  16.5,
+                  17,
+                  17.5,
+                  18,
+                  18.5,
+                  19,
+                  19.5,
+                  20,
+                  20.5,
+                  21,
+                  21.5
+                ]
+              }
+            ],
+            "bonus": [
+              {
+                "treeId": "pb",
+                "skillId": "teeth",
+                "statIdx": [
+                  0
+                ],
+                "value": [
+                  6
+                ],
+                "type": [
+                  "rate"
+                ],
+                "text": "{n}: +{0}% Magic Damage Per Level"
+              },
+              {
+                "treeId": "pb",
+                "skillId": "bonewall",
+                "statIdx": [
+                  0
+                ],
+                "value": [
+                  6
+                ],
+                "type": [
+                  "rate"
+                ],
+                "text": "{n}: +{0}% Magic Damage Per Level"
+              },
+              {
+                "treeId": "pb",
+                "skillId": "bonespear",
+                "statIdx": [
+                  0
+                ],
+                "value": [
+                  6
+                ],
+                "type": [
+                  "rate"
+                ],
+                "text": "{n}: +{0}% Magic Damage Per Level"
+              },
+              {
+                "treeId": "pb",
+                "skillId": "boneprison",
+                "statIdx": [
+                  0
+                ],
+                "value": [
+                  6
+                ],
+                "type": [
+                  "rate"
+                ],
+                "text": "{n}: +{0}% Magic Damage Per Level"
+              }
+            ]
+          },
+          {
+            "id": "bonearmor",
+            "top": "3.4",
+            "left": "72",
+            "position": "right",
+            "affected": [
+              {
+                "treeId": "pb",
+                "skillId": "bonewall"
+              },
+              {
+                "treeId": "pb",
+                "skillId": "boneprison"
+              }
+            ],
+            "name": "Bone Armor",
+            "desc": [
+              "Creates An Orbiting Shield Of Bone",
+              "That Absorbs Melee Damage"
+            ],
+            "level": "1",
+            "stat": [
+              {
+                "text": "Absorbs {0} Damage",
+                "value": [
+                  0,
+                  20,
+                  30,
+                  40,
+                  50,
+                  60,
+                  70,
+                  80,
+                  90,
+                  100,
+                  110,
+                  120,
+                  130,
+                  140,
+                  150,
+                  160,
+                  170,
+                  180,
+                  190,
+                  200,
+                  210
+                ]
+              },
+              {
+                "text": "Mana Cost {0}",
+                "value": [
+                  0,
+                  11,
+                  12,
+                  13,
+                  14,
+                  15,
+                  16,
+                  17,
+                  18,
+                  19,
+                  20,
+                  21,
+                  22,
+                  23,
+                  24,
+                  25,
+                  26,
+                  27,
+                  28,
+                  29,
+                  30
+                ]
+              }
+            ],
+            "bonus": [
+              {
+                "treeId": "pb",
+                "skillId": "bonewall",
+                "statIdx": [
+                  0
+                ],
+                "value": [
+                  15
+                ],
+                "type": [
+                  "sum"
+                ],
+                "text": "{n}: +{0} Damage Absorbed Per Level"
+              },
+              {
+                "treeId": "pb",
+                "skillId": "boneprison",
+                "statIdx": [
+                  0
+                ],
+                "value": [
+                  15
+                ],
+                "type": [
+                  "sum"
+                ],
+                "text": "{n}: +{0} Damage Absorbed Per Level"
+              }
+            ]
+          },
+          {
+            "id": "bonewall",
+            "top": "35.6",
+            "left": "72",
+            "position": "right",
+            "affected": [
+              {
+                "treeId": "pb",
+                "skillId": "teeth"
+              },
+              {
+                "treeId": "pb",
+                "skillId": "bonespear"
+              },
+              {
+                "treeId": "pb",
+                "skillId": "bonespirit"
+              },
+              {
+                "treeId": "pb",
+                "skillId": "bonearmor"
+              },
+              {
+                "treeId": "pb",
+                "skillId": "boneprison"
+              }
+            ],
+            "required": [
+              {
+                "treeId": "pb",
+                "skillId": "bonearmor"
+              }
+            ],
+            "name": "Bone Wall",
+            "desc": [
+              "Creates An Impassable Barrier",
+              "Of Bone And Debris"
+            ],
+            "level": "12",
+            "add": [
+              {
+                "text": "Duration: {0} Seconds",
+                "value": [
+                  24,
+                  24,
+                  24,
+                  24,
+                  24,
+                  24,
+                  24,
+                  24,
+                  24,
+                  24,
+                  24,
+                  24,
+                  24,
+                  24,
+                  24,
+                  24,
+                  24,
+                  24,
+                  24,
+                  24,
+                  24
+                ]
+              },
+              {
+                "text": "Mana Cost {0}",
+                "value": [
+                  17,
+                  17,
+                  17,
+                  17,
+                  17,
+                  17,
+                  17,
+                  17,
+                  17,
+                  17,
+                  17,
+                  17,
+                  17,
+                  17,
+                  17,
+                  17,
+                  17,
+                  17,
+                  17,
+                  17,
+                  17
+                ]
+              }
+            ],
+            "stat": [
+              {
+                "text": "Life: {0}",
+                "value": [
+                  0,
+                  431,
+                  538,
+                  646,
+                  754,
+                  862,
+                  970,
+                  1077,
+                  1185,
+                  1293,
+                  1401,
+                  1509,
+                  1616,
+                  1724,
+                  1831,
+                  1939,
+                  2047,
+                  2154,
+                  2262,
+                  2370,
+                  2478
+                ]
+              }
+            ],
+            "bonus": [
+              {
+                "treeId": "pb",
+                "skillId": "bonearmor",
+                "statIdx": [
+                  0
+                ],
+                "value": [
+                  10
+                ],
+                "type": [
+                  "rate"
+                ],
+                "text": "{n}: +{0}% Life Per Level"
+              },
+              {
+                "treeId": "pb",
+                "skillId": "boneprison",
+                "statIdx": [
+                  0
+                ],
+                "value": [
+                  10
+                ],
+                "type": [
+                  "rate"
+                ],
+                "text": "{n}: +{0}% Life Per Level"
+              }
+            ]
+          },
+          {
+            "id": "boneprison",
+            "top": "68.3",
+            "left": "72",
+            "position": "right",
+            "affected": [
+              {
+                "treeId": "pb",
+                "skillId": "teeth"
+              },
+              {
+                "treeId": "pb",
+                "skillId": "bonespear"
+              },
+              {
+                "treeId": "pb",
+                "skillId": "bonespirit"
+              },
+              {
+                "treeId": "pb",
+                "skillId": "bonearmor"
+              },
+              {
+                "treeId": "pb",
+                "skillId": "bonewall"
+              }
+            ],
+            "required": [
+              {
+                "treeId": "pb",
+                "skillId": "bonespear"
+              },
+              {
+                "treeId": "pb",
+                "skillId": "bonewall"
+              }
+            ],
+            "name": "Bone Prison",
+            "desc": [
+              "Creates A Barrier Of Fossilized Bone Around Your Target"
+            ],
+            "level": "24",
+            "add": [
+              {
+                "text": "Duration: {0} Seconds",
+                "value": [
+                  24,
+                  24,
+                  24,
+                  24,
+                  24,
+                  24,
+                  24,
+                  24,
+                  24,
+                  24,
+                  24,
+                  24,
+                  24,
+                  24,
+                  24,
+                  24,
+                  24,
+                  24,
+                  24,
+                  24,
+                  24
+                ]
+              }
+            ],
+            "stat": [
+              {
+                "text": "Life: {0}",
+                "value": [
+                  0,
+                  431,
+                  538,
+                  646,
+                  754,
+                  862,
+                  970,
+                  1077,
+                  1185,
+                  1293,
+                  1401,
+                  1509,
+                  1616,
+                  1724,
+                  1831,
+                  1939,
+                  2047,
+                  2154,
+                  2262,
+                  2370,
+                  2478
+                ]
+              },
+              {
+                "text": "Mana Cost {0}",
+                "value": [
+                  0,
+                  27,
+                  26,
+                  25,
+                  24,
+                  23,
+                  22,
+                  21,
+                  20,
+                  19,
+                  18,
+                  17,
+                  16,
+                  15,
+                  14,
+                  13,
+                  12,
+                  11,
+                  10,
+                  9,
+                  8
+                ]
+              }
+            ],
+            "bonus": [
+              {
+                "treeId": "pb",
+                "skillId": "bonearmor",
+                "statIdx": [
+                  0
+                ],
+                "value": [
+                  8
+                ],
+                "type": [
+                  "rate"
+                ],
+                "text": "{n}: +{0}% Life Per Level"
+              },
+              {
+                "treeId": "pb",
+                "skillId": "bonewall",
+                "statIdx": [
+                  0
+                ],
+                "value": [
+                  8
+                ],
+                "type": [
+                  "rate"
+                ],
+                "text": "{n}: +{0}% Life Per Level"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "cs",
+        "name": "Curses",
+        "src": "back.jpg",
+        "skills": [
+          {
+            "id": "dimvision",
+            "top": "19.8",
+            "left": "13.2",
+            "position": "left",
+            "name": "Dim Vision",
+            "desc": [
+              "Curses A Group Of Monsters,",
+              "Reducing Their Vison Radius"
+            ],
+            "level": "6",
+            "add": [
+              {
+                "text": "Mana Cost {0}",
+                "value": [
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9
+                ]
+              }
+            ],
+            "stat": [
+              {
+                "text": "Radius: {0} Yards",
+                "value": [
+                  0,
+                  2.6,
+                  3.3,
+                  4,
+                  4.6,
+                  5.3,
+                  6,
+                  6.6,
+                  7.3,
+                  8,
+                  8.6,
+                  9.3,
+                  10,
+                  10.6,
+                  11.3,
+                  12,
+                  12.6,
+                  13.3,
+                  14,
+                  14.6,
+                  15.3
+                ]
+              },
+              {
+                "text": "Duration: {0} Seconds",
+                "value": [
+                  0,
+                  1.7,
+                  2.2,
+                  2.7,
+                  3.2,
+                  3.7,
+                  4.2,
+                  4.7,
+                  5.2,
+                  5.7,
+                  6.2,
+                  6.7,
+                  7.2,
+                  7.7,
+                  8.2,
+                  8.7,
+                  9.2,
+                  9.7,
+                  10.2,
+                  10.7,
+                  11.2
+                ]
+              }
+            ]
+          },
+          {
+            "id": "confuse",
+            "top": "52.1",
+            "left": "13.2",
+            "position": "left",
+            "required": [
+              {
+                "treeId": "cs",
+                "skillId": "dimvision"
+              }
+            ],
+            "name": "Confuse",
+            "desc": [
+              "Curses A Monster To Force It To Attack Random Targets"
+            ],
+            "level": "18",
+            "add": [
+              {
+                "text": "Mana Cost {0}",
+                "value": [
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9
+                ]
+              }
+            ],
+            "stat": [
+              {
+                "text": "Radius: {0} Yards",
+                "value": [
+                  0,
+                  4,
+                  4.6,
+                  5.3,
+                  6,
+                  6.6,
+                  7.3,
+                  8,
+                  8.6,
+                  9.3,
+                  10,
+                  10.6,
+                  11.3,
+                  12,
+                  12.6,
+                  13.3,
+                  14,
+                  14.6,
+                  15.3,
+                  16,
+                  16.6
+                ]
+              },
+              {
+                "text": "Duration: {0} Seconds",
+                "value": [
+                  0,
+                  2.4,
+                  3,
+                  3.4,
+                  4,
+                  4.4,
+                  5,
+                  5.4,
+                  6,
+                  6.4,
+                  7,
+                  7.4,
+                  8,
+                  8.4,
+                  9,
+                  9.4,
+                  10,
+                  10.4,
+                  11,
+                  11.4,
+                  12
+                ]
+              }
+            ]
+          },
+          {
+            "id": "attract",
+            "top": "68.5",
+            "left": "13.2",
+            "position": "left",
+            "required": [
+              {
+                "treeId": "cs",
+                "skillId": "confuse"
+              }
+            ],
+            "name": "Attract",
+            "desc": [
+              "Curses A Monster To Becom The",
+              "Target Of All Nearby Monsters",
+              "This Curse May Not Be Overridden By Another Curse"
+            ],
+            "level": "24",
+            "add": [
+              {
+                "text": "Radius: {0} Yards",
+                "value": [
+                  6,
+                  6,
+                  6,
+                  6,
+                  6,
+                  6,
+                  6,
+                  6,
+                  6,
+                  6,
+                  6,
+                  6,
+                  6,
+                  6,
+                  6,
+                  6,
+                  6,
+                  6,
+                  6,
+                  6,
+                  6
+                ]
+              },
+              {
+                "text": "Mana Cost {0}",
+                "value": [
+                  17,
+                  17,
+                  17,
+                  17,
+                  17,
+                  17,
+                  17,
+                  17,
+                  17,
+                  17,
+                  17,
+                  17,
+                  17,
+                  17,
+                  17,
+                  17,
+                  17,
+                  17,
+                  17,
+                  17,
+                  17
+                ]
+              }
+            ],
+            "stat": [
+              {
+                "text": "Duration: {0} Seconds",
+                "value": [
+                  0,
+                  3,
+                  3.8,
+                  4.8,
+                  5.6,
+                  6.6,
+                  7.4,
+                  8.4,
+                  9.2,
+                  10.2,
+                  11,
+                  12,
+                  12.8,
+                  13.8,
+                  14.6,
+                  15.6,
+                  16.4,
+                  17.4,
+                  18.2,
+                  19.2,
+                  20
+                ]
+              }
+            ]
+          },
+          {
+            "id": "amplify",
+            "top": "3.6",
+            "left": "42.8",
+            "position": "middle",
+            "name": "Amplify Damage",
+            "desc": [
+              "Curses A Group Of Enemies, Increasing",
+              "The Non-Magic Damage They Receive"
+            ],
+            "level": "1",
+            "add": [
+              {
+                "text": "Damage Taken +{0}%",
+                "value": [
+                  100,
+                  100,
+                  100,
+                  100,
+                  100,
+                  100,
+                  100,
+                  100,
+                  100,
+                  100,
+                  100,
+                  100,
+                  100,
+                  100,
+                  100,
+                  100,
+                  100,
+                  100,
+                  100,
+                  100,
+                  100
+                ]
+              },
+              {
+                "text": "Mana Cost {0}",
+                "value": [
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4
+                ]
+              }
+            ],
+            "stat": [
+              {
+                "text": "Radius: {0} Yards",
+                "value": [
+                  0,
+                  2,
+                  2.6,
+                  3.3,
+                  4,
+                  4.6,
+                  5.3,
+                  6,
+                  6.6,
+                  7.3,
+                  8,
+                  8.6,
+                  9.3,
+                  10,
+                  10.6,
+                  11.3,
+                  12,
+                  12.6,
+                  13.3,
+                  14,
+                  14.6
+                ]
+              },
+              {
+                "text": "Duration: {0} Seconds",
+                "value": [
+                  0,
+                  8,
+                  11,
+                  14,
+                  17,
+                  20,
+                  23,
+                  26,
+                  29,
+                  32,
+                  35,
+                  38,
+                  41,
+                  44,
+                  47,
+                  50,
+                  53,
+                  56,
+                  59,
+                  62,
+                  65
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ironmaiden",
+            "top": "35.8",
+            "left": "42.8",
+            "position": "middle",
+            "required": [
+              {
+                "treeId": "cs",
+                "skillId": "amplify"
+              }
+            ],
+            "name": "Iron Maiden",
+            "desc": [
+              "Curses A Group Of Enemies, Causing Them",
+              "To Damage Themselves When Damaging Others"
+            ],
+            "level": "12",
+            "add": [
+              {
+                "text": "Mana Cost {0}",
+                "value": [
+                  4.6,
+                  4.6,
+                  4.6,
+                  4.6,
+                  4.6,
+                  4.6,
+                  4.6,
+                  4.6,
+                  4.6,
+                  4.6,
+                  4.6,
+                  4.6,
+                  4.6,
+                  4.6,
+                  4.6,
+                  4.6,
+                  4.6,
+                  4.6,
+                  4.6,
+                  4.6,
+                  4.6
+                ]
+              }
+            ],
+            "stat": [
+              {
+                "text": "{0}% Damage Returned",
+                "value": [
+                  0,
+                  200,
+                  225,
+                  250,
+                  275,
+                  300,
+                  325,
+                  350,
+                  375,
+                  400,
+                  425,
+                  450,
+                  475,
+                  500,
+                  525,
+                  550,
+                  575,
+                  600,
+                  625,
+                  650,
+                  675
+                ]
+              },
+              {
+                "text": "Duration: {0} Seconds",
+                "value": [
+                  0,
+                  12,
+                  14.4,
+                  16.8,
+                  19.2,
+                  21.6,
+                  24,
+                  26.4,
+                  28.8,
+                  31.2,
+                  33.6,
+                  36,
+                  38.4,
+                  40.8,
+                  43.2,
+                  45.6,
+                  48,
+                  50.4,
+                  52.8,
+                  55.2,
+                  57.6
+                ]
+              }
+            ]
+          },
+          {
+            "id": "lifetap",
+            "top": "52.2",
+            "left": "42.8",
+            "position": "middle",
+            "required": [
+              {
+                "treeId": "cs",
+                "skillId": "ironmaiden"
+              }
+            ],
+            "name": "Life Tap",
+            "desc": [
+              "Curses A Group Of Monsters So That",
+              "Damaging Them Gives The Attacker Life"
+            ],
+            "level": "18",
+            "add": [
+              {
+                "text": "Heals: {0}% Of Attack Damage",
+                "value": [
+                  50,
+                  50,
+                  50,
+                  50,
+                  50,
+                  50,
+                  50,
+                  50,
+                  50,
+                  50,
+                  50,
+                  50,
+                  50,
+                  50,
+                  50,
+                  50,
+                  50,
+                  50,
+                  50,
+                  50,
+                  50
+                ]
+              },
+              {
+                "text": "Mana Cost {0}",
+                "value": [
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9
+                ]
+              }
+            ],
+            "stat": [
+              {
+                "text": "Radius: {0} Yards",
+                "value": [
+                  0,
+                  2.6,
+                  3.3,
+                  4,
+                  4.6,
+                  5.3,
+                  6,
+                  6.6,
+                  7.3,
+                  8,
+                  8.6,
+                  9.3,
+                  10,
+                  10.6,
+                  11.3,
+                  12,
+                  12.6,
+                  13.3,
+                  14,
+                  14.6,
+                  15.3
+                ]
+              },
+              {
+                "text": "Duration: {0} Seconds",
+                "value": [
+                  0,
+                  16,
+                  18.4,
+                  20.8,
+                  23.2,
+                  25.6,
+                  28,
+                  30.4,
+                  32.8,
+                  35.2,
+                  37.6,
+                  40,
+                  42.4,
+                  44.8,
+                  47.2,
+                  49.6,
+                  52,
+                  54.4,
+                  56.8,
+                  59.2,
+                  61.6
+                ]
+              }
+            ]
+          },
+          {
+            "id": "lowerresist",
+            "top": "84.6",
+            "left": "42.8",
+            "position": "middle",
+            "required": [
+              {
+                "treeId": "cs",
+                "skillId": "lifetap"
+              },
+              {
+                "treeId": "cs",
+                "skillId": "decrepify"
+              }
+            ],
+            "name": "Lower Resist",
+            "desc": [
+              "Curses An Enemy To Take More Damage From All Magical Attacks",
+              "Lowers Resistances Of Monsters",
+              "Lowers Maximum Resistances Of Hostile Players"
+            ],
+            "level": "30",
+            "add": [
+              {
+                "text": "Mana Cost {0}",
+                "value": [
+                  22,
+                  22,
+                  22,
+                  22,
+                  22,
+                  22,
+                  22,
+                  22,
+                  22,
+                  22,
+                  22,
+                  22,
+                  22,
+                  22,
+                  22,
+                  22,
+                  22,
+                  22,
+                  22,
+                  22,
+                  22
+                ]
+              }
+            ],
+            "stat": [
+              {
+                "text": "Resist All -{0}%",
+                "value": [
+                  0,
+                  31,
+                  37,
+                  41,
+                  44,
+                  47,
+                  49,
+                  51,
+                  52,
+                  54,
+                  55,
+                  56,
+                  57,
+                  58,
+                  59,
+                  60,
+                  61,
+                  61,
+                  61,
+                  62,
+                  62
+                ]
+              },
+              {
+                "text": "Radius: {0} Yards",
+                "value": [
+                  0,
+                  4.6,
+                  5.3,
+                  6,
+                  6.6,
+                  7.3,
+                  8,
+                  8.6,
+                  9.3,
+                  10,
+                  10.6,
+                  11.3,
+                  12,
+                  12.6,
+                  13.3,
+                  14,
+                  14.6,
+                  15.3,
+                  16,
+                  16.6,
+                  17.3
+                ]
+              },
+              {
+                "text": "Duration: {0} Seconds",
+                "value": [
+                  0,
+                  20,
+                  22,
+                  24,
+                  26,
+                  28,
+                  30,
+                  32,
+                  34,
+                  36,
+                  38,
+                  40,
+                  42,
+                  44,
+                  46,
+                  48,
+                  50,
+                  52,
+                  54,
+                  56,
+                  58
+                ]
+              }
+            ]
+          },
+          {
+            "id": "weaken",
+            "top": "19.8",
+            "left": "72.3",
+            "position": "right",
+            "required": [
+              {
+                "treeId": "cs",
+                "skillId": "amplify"
+              }
+            ],
+            "name": "Weaken",
+            "desc": [
+              "Curses A Group Of Enemies,",
+              "Reducing The Amount Of Damage They Inflict"
+            ],
+            "level": "6",
+            "add": [
+              {
+                "text": "Enemy Damage -{0}%",
+                "value": [
+                  33,
+                  33,
+                  33,
+                  33,
+                  33,
+                  33,
+                  33,
+                  33,
+                  33,
+                  33,
+                  33,
+                  33,
+                  33,
+                  33,
+                  33,
+                  33,
+                  33,
+                  33,
+                  33,
+                  33,
+                  33
+                ]
+              },
+              {
+                "text": "Mana Cost {0}",
+                "value": [
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4
+                ]
+              }
+            ],
+            "stat": [
+              {
+                "text": "Radius: {0} Yards",
+                "value": [
+                  0,
+                  6,
+                  6.6,
+                  7.3,
+                  8,
+                  8.6,
+                  9.3,
+                  10,
+                  10.6,
+                  11.3,
+                  12,
+                  12.6,
+                  13.3,
+                  14,
+                  14.6,
+                  15.3,
+                  16,
+                  16.6,
+                  17.3,
+                  18,
+                  18.6
+                ]
+              },
+              {
+                "text": "Duration: {0} Seconds",
+                "value": [
+                  0,
+                  16.4,
+                  18.8,
+                  21.2,
+                  23.6,
+                  26,
+                  28.4,
+                  30.8,
+                  33.2,
+                  35.6,
+                  38,
+                  40.4,
+                  42.8,
+                  45.2,
+                  47.6,
+                  50,
+                  52.4,
+                  54.8,
+                  57.2,
+                  59.6
+                ]
+              }
+            ]
+          },
+          {
+            "id": "terror",
+            "top": "35.8",
+            "left": "72.3",
+            "position": "right",
+            "required": [
+              {
+                "treeId": "cs",
+                "skillId": "weaken"
+              }
+            ],
+            "name": "Terror",
+            "desc": [
+              "Curses A Group Of Monsters,",
+              "Causing Them To Flee In Terror"
+            ],
+            "level": "12",
+            "add": [
+              {
+                "text": "Radius: {0} Yards",
+                "value": [
+                  2.6,
+                  2.6,
+                  2.6,
+                  2.6,
+                  2.6,
+                  2.6,
+                  2.6,
+                  2.6,
+                  2.6,
+                  2.6,
+                  2.6,
+                  2.6,
+                  2.6,
+                  2.6,
+                  2.6,
+                  2.6,
+                  2.6,
+                  2.6,
+                  2.6,
+                  2.6,
+                  2.6
+                ]
+              },
+              {
+                "text": "Mana Cost {0}",
+                "value": [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ]
+              }
+            ],
+            "stat": [
+              {
+                "text": "Duration: {0} Seconds",
+                "value": [
+                  0,
+                  8,
+                  9,
+                  10,
+                  11,
+                  12,
+                  13,
+                  14,
+                  15,
+                  16,
+                  17,
+                  18,
+                  19,
+                  20,
+                  21,
+                  22,
+                  23,
+                  24,
+                  25,
+                  26,
+                  27
+                ]
+              }
+            ]
+          },
+          {
+            "id": "decrepify",
+            "top": "68.5",
+            "left": "72.3",
+            "position": "right",
+            "required": [
+              {
+                "treeId": "cs",
+                "skillId": "terror"
+              }
+            ],
+            "name": "Decrepify",
+            "desc": [
+              "Curses A Group Of Enemies To Make Them",
+              "Slow, Weak And Take Amplified Damage"
+            ],
+            "level": "24",
+            "add": [
+              {
+                "text": "Radius: {0} Yards",
+                "value": [
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4
+                ]
+              },
+              {
+                "text": "Mana Cost {0}",
+                "value": [
+                  11,
+                  11,
+                  11,
+                  11,
+                  11,
+                  11,
+                  11,
+                  11,
+                  11,
+                  11,
+                  11,
+                  11,
+                  11,
+                  11,
+                  11,
+                  11,
+                  11,
+                  11,
+                  11,
+                  11,
+                  11
+                ]
+              }
+            ],
+            "stat": [
+              {
+                "text": "Duration: {0} Seconds",
+                "value": [
+                  0,
+                  4,
+                  4.6,
+                  5.2,
+                  5.8,
+                  6.4,
+                  7,
+                  7.6,
+                  8.2,
+                  8.8,
+                  9.4,
+                  10,
+                  10.6,
+                  11.2,
+                  11.8,
+                  12.4,
+                  13,
+                  13.6,
+                  14.2,
+                  14.8,
+                  15.4
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

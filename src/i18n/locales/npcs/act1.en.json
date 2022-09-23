@@ -1,0 +1,71 @@
+{
+  "npcsData": {
+    "act1": [
+      {
+        "image": "/images/knowledge/npcs/akara.gif",
+        "name": "Akara",
+        "desc": "Rogue Priestess, is a formal woman, who intones rather than speaks. She is naturally suspicious of outsiders, but needs your help.",
+        "work": [
+          "Heals - Akara will refill your Life, Mana and Stamina for free",
+          "Trade - Sells Staves, Scepters, Wands, Tomes, Scrolls, Keys, and Potions."
+        ],
+        "voice": "akara"
+      },
+      {
+        "image": "/images/knowledge/npcs/charsi.gif",
+        "name": "Charsi",
+        "desc": "The Rogue Blacksmith, is a somewhat slow-witted simple country gal, but anger enters her voice when she mentions demons.",
+        "work": [
+          "Repair - Repair damaged Weapons and Armor for a price.",
+          "Trade - Sells Armor, Weapons, Bolts, and Arrows."
+        ],
+        "voice": "charsi"
+      },
+      {
+        "image": "/images/knowledge/npcs/deckardcain.gif",
+        "name": "Deckard Cain",
+        "desc": "A Horadrim sage, schooled in the most arcane history and lore, who can advise you.",
+        "work": [
+          "Deckard Cain is trapped in Tristram. Once rescued he will",
+          "Identify Items - Cain will Identify all of the unidentified Items in your Inventory. If you fail to Rescue Cain before you complete Act I, Cain will be rescued by the Rogues but will always charge you 100 Gold to identify items (in that difficulty level) because you failed to save him! =]"
+        ],
+        "voice": "cain"
+      },
+      {
+        "image": "/images/knowledge/npcs/rogue.gif",
+        "name": "Flavie",
+        "desc": "Warns of dangers beyond the Den of Evil.",
+        "work": [],
+        "voice": "rogue"
+      },
+      {
+        "image": "/images/knowledge/npcs/gheed.gif",
+        "name": "Gheed",
+        "desc": "A traveling merchant whose speech reeks of flowers.",
+        "work": [
+          "Trade - Sells Armor, Weapons, Bolts, Arrows, and Keys.",
+          "Gamble - For a price, Gheed will sell you an unidentified item. Once purchased, the item will be identified and you will see what item you received."
+        ],
+        "voice": "gheed"
+      },
+      {
+        "image": "/images/knowledge/npcs/kashya.gif",
+        "name": "Kashya",
+        "desc": "The Rogue Mercenary Captain, is hard-as-nails. She doesn't shy from talking about blood and gore. She is a bit impatient and curt until you win her trust.",
+        "work": [
+          "Hire - Allows you to hire Rogues once you have defeated Blood Raven or have reached level 9."
+        ],
+        "voice": "kashya"
+      },
+      {
+        "image": "/images/knowledge/npcs/warriv.gif",
+        "name": "Warriv",
+        "desc": "The tall, Arabic-looking Caravan Leader, is a dour adage-sayer.",
+        "work": [
+          "Go East - Allows you to travel to Act II once Act I has been completed."
+        ],
+        "voice": "warriv"
+      }
+    ]
+  }
+}
