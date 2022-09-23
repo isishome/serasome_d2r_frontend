@@ -79,7 +79,7 @@ const itemClick = (item) => {
                   <q-avatar rounded class="outlined">
                     <q-img :ratio="1" style="width:40px" :src="parsThumbnail(summary.thumbnail)" spinner-color="d2r">
                       <template v-if="blank !== null" #error>
-                        <q-img no-default-spinner basic :ratio="2 / 1" :src="require(`/images/${blank}`)"
+                        <q-img no-default-spinner basic :ratio="2 / 1" :src="`/images/${blank}`"
                           class="absolute-center bg-transparent" />
                       </template>
                     </q-img>
