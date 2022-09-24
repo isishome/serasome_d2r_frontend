@@ -60,8 +60,6 @@ const toggleLang = (val) => {
 // section
 const section = computed(() => store.getSection)
 
-
-
 // dark mode
 const isDark = computed(() => $q.dark.isActive)
 const toggleDark = () => {
@@ -294,6 +292,10 @@ watch(() => route.params.part, (val, old) => {
   color: var(--q-dark-text) !important;
   -webkit-backdrop-filter: blur(7px);
   backdrop-filter: blur(7px);
+}
+
+.body--dark .header::before {
+  filter: saturate(10) brightness(1.2);
 }
 
 .body--dark .header {

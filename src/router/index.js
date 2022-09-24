@@ -3,7 +3,7 @@ import { routes } from './routes'
 import { Quasar, Cookies } from 'quasar'
 import { instance } from '@/axios'
 import { useStore } from '@/stores'
-import { setI18nLanguage, loadLocaleMessages } from '@/i18n'
+import { supportLanguages, setI18nLanguage, loadLocaleMessages } from '@/i18n'
 import { pascalCase } from '@/common'
 
 // sleep
@@ -48,7 +48,7 @@ router.beforeEach(async (to) => {
     oldOgTitle.replaceWith(ogTitle)
 
   let locale = Cookies.has(import.meta.env.VITE_APP_LANGUAGE_NAME) ? Cookies.get(import.meta.env.VITE_APP_LANGUAGE_NAME) : Quasar.lang.getLocale().substring(0, 2)
-  if (!['ko', 'en'].includes(locale)) {
+  if (!supportLanguages.includes(locale)) {
     locale = 'en'
     Cookies.set(import.meta.env.VITE_APP_LANGUAGE_NAME, locale, { path: '/', expires: '7300d' })
   }

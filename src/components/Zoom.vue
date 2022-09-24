@@ -1,6 +1,6 @@
 <script setup>
 import { ref, reactive, watch, onMounted } from 'vue'
-import { useQuasar, morph } from 'quasar'
+import { morph } from 'quasar'
 
 const props = defineProps({
   images: {
@@ -8,8 +8,6 @@ const props = defineProps({
     default: () => []
   }
 })
-
-const $q = useQuasar()
 
 const indexZoomed = ref(void 0)
 const imgLoaded = reactive({
@@ -38,7 +36,7 @@ const init = () => {
 const imgLoadedResolve = () => {
   imgLoaded.resolve()
   if (indexZoomed.value !== void 0 && imagesEl[indexZoomed.value]) {
-    const base = $q.screen.lt.sm ? 100 : 80
+    const base = 90
     const img = imagesEl[indexZoomed.value]
     const imgWidth = img.offsetWidth
     const imgHeight = img.offsetHeight

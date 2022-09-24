@@ -3,6 +3,7 @@ import { createI18n } from 'vue-i18n'
 import { instance } from '@/axios'
 import ko from './locales/ko'
 
+export const supportLanguages = ['ko', 'en']
 const services = []
 const sections = []
 
