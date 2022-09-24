@@ -359,10 +359,13 @@ onMounted(() => {
   -webkit-filter: brightness(2.5);
 }
 
-.img:hover {
-  filter: brightness(3);
-  -webkit-filter: brightness(3);
+@media (hover:hover) {
+  .img:hover {
+    filter: brightness(3);
+    -webkit-filter: brightness(3);
+  }
 }
+
 
 .d2r-green {
   color: rgb(9, 255, 0);

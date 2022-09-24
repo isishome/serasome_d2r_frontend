@@ -7,7 +7,7 @@ const { locale } = useI18n()
 <template>
   <div>
     <template v-if="locale === 'ko'">
-      <p class="font-kodia text-h6">
+      <p class="q-mt-xl text-h6">
         배경
       </p>
       <p>드루이드는 본래 바바리안의 일족이었으나, 의견 차이로 인해 갈라져 나온 분파이다. 스코스글랜(Scosglen)의 북쪽 숲에 은둔하고 있다. 드루이드들은 전통적인 마법(더브드로이아크
@@ -26,7 +26,7 @@ const { locale } = useI18n()
         '글루안파이드아(Glór-an-Fháidha)'에는 가장 위대한 드루이드 학교인 '투르 둘라(Túr Dúlra)'가 위치했다. 수 세기 동안 드루이드들은 이 배움의 성소에서 강력한 자연 마법뿐만 아니라
         과거 바바리안 시절부터 단련해 왔던 전투 기술도 이어받아 훈련했다. 세월이 흘러 악마의 군대에게 침략해 오자 마침내 드루이드들은 은둔에서 벗어나 바깥 세상으로 전진했다.
       </p>
-      <p class="font-kodia text-h6">
+      <p class="q-mt-xl text-h6">
         통계 및 수치
       </p>
       <p class="row justify-start">
@@ -103,14 +103,14 @@ const { locale } = useI18n()
           </tbody>
         </q-markup-table>
       </p>
-      <p class="font-kodia text-h6">
+      <p class="q-mt-xl text-h6">
         소개
       </p>
       <p>기본적으로 바바리안, 소서리스, 팔라딘, 네크로맨서의 특징을 모두 지닌 하이브리드 클래스이나, 투자 기술에 따라서 마법형, 근접형으로 거의 철저하게 나뉜다. 공통점이라고 하면 주력 정령을 하나씩
         둔다는 정도밖에 없다. 애매하게 마법형과 근접형을 절충하면 제대로 된 위력을 행사할 수가 없다. 변신 중에는 마법 스킬을 사용할 수 없고, 마법 스킬의 위력을 극대화시키기 위해 시너지를 줄 수
         없기 때문이다.
       </p>
-      <p class="font-kodia text-h6">
+      <p class="q-mt-xl text-h6">
         패스트 블럭
       </p>
       <p class="row justify-start">
@@ -145,7 +145,7 @@ const { locale } = useI18n()
           </tbody>
         </q-markup-table>
       </p>
-      <p class="font-kodia text-h6">
+      <p class="q-mt-xl text-h6">
         패스트 캐스트
       </p>
       <p class="row justify-start">
@@ -176,7 +176,7 @@ const { locale } = useI18n()
           </tbody>
         </q-markup-table>
       </p>
-      <p class="font-kodia text-h6">
+      <p class="q-mt-xl text-h6">
         패스트 힛 리커버리
       </p>
       <p class="row justify-start">
@@ -220,15 +220,15 @@ const { locale } = useI18n()
           href="https://namu.wiki/w/%EC%95%84%EB%A7%88%EC%A1%B4(%EB%94%94%EC%95%84%EB%B8%94%EB%A1%9C%202)">나무위키</a></p>
     </template>
     <template v-else>
-      <p class="font-kodia text-h6">
-        BACKGROUND
+      <p class="q-mt-xl text-h6">
+        Background
       </p>
       <p>The Druids who inhabit the northern forests of Scosglen developed their magic independently from the eastern
         mage clans. They served as the warrior-kings of their tribes, usually living apart from their people in massive
         stone towers that were covered with vines and ivy. As masters of the natural world, they were able to control
         living creatures and the very forces of nature.</p>
-      <p class="font-kodia text-h6">
-        STATISTICS AND FIGURES
+      <p class="q-mt-xl text-h6">
+        Statistics And Figures
       </p>
       <p class="row justify-start">
         <q-markup-table class="table-back" separator="vertical" flat bordered>
@@ -292,8 +292,8 @@ const { locale } = useI18n()
           </tbody>
         </q-markup-table>
       </p>
-      <p class="font-kodia text-h6">
-        INTRODUCTION
+      <p class="q-mt-xl text-h6">
+        Introduction
       </p>
       <p>As Diablo 2 rounds down figures displayed you will see a discrepancy at times. With the example above with life
         increasing by .75 with each level up, even though you won’t see a figure change to x.5 and x.25 the Druid will
@@ -312,7 +312,7 @@ const { locale } = useI18n()
         attributes to wear armour, do damage, hit successfully, and still have enough mana to use some Elemental skills
         and keep summoning creatures and transforming. He seems to have a lot of options in play style, but also seems
         that he would need to be handled well, to keep from being spread too thin.</p>
-      <p class="font-kodia text-h6">
+      <p class="q-mt-xl text-h6">
         Faster Block Rate
       </p>
       <p class="row justify-start">
@@ -347,7 +347,7 @@ const { locale } = useI18n()
           </tbody>
         </q-markup-table>
       </p>
-      <p class="font-kodia text-h6">
+      <p class="q-mt-xl text-h6">
         Faster Cast Rate
       </p>
       <p class="row justify-start">
@@ -378,7 +378,7 @@ const { locale } = useI18n()
           </tbody>
         </q-markup-table>
       </p>
-      <p class="font-kodia text-h6">
+      <p class="q-mt-xl text-h6">
         Faster Hit Recovery
       </p>
       <p class="row justify-start">

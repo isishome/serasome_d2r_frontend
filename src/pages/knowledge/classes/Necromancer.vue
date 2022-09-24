@@ -7,7 +7,7 @@ const { locale } = useI18n()
 <template>
   <div>
     <template v-if="locale === 'ko'">
-      <p class="font-kodia text-h6">
+      <p class="q-mt-xl text-h6">
         배경
       </p>
       <p>강령술사, 즉 "라트마의 사제"(The Priests of Rathma)의 설립자는 라트마이다. 그는 이나리우스와 릴리트의 아들로서 최초의 네팔렘이다. 허나 부모에게 천대받았고, 그 역시 부모와
@@ -31,7 +31,7 @@ const { locale } = useI18n()
         전설장비 별빛금속 쿠크리에는 강령술사가 부두술사 부족을 만나 교류를 한 것으로 여겨지는 설명이 들어간 장비가 있다. 여담이지만 최초의 네크로맨서이자 네팔렘인 라트마가 아버지 이나리우스에게 수치로
         여겨졌던 걸 보면 천시받는 게 전통인 모양. 단 2막에서 처음 만났을 때 적대적인 반응을 보이는 직업들도 5막에서 다시 만났을 때는 다소 누그러진 반응을 보이고, 코르마크는 메탄을 두고 명예를 아는
         전사라고 높게 평가하는걸 보면 한번 같이 싸워 본 뒤로는 신뢰하게 된 듯하다.</p>
-      <p class="font-kodia text-h6">
+      <p class="q-mt-xl text-h6">
         통계 및 수치
       </p>
       <p class="row justify-start">
@@ -108,7 +108,7 @@ const { locale } = useI18n()
           </tbody>
         </q-markup-table>
       </p>
-      <p class="font-kodia text-h6">
+      <p class="q-mt-xl text-h6">
         소개
       </p>
       <p>우선 저주 계열 스킬은 어떤 유형을 키우더라도 찍긴 하지만 적극 투자는 하지 않는다. 대부분의 저주는 레벨을 올려도 효과 범위만 증가하고, 레벨 상승시 디버프 효과가 강해지는 저주라도 레벨이 높아질
@@ -116,7 +116,7 @@ const { locale } = useI18n()
         네크의 스킬 트리는 소환 계열 스킬을 올리느냐, 포이즌 & 본 계열 스킬에서 포이즌을 올리느냐 본을 올리느냐 하는 정도의 차이 밖에 없다. 이 중에서 본 계열을 제외하면 스킬 선택의 폭이 매우
         넓으므로(=스킬 포인트가 많이 남으므로) 사소한 베리에이션은 매우 다양할 수 있다. 의외로 1만 찍어도 어느 정도 효과를 보는 스킬이 많아서 주력기 외의 보조 스킬은 취향을 많이 타는 편. 다만 어떤
         네크로맨서라도 커프스 익스플로전은 반드시 사용 가능해야 한다.</p>
-      <p class="font-kodia text-h6">
+      <p class="q-mt-xl text-h6">
         패스트 블럭
       </p>
       <p class="row justify-start">
@@ -151,7 +151,7 @@ const { locale } = useI18n()
           </tbody>
         </q-markup-table>
       </p>
-      <p class="font-kodia text-h6">
+      <p class="q-mt-xl text-h6">
         패스트 캐스트
       </p>
       <p class="row justify-start">
@@ -180,7 +180,7 @@ const { locale } = useI18n()
           </tbody>
         </q-markup-table>
       </p>
-      <p class="font-kodia text-h6">
+      <p class="q-mt-xl text-h6">
         패스트 힛 리커버리
       </p>
       <p class="row justify-start">
@@ -219,8 +219,8 @@ const { locale } = useI18n()
           href="https://namu.wiki/w/%EC%95%84%EB%A7%88%EC%A1%B4(%EB%94%94%EC%95%84%EB%B8%94%EB%A1%9C%202)">나무위키</a></p>
     </template>
     <template v-else>
-      <p class="font-kodia text-h6">
-        BACKGROUND
+      <p class="q-mt-xl text-h6">
+        Background
       </p>
       <p>From the steamy recesses of the southern swamps comes a figure cloaked in mystery. The Necromancer, as his name
         implies, is an unseemly form of sorcerer whose spells deal with the raising of the dead and the summoning and
@@ -228,8 +228,8 @@ const { locale } = useI18n()
         Light, some do not think that these ends can justify his foul means. Long hours of study in dank mausolea have
         made his skin pale and corpselike, his figure, skeletal. Most people shun him for his peculiar looks and ways,
         but none doubt the power of the Necromancer, for it is the stuff of nightmares.</p>
-      <p class="font-kodia text-h6">
-        STATISTICS AND FIGURES
+      <p class="q-mt-xl text-h6">
+        Statistics And Figures
       </p>
       <p class="row justify-start">
         <q-markup-table class="table-back" separator="vertical" flat bordered>
@@ -293,8 +293,8 @@ const { locale } = useI18n()
           </tbody>
         </q-markup-table>
       </p>
-      <p class="font-kodia text-h6">
-        INTRODUCTION
+      <p class="q-mt-xl text-h6">
+        Introduction
       </p>
       <p>First of all, they do not actively invest in curse-type skills, no matter what type of skill they develop. Most
         curses only increase the range of effect even if the level is raised, and even if the level of a curse increases
@@ -306,7 +306,7 @@ const { locale } = useI18n()
         can be very diverse. Surprisingly, there are a lot of skills that can have an effect to a certain extent even
         with just 1 shot, so I tend to prefer secondary skills other than the main one. However, any Necromancer must be
         able to use Cuff Explosion.</p>
-      <p class="font-kodia text-h6">
+      <p class="q-mt-xl text-h6">
         Faster Block Rate
       </p>
       <p class="row justify-start">
@@ -341,7 +341,7 @@ const { locale } = useI18n()
           </tbody>
         </q-markup-table>
       </p>
-      <p class="font-kodia text-h6">
+      <p class="q-mt-xl text-h6">
         Faster Cast Rate
       </p>
       <p class="row justify-start">
@@ -370,7 +370,7 @@ const { locale } = useI18n()
           </tbody>
         </q-markup-table>
       </p>
-      <p class="font-kodia text-h6">
+      <p class="q-mt-xl text-h6">
         Faster Hit Recovery
       </p>
       <p class="row justify-start">

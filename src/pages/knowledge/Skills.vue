@@ -207,9 +207,9 @@ mergeSection('skills', part).then(() => {
   <div class="full-width non-selectable no-touch">
     <div class="column q-gutter-y-sm">
       <div class="q-mb-md">
-        <ul class="desc font-kodia text-weight-bold">
+        <ul class="desc text-weight-bold column q-gutter-y-sm">
           <li v-for="(d, idx) in tm('desc')[platform.is.mobile ? 'mobile' : 'desktop']" :key="idx"
-            class="row items-center q-gutter-x-xs text-caption text-weight-bold no-wrap">
+            class="row items-center q-gutter-x-xs text-html2 text-weight-bold no-wrap">
             <div v-for="(k, idx1) in d.key" :key="`k${idx}_${idx1}`"
               class="row justify-center items-center q-gutter-x-xs no-wrap">
               <div>

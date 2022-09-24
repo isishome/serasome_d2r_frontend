@@ -13,16 +13,22 @@
       "over": "/images/knowledge/classes/over/assassin.png"
     },
     {
-      "value": "necromancer",
-      "label": "Necromancer",
-      "img": "/images/knowledge/classes/necromancer.png",
-      "over": "/images/knowledge/classes/over/necromancer.png"
-    },
-    {
       "value": "barbarian",
       "label": "Barbarian",
       "img": "/images/knowledge/classes/barbarian.png",
       "over": "/images/knowledge/classes/over/barbarian.png"
+    },
+    {
+      "value": "druid",
+      "label": "Druid",
+      "img": "/images/knowledge/classes/druid.png",
+      "over": "/images/knowledge/classes/over/druid.png"
+    },
+    {
+      "value": "necromancer",
+      "label": "Necromancer",
+      "img": "/images/knowledge/classes/necromancer.png",
+      "over": "/images/knowledge/classes/over/necromancer.png"
     },
     {
       "value": "paladin",
@@ -35,12 +41,6 @@
       "label": "Sorceress",
       "img": "/images/knowledge/classes/sorceress.png",
       "over": "/images/knowledge/classes/over/sorceress.png"
-    },
-    {
-      "value": "druid",
-      "label": "Druid",
-      "img": "/images/knowledge/classes/druid.png",
-      "over": "/images/knowledge/classes/over/druid.png"
     }
   ]
 }

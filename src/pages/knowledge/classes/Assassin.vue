@@ -7,7 +7,7 @@ const { locale } = useI18n()
 <template>
   <div>
     <template v-if="locale === 'ko'">
-      <p class="font-kodia text-h6">
+      <p class="q-mt-xl text-h6">
         배경
       </p>
       <p>'비쟈크타르(Viz-Jaqtaar)'라 불리는 마법사 암살자 집단의 맴버. 마법사 부족 전쟁(Mage Clan War)이 끝난 후에 출현한 비쟈크타르는 악마의 마법에 의해 타락한 마법사들을 처리하기
@@ -22,7 +22,7 @@ const { locale } = useI18n()
         큰 피해를 입은 후였다. 전쟁으로 인해 바르툭은 죽었고, 호라존은 죄책감에 사로잡혀 루트 골레인 근처에 아케인 생츄어리를 만들어 잠적했다. 이 사건으로 비제레이 부족은 타락한 마법사들이 얼마나 위험할
         수 있는지를 깨닫게 되었다. 전쟁에서 생존한 소수의 마법사들은 앞으로 절대 악마의 마법을 사용하지 않으리라 결심하고 자연의 마법에 대한 연구를 시작했다. 이것이 어쎄신이라 불리는 마법사 암살자,
         비쟈크타르의 탄생이다.</p>
-      <p class="font-kodia text-h6">
+      <p class="q-mt-xl text-h6">
         통계 및 수치
       </p>
       <p class="row justify-start">
@@ -99,13 +99,13 @@ const { locale } = useI18n()
           </tbody>
         </q-markup-table>
       </p>
-      <p class="font-kodia text-h6">
+      <p class="q-mt-xl text-h6">
         소개
       </p>
       <p>육성법은 트랩, 킥, 클러 계열로 나뉜다. 다만 시너지 때문에 스킬 트리가 어느 정도 정형화된 다른 캐릭터들과는 달리 트랩을 제외하면 이렇다 할 시너지들이 거의 없기 때문에 각 스킬을 조합해서
         똑같은 계열의 어쎄신이라도 세부적으로는 다양한 방식의 육성을 할 수 있지만, 주로 인기있는 육성법은 극트랩, 킥트랩, 그리고 혼돈 등 크게 3가지로 국한된다.
         원래 육성 타입을 말할 때는 '~신' 으로 말하는 것이 맞는 표기겠지만, 99%의 유저들은 '~씬' 으로 부르는 암묵의 룰이 있다.</p>
-      <p class="font-kodia text-h6">
+      <p class="q-mt-xl text-h6">
         패스트 블럭
       </p>
       <p class="row justify-start">
@@ -138,7 +138,7 @@ const { locale } = useI18n()
           </tbody>
         </q-markup-table>
       </p>
-      <p class="font-kodia text-h6">
+      <p class="q-mt-xl text-h6">
         패스트 캐스트
       </p>
       <p class="row justify-start">
@@ -169,7 +169,7 @@ const { locale } = useI18n()
           </tbody>
         </q-markup-table>
       </p>
-      <p class="font-kodia text-h6">
+      <p class="q-mt-xl text-h6">
         패스트 힛 리커버리
       </p>
       <p class="row justify-start">
@@ -213,8 +213,8 @@ const { locale } = useI18n()
           href="https://namu.wiki/w/%EC%95%84%EB%A7%88%EC%A1%B4(%EB%94%94%EC%95%84%EB%B8%94%EB%A1%9C%202)">나무위키</a></p>
     </template>
     <template v-else>
-      <p class="font-kodia text-h6">
-        BACKGROUND
+      <p class="q-mt-xl text-h6">
+        Background
       </p>
       <p>he Order of Mage Slayers was formed after the Vizjerei survived the tragedy brought on by Bartuc and Horazon.
         Their purpose was to watch for rogue magi that may become corrupted by the forces of Evil. To be effective at
@@ -225,8 +225,8 @@ const { locale } = useI18n()
       <p>Assassins do not employ the magical arts directly; rather, they use enchanted items that mimic elemental powers
         and can be used autonomously. To further avoid potential corruption, they focus on the natural abilities of the
         mortal body – powers of the mind and unarmed combat.</p>
-      <p class="font-kodia text-h6">
-        STATISTICS AND FIGURES
+      <p class="q-mt-xl text-h6">
+        Statistics And Figures
       </p>
       <p class="row justify-start">
         <q-markup-table class="table-back" separator="vertical" flat bordered>
@@ -290,8 +290,8 @@ const { locale } = useI18n()
           </tbody>
         </q-markup-table>
       </p>
-      <p class="font-kodia text-h6">
-        INTRODUCTION
+      <p class="q-mt-xl text-h6">
+        Introduction
       </p>
       <p>
         The breeding method is divided into trap, kick, and claw series. However, unlike other characters whose skill
@@ -301,7 +301,7 @@ const { locale } = useI18n()
         methods are limited to three major types: extreme trap, kick trap, and chaos.
         When talking about the original breeding type, it would be correct to say '~ sin', but there is an implicit rule
         that 99% of users call it '~ ssin'.</p>
-      <p class="font-kodia text-h6">
+      <p class="q-mt-xl text-h6">
         Faster Block Rate
       </p>
       <p class="row justify-start">
@@ -334,7 +334,7 @@ const { locale } = useI18n()
           </tbody>
         </q-markup-table>
       </p>
-      <p class="font-kodia text-h6">
+      <p class="q-mt-xl text-h6">
         Faster Cast Rate
       </p>
       <p class="row justify-start">
@@ -365,7 +365,7 @@ const { locale } = useI18n()
           </tbody>
         </q-markup-table>
       </p>
-      <p class="font-kodia text-h6">
+      <p class="q-mt-xl text-h6">
         Faster Hit Recovery
       </p>
       <p class="row justify-start">

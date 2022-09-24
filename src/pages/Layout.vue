@@ -173,17 +173,19 @@ watch(() => route.params.part, (val, old) => {
         </div>
         <q-space class="gt-md" />
         <div class="row justify-end items-center func" :class="screen.gt.sm ? 'q-gutter-x-sm' : ''">
-          <q-btn-dropdown class="gt-md" type="a" :ripple="false" dense flat dropdown-icon="language"
-            content-class="font-kodia" no-icon-animation>
-            <q-list separator bordered>
-              <q-item dense v-for="(option, index) in options" :key="index" clickable v-close-popup
-                @click="toggleLang(option.value)" :active="lang === option.value" active-class="text-secondary">
-                <q-item-section>
-                  <q-item-label>{{ option.label }}</q-item-label>
-                </q-item-section>
-              </q-item>
-            </q-list>
-          </q-btn-dropdown>
+          <q-btn class="gt-md" :ripple="false" dense flat icon="language">
+            <q-menu anchor="bottom end" self="top end">
+              <q-list separator bordered>
+                <q-item dense v-for="(option, index) in options" :key="index" :clickable="lang !== option.value"
+                  :v-close-popup="lang !== option.value" @click="toggleLang(option.value)"
+                  :active="lang === option.value" active-class="text-secondary">
+                  <q-item-section>
+                    <q-item-label>{{ option.label }}</q-item-label>
+                  </q-item-section>
+                </q-item>
+              </q-list>
+            </q-menu>
+          </q-btn>
           <q-btn class="gt-md" dense flat :ripple="false" @click="toggleDark"
             :icon="isDark ? 'light_mode' : 'dark_mode'" />
           <q-btn v-if="isKnowledge && partList.length > 1" class="lt-lg" dense flat :ripple="false"
@@ -312,8 +314,10 @@ watch(() => route.params.part, (val, old) => {
   position: relative;
 }
 
-.nav:deep(a:hover) {
-  opacity: .8;
+@media (hover:hover) {
+  .nav:deep(a:hover) {
+    opacity: .8;
+  }
 }
 
 .header:deep(.q-btn .q-focus-helper) {
@@ -338,8 +342,10 @@ watch(() => route.params.part, (val, old) => {
   color: #888888;
 }
 
-.func:deep(.q-btn:hover) {
-  filter: brightness(1.2);
+@media (hover:hover) {
+  .func:deep(.q-btn:hover) {
+    filter: brightness(1.2);
+  }
 }
 
 .text-title {
@@ -371,9 +377,11 @@ watch(() => route.params.part, (val, old) => {
   opacity: .6;
 }
 
-.part:deep(.q-img:hover) {
-  filter: grayscale(0%);
-  opacity: .8;
+@media (hover:hover) {
+  .part:deep(.q-img:hover) {
+    filter: grayscale(0%);
+    opacity: .8;
+  }
 }
 
 .part:deep(.q-btn.active:after) {
