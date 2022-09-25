@@ -1682,6 +1682,12 @@
             "top": "35.6",
             "left": "13.3",
             "position": "left",
+            "affected": [
+              {
+                "treeId": "cs",
+                "skillId": "frenzy"
+              }
+            ],
             "name": "Increased Stamina",
             "desc": [
               "Passive - Increases Your Stamina"
@@ -3969,8 +3975,14 @@
               {
                 "treeId": "cm",
                 "skillId": "increasedstamina",
+                "addIdx": [
+                  0
+                ],
                 "value": [
                   0.4
+                ],
+                "type": [
+                  "sum"
                 ],
                 "text": "{n}: +{0} Seconds Per Level"
               },

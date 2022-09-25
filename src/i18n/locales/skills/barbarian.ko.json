@@ -1682,6 +1682,12 @@
             "top": "35.6",
             "left": "13.3",
             "position": "left",
+            "affected": [
+              {
+                "treeId": "cs",
+                "skillId": "frenzy"
+              }
+            ],
             "name": "지구력 증가",
             "desc": [
               "지속효과 - 지구력이 증가합니다."
@@ -3968,10 +3974,16 @@
               {
                 "treeId": "cm",
                 "skillId": "increasedstamina",
+                "addIdx": [
+                  0
+                ],
                 "value": [
                   0.4
                 ],
-                "text": "{n}: 레벨당 +{0}초 증가"
+                "type": [
+                  "sum"
+                ],
+                "text": "{n}: 레벨당 지속시간 +{0}초 증가"
               },
               {
                 "treeId": "cs",
