@@ -121,9 +121,20 @@ watch(() => route.name, (val, old) => {
   immediate: true
 })
 
+watch(() => route.params.sec, (val, old) => {
+  if (val !== old && old !== null) {
+    progress.value = 0
+    checkStatus()
+    key.value++
+  }
+}, {
+  immediate: true
+})
+
 watch(() => route.params.section, (val, old) => {
   if (val !== old && old !== null) {
     _section.value = val
+    key.value++
   }
 }, {
   immediate: true
@@ -132,6 +143,7 @@ watch(() => route.params.section, (val, old) => {
 watch(() => route.params.part, (val, old) => {
   if (val !== old && old !== null) {
     _part.value = val
+    key.value++
   }
 }, {
   immediate: true
