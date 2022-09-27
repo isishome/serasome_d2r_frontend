@@ -67,7 +67,7 @@ const co = new IntersectionObserver((entries, observer) => {
 })
 
 const intersactionImage = (info) => {
-  info.contents = info.contents.replace(/(<img[^>]+)(src)([^>]+>)/gmi, '$1 class="io-img" src="/images/d2r_og.jpg" data-src$3')
+  info.contents = info.contents.replace(/(<img[^>]+)(src)([^>]+>)/gmi, '$1 class="io-img" src="/images/d2r.webp" data-src$3')
 }
 
 // about post
@@ -423,13 +423,6 @@ onMounted(() => {
 </template>
 
 <style scoped>
-.io-img {
-  filter: grayscale(1);
-  opacity: .5;
-  width: 100%;
-  height: auto;
-}
-
 .contents-on:deep(>hr) {
   background-color: rgba(150, 150, 150, .2);
 }
