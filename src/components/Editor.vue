@@ -124,14 +124,14 @@ const onPaste = (evt) => {
     text = evt.originalEvent.clipboardData.getData('text/plain')
     encodeText = text.replace(/[\u00A0-\u9999<>\&]/g, function (i) {
       return '&#' + i.charCodeAt(0) + ';'
-    })
-    editor.value.runCmd('insertHTML', text)
+    }).split(/\u000D\u000A/).map(c => `<div>${c === '' ? '<br />' : c}</div>`).join('')
+    editor.value.runCmd('insertHTML', encodeText)
   }
   else if (evt.clipboardData && evt.clipboardData.getData) {
     text = evt.clipboardData.getData('text/plain')
     encodeText = text.replace(/[\u00A0-\u9999<>\&]/g, function (i) {
       return '&#' + i.charCodeAt(0) + ';'
-    })
+    }).split(/\u000D\u000A/).map(c => `<div>${c === '' ? '<br />' : c}</div>`).join('')
     editor.value.runCmd('insertHTML', encodeText)
   }
   update()

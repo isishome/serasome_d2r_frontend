@@ -185,8 +185,8 @@ const post = () => {
   }).then(function () {
     complete()
   })
-    .catch(function (err) {
-      failed(err)
+    .catch(function () {
+      failed()
     })
     .then(function () {
       loading.value = false
@@ -220,7 +220,7 @@ const failed = (msg) => {
             <div class="col col-md-3 col-lg-3">
               <q-select dense outlined emit-value no-error-icon hide-bottom-space map-options class="col-12 col-lg-3"
                 color="grey-5" v-model="writeInfo.classify" :options="classifies" :label="t('d2r.bbs.classify')"
-                behavior="menu" :error="writeInfo.classify === ''" />
+                behavior="menu" :rules="[val => val && val.trim() !== '']" />
             </div>
             <div v-if="writeInfo.classify === 'give'" class="col col-md-3 col-lg-3">
               <q-checkbox :label="t('d2r.bbs.quiz')" v-model="writeInfo.quiz.enable" />
@@ -245,14 +245,14 @@ const failed = (msg) => {
             <div v-if="writeInfo.quiz.enable">
               <q-input dense outlined hide-bottom-space no-error-icon class="quiz" color="grey-5" :disable="loading"
                 maxlength="100" type="text" :label="t('d2r.bbs.reward')" v-model="writeInfo.quiz.reward"
-                :rules="[val => val && val.trim() !== '' || undefined]" />
+                :rules="[val => val && val.trim() !== '']" />
             </div>
           </q-slide-transition>
           <q-separator />
           <div>
             <q-input dense outlined hide-bottom-space no-error-icon color="grey-5" :disable="loading" maxlength="200"
               type="text" :label="t('post.title')" v-model="writeInfo.title"
-              :error="writeInfo.title.length > 0 && writeInfo.title.trim() === ''" />
+              :rules="[val => val && val.trim() !== '']" />
           </div>
           <div>
             <Editor ref="editor" :contents="writeInfo.contents" :factory-fn="factoryFn" :disable="loading"

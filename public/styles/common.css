@@ -215,3 +215,7 @@ p {
 .q-timeline {
   color: inherit !important;
 }
+
+.q-field--error .q-field__bottom {
+  display: none !important;
+}
