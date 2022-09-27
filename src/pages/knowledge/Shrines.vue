@@ -30,7 +30,7 @@ const columns = reactive([
           <q-td>
             <img :src='props.row.image' style="max-width:65px" />
           </q-td>
-          <q-td class="text-left text-secondary">
+          <q-td class="text-left text-primary">
             <div class="text-subtitle1">{{props.row.name}}</div>
           </q-td>
           <q-td class="text-left">
@@ -57,7 +57,7 @@ const columns = reactive([
               <img :src='props.row.image' style="max-width:65px" />
             </q-card-section>
             <q-card-section>
-              <div class="text-h6 text-secondary">{{props.row.name}}</div>
+              <div class="text-h6 text-primary">{{props.row.name}}</div>
             </q-card-section>
             <q-separator inset />
             <q-card-section>

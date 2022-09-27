@@ -31,7 +31,7 @@ mergeSection('quests', 'act').then(() => {
 <template>
   <div class="column q-gutter-y-md">
     <q-input :dense="$q.screen.lt.md" outlined v-model="searchText" :label="t('d2r.knowledge.quests.search')"
-      color="secondary">
+      color="primary">
       <template #append>
         <q-icon name="search" />
       </template>
@@ -61,26 +61,26 @@ mergeSection('quests', 'act').then(() => {
               {{d}}</p>
           </div>
           <div v-if="prop.node.given" class="row no-wrap items-baseline q-gutter-x-xs">
-            <div class="text-secondary">
+            <div class="text-primary">
               {{t('d2r.knowledge.quests.given')}}</div>
             <div>ㆍ</div>
             <div>{{prop.node.given}}</div>
           </div>
           <div v-if="prop.node.tip" class="row no-wrap items-baseline q-gutter-x-xs">
-            <div class="text-secondary">
+            <div class="text-primary">
               {{t('d2r.knowledge.quests.tip')}}</div>
             <div>ㆍ</div>
             <div>{{prop.node.tip}}</div>
           </div>
           <div v-if="prop.node.reward" class="row no-wrap items-baseline q-gutter-x-xs">
-            <div class="text-secondary">
+            <div class="text-primary">
               {{t('d2r.knowledge.quests.reward')}}
             </div>
             <div>ㆍ</div>
             <div>{{prop.node.reward}}</div>
           </div>
           <div v-if="prop.node.note" class="row no-wrap items-baseline q-gutter-x-xs">
-            <div class="text-secondary">
+            <div class="text-primary">
               {{t('d2r.knowledge.quests.note')}}</div>
             <div>ㆍ</div>
             <div class="col word-keep">{{prop.node.note}}</div>

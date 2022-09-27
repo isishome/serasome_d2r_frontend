@@ -36,7 +36,7 @@ mergeSection('npcs', part).then(() => {
           </q-td>
           <q-td class="text-left">
             <div class="column q-gutter-y-md">
-              <div class="text-h6 text-secondary">
+              <div class="text-h6 text-primary">
                 {{props.row.name}}
               </div>
               <div class="text-body1 word-keep">
@@ -51,7 +51,7 @@ mergeSection('npcs', part).then(() => {
           </q-td>
           <q-td>
             <div class="q-px-md">
-              <q-btn flat dense round color="red-10" icon="headset" @click.stop="play(props.row.voice, $event)" />
+              <q-btn flat dense round color="secondary" icon="headset" @click.stop="play(props.row.voice, $event)" />
             </div>
           </q-td>
         </q-tr>
@@ -61,11 +61,11 @@ mergeSection('npcs', part).then(() => {
           <q-card class="no-shadow text-center text-body2 word-keep">
             <q-card-section>
               <img :src='props.row.image' style="max-width:200px" />
-              <q-btn round dense flat class="absolute-top-right q-ma-sm" icon="headset" color="red-10"
+              <q-btn round dense flat class="absolute-top-right q-ma-sm" icon="headset" color="secondary"
                 @click="play(props.row.voice, $event)" />
             </q-card-section>
             <q-card-section class="no-padding">
-              <div class="text-h6 text-secondary">
+              <div class="text-h6 text-primary">
                 <span> {{props.row.name}}</span>
               </div>
             </q-card-section>

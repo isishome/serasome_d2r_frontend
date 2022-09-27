@@ -46,17 +46,17 @@ mergeSection('items', 'cube').then(() => {
     <div class="row justify-around items-baseline q-col-gutter-sm q-pa-sm">
       <div class="gt-sm col-9 q-gutter-x-md">
         <q-radio dense :size="screen.lt.md ? 'xs' : 'sm'" v-for="c in classifies" :key="c.value" :val="c.value"
-          v-model="classify" :label="c.label" color="secondary" />
+          v-model="classify" :label="c.label" color="primary" />
       </div>
       <div class="lt-md col-12 col-sm">
-        <q-select color="secondary" v-model="classify" :options="classifies" dropdown-icon="keyboard_arrow_down"
+        <q-select color="primary" v-model="classify" :options="classifies" dropdown-icon="keyboard_arrow_down"
           :label="t('d2r.knowledge.items.recipeType')" behavior="menu" dense outlined emit-value map-options
           no-error-icon options-dense />
       </div>
       <div class="col">
-        <q-input dense outlined debounce="400" :label="t('btn.search')" color="secondary" v-model="filter">
+        <q-input dense outlined debounce="400" :label="t('btn.search')" color="primary" v-model="filter">
           <template v-slot:append>
-            <q-icon name="search" color="secondary" />
+            <q-icon name="search" color="primary" />
           </template>
         </q-input>
       </div>
@@ -109,7 +109,7 @@ mergeSection('items', 'cube').then(() => {
         <q-intersection transition="slide-up" once class="col-md-6 col-12 knowledge-item cube-item">
           <q-card class="no-shadow text-body2 word-keep">
             <q-card-section>
-              <div class="text-h6 word-keep text-center text-secondary">{{props.row.title}}</div>
+              <div class="text-h6 word-keep text-center text-primary">{{props.row.title}}</div>
             </q-card-section>
             <q-separator />
             <q-card-section>

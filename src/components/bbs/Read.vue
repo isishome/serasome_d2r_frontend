@@ -378,7 +378,7 @@ onMounted(() => {
       <q-separator inset />
       <q-card-section class="row justify-between">
         <div class="row justify-end q-gutter-x-sm">
-          <q-btn v-if="authority(sec, 'delete') || data.owner === true" dense unelevated color="red-10"
+          <q-btn v-if="authority(sec, 'delete') || data.owner === true" dense unelevated color="secondary"
             :disable="loading" :label="t('btn.delete')" @click="showConfirm('delete')" />
           <q-btn
             v-if="(authority(sec, 'delete') || data.owner === true) && sec === 'trade' && data.classify !== 'notice'"
@@ -386,7 +386,7 @@ onMounted(() => {
             @click="showConfirm('finish')" />
         </div>
         <div class="row justify-end q-gutter-x-sm">
-          <q-btn v-if="authority(sec, 'delete') || data.owner === true" dense unelevated color="secondary"
+          <q-btn v-if="authority(sec, 'delete') || data.owner === true" dense unelevated color="primary"
             :disable="loading" :label="t('btn.modify')"
             :to="{name:'d2r-modify', params:{ sec:sec, pid:pid }, query:{page:route.query.page || 1}}" />
           <q-btn dense outline :disable="loading" :label="t('btn.list')"

@@ -149,13 +149,13 @@ mergeMessages('classes')
             :label="t('d2r.knowledge.items.own')" />
         </div>
         <div class="col-12 col-sm-6 col-lg-3">
-          <q-select color="secondary" popup-content-style="border:solid 2px #b89c5b" v-model="selectedMaterial"
+          <q-select color="primary" popup-content-style="border:solid 2px #b89c5b" v-model="selectedMaterial"
             :options="meterialOptions" dropdown-icon="keyboard_arrow_down"
             :label="t('d2r.knowledge.items.runewordMaterialType')" behavior="menu" dense outlined emit-value map-options
             no-error-icon options-dense />
         </div>
         <div class="col-12 col-sm-6 col-lg-3">
-          <q-select color="secondary" popup-content-style="border:solid 2px #b89c5b" v-model="selectedClass"
+          <q-select color="primary" popup-content-style="border:solid 2px #b89c5b" v-model="selectedClass"
             :options="classesOptions" :label="t('d2r.knowledge.items.recommendedClass')"
             dropdown-icon="keyboard_arrow_down" behavior="menu" dense outlined emit-value map-options no-error-icon
             options-dense>
@@ -184,14 +184,14 @@ mergeMessages('classes')
       </div>
       <div class="col-12 col-md-4 row justify-end q-col-gutter-sm">
         <div class="col-12 col-lg-5">
-          <q-select color="secondary" popup-content-style="border:solid 2px #b89c5b" v-model="selectedSort"
+          <q-select color="primary" popup-content-style="border:solid 2px #b89c5b" v-model="selectedSort"
             :options="sortOptions" dropdown-icon="keyboard_arrow_down" :label="t('d2r.knowledge.items.sort')"
             behavior="menu" dense outlined emit-value map-options no-error-icon options-dense />
         </div>
         <div class="col-12 col-lg-5">
-          <q-input dense outlined debounce="400" :label="t('btn.search')" color="secondary" v-model="filter">
+          <q-input dense outlined debounce="400" :label="t('btn.search')" color="primary" v-model="filter">
             <template #append>
-              <q-icon name="search" color="secondary" />
+              <q-icon name="search" color="primary" />
             </template>
           </q-input>
         </div>
@@ -207,7 +207,7 @@ mergeMessages('classes')
       <template #body="props">
         <q-tr :props="props">
           <q-td key="name" :props="props">
-            <div class="text-h6 word-keep text-secondary column">
+            <div class="text-h6 word-keep text-primary column">
               <div class="col">
                 {{props.row.name}}
               </div>
@@ -270,7 +270,7 @@ mergeMessages('classes')
         <q-intersection transition="slide-up" once class="col-md-6 col-12 knowledge-item rune-item">
           <q-card class="no-shadow text-center">
             <q-card-section class="text-grey-6 text-h6 word-keep">
-              <div class="text-h6 word-keep text-secondary column">
+              <div class="text-h6 word-keep text-primary column">
                 <div class="col">{{props.row.name}}<span class="text-body1 text-brown" v-if="props.row.oldName">
                     ({{props.row.oldName}})</span></div>
                 <div class="col text-teal-4 text-subtitle2">clvl

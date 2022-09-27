@@ -26,7 +26,7 @@ onMounted(() => {
             <div class="col gt-xs"></div>
             <q-card class="map-card no-shadow">
               <q-card-section class="text-center">
-                <div class="text-h6 text-secondary">Lut Gholein</div>
+                <div class="text-h6 text-primary">Lut Gholein</div>
               </q-card-section>
               <q-img src="/images/knowledge/maps/act2/LutGholein.jpg" width="100%" />
               <q-card-section class="text-left text-body2">
@@ -43,7 +43,7 @@ onMounted(() => {
             <div class="col gt-xs"></div>
             <q-card class="map-card no-shadow">
               <q-card-section class="text-center">
-                <div class="text-h6 text-secondary">Sewers</div>
+                <div class="text-h6 text-primary">Sewers</div>
               </q-card-section>
               <q-img src="/images/knowledge/maps/act2/Sewers.jpg" width="100%" />
               <q-card-section class="text-left text-body2">
@@ -59,7 +59,7 @@ onMounted(() => {
           <div class="row knowledge-item">
             <q-card class="map-card no-shadow">
               <q-card-section class="text-center">
-                <div class="text-h6 text-secondary">Rocky Waste</div>
+                <div class="text-h6 text-primary">Rocky Waste</div>
               </q-card-section>
               <q-img src="/images/knowledge/maps/act2/RockyWaste.jpg" width="100%" />
               <q-card-section class="text-left text-body2">
@@ -77,7 +77,7 @@ onMounted(() => {
             <div class="col gt-xs"></div>
             <q-card class="map-card no-shadow">
               <q-card-section class="text-center">
-                <div class="text-h6 text-secondary">Dry Hills</div>
+                <div class="text-h6 text-primary">Dry Hills</div>
               </q-card-section>
               <q-img src="/images/knowledge/maps/act2/DryHills.jpg" width="100%" />
               <q-card-section class="text-left text-body2">
@@ -92,7 +92,7 @@ onMounted(() => {
             <div class="col gt-xs"></div>
             <q-card class="map-card no-shadow">
               <q-card-section class="text-center">
-                <div class="text-h6 text-secondary">Halls of the Dead</div>
+                <div class="text-h6 text-primary">Halls of the Dead</div>
               </q-card-section>
               <q-img src="/images/knowledge/maps/act2/HallsoftheDead.jpg" width="100%" />
               <q-card-section class="text-left text-body2">
@@ -108,7 +108,7 @@ onMounted(() => {
           <div class="q-mb-lg row">
             <q-card class="map-card no-shadow">
               <q-card-section class="text-center">
-                <div class="text-h6 text-secondary">Far Oasis</div>
+                <div class="text-h6 text-primary">Far Oasis</div>
               </q-card-section>
               <q-img src="/images/knowledge/maps/act2/FarOasis.jpg" width="100%" />
               <q-card-section class="text-left text-body2">
@@ -123,7 +123,7 @@ onMounted(() => {
           <div class="row knowledge-item">
             <q-card class="map-card no-shadow">
               <q-card-section class="text-center">
-                <div class="text-h6 text-secondary">Maggot Lair</div>
+                <div class="text-h6 text-primary">Maggot Lair</div>
               </q-card-section>
               <q-img src="/images/knowledge/maps/act2/MaggotLair.jpg" width="100%" />
               <q-card-section class="text-left text-body2">
@@ -141,7 +141,7 @@ onMounted(() => {
             <div class="col gt-xs"></div>
             <q-card class="map-card no-shadow">
               <q-card-section class="text-center">
-                <div class="text-h6 text-secondary">Lost City</div>
+                <div class="text-h6 text-primary">Lost City</div>
               </q-card-section>
               <q-img src="/images/knowledge/maps/act2/LostCity.jpg" width="100%" />
               <q-card-section class="text-left text-body2">
@@ -157,7 +157,7 @@ onMounted(() => {
           <div class="row knowledge-item">
             <q-card class="map-card no-shadow">
               <q-card-section class="text-center">
-                <div class="text-h6 text-secondary">Valley of Snakes</div>
+                <div class="text-h6 text-primary">Valley of Snakes</div>
               </q-card-section>
               <q-img src="/images/knowledge/maps/act2/ValleyofSnakes.jpg" width="100%" />
               <q-card-section class="text-left text-body2">
@@ -170,7 +170,7 @@ onMounted(() => {
             <div class="col gt-xs"></div>
           </div>
         </q-timeline-entry>
-        <q-timeline-entry color="secondary" class="text-h5 text-weight-bold font-kodia" icon="flag">액트 II - 파트 I
+        <q-timeline-entry color="primary" class="text-h5 text-weight-bold font-kodia" icon="flag">액트 II - 파트 I
           완료
         </q-timeline-entry>
       </q-timeline>
@@ -180,7 +180,7 @@ onMounted(() => {
             <div class="col gt-xs"></div>
             <q-card class="map-card no-shadow">
               <q-card-section class="text-center">
-                <div class="text-h6 text-secondary">Lut Gholein</div>
+                <div class="text-h6 text-primary">Lut Gholein</div>
               </q-card-section>
               <q-img src="/images/knowledge/maps/act2/LutGholein.jpg" width="100%" />
               <q-card-section class="text-left text-body2">
@@ -196,7 +196,7 @@ onMounted(() => {
           <div class="row knowledge-item">
             <q-card class="map-card no-shadow">
               <q-card-section class="text-center">
-                <div class="text-h6 text-secondary">Harem</div>
+                <div class="text-h6 text-primary">Harem</div>
               </q-card-section>
               <q-img src="/images/knowledge/maps/act2/Harem.jpg" width="100%" />
               <q-card-section class="text-left text-body2">
@@ -214,7 +214,7 @@ onMounted(() => {
             <div class="col gt-xs"></div>
             <q-card class="map-card no-shadow">
               <q-card-section class="text-center">
-                <div class="text-h6 text-secondary">The Palace Cellar</div>
+                <div class="text-h6 text-primary">The Palace Cellar</div>
               </q-card-section>
               <q-img src="/images/knowledge/maps/act2/PalaceCellar.jpg" width="100%" />
               <q-card-section class="text-left text-body2">
@@ -230,7 +230,7 @@ onMounted(() => {
           <div class="row knowledge-item">
             <q-card class="map-card no-shadow">
               <q-card-section class="text-center">
-                <div class="text-h6 text-secondary">Arcane Sanctuary</div>
+                <div class="text-h6 text-primary">Arcane Sanctuary</div>
               </q-card-section>
               <q-img src="/images/knowledge/maps/act2/ArcaneSanctuary.jpg" width="100%" />
               <q-card-section class="text-left text-body2">
@@ -248,7 +248,7 @@ onMounted(() => {
             <div class="col gt-xs"></div>
             <q-card class="map-card no-shadow">
               <q-card-section class="text-center">
-                <div class="text-h6 text-secondary">Canyon of the Magi</div>
+                <div class="text-h6 text-primary">Canyon of the Magi</div>
               </q-card-section>
               <q-img src="/images/knowledge/maps/act2/ValleyofKings.jpg" width="100%" />
               <q-card-section class="text-left text-body2">
@@ -264,7 +264,7 @@ onMounted(() => {
           <div class="row knowledge-item">
             <q-card class="map-card no-shadow">
               <q-card-section class="text-center">
-                <div class="text-h6 text-secondary">Tal Rasha's Tomb</div>
+                <div class="text-h6 text-primary">Tal Rasha's Tomb</div>
               </q-card-section>
               <q-img src="/images/knowledge/maps/act2/TalRashasTomb.jpg" width="100%" />
               <q-card-section class="text-left text-body2">
@@ -282,7 +282,7 @@ onMounted(() => {
             <div class="col gt-xs"></div>
             <q-card class="map-card no-shadow">
               <q-card-section class="text-center">
-                <div class="text-h6 text-secondary">Tal Rasha's Chamber</div>
+                <div class="text-h6 text-primary">Tal Rasha's Chamber</div>
               </q-card-section>
               <q-img src="/images/knowledge/maps/act2/DurielsLair.jpg" width="100%" />
               <q-card-section class="text-left text-body2">
@@ -294,7 +294,7 @@ onMounted(() => {
             </q-card>
           </div>
         </q-timeline-entry>
-        <q-timeline-entry color="secondary" class="text-h5 text-weight-bold font-kodia" icon="flag">
+        <q-timeline-entry color="primary" class="text-h5 text-weight-bold font-kodia" icon="flag">
           액트 II - 파트 II 완료
         </q-timeline-entry>
       </q-timeline>
@@ -306,7 +306,7 @@ onMounted(() => {
             <div class="col gt-xs"></div>
             <q-card class="map-card no-shadow">
               <q-card-section class="text-center">
-                <div class="text-h6 text-secondary">Lut Gholein</div>
+                <div class="text-h6 text-primary">Lut Gholein</div>
               </q-card-section>
               <q-img src="/images/knowledge/maps/act2/LutGholein.jpg" width="100%" />
               <q-card-section class="text-left text-body2">
@@ -323,7 +323,7 @@ onMounted(() => {
             <div class="col gt-xs"></div>
             <q-card class="map-card no-shadow">
               <q-card-section class="text-center">
-                <div class="text-h6 text-secondary">Sewers</div>
+                <div class="text-h6 text-primary">Sewers</div>
               </q-card-section>
               <q-img src="/images/knowledge/maps/act2/Sewers.jpg" width="100%" />
               <q-card-section class="text-left text-body2">
@@ -339,7 +339,7 @@ onMounted(() => {
           <div class="row knowledge-item">
             <q-card class="map-card no-shadow">
               <q-card-section class="text-center">
-                <div class="text-h6 text-secondary">Rocky Waste</div>
+                <div class="text-h6 text-primary">Rocky Waste</div>
               </q-card-section>
               <q-img src="/images/knowledge/maps/act2/RockyWaste.jpg" width="100%" />
               <q-card-section class="text-left text-body2">
@@ -357,7 +357,7 @@ onMounted(() => {
             <div class="col gt-xs"></div>
             <q-card class="map-card no-shadow">
               <q-card-section class="text-center">
-                <div class="text-h6 text-secondary">Dry Hills</div>
+                <div class="text-h6 text-primary">Dry Hills</div>
               </q-card-section>
               <q-img src="/images/knowledge/maps/act2/DryHills.jpg" width="100%" />
               <q-card-section class="text-left text-body2">
@@ -372,7 +372,7 @@ onMounted(() => {
             <div class="col gt-xs"></div>
             <q-card class="map-card no-shadow">
               <q-card-section class="text-center">
-                <div class="text-h6 text-secondary">Halls of the Dead</div>
+                <div class="text-h6 text-primary">Halls of the Dead</div>
               </q-card-section>
               <q-img src="/images/knowledge/maps/act2/HallsoftheDead.jpg" width="100%" />
               <q-card-section class="text-left text-body2">
@@ -388,7 +388,7 @@ onMounted(() => {
           <div class="q-mb-lg row">
             <q-card class="map-card no-shadow">
               <q-card-section class="text-center">
-                <div class="text-h6 text-secondary">Far Oasis</div>
+                <div class="text-h6 text-primary">Far Oasis</div>
               </q-card-section>
               <q-img src="/images/knowledge/maps/act2/FarOasis.jpg" width="100%" />
               <q-card-section class="text-left text-body2">
@@ -403,7 +403,7 @@ onMounted(() => {
           <div class="row knowledge-item">
             <q-card class="map-card no-shadow">
               <q-card-section class="text-center">
-                <div class="text-h6 text-secondary">Maggot Lair</div>
+                <div class="text-h6 text-primary">Maggot Lair</div>
               </q-card-section>
               <q-img src="/images/knowledge/maps/act2/MaggotLair.jpg" width="100%" />
               <q-card-section class="text-left text-body2">
@@ -421,7 +421,7 @@ onMounted(() => {
             <div class="col gt-xs"></div>
             <q-card class="map-card no-shadow">
               <q-card-section class="text-center">
-                <div class="text-h6 text-secondary">Lost City</div>
+                <div class="text-h6 text-primary">Lost City</div>
               </q-card-section>
               <q-img src="/images/knowledge/maps/act2/LostCity.jpg" width="100%" />
               <q-card-section class="text-left text-body2">
@@ -437,7 +437,7 @@ onMounted(() => {
           <div class="row knowledge-item">
             <q-card class="map-card no-shadow">
               <q-card-section class="text-center">
-                <div class="text-h6 text-secondary">Valley of Snakes</div>
+                <div class="text-h6 text-primary">Valley of Snakes</div>
               </q-card-section>
               <q-img src="/images/knowledge/maps/act2/ValleyofSnakes.jpg" width="100%" />
               <q-card-section class="text-left text-body2">
@@ -450,7 +450,7 @@ onMounted(() => {
             <div class="col gt-xs"></div>
           </div>
         </q-timeline-entry>
-        <q-timeline-entry color="secondary" class="text-h5 text-weight-bold font-kodia" icon="flag">Act II - Part
+        <q-timeline-entry color="primary" class="text-h5 text-weight-bold font-kodia" icon="flag">Act II - Part
           I Completed
         </q-timeline-entry>
       </q-timeline>
@@ -460,7 +460,7 @@ onMounted(() => {
             <div class="col gt-xs"></div>
             <q-card class="map-card no-shadow">
               <q-card-section class="text-center">
-                <div class="text-h6 text-secondary">Lut Gholein</div>
+                <div class="text-h6 text-primary">Lut Gholein</div>
               </q-card-section>
               <q-img src="/images/knowledge/maps/act2/LutGholein.jpg" width="100%" />
               <q-card-section class="text-left text-body2">
@@ -476,7 +476,7 @@ onMounted(() => {
           <div class="row knowledge-item">
             <q-card class="map-card no-shadow">
               <q-card-section class="text-center">
-                <div class="text-h6 text-secondary">Harem</div>
+                <div class="text-h6 text-primary">Harem</div>
               </q-card-section>
               <q-img src="/images/knowledge/maps/act2/Harem.jpg" width="100%" />
               <q-card-section class="text-left text-body2">
@@ -494,7 +494,7 @@ onMounted(() => {
             <div class="col gt-xs"></div>
             <q-card class="map-card no-shadow">
               <q-card-section class="text-center">
-                <div class="text-h6 text-secondary">The Palace Cellar</div>
+                <div class="text-h6 text-primary">The Palace Cellar</div>
               </q-card-section>
               <q-img src="/images/knowledge/maps/act2/PalaceCellar.jpg" width="100%" />
               <q-card-section class="text-left text-body2">
@@ -510,7 +510,7 @@ onMounted(() => {
           <div class="row knowledge-item">
             <q-card class="map-card no-shadow">
               <q-card-section class="text-center">
-                <div class="text-h6 text-secondary">Arcane Sanctuary</div>
+                <div class="text-h6 text-primary">Arcane Sanctuary</div>
               </q-card-section>
               <q-img src="/images/knowledge/maps/act2/ArcaneSanctuary.jpg" width="100%" />
               <q-card-section class="text-left text-body2">
@@ -528,7 +528,7 @@ onMounted(() => {
             <div class="col gt-xs"></div>
             <q-card class="map-card no-shadow">
               <q-card-section class="text-center">
-                <div class="text-h6 text-secondary">Canyon of the Magi</div>
+                <div class="text-h6 text-primary">Canyon of the Magi</div>
               </q-card-section>
               <q-img src="/images/knowledge/maps/act2/ValleyofKings.jpg" width="100%" />
               <q-card-section class="text-left text-body2">
@@ -544,7 +544,7 @@ onMounted(() => {
           <div class="row knowledge-item">
             <q-card class="map-card no-shadow">
               <q-card-section class="text-center">
-                <div class="text-h6 text-secondary">Tal Rasha's Tomb</div>
+                <div class="text-h6 text-primary">Tal Rasha's Tomb</div>
               </q-card-section>
               <q-img src="/images/knowledge/maps/act2/TalRashasTomb.jpg" width="100%" />
               <q-card-section class="text-left text-body2">
@@ -562,7 +562,7 @@ onMounted(() => {
             <div class="col gt-xs"></div>
             <q-card class="map-card no-shadow">
               <q-card-section class="text-center">
-                <div class="text-h6 text-secondary">Tal Rasha's Chamber</div>
+                <div class="text-h6 text-primary">Tal Rasha's Chamber</div>
               </q-card-section>
               <q-img src="/images/knowledge/maps/act2/DurielsLair.jpg" width="100%" />
               <q-card-section class="text-left text-body2">
@@ -574,7 +574,7 @@ onMounted(() => {
             </q-card>
           </div>
         </q-timeline-entry>
-        <q-timeline-entry color="secondary" class="text-h5 text-weight-bold font-kodia" icon="flag">
+        <q-timeline-entry color="primary" class="text-h5 text-weight-bold font-kodia" icon="flag">
           Act II - Part II Completed
         </q-timeline-entry>
       </q-timeline>

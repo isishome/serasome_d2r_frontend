@@ -26,7 +26,7 @@ onMounted(() => {
             <div class="col gt-xs"></div>
             <q-card class="map-card no-shadow">
               <q-card-section class="text-center">
-                <div class="text-h6 text-secondary">Pandemonium Fortress</div>
+                <div class="text-h6 text-primary">Pandemonium Fortress</div>
               </q-card-section>
               <q-img src="/images/knowledge/maps/act4/PandemoniumFortress.jpg" width="100%" />
               <q-card-section class="text-left text-body2">
@@ -42,7 +42,7 @@ onMounted(() => {
           <div class="row knowledge-item">
             <q-card class="map-card no-shadow">
               <q-card-section class="text-center">
-                <div class="text-h6 text-secondary">Outer Steppes</div>
+                <div class="text-h6 text-primary">Outer Steppes</div>
               </q-card-section>
               <q-img src="/images/knowledge/maps/act4/OuterSteppes.jpg" width="100%" />
               <q-card-section class="text-left text-body2">
@@ -60,7 +60,7 @@ onMounted(() => {
             <div class="col gt-xs"></div>
             <q-card class="map-card no-shadow">
               <q-card-section class="text-center">
-                <div class="text-h6 text-secondary">Plains of Despair</div>
+                <div class="text-h6 text-primary">Plains of Despair</div>
               </q-card-section>
               <q-img src="/images/knowledge/maps/act4/PlainsofDespair.jpg" width="100%" />
               <q-card-section class="text-left text-body2">
@@ -76,7 +76,7 @@ onMounted(() => {
           <div class="row knowledge-item">
             <q-card class="map-card no-shadow">
               <q-card-section class="text-center">
-                <div class="text-h6 text-secondary">City of the Damned</div>
+                <div class="text-h6 text-primary">City of the Damned</div>
               </q-card-section>
               <q-img src="/images/knowledge/maps/act4/CityoftheDamned.jpg" width="100%" />
               <q-card-section class="text-left text-body2">
@@ -94,7 +94,7 @@ onMounted(() => {
             <div class="col gt-xs"></div>
             <q-card class="map-card no-shadow">
               <q-card-section class="text-center">
-                <div class="text-h6 text-secondary">River of Flame</div>
+                <div class="text-h6 text-primary">River of Flame</div>
               </q-card-section>
               <q-img src="/images/knowledge/maps/act4/RiverofFlames.jpg" width="100%" />
               <q-card-section class="text-left text-body2">
@@ -106,11 +106,11 @@ onMounted(() => {
             </q-card>
           </div>
         </q-timeline-entry>
-        <q-timeline-entry color="red-10" side="right" icon="full_stacked_bar_chart">
+        <q-timeline-entry color="secondary" side="right" icon="full_stacked_bar_chart">
           <div class="row knowledge-item">
             <q-card class="map-card no-shadow">
               <q-card-section class="text-center">
-                <div class="text-h6 text-secondary">Chaos Sanctuary</div>
+                <div class="text-h6 text-primary">Chaos Sanctuary</div>
               </q-card-section>
               <q-img src="/images/knowledge/maps/act4/ChaosSanctuary.jpg" width="100%" />
               <q-card-section class="text-left text-body2">
@@ -123,7 +123,7 @@ onMounted(() => {
             <div class="col gt-xs"></div>
           </div>
         </q-timeline-entry>
-        <q-timeline-entry color="secondary" class="text-h5 text-weight-bold font-kodia" icon="flag">
+        <q-timeline-entry color="primary" class="text-h5 text-weight-bold font-kodia" icon="flag">
           액트 IV 완료
         </q-timeline-entry>
       </q-timeline>
@@ -135,7 +135,7 @@ onMounted(() => {
             <div class="col gt-xs"></div>
             <q-card class="map-card no-shadow">
               <q-card-section class="text-center">
-                <div class="text-h6 text-secondary">Pandemonium Fortress</div>
+                <div class="text-h6 text-primary">Pandemonium Fortress</div>
               </q-card-section>
               <q-img src="/images/knowledge/maps/act4/PandemoniumFortress.jpg" width="100%" />
               <q-card-section class="text-left text-body2">
@@ -151,7 +151,7 @@ onMounted(() => {
           <div class="row knowledge-item">
             <q-card class="map-card no-shadow">
               <q-card-section class="text-center">
-                <div class="text-h6 text-secondary">Outer Steppes</div>
+                <div class="text-h6 text-primary">Outer Steppes</div>
               </q-card-section>
               <q-img src="/images/knowledge/maps/act4/OuterSteppes.jpg" width="100%" />
               <q-card-section class="text-left text-body2">
@@ -169,7 +169,7 @@ onMounted(() => {
             <div class="col gt-xs"></div>
             <q-card class="map-card no-shadow">
               <q-card-section class="text-center">
-                <div class="text-h6 text-secondary">Plains of Despair</div>
+                <div class="text-h6 text-primary">Plains of Despair</div>
               </q-card-section>
               <q-img src="/images/knowledge/maps/act4/PlainsofDespair.jpg" width="100%" />
               <q-card-section class="text-left text-body2">
@@ -185,7 +185,7 @@ onMounted(() => {
           <div class="row knowledge-item">
             <q-card class="map-card no-shadow">
               <q-card-section class="text-center">
-                <div class="text-h6 text-secondary">City of the Damned</div>
+                <div class="text-h6 text-primary">City of the Damned</div>
               </q-card-section>
               <q-img src="/images/knowledge/maps/act4/CityoftheDamned.jpg" width="100%" />
               <q-card-section class="text-left text-body2">
@@ -203,7 +203,7 @@ onMounted(() => {
             <div class="col gt-xs"></div>
             <q-card class="map-card no-shadow">
               <q-card-section class="text-center">
-                <div class="text-h6 text-secondary">River of Flame</div>
+                <div class="text-h6 text-primary">River of Flame</div>
               </q-card-section>
               <q-img src="/images/knowledge/maps/act4/RiverofFlames.jpg" width="100%" />
               <q-card-section class="text-left text-body2">
@@ -215,11 +215,11 @@ onMounted(() => {
             </q-card>
           </div>
         </q-timeline-entry>
-        <q-timeline-entry color="red-10" side="right" icon="full_stacked_bar_chart">
+        <q-timeline-entry color="secondary" side="right" icon="full_stacked_bar_chart">
           <div class="row knowledge-item">
             <q-card class="map-card no-shadow">
               <q-card-section class="text-center">
-                <div class="text-h6 text-secondary">Chaos Sanctuary</div>
+                <div class="text-h6 text-primary">Chaos Sanctuary</div>
               </q-card-section>
               <q-img src="/images/knowledge/maps/act4/ChaosSanctuary.jpg" width="100%" />
               <q-card-section class="text-left text-body2">
@@ -232,7 +232,7 @@ onMounted(() => {
             <div class="col gt-xs"></div>
           </div>
         </q-timeline-entry>
-        <q-timeline-entry color="secondary" class="text-h5 text-weight-bold font-kodia" icon="flag">
+        <q-timeline-entry color="primary" class="text-h5 text-weight-bold font-kodia" icon="flag">
           Act IV Completed
         </q-timeline-entry>
       </q-timeline>

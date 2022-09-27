@@ -72,7 +72,7 @@ const url = ref(props.contents)
             </template>
           </q-input>
         </q-card-section>
-        <q-card-actions align="right" class="text-primary">
+        <q-card-actions align="right">
           <q-btn flat :label="t('btn.cancel')" @click="emit('cancel')" />
           <q-btn flat :label="confirmLabelText" @click="emit('ok', url)" />
         </q-card-actions>

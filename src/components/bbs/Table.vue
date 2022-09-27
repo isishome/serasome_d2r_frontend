@@ -89,7 +89,7 @@ defineExpose({
       <template #loading>
         <div class="non-selectable">
           <q-inner-loading showing size="xs">
-            <q-spinner-ball size="xl" color="red-10" />
+            <q-spinner-ball size="xl" color="secondary" />
           </q-inner-loading>
         </div>
       </template>

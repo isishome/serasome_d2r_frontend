@@ -334,7 +334,7 @@ defineExpose({
                 <template #append>
                   <div class="">
                     <q-toggle :disable="loading" v-model="desktop.secret" unchecked-icon="lock_open" checked-icon="lock"
-                      color="secondary" />
+                      color="primary" />
                   </div>
                 </template>
                 <template #counter>
@@ -360,7 +360,7 @@ defineExpose({
             <template #append>
               <div class="">
                 <q-toggle :disable="loading" v-model="info.secret" unchecked-icon="lock_open" checked-icon="lock"
-                  color="secondary" />
+                  color="primary" />
               </div>
             </template>
             <template #counter>
@@ -376,7 +376,7 @@ defineExpose({
       </q-card-section>
       <q-card-actions align="right">
         <q-btn :disable="loading" dense outline :label="t('btn.cancel')" v-close-popup />
-        <q-btn :disable="loading" dense color="red-10" :label="t('btn.confirm')" @click="process" />
+        <q-btn :disable="loading" dense color="secondary" :label="t('btn.confirm')" @click="process" />
       </q-card-actions>
     </q-card>
   </q-dialog>

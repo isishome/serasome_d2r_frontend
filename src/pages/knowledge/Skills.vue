@@ -251,15 +251,15 @@ mergeSection('skills', part).then(() => {
       </div>
       <div v-if="skillPoints < 110" class="full-width row justify-end items-center q-gutter-sm">
         <div class="text-left">
-          <q-input v-if="shareUrl !== ''" color="secondary" type="text" v-model="shareUrl" dense standout outlined
+          <q-input v-if="shareUrl !== ''" color="primary" type="text" v-model="shareUrl" dense standout outlined
             hide-bottom-space no-error-icon>
             <template v-slot:prepend>
-              <q-icon color="secondary" name="link" />
+              <q-icon color="primary" name="link" />
             </template>
           </q-input>
         </div>
         <div>
-          <q-btn unelevated icon="share" color="secondary" :label="t('d2r.knowledge.skills.btn.share')" @click="share"
+          <q-btn unelevated icon="share" color="primary" :label="t('d2r.knowledge.skills.btn.share')" @click="share"
             :loading="loading" />
         </div>
       </div>

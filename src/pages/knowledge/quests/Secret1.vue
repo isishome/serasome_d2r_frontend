@@ -28,7 +28,7 @@ mergeSection('quests', 'secret1').then(() => {
   <div class="column quests word-keep text-body2">
     <div class="row justify-center items-center q-gutter-x-lg">
       <img :src="'/images/knowledge/quests/secret1/hellbovine.gif'" style="max-width:93px" />
-      <q-btn round dense flat color="red-10" icon="headset" @click="play" />
+      <q-btn round dense flat color="secondary" icon="headset" @click="play" />
     </div>
     <div class="column items-start q-gutter-y-lg">
       <div v-for="(contents, index) in secretData" :key="index" class="full-width">

@@ -26,7 +26,7 @@ onMounted(() => {
             <div class="col gt-xs"></div>
             <q-card class="map-card no-shadow">
               <q-card-section class="text-center">
-                <div class="text-h6 text-secondary">Rogue Encampment</div>
+                <div class="text-h6 text-primary">Rogue Encampment</div>
               </q-card-section>
               <q-img src="/images/knowledge/maps/act1/RogueEncampment.jpg" width="100%" />
               <q-card-section class="text-left text-body2">
@@ -38,11 +38,11 @@ onMounted(() => {
             </q-card>
           </div>
         </q-timeline-entry>
-        <q-timeline-entry color="red-10" side="right" icon="door_open">
+        <q-timeline-entry color="secondary" side="right" icon="door_open">
           <div class="row knowledge-item">
             <q-card class="map-card no-shadow">
               <q-card-section class="text-center">
-                <div class="text-h6 text-secondary">Blood Moor</div>
+                <div class="text-h6 text-primary">Blood Moor</div>
               </q-card-section>
               <q-img src="/images/knowledge/maps/act1/BloodMoor.jpg" width="100%" />
               <q-card-section class="text-left text-body2">
@@ -60,7 +60,7 @@ onMounted(() => {
             <div class="col gt-xs"></div>
             <q-card class="map-card no-shadow">
               <q-card-section class="text-center">
-                <div class="text-h6 text-secondary">Cold Plains</div>
+                <div class="text-h6 text-primary">Cold Plains</div>
               </q-card-section>
               <q-img src="/images/knowledge/maps/act1/ColdPlains.jpg" width="100%" />
               <q-card-section class="text-left text-body2">
@@ -75,7 +75,7 @@ onMounted(() => {
             <div class="col gt-xs"></div>
             <q-card class="map-card no-shadow">
               <q-card-section class="text-center">
-                <div class="text-h6 text-secondary">Burial Grounds</div>
+                <div class="text-h6 text-primary">Burial Grounds</div>
               </q-card-section>
               <q-img src="/images/knowledge/maps/act1/BurialGrounds.jpg" width="100%" />
               <q-card-section class="text-left text-body2">
@@ -91,7 +91,7 @@ onMounted(() => {
           <div class="q-mb-lg row">
             <q-card class="map-card no-shadow">
               <q-card-section class="text-center">
-                <div class="text-h6 text-secondary">Stony Field</div>
+                <div class="text-h6 text-primary">Stony Field</div>
               </q-card-section>
               <q-img src="/images/knowledge/maps/act1/StoneyField.jpg" width="100%" />
               <q-card-section class="text-left text-body2">
@@ -106,7 +106,7 @@ onMounted(() => {
           <div class="row knowledge-item">
             <q-card class="map-card no-shadow">
               <q-card-section class="text-center">
-                <div class="text-h6 text-secondary">Tristram</div>
+                <div class="text-h6 text-primary">Tristram</div>
               </q-card-section>
               <q-img src="/images/knowledge/maps/act1/Tristram.jpg" width="100%" />
               <q-card-section class="text-left text-body2">
@@ -124,7 +124,7 @@ onMounted(() => {
             <div class="col gt-xs"></div>
             <q-card class="map-card no-shadow">
               <q-card-section class="text-center">
-                <div class="text-h6 text-secondary">The Underground Passage</div>
+                <div class="text-h6 text-primary">The Underground Passage</div>
               </q-card-section>
               <q-img src="/images/knowledge/maps/act1/UndergroundPassage.jpg" width="100%" />
               <q-card-section class="text-left text-body2">
@@ -140,7 +140,7 @@ onMounted(() => {
           <div class="row knowledge-item">
             <q-card class="map-card no-shadow">
               <q-card-section class="text-center">
-                <div class="text-h6 text-secondary">Dark Wood</div>
+                <div class="text-h6 text-primary">Dark Wood</div>
               </q-card-section>
               <q-img src="/images/knowledge/maps/act1/DarkWood.jpg" width="100%" />
               <q-card-section class="text-left text-body2">
@@ -158,7 +158,7 @@ onMounted(() => {
             <div class="col gt-xs"></div>
             <q-card class="map-card no-shadow">
               <q-card-section class="text-center">
-                <div class="text-h6 text-secondary">Black Marsh</div>
+                <div class="text-h6 text-primary">Black Marsh</div>
               </q-card-section>
               <q-img src="/images/knowledge/maps/act1/BlackMarsh.jpg" width="100%" />
               <q-card-section class="text-left text-body2">
@@ -174,7 +174,7 @@ onMounted(() => {
           <div class="row knowledge-item">
             <q-card class="map-card no-shadow">
               <q-card-section class="text-center">
-                <div class="text-h6 text-secondary">Tamoe Highland</div>
+                <div class="text-h6 text-primary">Tamoe Highland</div>
               </q-card-section>
               <q-img src="/images/knowledge/maps/act1/TamoeHighland.jpg" width="100%" />
               <q-card-section class="text-left text-body2">
@@ -192,7 +192,7 @@ onMounted(() => {
             <div class="col gt-xs"></div>
             <q-card class="map-card no-shadow">
               <q-card-section class="text-center">
-                <div class="text-h6 text-secondary">Monastery Gate</div>
+                <div class="text-h6 text-primary">Monastery Gate</div>
               </q-card-section>
               <q-img src="/images/knowledge/maps/act1/MonasteryGate.jpg" width="100%" />
               <q-card-section class="text-left text-body2">
@@ -208,7 +208,7 @@ onMounted(() => {
           <div class="row knowledge-item">
             <q-card class="map-card no-shadow">
               <q-card-section class="text-center">
-                <div class="text-h6 text-secondary">Outer Cloister</div>
+                <div class="text-h6 text-primary">Outer Cloister</div>
               </q-card-section>
               <q-img src="/images/knowledge/maps/act1/OuterCloister.jpg" width="100%" />
               <q-card-section class="text-left text-body2">
@@ -226,7 +226,7 @@ onMounted(() => {
             <div class="col gt-xs"></div>
             <q-card class="map-card no-shadow">
               <q-card-section class="text-center">
-                <div class="text-h6 text-secondary">Barracks</div>
+                <div class="text-h6 text-primary">Barracks</div>
               </q-card-section>
               <q-img src="/images/knowledge/maps/act1/Barracks.jpg" width="100%" />
               <q-card-section class="text-left text-body2">
@@ -242,7 +242,7 @@ onMounted(() => {
           <div class="row knowledge-item">
             <q-card class="map-card no-shadow">
               <q-card-section class="text-center">
-                <div class="text-h6 text-secondary">Jail</div>
+                <div class="text-h6 text-primary">Jail</div>
               </q-card-section>
               <q-img src="/images/knowledge/maps/act1/Jail.jpg" width="100%" />
               <q-card-section class="text-left text-body2">
@@ -260,7 +260,7 @@ onMounted(() => {
             <div class="col gt-xs"></div>
             <q-card class="map-card no-shadow">
               <q-card-section class="text-center">
-                <div class="text-h6 text-secondary">Inner Cloister</div>
+                <div class="text-h6 text-primary">Inner Cloister</div>
               </q-card-section>
               <q-img src="/images/knowledge/maps/act1/InnerCloister.jpg" width="100%" />
               <q-card-section class="text-left text-body2">
@@ -276,7 +276,7 @@ onMounted(() => {
           <div class="row knowledge-item">
             <q-card class="map-card no-shadow">
               <q-card-section class="text-center">
-                <div class="text-h6 text-secondary">Cathedral</div>
+                <div class="text-h6 text-primary">Cathedral</div>
               </q-card-section>
               <q-img src="/images/knowledge/maps/act1/Cathedral.jpg" width="100%" />
               <q-card-section class="text-left text-body2">
@@ -294,7 +294,7 @@ onMounted(() => {
             <div class="col gt-xs"></div>
             <q-card class="map-card no-shadow">
               <q-card-section class="text-center">
-                <div class="text-h6 text-secondary">Catacombs</div>
+                <div class="text-h6 text-primary">Catacombs</div>
               </q-card-section>
               <q-img src="/images/knowledge/maps/act1/Catacombs.jpg" width="100%" />
               <q-card-section class="text-left text-body2">
@@ -306,7 +306,7 @@ onMounted(() => {
             </q-card>
           </div>
         </q-timeline-entry>
-        <q-timeline-entry color="secondary" class="text-h5 text-weight-bold font-kodia" icon="flag">액트 I 완료
+        <q-timeline-entry color="primary" class="text-h5 text-weight-bold font-kodia" icon="flag">액트 I 완료
         </q-timeline-entry>
       </q-timeline>
     </template>
@@ -317,7 +317,7 @@ onMounted(() => {
             <div class="col gt-xs"></div>
             <q-card class="map-card no-shadow">
               <q-card-section class="text-center">
-                <div class="text-h6 text-secondary">Rogue Encampment</div>
+                <div class="text-h6 text-primary">Rogue Encampment</div>
               </q-card-section>
               <q-img src="/images/knowledge/maps/act1/RogueEncampment.jpg" width="100%" />
               <q-card-section class="text-left text-body2">
@@ -329,11 +329,11 @@ onMounted(() => {
             </q-card>
           </div>
         </q-timeline-entry>
-        <q-timeline-entry color="red-10" side="right" icon="door_open">
+        <q-timeline-entry color="secondary" side="right" icon="door_open">
           <div class="row knowledge-item">
             <q-card class="map-card no-shadow">
               <q-card-section class="text-center">
-                <div class="text-h6 text-secondary">Blood Moor</div>
+                <div class="text-h6 text-primary">Blood Moor</div>
               </q-card-section>
               <q-img src="/images/knowledge/maps/act1/BloodMoor.jpg" width="100%" />
               <q-card-section class="text-left text-body2">
@@ -351,7 +351,7 @@ onMounted(() => {
             <div class="col gt-xs"></div>
             <q-card class="map-card no-shadow">
               <q-card-section class="text-center">
-                <div class="text-h6 text-secondary">Cold Plains</div>
+                <div class="text-h6 text-primary">Cold Plains</div>
               </q-card-section>
               <q-img src="/images/knowledge/maps/act1/ColdPlains.jpg" width="100%" />
               <q-card-section class="text-left text-body2">
@@ -366,7 +366,7 @@ onMounted(() => {
             <div class="col gt-xs"></div>
             <q-card class="map-card no-shadow">
               <q-card-section class="text-center">
-                <div class="text-h6 text-secondary">Burial Grounds</div>
+                <div class="text-h6 text-primary">Burial Grounds</div>
               </q-card-section>
               <q-img src="/images/knowledge/maps/act1/BurialGrounds.jpg" width="100%" />
               <q-card-section class="text-left text-body2">
@@ -382,7 +382,7 @@ onMounted(() => {
           <div class="q-mb-lg row">
             <q-card class="map-card no-shadow">
               <q-card-section class="text-center">
-                <div class="text-h6 text-secondary">Stony Field</div>
+                <div class="text-h6 text-primary">Stony Field</div>
               </q-card-section>
               <q-img src="/images/knowledge/maps/act1/StoneyField.jpg" width="100%" />
               <q-card-section class="text-left text-body2">
@@ -397,7 +397,7 @@ onMounted(() => {
           <div class="row knowledge-item">
             <q-card class="map-card no-shadow">
               <q-card-section class="text-center">
-                <div class="text-h6 text-secondary">Tristram</div>
+                <div class="text-h6 text-primary">Tristram</div>
               </q-card-section>
               <q-img src="/images/knowledge/maps/act1/Tristram.jpg" width="100%" />
               <q-card-section class="text-left text-body2">
@@ -415,7 +415,7 @@ onMounted(() => {
             <div class="col gt-xs"></div>
             <q-card class="map-card no-shadow">
               <q-card-section class="text-center">
-                <div class="text-h6 text-secondary">The Underground Passage</div>
+                <div class="text-h6 text-primary">The Underground Passage</div>
               </q-card-section>
               <q-img src="/images/knowledge/maps/act1/UndergroundPassage.jpg" width="100%" />
               <q-card-section class="text-left text-body2">
@@ -431,7 +431,7 @@ onMounted(() => {
           <div class="row knowledge-item">
             <q-card class="map-card no-shadow">
               <q-card-section class="text-center">
-                <div class="text-h6 text-secondary">Dark Wood</div>
+                <div class="text-h6 text-primary">Dark Wood</div>
               </q-card-section>
               <q-img src="/images/knowledge/maps/act1/DarkWood.jpg" width="100%" />
               <q-card-section class="text-left text-body2">
@@ -449,7 +449,7 @@ onMounted(() => {
             <div class="col gt-xs"></div>
             <q-card class="map-card no-shadow">
               <q-card-section class="text-center">
-                <div class="text-h6 text-secondary">Black Marsh</div>
+                <div class="text-h6 text-primary">Black Marsh</div>
               </q-card-section>
               <q-img src="/images/knowledge/maps/act1/BlackMarsh.jpg" width="100%" />
               <q-card-section class="text-left text-body2">
@@ -465,7 +465,7 @@ onMounted(() => {
           <div class="row knowledge-item">
             <q-card class="map-card no-shadow">
               <q-card-section class="text-center">
-                <div class="text-h6 text-secondary">Tamoe Highland</div>
+                <div class="text-h6 text-primary">Tamoe Highland</div>
               </q-card-section>
               <q-img src="/images/knowledge/maps/act1/TamoeHighland.jpg" width="100%" />
               <q-card-section class="text-left text-body2">
@@ -483,7 +483,7 @@ onMounted(() => {
             <div class="col gt-xs"></div>
             <q-card class="map-card no-shadow">
               <q-card-section class="text-center">
-                <div class="text-h6 text-secondary">Monastery Gate</div>
+                <div class="text-h6 text-primary">Monastery Gate</div>
               </q-card-section>
               <q-img src="/images/knowledge/maps/act1/MonasteryGate.jpg" width="100%" />
               <q-card-section class="text-left text-body2">
@@ -499,7 +499,7 @@ onMounted(() => {
           <div class="row knowledge-item">
             <q-card class="map-card no-shadow">
               <q-card-section class="text-center">
-                <div class="text-h6 text-secondary">Outer Cloister</div>
+                <div class="text-h6 text-primary">Outer Cloister</div>
               </q-card-section>
               <q-img src="/images/knowledge/maps/act1/OuterCloister.jpg" width="100%" />
               <q-card-section class="text-left text-body2">
@@ -517,7 +517,7 @@ onMounted(() => {
             <div class="col gt-xs"></div>
             <q-card class="map-card no-shadow">
               <q-card-section class="text-center">
-                <div class="text-h6 text-secondary">Barracks</div>
+                <div class="text-h6 text-primary">Barracks</div>
               </q-card-section>
               <q-img src="/images/knowledge/maps/act1/Barracks.jpg" width="100%" />
               <q-card-section class="text-left text-body2">
@@ -533,7 +533,7 @@ onMounted(() => {
           <div class="row knowledge-item">
             <q-card class="map-card no-shadow">
               <q-card-section class="text-center">
-                <div class="text-h6 text-secondary">Jail</div>
+                <div class="text-h6 text-primary">Jail</div>
               </q-card-section>
               <q-img src="/images/knowledge/maps/act1/Jail.jpg" width="100%" />
               <q-card-section class="text-left text-body2">
@@ -551,7 +551,7 @@ onMounted(() => {
             <div class="col gt-xs"></div>
             <q-card class="map-card no-shadow">
               <q-card-section class="text-center">
-                <div class="text-h6 text-secondary">Inner Cloister</div>
+                <div class="text-h6 text-primary">Inner Cloister</div>
               </q-card-section>
               <q-img src="/images/knowledge/maps/act1/InnerCloister.jpg" width="100%" />
               <q-card-section class="text-left text-body2">
@@ -567,7 +567,7 @@ onMounted(() => {
           <div class="row knowledge-item">
             <q-card class="map-card no-shadow">
               <q-card-section class="text-center">
-                <div class="text-h6 text-secondary">Cathedral</div>
+                <div class="text-h6 text-primary">Cathedral</div>
               </q-card-section>
               <q-img src="/images/knowledge/maps/act1/Cathedral.jpg" width="100%" />
               <q-card-section class="text-left text-body2">
@@ -585,7 +585,7 @@ onMounted(() => {
             <div class="col gt-xs"></div>
             <q-card class="map-card no-shadow">
               <q-card-section class="text-center">
-                <div class="text-h6 text-secondary">Catacombs</div>
+                <div class="text-h6 text-primary">Catacombs</div>
               </q-card-section>
               <q-img src="/images/knowledge/maps/act1/Catacombs.jpg" width="100%" />
               <q-card-section class="text-left text-body2">
@@ -597,7 +597,7 @@ onMounted(() => {
             </q-card>
           </div>
         </q-timeline-entry>
-        <q-timeline-entry color="secondary" class="text-h5 text-weight-bold font-kodia" icon="flag">
+        <q-timeline-entry color="primary" class="text-h5 text-weight-bold font-kodia" icon="flag">
           Act I Completed
         </q-timeline-entry>
       </q-timeline>

@@ -160,10 +160,11 @@ watch(() => route.params.part, (val, old) => {
         <q-toolbar-title :shrink="screen.gt.md" class="no-padding q-mr-md row justify-center">
           <div class="row items-center cursor-pointer"
             :class="[screen.lt.lg ? 'justify-center' : '', !isDark ? 'light' : '']" @click="home">
-            <q-icon flat class="text-red-10 rotate-180 q-mr-xs text-title" name="align_vertical_center" size="24px" />
+            <q-icon flat class="text-secondary rotate-180 q-mr-xs text-title" name="align_vertical_center"
+              size="24px" />
             <div class="gt-md font-kodia column items-center">
               <div class="text-h5 text-amber text-title" style="line-height:1">DIABLO® II</div>
-              <div class="text-caption text-secondary" style="line-height:1">Resurrected</div>
+              <div class="text-caption text-primary" style="line-height:1">Resurrected</div>
             </div>
             <div class="lt-lg font-kodia text-h4 text-amber text-title">D2R</div>
           </div>
@@ -177,8 +178,8 @@ watch(() => route.params.part, (val, old) => {
               :to="{ name: 'd2r-knowledge-part', params:{ section:'classes', part:'amazon'} }" :ripple="false" flat
               no-caps padding="0 5px" size="18px" :label="t('d2r.knowledge.title')" />
             <template v-if="isKnowledge">
-              <q-separator color="secondary" class="full-width" />
-              <q-btn-toggle flat dense v-model="_section" toggle-color="secondary" class="section" padding="0 sm"
+              <q-separator color="primary" class="full-width" />
+              <q-btn-toggle flat dense v-model="_section" toggle-color="primary" class="section" padding="0 sm"
                 :options="sectionList" @update:model-value="toSection" type="a" :ripple="false" />
             </template>
           </div>
@@ -190,7 +191,7 @@ watch(() => route.params.part, (val, old) => {
               <q-list separator bordered>
                 <q-item dense v-for="(option, index) in options" :key="index" :clickable="lang !== option.value"
                   :v-close-popup="lang !== option.value" @click="toggleLang(option.value)"
-                  :active="lang === option.value" active-class="text-secondary">
+                  :active="lang === option.value" active-class="text-primary">
                   <q-item-section>
                     <q-item-label>{{ option.label }}</q-item-label>
                   </q-item-section>
@@ -210,7 +211,7 @@ watch(() => route.params.part, (val, old) => {
       <q-list class="font-kodia">
         <q-item>
           <q-item-section>
-            <q-select dense outlined separator emit-value map-options color="secondary" behavior="menu" v-model="lang"
+            <q-select dense outlined separator emit-value map-options color="primary" behavior="menu" v-model="lang"
               :options="options" popup-content-class="font-kodia" :label="t('language')"
               @update:model-value="toggleLang(lang)" />
           </q-item-section>
@@ -220,7 +221,7 @@ watch(() => route.params.part, (val, old) => {
         </q-item>
         <q-separator />
         <q-item v-for="sec in section" :key="sec.value" :inset-level="0.5"
-          :to="{ name: 'd2r-bbs', params: { sec: sec.value } }" active-class="text-secondary">
+          :to="{ name: 'd2r-bbs', params: { sec: sec.value } }" active-class="text-primary">
           <q-item-section>
             {{ sec.label }}
           </q-item-section>
@@ -228,7 +229,7 @@ watch(() => route.params.part, (val, old) => {
         <q-expansion-item default-opened :header-inset-level="0.5" :label="t('d2r.knowledge.title')">
           <q-item :active="section.value === _section" v-for="section in sectionList" :key="section" :inset-level="1"
             :to="section.value !== _section ? { name: 'd2r-knowledge-section', params:{ section: section.value} } : null"
-            active-class="text-secondary">
+            active-class="text-primary">
             <q-item-section>
               {{ section.label }}
             </q-item-section>
@@ -244,7 +245,7 @@ watch(() => route.params.part, (val, old) => {
       <q-list class="font-kodia">
         <q-item v-for="part in partList" :key="part.value" :inset-level="0.5"
           :to="{ name: 'd2r-knowledge-part', params: { section: _section, part: part.value } }"
-          active-class="text-secondary">
+          active-class="text-primary">
           <q-item-section>
             {{ part.label }}
           </q-item-section>
@@ -287,13 +288,13 @@ watch(() => route.params.part, (val, old) => {
       <div class="platform-ios-only" style="padding-bottom: 12vh;"></div>
       <q-page-sticky style="z-index: 1;" expand position="top">
         <q-linear-progress :track-color="isDark ? 'grey-8' : 'grey-5'" :value="progress" animation-speed="400"
-          color="secondary" size="1px" />
+          color="primary" size="1px" />
       </q-page-sticky>
       <q-page-scroller position="bottom-left" :scroll-offset="150" :offset="[0, 0]"
         style="position: absolute;z-index: 4;">
         <q-btn push
           :style="screen.gt.lg ? 'left:22vw;bottom:20px' : screen.gt.md ? 'left:13vw;bottom:20px' : 'left:10px;bottom:30px'"
-          round size="md" icon="keyboard_arrow_up" color="info" />
+          round size="md" icon="keyboard_arrow_up" color="secondary" />
       </q-page-scroller>
     </q-page-container>
   </q-layout>
@@ -347,7 +348,7 @@ watch(() => route.params.part, (val, old) => {
   left: 0;
   right: 0;
   height: 1px;
-  background-color: var(--q-secondary);
+  background-color: var(--q-primary);
 }
 
 .func:deep(.q-btn) {
@@ -402,7 +403,7 @@ watch(() => route.params.part, (val, old) => {
   left: 0;
   bottom: 0;
   width: 4px;
-  background-color: var(--q-secondary) !important;
+  background-color: var(--q-primary) !important;
   position: absolute;
   z-index: 1;
 }

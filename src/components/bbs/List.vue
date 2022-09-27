@@ -179,13 +179,12 @@ watch(() => route.query.page, (val, old) => {
           @submit="request(1)">
           <div class="row justify-start items-start q-col-gutter-sm">
             <div class="col" style="max-width:170px;">
-              <q-select :disable="loading" color="secondary" v-model="filter.filterBy" :options="filter.options"
+              <q-select :disable="loading" color="primary" v-model="filter.filterBy" :options="filter.options"
                 :label="t('d2r.bbs.filterBy')" behavior="menu" dense emit-value no-error-icon hide-bottom-space
                 map-options outlined options-cover options-dense />
             </div>
             <div class="col" style="max-width:170px;">
-              <q-input :disable="loading" v-model="filter.filter" :label="t('d2r.bbs.filter')" outlined
-                color="secondary"
+              <q-input :disable="loading" v-model="filter.filter" :label="t('d2r.bbs.filter')" outlined color="primary"
                 :rules="[val => /^(\s*|[ㄱ-ㅎㅏ-ㅣ가-힣a-zA-Z0-9\s]{2,20})$/.test(val) || t('search.message.invalidWord')]"
                 dense no-error-icon clearable @keyup.enter="searchObj.submit()" />
             </div>
@@ -260,7 +259,7 @@ watch(() => route.query.page, (val, old) => {
               </q-chip>
             </q-card-section>
             <q-card-section class="no-padding absolute-top-right" style="z-index:1;top:-2px;right:1px;opacity: .8;">
-              <q-chip square icon="visibility" size="xs" color="primary" text-color="white"
+              <q-chip square icon="visibility" size="xs" color="grey-9" text-color="white"
                 class="no-margin row justify-center items-center text-caption" :label="isView(props.row.seq)" />
             </q-card-section>
             <q-img :src="parsThumbnail(props.row.thumbnail)" ratio="1"
@@ -312,7 +311,7 @@ watch(() => route.query.page, (val, old) => {
     </Table>
     <q-page-sticky v-if="!search && authority(sec, 'write')" position="bottom-right" :offset="[0, 0]"
       style="z-index: 4;">
-      <q-btn push color="secondary"
+      <q-btn push color="primary"
         :style="$q.screen.gt.lg ? 'right:22vw;bottom:20px' : $q.screen.gt.md ? 'right:13vw;bottom:20px' : 'right:10px;bottom:30px'"
         round size="md" icon="add" :to="`${sec}/write`" :disable="loading" />
     </q-page-sticky>

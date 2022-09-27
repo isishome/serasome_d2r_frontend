@@ -1,7 +1,6 @@
 :root {
-  --q-primary: #121212 !important;
-  --q-secondary-hide: #b89c5b00 !important;
-  --q-secondary: #b89c5b !important;
+  --q-primary: #b89c5b !important;
+  --q-secondary: #8a0303 !important;
   --q-light-page: #dadada !important;
   --q-dark-page: #121212 !important;
   --q-light-alpha: #dadadacc !important;

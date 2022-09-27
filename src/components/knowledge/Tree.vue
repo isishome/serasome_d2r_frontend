@@ -54,7 +54,7 @@ const reset = () => {
 <template>
   <div class="font-kodia relative-position" @contextmenu.prevent>
     <q-inner-loading :showing="loading" class="loading">
-      <q-spinner-ball size="16%" color="red-10" />
+      <q-spinner-ball size="16%" color="secondary" />
     </q-inner-loading>
     <div class="tree-back">
       <div class="row justify-between items-center word-keep">
@@ -65,7 +65,7 @@ const reset = () => {
         </div>
         <div class="col-1 text-right relative-position" style="z-index: 2;">
           <q-btn v-if="treePoints > 0" :size="platform.is.mobile ? '7px' : '10px'" padding="2px" unelevated dense
-            color="red-10" class="text-weight-bold" @click="reset">
+            color="secondary" class="text-weight-bold" @click="reset">
             <q-icon name="close" />
           </q-btn>
         </div>
@@ -79,13 +79,13 @@ const reset = () => {
       <div v-if="platform.is.mobile" class="row justify-center items-center q-gutter-y-xs relative-position"
         :class="screen.lt.sm ? 'q-gutter-x-xs' : 'q-gutter-x-md'" style="z-index: 2;">
         <div>
-          <q-checkbox dark dense size="xs" v-model="mobile.max" color="secondary" :label="lang.max" />
+          <q-checkbox dark dense size="xs" v-model="mobile.max" color="primary" :label="lang.max" />
         </div>
         <div>
-          <q-checkbox dark dense size="xs" v-model="mobile.remove" color="secondary" :label="lang.back" />
+          <q-checkbox dark dense size="xs" v-model="mobile.remove" color="primary" :label="lang.back" />
         </div>
         <div>
-          <q-checkbox dark dense size="xs" v-model="mobile.info" color="secondary" :label="lang.info" />
+          <q-checkbox dark dense size="xs" v-model="mobile.info" color="primary" :label="lang.info" />
         </div>
         <div class="col-12">
           <q-separator color="grey-9" />

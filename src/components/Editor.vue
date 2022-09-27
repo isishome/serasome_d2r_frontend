@@ -1,5 +1,5 @@
 <script setup>
-import { ref, shallowReadonly, computed, reactive } from 'vue'
+import { ref, shallowReadonly, computed, reactive, watch } from 'vue'
 import { useQuasar } from 'quasar'
 
 const props = defineProps({
@@ -305,6 +305,11 @@ const extensions = reactive([
   }
 ])
 
+watch(() => props.contents, (val, old) => {
+  if (val !== old)
+    _contents.value = val
+})
+
 const focus = () => {
   if (editor.value)
     editor.value.focus()
@@ -324,7 +329,8 @@ defineExpose({ focus, getAttach, upload })
 <template>
   <form autocorrect="off" autocapitalize="off" autocomplete="off" spellcheck="false">
     <q-uploader ref="uploader" v-show="false" :disable="disable" :max-files="maxFiles" :accept="accept" multiple batch
-      @added="added" :factory="factoryFn" @uploaded="emit('complete')" @failed="emit('failed')" />
+      @added="added" :factory="factoryFn" @uploaded="emit('complete')"
+      @failed="info => emit('failed', info.xhr.responseText)" />
     <div class="relative-position">
       <q-editor ref="editor" :disable="disable" toolbar-toggle-color="active-toggle" v-model="_contents"
         @update:model-value="update" @paste="onPaste" min-height="50rem" max-height="50rem" class="editor"
@@ -388,13 +394,7 @@ defineExpose({ focus, getAttach, upload })
         </template>
       </q-editor>
     </div>
-    <div class="row items-center q-col-gutter-xs">
-      <div v-for="a in attach" :key="a.name" class="col-4 col-md-2">
-        <q-chip class="full-width" removable clickable icon="image" :label="a.name" @click="insertImage(a.__img.src)"
-          @remove="remove(a)" />
-      </div>
-    </div>
-    <q-btn v-if="attach.length > 0" no-caps unelevated dense rounded color="grey-10" @click="clear" label="Clear All" />
+    <slot name="attach" :files="attach" :insert="insertImage" :remove="remove" :clear="clear"></slot>
   </form>
 </template>
 

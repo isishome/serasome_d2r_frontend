@@ -49,7 +49,7 @@ loadComponent(section, props.part)
       
 <template>
   <div v-if="partIsClass" class="column q-gutter-y-md">
-    <div class="font-kodia text-center text-h4 text-weight-bold text-secondary q-pt-sm q-pb-xl word-keep">
+    <div class="font-kodia text-center text-h4 text-weight-bold text-primary q-pt-sm q-pb-xl word-keep">
       {{partIsClass.label}}
     </div>
     <div v-if="partIsClass.over" class="row justify-center">

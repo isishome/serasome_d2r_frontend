@@ -50,7 +50,7 @@ mergeSection('items', 'craft').then(() => {
 <template>
   <div>
     <div class="row justify-end items-center">
-      <q-toggle dense color="secondary" v-model="visible" icon="help_outline" class="q-mb-sm" />
+      <q-toggle dense color="primary" v-model="visible" icon="help_outline" class="q-mb-sm" />
     </div>
     <q-slide-transition>
       <div v-show="visible" class="row justify-start items-center word-keep">
@@ -73,14 +73,14 @@ mergeSection('items', 'craft').then(() => {
           :color="ct.color" />
       </div>
       <div class="lt-md col-12 col-sm">
-        <q-select color="secondary" popup-content-style="border:solid 2px #b89c5b" v-model="craftType"
+        <q-select color="primary" popup-content-style="border:solid 2px #b89c5b" v-model="craftType"
           :options="craftTypes" dropdown-icon="keyboard_arrow_down" :label="t('d2r.knowledge.items.craftType')"
           behavior="menu" dense outlined emit-value map-options no-error-icon options-dense />
       </div>
       <div class="col">
-        <q-input dense outlined debounce="400" :label="t('btn.search')" color="secondary" v-model="filter">
+        <q-input dense outlined debounce="400" :label="t('btn.search')" color="primary" v-model="filter">
           <template v-slot:append>
-            <q-icon name="search" color="secondary" />
+            <q-icon name="search" color="primary" />
           </template>
         </q-input>
       </div>
@@ -104,7 +104,7 @@ mergeSection('items', 'craft').then(() => {
           <q-tr :props="props">
             <q-td key="material" :props="props">
               <div class="column items-center">
-                <div class="col-12 text-h6 text-secondary text-center word-keep">
+                <div class="col-12 text-h6 text-primary text-center word-keep">
                   {{materials.find(m => m.no === props.row.material).name}}
                 </div>
                 <q-badge color="red" v-if="props.row.hot === true">
@@ -163,7 +163,7 @@ mergeSection('items', 'craft').then(() => {
             <q-card class="no-shadow text-center text-body2 word-keep">
               <q-card-section>
                 <div class="row justify-center items-center q-gutter-x-sm">
-                  <div class="text-h6 text-secondary">
+                  <div class="text-h6 text-primary">
                     {{materials.find(m => m.no === props.row.material).name}}
                   </div>
                   <q-badge color="red" v-if="props.row.hot === true">

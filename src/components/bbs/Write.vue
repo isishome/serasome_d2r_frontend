@@ -1,6 +1,6 @@
 <script setup>
 import { ref, computed, defineAsyncComponent, reactive, inject } from 'vue'
-import { useQuasar, copyToClipboard } from 'quasar'
+import { useQuasar } from 'quasar'
 import { useRoute, useRouter } from 'vue-router'
 import { useStore } from '@/stores'
 import { useI18n } from 'vue-i18n'
@@ -31,7 +31,6 @@ const { t } = useI18n()
 
 // common variables
 const loading = ref(false)
-const processPosting = ref(false)
 const editor = ref(null)
 const writeInfo = reactive({
   classify: '',
@@ -39,7 +38,6 @@ const writeInfo = reactive({
   title: '',
   contents: '',
   youtube: '',
-  thumb: null,
   files: [],
   fileList: [],
   blobList: [],
@@ -75,7 +73,6 @@ if (props.pid) {
       writeInfo.title = response.data.title
       writeInfo.contents = response.data.contents
       writeInfo.youtube = response.data.youtube
-      writeInfo.thumb = response.data.thumb
       writeInfo.files = response.data.files
       writeInfo.owner = response.data.owner
 
@@ -118,30 +115,6 @@ const onSubmit = () => {
   }
 }
 
-const copyThumbnail = (thumbnailSrc) => {
-  copyToClipboard(thumbnailSrc)
-    .then(() => {
-      $q.notify({
-        type: 'positive',
-        color: 'positive',
-        message: t('post.message.successClipboard')
-      })
-    })
-    .catch(() => {
-      $q.notify({
-        type: 'negative',
-        color: 'negative',
-        message: t('post.message.failedClipboard')
-      })
-    })
-}
-
-const validYoutube = () => {
-  const youtubeId = getYoutubeId(writeInfo.youtube)
-  if (youtubeId !== null && writeInfo.thumb === null)
-    writeInfo.thumb = writeInfo.youtube
-}
-
 const deleteFile = (file) => {
   const findIndex = writeInfo.files.findIndex(f => f.fid === file.fid)
 
@@ -151,9 +124,6 @@ const deleteFile = (file) => {
     writeInfo.deleteList.push(file.fid)
     writeInfo.files.splice(findIndex, 1)
     editor.setContent(newContents, true)
-
-    if (writeInfo.thumb === file.origin)
-      writeInfo.thumb = null
   }
 }
 
@@ -193,10 +163,6 @@ const factoryFn = () => {
           'value': encodeURIComponent(writeInfo.youtube)
         },
         {
-          'name': 'thumb',
-          'value': encodeURIComponent(writeInfo.thumb)
-        },
-        {
           'name': 'deleteList',
           'value': encodeURIComponent(JSON.stringify(writeInfo.deleteList))
         }
@@ -215,13 +181,12 @@ const post = () => {
     title: encodeURIComponent(writeInfo.title),
     contents: encodeURIComponent(writeInfo.contents),
     youtube: encodeURIComponent(writeInfo.youtube),
-    thumb: encodeURIComponent(writeInfo.thumb),
     deleteList: encodeURIComponent(JSON.stringify(writeInfo.deleteList))
   }).then(function () {
     complete()
   })
-    .catch(function () {
-      failed()
+    .catch(function (err) {
+      failed(err)
     })
     .then(function () {
       loading.value = false
@@ -238,11 +203,11 @@ const complete = () => {
   router.push({ name: 'd2r-bbs', params: { sec: props.sec }, query: { page: route.query.page || 1 } })
 }
 
-const failed = () => {
+const failed = (msg) => {
   $q.notify({
     type: 'negative',
     color: 'negative',
-    message: t('post.message.failedPosting')
+    message: t('post.message.failedPosting') + (msg ? ` [${msg}]` : '')
   })
 }
 </script>
@@ -265,59 +230,65 @@ const failed = () => {
           <q-slide-transition>
             <div v-if="writeInfo.quiz.enable" class="row justify-start q-col-gutter-x-sm">
               <div class="col-8 col-sm-9">
-                <q-input dense outlined hide-bottom-space no-error-icon class="quiz" color="grey-5"
-                  :disable="processPosting" maxlength="80" type="text" :label="t('d2r.bbs.question')"
-                  v-model="writeInfo.quiz.question" :rules="[val => val && val.trim() !== '']" />
+                <q-input dense outlined hide-bottom-space no-error-icon class="quiz" color="grey-5" :disable="loading"
+                  maxlength="80" type="text" :label="t('d2r.bbs.question')" v-model="writeInfo.quiz.question"
+                  :rules="[val => val && val.trim() !== '']" />
               </div>
               <div class="col col-sm">
-                <q-input dense outlined hide-bottom-space no-error-icon class="quiz" color="grey-5"
-                  :disable="processPosting" maxlength="20" type="text" :label="t('d2r.bbs.answer')"
-                  v-model="writeInfo.quiz.answer" :rules="[val => val && val.trim() !== '']" />
+                <q-input dense outlined hide-bottom-space no-error-icon class="quiz" color="grey-5" :disable="loading"
+                  maxlength="20" type="text" :label="t('d2r.bbs.answer')" v-model="writeInfo.quiz.answer"
+                  :rules="[val => val && val.trim() !== '']" />
               </div>
             </div>
           </q-slide-transition>
           <q-slide-transition>
             <div v-if="writeInfo.quiz.enable">
-              <q-input dense outlined hide-bottom-space no-error-icon class="quiz" color="grey-5"
-                :disable="processPosting" maxlength="100" type="text" :label="t('d2r.bbs.reward')"
-                v-model="writeInfo.quiz.reward" :rules="[val => val && val.trim() !== '' || undefined]" />
+              <q-input dense outlined hide-bottom-space no-error-icon class="quiz" color="grey-5" :disable="loading"
+                maxlength="100" type="text" :label="t('d2r.bbs.reward')" v-model="writeInfo.quiz.reward"
+                :rules="[val => val && val.trim() !== '' || undefined]" />
             </div>
           </q-slide-transition>
           <q-separator />
           <div>
-            <q-input dense outlined hide-bottom-space no-error-icon color="grey-5" :disable="processPosting"
-              maxlength="200" type="text" :label="t('post.title')" v-model="writeInfo.title"
+            <q-input dense outlined hide-bottom-space no-error-icon color="grey-5" :disable="loading" maxlength="200"
+              type="text" :label="t('post.title')" v-model="writeInfo.title"
               :error="writeInfo.title.length > 0 && writeInfo.title.trim() === ''" />
           </div>
           <div>
-            <Editor ref="editor" :contents="writeInfo.contents" :factory-fn="factoryFn"
-              @update="val => writeInfo.contents = val" @complete="complete" @failed="failed"></Editor>
+            <Editor ref="editor" :contents="writeInfo.contents" :factory-fn="factoryFn" :disable="loading"
+              @update="val => writeInfo.contents = val" @complete="complete" @failed="failed">
+              <template #attach="{files, insert, remove, clear}">
+                <div class="column items-start">
+                  <div class="full-width row items-center q-col-gutter-xs">
+                    <div v-for="f in files" :key="f.name" class="col-4 col-md-2">
+                      <q-chip removable clickable color="grey-9" text-color="white" icon="image" :label="f.name"
+                        @click="insert(f.__img.src)" @remove="remove(f)" />
+                    </div>
+                  </div>
+                  <q-btn v-if="files.length > 0" no-caps unelevated dense color="grey-9" class="self-end" @click="clear"
+                    label="Clear All" />
+                </div>
+              </template>
+            </Editor>
           </div>
           <div v-if="sec !== 'trade'" class="row q-gutter-x-sm">
-            <q-radio dense :disable="getYoutubeId(writeInfo.youtube) === null" v-model="writeInfo.thumb"
-              :val="writeInfo.youtube" size="xs" />
-            <q-input class="col" outlined dense hide-bottom-space no-error-icon color="grey-5" :disable="processPosting"
+            <q-input class="col" outlined dense hide-bottom-space no-error-icon color="grey-5" :disable="loading"
               type="text" v-model="writeInfo.youtube" :label="t('post.youtubeUrl')"
-              :rules="[val => (!val || val.trim() === '' || getYoutubeId(val) !== null) || '']" @input="validYoutube" />
+              :rules="[val => (!val || val.trim() === '' || getYoutubeId(val) !== null) || '']" />
           </div>
           <div v-if="pid && writeInfo.files.length > 0" class="full-width scroll" style="max-height: 25vh;">
             <q-list bordered separator class="q-pa-sm">
               <template v-for="file in writeInfo.files">
                 <q-item dense v-if="file.deleted !== true" :key="file.fid">
-                  <q-item-section v-if="file.type === 'image'" side>
-                    <q-radio dense v-model="writeInfo.thumb" :val="file.origin" size="xs" color="d2r" />
-                  </q-item-section>
                   <q-item-section v-if="file.type === 'image'" thumbnail>
                     <img :src="file.path">
                   </q-item-section>
-                  <q-item-section class="gt-xs">
-                    <q-item-label class="ellipsis">
+                  <q-item-section>
+                    <q-item-label class="gt-xs ellipsis">
                       {{file.origin}}
                     </q-item-label>
                   </q-item-section>
-                  <q-item-section top side>
-                    <q-btn v-if="file.type === 'image'" flat round dense icon="link"
-                      @click="copyThumbnail(file.path)" />
+                  <q-item-section center side>
                     <q-btn size="md" flat round dense icon="delete" @click="deleteFile(file)" />
                   </q-item-section>
                 </q-item>
@@ -327,7 +298,7 @@ const failed = () => {
           <div class="row justify-end q-gutter-x-sm">
             <q-btn dense outline :disable="loading" :label="t('btn.cancel')"
               :to="pid !== null ? {name:'d2r-read', params:{sec:sec, pid:pid}} : {name:'d2r-bbs', params:{sec:sec}}" />
-            <q-btn dense unelevated color="secondary" :loading="loading" type="submit"
+            <q-btn dense unelevated color="primary" :loading="loading" type="submit"
               :label="pid ? t('btn.modify') :t('btn.posting')" />
           </div>
         </q-form>
