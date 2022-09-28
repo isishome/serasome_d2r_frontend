@@ -7,7 +7,7 @@ const { locale } = useI18n()
 <template>
   <div>
     <template v-if="locale === 'ko'">
-      <p class="q-mt-xl text-h6">
+      <p class="knowledge-title">
         배경
       </p>
       <p>팔라딘은 자카룸 교단의 기사단이다. 팔라딘의 시초는 12세기 중반으로 거슬러 올라간다. 동부 대륙에 위치한 자카룸 교단은 서부 대륙에도 포교하기 위해 선교사들을 파견했지만 강도나 몬스터 등의 습격
@@ -29,7 +29,7 @@ const { locale } = useI18n()
       <p>하지만 나머지 팔라딘들은 아직도 타락한 자카룸 교단의 명령을 수행하는 듯하다. 자카룸 출신 중에서 타락하지 않은 자들은 서부로 원정을 떠난 소수의 성기사(팔라딘)들과 200년 전 타락의 근본적 원인을
         제거하러 동쪽으로 떠난 성전사들 정도다.
       </p>
-      <p class="q-mt-xl text-h6">
+      <p class="knowledge-title">
         통계 및 수치
       </p>
       <p class="row justify-start">
@@ -106,7 +106,7 @@ const { locale } = useI18n()
           </tbody>
         </q-markup-table>
       </p>
-      <p class="q-mt-xl text-h6">
+      <p class="knowledge-title">
         소개
       </p>
       <p>오라 중에는 잉여 스킬이 많고, 상위 호환되는 오라가 분명히 존재하는 데다가 무엇보다도 한 번에 하나만 켤 수 있기 때문에 선행이나 시너지 스킬이 아니라면 찍을 이유가 없다. 따라서 반드시 키워야
@@ -116,7 +116,7 @@ const { locale } = useI18n()
         멈추고 아이템으로 충당하는 경우도 많다.
         아래는 육성 유형. 공통 사항으로 해머딘이 아니라면 사냥 및 내성을 대비해 각각 질과 벤전스에 1이라도 투자하며, 어떤 유형이라도 방패를 사용한다면 홀리 쉴드를 최소 1 투자하거나 아예 마스터한다.
       </p>
-      <p class="q-mt-xl text-h6">
+      <p class="knowledge-title">
         패스트 블럭
       </p>
       <p class="row justify-start">
@@ -149,7 +149,7 @@ const { locale } = useI18n()
           </tbody>
         </q-markup-table>
       </p>
-      <p class="q-mt-xl text-h6">
+      <p class="knowledge-title">
         패스트 캐스트
       </p>
       <p class="row justify-start">
@@ -178,7 +178,7 @@ const { locale } = useI18n()
           </tbody>
         </q-markup-table>
       </p>
-      <p class="q-mt-xl text-h6">
+      <p class="knowledge-title">
         패스트 힛 리커버리
       </p>
       <p class="row justify-start">
@@ -216,7 +216,7 @@ const { locale } = useI18n()
           href="https://namu.wiki/w/%EC%95%84%EB%A7%88%EC%A1%B4(%EB%94%94%EC%95%84%EB%B8%94%EB%A1%9C%202)">나무위키</a></p>
     </template>
     <template v-else>
-      <p class="q-mt-xl text-h6">
+      <p class="knowledge-title">
         Background
       </p>
       <p>The Knights of Westmarch who felled the armies of mighty Leoric are pure at heart and closely follow the
@@ -226,7 +226,7 @@ const { locale } = useI18n()
         His steadfastness gives him powers to bestow blessings to his friends and wreak cruel justice on foes. There are
         those who call the Paladin an overwrought zealot, but others recognize in him the strength and goodness of the
         Light.</p>
-      <p class="q-mt-xl text-h6">
+      <p class="knowledge-title">
         Statistics And Figures
       </p>
       <p class="row justify-start">
@@ -291,7 +291,7 @@ const { locale } = useI18n()
           </tbody>
         </q-markup-table>
       </p>
-      <p class="q-mt-xl text-h6">
+      <p class="knowledge-title">
         Introduction
       </p>
       <p>The Paladin is perhaps the most useful addition to any party, as he can extend his Auras to his allies. Skilled
@@ -309,7 +309,7 @@ const { locale } = useI18n()
         item, which allows him to carry a shield in the other hand. A good shield is important both for blocking and a
         higher armor rating. Additionally, a socketed shield can be equipped with gems that add to its resistance. This
         can be of considerable use in some of the more difficult dungeons.</p>
-      <p class="q-mt-xl text-h6">
+      <p class="knowledge-title">
         Faster Block Rate
       </p>
       <p class="row justify-start">
@@ -342,7 +342,7 @@ const { locale } = useI18n()
           </tbody>
         </q-markup-table>
       </p>
-      <p class="q-mt-xl text-h6">
+      <p class="knowledge-title">
         Faster Cast Rate
       </p>
       <p class="row justify-start">
@@ -371,7 +371,7 @@ const { locale } = useI18n()
           </tbody>
         </q-markup-table>
       </p>
-      <p class="q-mt-xl text-h6">
+      <p class="knowledge-title">
         Faster Hit Recovery
       </p>
       <p class="row justify-start">

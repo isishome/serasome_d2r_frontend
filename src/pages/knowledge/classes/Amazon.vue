@@ -7,7 +7,7 @@ const { locale } = useI18n()
 <template>
   <div>
     <template v-if="locale === 'ko'">
-      <p class="q-mt-xl text-h6">
+      <p class="knowledge-title">
         배경
       </p>
       <p>아마존은 성역의 남쪽에 있는 쌍둥이해(Twin seas)의 스코보스 제도 출신의 여전사들로, 원거리 공격계열인 활과 투창, 근접 공격계열인 창을 다룬다. 정글에서 자라온지라 활 같은 사격 무기를
@@ -34,7 +34,7 @@ const { locale } = useI18n()
         필리오스는 이후 아스카라라는 새 여인과 결혼해 쌍둥이 자매를 낳았고, 딸들에게 거울에 대해 알려줬다. 자매는 거울을 스코보스 섬에서 찾아내었고 이 표면에 투영된 영상을 통해 미래를 볼 수 있다는 걸
         깨달았다. 그리고 이 거울을 중심으로 섬이 발전하기 시작했으며 자매 중 강인한 쪽의 후손이 아마존 계급, 예지력을 가진 쪽의 후손이 점술사 계급으로 이어졌다고 한다. 아마존들이 통치하는 스코보스 제도는
         4개의 큰 섬을 중심지로 하는데, 이 4개의 섬들의 이름 중 하나는 네팔렘 필리오스, 또 하나는 천사 라이칸더의 이름을 따서 이름지어졌다.</p>
-      <p class="q-mt-xl text-h6">
+      <p class="knowledge-title">
         통계 및 수치
       </p>
       <p class="row justify-start">
@@ -111,14 +111,14 @@ const { locale } = useI18n()
           </tbody>
         </q-markup-table>
       </p>
-      <p class="q-mt-xl text-h6">
+      <p class="knowledge-title">
         소개
       </p>
       <p>아마존은 주요 투자 스킬에 따라 원거리 캐릭터도 근거리 캐릭터도 될 수 있다. 다만 현거래를 이용하지 않는 맨땅의 경우, 첫 캐릭터로 아마존을 선택하는 것은 비추천하는 유저가 많다. 현거래 없이는
         육성이 너무나 힘들기 때문이다. 활을 사용하는 활마존의 육성 난이도는 최악으로 유명하고, 자벨마는 나이트메어 정도까지는 무난하게 키울 수 있지만 헬에서 내성 문제가 발목을 잡는다. 자벨마는 자력으로
         주력스킬 내성에 대처할 방법이 없는 거의 유일한 주류 육성법이기 때문이다. 물리 피해가 대부분인 바바리안도 버서크로 물리 내성을 잡을 수 있는데, 자벨마는 룬워드 '무한의 공간'이 없다면 헬에서
         라이트닝 내성 몹을 잡을 방법이 없다. 자벨마의 주력 스킬은 라이트닝이고 물리 피해는 보잘것없으며 포이즌 스킬을 섞자니 포이즌 스킬의 효율이 너무나도 좋지 않기 때문이다.</p>
-      <p class="q-mt-xl text-h6">
+      <p class="knowledge-title">
         패스트 블럭
       </p>
       <p class="row justify-start">
@@ -173,7 +173,7 @@ const { locale } = useI18n()
           </tbody>
         </q-markup-table>
       </p>
-      <p class="q-mt-xl text-h6">
+      <p class="knowledge-title">
         패스트 캐스트
       </p>
       <p class="row justify-start">
@@ -206,7 +206,7 @@ const { locale } = useI18n()
           </tbody>
         </q-markup-table>
       </p>
-      <p class="q-mt-xl text-h6">
+      <p class="knowledge-title">
         패스트 힛 리커버리
       </p>
       <p class="row justify-start">
@@ -246,7 +246,7 @@ const { locale } = useI18n()
           href="https://namu.wiki/w/%EC%95%84%EB%A7%88%EC%A1%B4(%EB%94%94%EC%95%84%EB%B8%94%EB%A1%9C%202)">나무위키</a></p>
     </template>
     <template v-else>
-      <p class="q-mt-xl text-h6">
+      <p class="knowledge-title">
         Background
       </p>
       <p>This powerful woman warrior belongs to nomadic bands who roam the plains near the South Sea.
@@ -256,7 +256,7 @@ const { locale } = useI18n()
         While her skill with the bow rivals that of the Rogues, the Amazon is also adept in the use of spears and other
         throwing weapons, as well as in hand-to-hand combat. The Amazon is much sought after as a mercenary, in which
         type of service she will be loyal as long as her own ends are also served.</p>
-      <p class="q-mt-xl text-h6">
+      <p class="knowledge-title">
         Statistics And Figures
       </p>
       <p class="row justify-start">
@@ -321,7 +321,7 @@ const { locale } = useI18n()
           </tbody>
         </q-markup-table>
       </p>
-      <p class="q-mt-xl text-h6">
+      <p class="knowledge-title">
         Introduction
       </p>
       <p>Here is our female warrior, not to be confused as a beefed-up Rogue for as well as being much more effective
@@ -339,7 +339,7 @@ const { locale } = useI18n()
       <p>The Amazon can use her starting equipment to stab or throw, or switch to a bow as soon as she finds one of
         those. She’s good with spears also, a decent early spear find and a point in Jab can make lighter work of Act
         One, though you’ll need to work to keep enough mana early on.</p>
-      <p class="q-mt-xl text-h6">
+      <p class="knowledge-title">
         Faster Block Rate
       </p>
       <p class="row justify-start">
@@ -394,7 +394,7 @@ const { locale } = useI18n()
           </tbody>
         </q-markup-table>
       </p>
-      <p class="q-mt-xl text-h6">
+      <p class="knowledge-title">
         Faster Cast Rate
       </p>
       <p class="row justify-start">
@@ -427,7 +427,7 @@ const { locale } = useI18n()
           </tbody>
         </q-markup-table>
       </p>
-      <p class="q-mt-xl text-h6">
+      <p class="knowledge-title">
         Faster Hit Recovery
       </p>
       <p class="row justify-start">

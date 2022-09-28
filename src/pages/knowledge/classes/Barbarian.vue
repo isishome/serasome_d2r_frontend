@@ -7,7 +7,7 @@ const { locale } = useI18n()
 <template>
   <div>
     <template v-if="locale === 'ko'">
-      <p class="q-mt-xl text-h6">
+      <p class="knowledge-title">
         배경
       </p>
       <p>고대의 위대한 왕, 배짱과 용기의 화신 불카토스(Bul-Kathos)의 후손들이라고 주장하는 강인한 전사들. 이 전사들은 문명의 외곽 지역에서 세계석이 봉인된 아리앗 산을 지키고 있으며, 이것을
@@ -37,7 +37,7 @@ const { locale } = useI18n()
         성성한 노장 외모로 만들었으나 스토리상 연결과 전개에 여러 난점 때문에 3편의 야만용사와는 별개의 인물이 됐다. 디아블로 1 주인공들이 2에서 어떤 꼴이 되었는지 생각해 보면 무소식이
         희소식이다...
       </p>
-      <p class="q-mt-xl text-h6">
+      <p class="knowledge-title">
         통계 및 수치
       </p>
       <p class="row justify-start">
@@ -114,7 +114,7 @@ const { locale } = useI18n()
           </tbody>
         </q-markup-table>
       </p>
-      <p class="q-mt-xl text-h6">
+      <p class="knowledge-title">
         소개
       </p>
       <p>일반적인 캐릭터 육성이 사용 스킬에 따라서 종류가 나뉘는 것에 비하여 바바리안은 활과 쇠뇌, 클러, 대거 외의 무기에 특화하는 웨폰 마스터리라는 기술 덕분에, 사용 무기별로 다양한 유형의
@@ -126,7 +126,7 @@ const { locale } = useI18n()
       <p>하지만 오리지널에서는 휠윈드가 공속에 영향 받지 않고 히트 수 제한이 없기 때문에 물리 이뮨이 아니면 다 썰어버렸었다. 이동속도가 낮으면 낮을수록 목표지점에 가는 동안 계속 때리기 때문. 대신 무기
         데미지가 낮으면 내구도가 팍팍 내려간다.</p>
       <p>이런저런 애로사항이 있긴 하지만 함성과 각종 패시브 덕에 룬워드 연기 갑옷과 디파이언스 용병만 있어도 헬 난이도에서 어느 정도 비빌 수 있다는 점은 메리트라고 할 수 있을 것이다.</p>
-      <p class="q-mt-xl text-h6">
+      <p class="knowledge-title">
         패스트 블럭
       </p>
       <p class="row justify-start">
@@ -159,7 +159,7 @@ const { locale } = useI18n()
           </tbody>
         </q-markup-table>
       </p>
-      <p class="q-mt-xl text-h6">
+      <p class="knowledge-title">
         패스트 캐스트
       </p>
       <p class="row justify-start">
@@ -188,7 +188,7 @@ const { locale } = useI18n()
           </tbody>
         </q-markup-table>
       </p>
-      <p class="q-mt-xl text-h6">
+      <p class="knowledge-title">
         패스트 힛 리커버리
       </p>
       <p class="row justify-start">
@@ -228,7 +228,7 @@ const { locale } = useI18n()
           href="https://namu.wiki/w/%EC%95%84%EB%A7%88%EC%A1%B4(%EB%94%94%EC%95%84%EB%B8%94%EB%A1%9C%202)">나무위키</a></p>
     </template>
     <template v-else>
-      <p class="q-mt-xl text-h6">
+      <p class="knowledge-title">
         Background
       </p>
       <p>The Barbarian, a member of any of several tribes on the fringes of civilization, rebuffs the influence of those
@@ -246,7 +246,7 @@ const { locale } = useI18n()
         most innovative feature is the ability to wield two weapons at the same time. Allotting points to his ‘Double
         Swing’ skill in his Combat Actions tree will optimize this ability, enabling him to perform a quick attack with
         both weapons. Coupled with Skill Synergies, any Barbarian has the potential to become a potent fighter.</p>
-      <p class="q-mt-xl text-h6">
+      <p class="knowledge-title">
         Statistics And Figures
       </p>
       <p class="row justify-start">
@@ -311,7 +311,7 @@ const { locale } = useI18n()
           </tbody>
         </q-markup-table>
       </p>
-      <p class="q-mt-xl text-h6">
+      <p class="knowledge-title">
         Introduction
       </p>
       <p>Being a melee specialist, a Barbarian should be mindful of his health and keep a plentiful stock of health
@@ -337,7 +337,7 @@ const { locale } = useI18n()
       <p>Dual-wielding weapons presents another problem. Placing a weapon in the off-hand slot deprives the Barbarian of
         a shield which, consequently, leaves him more vulnerable to melee foes due to a lower AC. The warcry Shout may
         serve as a method to counter this.</p>
-      <p class="q-mt-xl text-h6">
+      <p class="knowledge-title">
         Faster Block Rate
       </p>
       <p class="row justify-start">
@@ -370,7 +370,7 @@ const { locale } = useI18n()
           </tbody>
         </q-markup-table>
       </p>
-      <p class="q-mt-xl text-h6">
+      <p class="knowledge-title">
         Faster Cast Rate
       </p>
       <p class="row justify-start">
@@ -399,7 +399,7 @@ const { locale } = useI18n()
           </tbody>
         </q-markup-table>
       </p>
-      <p class="q-mt-xl text-h6">
+      <p class="knowledge-title">
         Faster Hit Recovery
       </p>
       <p class="row justify-start">

@@ -7,7 +7,7 @@ const { locale } = useI18n()
 <template>
   <div>
     <template v-if="locale === 'ko'">
-      <p class="q-mt-xl text-h6">
+      <p class="knowledge-title">
         배경
       </p>
       <p>잔 에수(Zann Esu)는 케지스탄의 주요 마법단(Mage Clan) 중 하나로, 오직 여성만 존재하는 특이한 곳이다. 가장 오래된 마법단 중 하나이지만, 이들에 대해 알려진 사실은 별로 많지
@@ -32,7 +32,7 @@ const { locale } = useI18n()
         디아블로 2에서 5막 하로가스의 주문 사용자인 마라가 소서리스와 관한 썰을 푸는데, 그녀는 어릴 때 잔 에수를 따르려 했지만 단순한 마법 주문으로는 자신의 능력이 결코 발전하지 않았다고 한다. 그와
         별개로 잔 에수의 원소술사들을 존경하는 듯 하며, 디아 2의 소서리스에게 마법에 대한 가르침을 청하기도 한다.
       </p>
-      <p class="q-mt-xl text-h6">
+      <p class="knowledge-title">
         통계 및 수치
       </p>
       <p class="row justify-start">
@@ -109,7 +109,7 @@ const { locale } = useI18n()
           </tbody>
         </q-markup-table>
       </p>
-      <p class="q-mt-xl text-h6">
+      <p class="knowledge-title">
         소개
       </p>
       <p>디아블로 2의 스킬 대미지는 무기 대미지에 관계없이 순수 스킬 레벨에만 의존하기 때문에 아이템 자체 성능이나 대미지가 높은 고급 아이템 없이도 무난하게(어디까지나 타 캐릭터에 비해서) 사냥할 수
@@ -139,7 +139,7 @@ const { locale } = useI18n()
       <p>시너지 전후에 관계 없이 1원소는 내성에 취약하고 3원소는 되다 만 어중간함 덕분에 무난하게 2원소를 찍었으나, 룬워드 무한의 공간(infinity)의 등장 이후 내성을 쉽게 벗길 수 있게 됨으로써
         저항력 감소가 쉬운 라이트닝 1원소 몰아찍기가 대세. 소서리스 스킬은 대부분 서포트와 관계 없이 마법 자체가 공격 or 방어 그 자체이므로 투자 대비 효율을 생각할 필요 없이 모조리 몰아 찍게 된다.
       </p>
-      <p class="q-mt-xl text-h6">
+      <p class="knowledge-title">
         패스트 블럭
       </p>
       <p class="row justify-start">
@@ -172,7 +172,7 @@ const { locale } = useI18n()
           </tbody>
         </q-markup-table>
       </p>
-      <p class="q-mt-xl text-h6">
+      <p class="knowledge-title">
         패스트 캐스트
       </p>
       <p class="row justify-start">
@@ -210,7 +210,7 @@ const { locale } = useI18n()
           </tbody>
         </q-markup-table>
       </p>
-      <p class="q-mt-xl text-h6">
+      <p class="knowledge-title">
         패스트 힛 리커버리
       </p>
       <p class="row justify-start">
@@ -253,7 +253,7 @@ const { locale } = useI18n()
           href="https://namu.wiki/w/%EC%95%84%EB%A7%88%EC%A1%B4(%EB%94%94%EC%95%84%EB%B8%94%EB%A1%9C%202)">나무위키</a></p>
     </template>
     <template v-else>
-      <p class="q-mt-xl text-h6">
+      <p class="knowledge-title">
         Background
       </p>
       <p>A rebellious woman who has wrested the secrets of magic use from the male-dominated Mage-Clans of the East, the
@@ -262,7 +262,7 @@ const { locale } = useI18n()
         reclusive, the Sorceress acts based on motives and ethics inscrutable to most, and sometimes seems capricious
         and even spiteful. In reality, she understands the struggle between Order and Chaos all too clearly, as well as
         her role as a warrior in this battle.</p>
-      <p class="q-mt-xl text-h6">
+      <p class="knowledge-title">
         Statistics And Figures
       </p>
       <p class="row justify-start">
@@ -327,7 +327,7 @@ const { locale } = useI18n()
           </tbody>
         </q-markup-table>
       </p>
-      <p class="q-mt-xl text-h6">
+      <p class="knowledge-title">
         Introduction
       </p>
       <p>Of all the character classes, the Sorceress is the most dependent on her skills; therefore, she is also the
@@ -351,7 +351,7 @@ const { locale } = useI18n()
         possess a great deal of magical defense, and spells are not always effective. It is wise to choose skills from
         throughout the skill tree. Of all the classes though, she must avoid being struck in melee combat, therefore she
         requires the most tactical maneuvering and the most care.</p>
-      <p class="q-mt-xl text-h6">
+      <p class="knowledge-title">
         Faster Block Rate
       </p>
       <p class="row justify-start">
@@ -384,7 +384,7 @@ const { locale } = useI18n()
           </tbody>
         </q-markup-table>
       </p>
-      <p class="q-mt-xl text-h6">
+      <p class="knowledge-title">
         Faster Cast Rate
       </p>
       <p class="row justify-start">
@@ -422,7 +422,7 @@ const { locale } = useI18n()
           </tbody>
         </q-markup-table>
       </p>
-      <p class="q-mt-xl text-h6">
+      <p class="knowledge-title">
         Faster Hit Recovery
       </p>
       <p class="row justify-start">

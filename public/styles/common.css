@@ -191,6 +191,14 @@ body {
   border-radius: 4px !important;
 }
 
+.knowledge-title {
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 2rem !important;
+  letter-spacing: .0125em;
+  margin-top: 48px;
+}
+
 .knowledge p {
   text-indent: 1em;
   line-height: 1.8;
