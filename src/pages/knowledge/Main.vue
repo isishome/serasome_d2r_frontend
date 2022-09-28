@@ -12,7 +12,7 @@ if (!route.params.section)
 </script>
 
 <template>
-  <div class="contents-wrap">
+  <div class="contents-wrap knowledge">
     <div :class="$q.screen.gt.sm ? 'contents-on q-pa-md' : ''">
       <router-view></router-view>
     </div>

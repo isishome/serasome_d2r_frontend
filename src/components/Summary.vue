@@ -77,10 +77,11 @@ const itemClick = (item) => {
               <q-btn flat unelevated no-caps class="text-body fit" @click="itemClick(summary)">
                 <q-item-section top avatar>
                   <q-avatar rounded class="outlined">
-                    <q-img :ratio="1" style="width:40px" :src="parsThumbnail(summary.thumbnail)" no-spinner>
+                    <q-img :ratio="1" style="width:40px" :src="parsThumbnail(summary.thumbnail)" no-spinner
+                      no-transition>
                       <template v-if="blank !== null" #error>
-                        <q-img :ratio="2 / 1" :src="`/images/${blank}`" class="absolute-center bg-transparent"
-                          no-spinner />
+                        <q-img :ratio="2" :src="`/images/${blank}`" class="absolute-center bg-transparent" no-spinner
+                          no-transition />
                       </template>
                     </q-img>
                   </q-avatar>

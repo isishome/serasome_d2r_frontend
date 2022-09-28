@@ -191,7 +191,7 @@ body {
   border-radius: 4px !important;
 }
 
-p {
+.knowledge p {
   text-indent: 1em;
   line-height: 1.8;
   margin-bottom: 10px !important;
@@ -221,7 +221,6 @@ p {
 }
 
 .io-img {
-  display: block;
   filter: grayscale(1);
   opacity: .5;
   width: 100%;
