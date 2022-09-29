@@ -103,9 +103,7 @@ onUnmounted(() => {
 </template>
 
 <style scoped>
-
-
-.box::after {
+.box::before {
   position: absolute;
   content: 'AD';
   top: 50%;
