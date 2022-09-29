@@ -40,25 +40,13 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-body::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -1;
-  background-image: url('/images/back.webp') !important;
-  background-size: 500px !important;
-  opacity: .1;
-}
-
 .body--light {
   color: var(--q-dark-page) !important;
 }
 
 .body--dark {
   color: var(--q-light-page) !important;
+  background-color: #000000 !important;
 }
 
 .bg-invert {
