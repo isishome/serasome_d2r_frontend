@@ -202,10 +202,10 @@ watch(() => route.query.page, (val, old) => {
             </q-chip>
           </q-td>
           <q-td>
-            <q-img class="rounded-borders" :ratio="20 / 13" style="width:80px" :src="parsThumbnail(props.row.thumbnail)"
-              no-spinner no-transition>
+            <q-img class="rounded-borders" :ratio="20 / 13" style="width:80px"
+              :src="parsThumbnail(props.row.thumbnail)">
               <template #error>
-                <q-img no-spinner no-transition :ratio="2 / 1" src="/images/blank.png" class="absolute-center" />
+                <q-img :ratio="2 / 1" src="/images/blank.png" class="absolute-center" />
               </template>
             </q-img>
           </q-td>
@@ -216,7 +216,7 @@ watch(() => route.query.page, (val, old) => {
           <q-td>
             <div class="row items-center q-gutter-x-xs">
               <q-avatar rounded class="q-mr-xs avatar" size="30px">
-                <q-img v-if="props.row.avatar" :src="props.row.avatar" :ratio="1" no-spinner no-transition>
+                <q-img v-if="props.row.avatar" :src="props.row.avatar" :ratio="1">
                   <template #error>
                     <div class="bg-d2r absolute-center">
                       {{ props.row.writer.toUpperCase().substring(0, 1) }}
@@ -263,9 +263,9 @@ watch(() => route.query.page, (val, old) => {
                 class="no-margin row justify-center items-center text-caption" :label="isView(props.row.seq)" />
             </q-card-section>
             <q-img :src="parsThumbnail(props.row.thumbnail)" ratio="1"
-              :style="$q.screen.lt.sm ? 'height:80px' : 'height:100px'" no-spinner no-transition>
+              :style="$q.screen.lt.sm ? 'height:80px' : 'height:100px'">
               <template #error>
-                <q-img no-spinner no-transition :ratio="2 / 1" src="/images/blank.png" class="absolute-center" />
+                <q-img :ratio="2 / 1" src="/images/blank.png" class="absolute-center" />
               </template>
             </q-img>
             <q-card-section :class="$q.screen.lt.sm ? 'q-py-xs q-px-sm' : 'q-pa-sm'">
@@ -280,8 +280,7 @@ watch(() => route.query.page, (val, old) => {
             <q-card-section :class="$q.screen.lt.sm ? 'q-py-xs q-px-sm' : 'q-pa-sm'">
               <div class="text-caption row justify-end no-wrap items-center">
                 <q-avatar rounded class="q-mr-xs avatar text-uppercase" size="16px">
-                  <q-img v-if="props.row.avatar" :src="props.row.avatar" width="100%" :ratio="1" no-spinner
-                    no-transition>
+                  <q-img v-if="props.row.avatar" :src="props.row.avatar" width="100%" :ratio="1">
                     <template #error>
                       <div class="bg-d2r absolute-center">
                         {{ props.row.writer.substring(0, 1) }}

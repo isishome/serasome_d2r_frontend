@@ -36,7 +36,7 @@ const textSub = computed(() => {
         /images/${rt(no.img)}_4x.jpg 1600w`" class="fit absolute" sizes="(max-width: 400px) 400w,
               (min-width: 400px) and (max-width: 800px) 800w,
               (min-width: 800px) and (max-width: 1200px) 1200w,
-              (min-width: 1200px) 1600w" no-spinner no-transition />
+              (min-width: 1200px) 1600w" />
         <div class="full-width bg-transparent custom-caption"
           :class="$q.screen.lt.sm ? 'absolute-center no-padding' : 'absolute-center'">
           <div class="d2r-top-title q-mb-sm word-keep" :style="textFlame">{{ rt(no.title) }}</div>
