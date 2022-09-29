@@ -9,6 +9,8 @@
   --q-dark-half: #12121280 !important;
   --q-light-cloud: #dadada20 !important;
   --q-dark-cloud: #12121220 !important;
+  --q-light-faint: #dadada08 !important;
+  --q-dark-faint: #12121208 !important;
   --q-info: #880000 !important;
 }
 
@@ -36,6 +38,19 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background-image: url('/images/back.webp') !important;
+  background-size: 500px !important;
+  opacity: .1;
 }
 
 .body--light {
@@ -164,10 +179,12 @@ body {
 }
 
 .knowledge-item .q-card {
+  background-color: var(--q-dark-faint) !important;
   box-shadow: 0 0 0 1px var(--q-dark-cloud) !important;
 }
 
 .body--dark .knowledge-item .q-card {
+  background-color: var(--q-light-faint) !important;
   box-shadow: 0 0 0 1px var(--q-light-cloud) !important;
 }
 
