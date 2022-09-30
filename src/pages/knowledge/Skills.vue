@@ -237,7 +237,7 @@ mergeSection('skills', part).then(() => {
           </li>
         </ul>
       </div>
-      <div class="row justify-start items-center q-col-gutter-lg">
+      <div class="row justify-center items-center q-col-gutter-lg">
         <div class="col-12 col-md-6 col-lg-4" v-for="tree in skills[part]" :key="tree.id">
           <Tree :loading="loadedSkill[tree.id] !== tree.skills.length || loading" :tree-id="tree.id" :data="data"
             :lang="tm('lang')" :skill-points="skillPoints" @reset="reset">

@@ -390,7 +390,7 @@
                 ]
               },
               {
-                "text": "Lightning Damage {0}-{1}",
+                "text": "Lightning Damage: {0}-{1}",
                 "value": [
                   0,
                   [
@@ -614,7 +614,7 @@
                 ]
               },
               {
-                "text": "Lightning Damage {0}-{1}",
+                "text": "Lightning Damage: {0}-{1}",
                 "value": [
                   0,
                   [
@@ -862,7 +862,7 @@
                 ]
               },
               {
-                "text": "Lightning Damage {0}-{1}",
+                "text": "Lightning Damage: {0}-{1}",
                 "value": [
                   0,
                   [
@@ -1012,7 +1012,7 @@
             "level": "6",
             "stat": [
               {
-                "text": "Poison Damage {0}-{1}",
+                "text": "Poison Damage: {0}-{1}",
                 "value": [
                   0,
                   [
@@ -1257,7 +1257,7 @@
             ],
             "stat": [
               {
-                "text": "Lightning Damage {0}-{1}",
+                "text": "Lightning Damage: {0}-{1}",
                 "value": [
                   0,
                   [
@@ -1507,7 +1507,7 @@
                 ]
               },
               {
-                "text": "Poison Damage {0}-{1}",
+                "text": "Poison Damage: {0}-{1}",
                 "value": [
                   0,
                   [
@@ -1687,7 +1687,7 @@
                 ]
               },
               {
-                "text": "Lightning Damage {0}-{1}",
+                "text": "Lightning Damage: {0}-{1}",
                 "value": [
                   0,
                   [
@@ -2789,7 +2789,7 @@
                 ]
               },
               {
-                "text": "Cold Damage {0}-{1}",
+                "text": "Cold Damage: {0}-{1}",
                 "value": [
                   0,
                   [
@@ -2999,7 +2999,7 @@
                 ]
               },
               {
-                "text": "Cold Damage {0}-{1}",
+                "text": "Cold Damage: {0}-{1}",
                 "value": [
                   0,
                   [
@@ -3251,7 +3251,7 @@
                 ]
               },
               {
-                "text": "Cold Damage {0}-{1}",
+                "text": "Cold Damage: {0}-{1}",
                 "value": [
                   0,
                   [
@@ -3975,7 +3975,7 @@
                 ]
               },
               {
-                "text": "Fire Damage {0}-{1}",
+                "text": "Fire Damage: {0}-{1}",
                 "value": [
                   0,
                   [
@@ -4137,7 +4137,7 @@
                 ]
               },
               {
-                "text": "Fire Damage {0}-{1} (*TBD)",
+                "text": "Fire Damage: {0}-{1} (*TBD)",
                 "value": [
                   0,
                   [
@@ -4311,7 +4311,7 @@
                 ]
               },
               {
-                "text": "Fire Explosion Damage {0}-{1}",
+                "text": "Fire Explosion Damage: {0}-{1}",
                 "value": [
                   0,
                   [
@@ -4397,7 +4397,7 @@
                 ]
               },
               {
-                "text": "Average Fire Damage {0}-{1} Per Second (*TBD)",
+                "text": "Average Fire Damage: {0}-{1} Per Second (*TBD)",
                 "value": [
                   0,
                   [

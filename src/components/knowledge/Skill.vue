@@ -213,7 +213,7 @@ onMounted(() => {
     <button class="btn relative-position" :style="`top:${info.top}%;left:${info.left}%`" @click.exact="selected(1)"
       @contextmenu.exact.prevent="selected(-1)" @click.shift.exact="selected(1000)"
       @contextmenu.shift.exact.prevent="selected(-1000)">
-      <img class="img" :class="points > 0 ? 'learned' : ''"
+      <img class="img" :class="points > 0 ? 'learned' : ''" draggable="false"
         :src="`/images/knowledge/skills/${part}/${treeId}/${skillId}.jpg`" />
       <q-tooltip v-if="!platform.is.mobile" class="skill-tooltip font-kodia text-body2 text-center"
         :scroll-target="scrollTarget" size="xs" :anchor="`bottom ${info.position || 'middle'}`"

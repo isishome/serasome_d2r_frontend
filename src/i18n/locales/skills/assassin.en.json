@@ -1392,7 +1392,7 @@
                 ]
               },
               {
-                "text": "Average Fire Damage {0}-{1} Per Second",
+                "text": "Average Fire Damage: {0}-{1} Per Second",
                 "value": [
                   0,
                   [
@@ -2486,7 +2486,7 @@
             ],
             "stat": [
               {
-                "text": "Poison Damage {0}-{1}",
+                "text": "Poison Damage: {0}-{1}",
                 "value": [
                   0,
                   [
@@ -3177,7 +3177,7 @@
                 ]
               },
               {
-                "text": "Magic Damage {0}-{1}",
+                "text": "Magic Damage: {0}-{1}",
                 "value": [
                   0,
                   [
@@ -3838,7 +3838,7 @@
                 ]
               },
               {
-                "text": "Average Lightning Damage {0}-{1} Per Second",
+                "text": "Average Lightning Damage: {0}-{1} Per Second",
                 "value": [
                   0,
                   [
@@ -4111,7 +4111,7 @@
             ],
             "stat": [
               {
-                "text": "Lightning Damage {0}-{1}",
+                "text": "Lightning Damage: {0}-{1}",
                 "value": [
                   0,
                   [
@@ -4353,7 +4353,7 @@
             ],
             "stat": [
               {
-                "text": "Lightning Damage {0}-{1}",
+                "text": "Lightning Damage: {0}-{1}",
                 "value": [
                   0,
                   [
@@ -4489,7 +4489,7 @@
             "level": "30",
             "add": [
               {
-                "text": "Corpse Explosion Damage {0}-{1}% Of Corpse Life",
+                "text": "Corpse Explosion Damage: {0}-{1}% Of Corpse Life",
                 "value": [
                   [
                     40,
@@ -4632,7 +4632,7 @@
             ],
             "stat": [
               {
-                "text": "Lightning Damage {0}-{1}",
+                "text": "Lightning Damage: {0}-{1}",
                 "value": [
                   0,
                   [
@@ -4841,7 +4841,7 @@
             ],
             "stat": [
               {
-                "text": "Fire Damage {0}-{1}",
+                "text": "Fire Damage: {0}-{1}",
                 "value": [
                   0,
                   [
@@ -5108,7 +5108,7 @@
             ],
             "stat": [
               {
-                "text": "Fire Damage {0}-{1}",
+                "text": "Fire Damage: {0}-{1}",
                 "value": [
                   0,
                   [
@@ -5333,7 +5333,7 @@
             ],
             "stat": [
               {
-                "text": "Fire Damage {0}-{1}",
+                "text": "Fire Damage: {0}-{1}",
                 "value": [
                   0,
                   [

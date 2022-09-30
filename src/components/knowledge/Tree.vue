@@ -52,50 +52,52 @@ const reset = () => {
 </script>
 
 <template>
-  <div class="font-kodia relative-position" @contextmenu.prevent>
-    <q-inner-loading :showing="loading" class="loading">
-      <q-spinner-ball size="16%" color="secondary" />
-    </q-inner-loading>
-    <div class="tree-back">
-      <div class="row justify-between items-center word-keep">
-        <div class="col-1"></div>
-        <div class="col row justify-center q-gutter-sm">
-          <div v-for="(i,idx) in info.name.split(' ')" :key="idx" class="first-letter">
-            {{i}}</div>
-        </div>
-        <div class="col-1 text-right relative-position" style="z-index: 2;">
-          <q-btn v-if="treePoints > 0" :size="platform.is.mobile ? '7px' : '10px'" padding="2px" unelevated dense
-            color="secondary" class="text-weight-bold" @click="reset">
-            <q-icon name="close" />
-          </q-btn>
+  <div class="row justify-center">
+    <div class="font-kodia relative-position" @contextmenu.prevent>
+      <q-inner-loading :showing="loading" class="loading">
+        <q-spinner-ball size="16%" color="secondary" />
+      </q-inner-loading>
+      <div class="tree-back">
+        <div class="row justify-between items-center word-keep">
+          <div class="col-1"></div>
+          <div class="col row justify-center q-gutter-sm">
+            <div v-for="(i,idx) in info.name.split(' ')" :key="idx" class="first-letter">
+              {{i}}</div>
+          </div>
+          <div class="col-1 text-right relative-position" style="z-index: 2;">
+            <q-btn v-if="treePoints > 0" :size="platform.is.mobile ? '7px' : '10px'" padding="2px" unelevated dense
+              color="secondary" class="text-weight-bold" @click="reset">
+              <q-icon name="close" />
+            </q-btn>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="tree-center">
-      <img :src="`/images/knowledge/skills/${part}/${info.id}/back.jpg`" class="img no-pointer-events" />
-      <slot name="default" :mobile="mobile"></slot>
-    </div>
-    <div class="tree-back tree-bottom">
-      <div v-if="platform.is.mobile" class="row justify-center items-center q-gutter-y-xs relative-position"
-        :class="screen.lt.sm ? 'q-gutter-x-xs' : 'q-gutter-x-md'" style="z-index: 2;">
-        <div>
-          <q-checkbox dark dense size="xs" v-model="mobile.max" color="primary" :label="lang.max" />
-        </div>
-        <div>
-          <q-checkbox dark dense size="xs" v-model="mobile.remove" color="primary" :label="lang.back" />
-        </div>
-        <div>
-          <q-checkbox dark dense size="xs" v-model="mobile.info" color="primary" :label="lang.info" />
-        </div>
-        <div class="col-12">
-          <q-separator color="grey-9" />
-        </div>
-        <div class="col-12"></div>
+      <div class="tree-center">
+        <img :src="`/images/knowledge/skills/${part}/${info.id}/back.jpg`" class="img no-pointer-events" />
+        <slot name="default" :mobile="mobile"></slot>
       </div>
-      <div class="row justify-center items-center" :class="screen.gt.sm ? ' q-gutter-x-sm' : 'q-gutter-x-xs'">
-        <div>{{skillPoints}}</div>
-        <div v-for="(r,idx) in lang.remain.split(' ')" :key="idx" class="first-letter">
-          {{r}}</div>
+      <div class="tree-back tree-bottom">
+        <div v-if="platform.is.mobile" class="row justify-center items-center q-gutter-y-xs relative-position"
+          :class="screen.lt.sm ? 'q-gutter-x-xs' : 'q-gutter-x-md'" style="z-index: 2;">
+          <div>
+            <q-checkbox dark dense size="xs" v-model="mobile.max" color="primary" :label="lang.max" />
+          </div>
+          <div>
+            <q-checkbox dark dense size="xs" v-model="mobile.remove" color="primary" :label="lang.back" />
+          </div>
+          <div>
+            <q-checkbox dark dense size="xs" v-model="mobile.info" color="primary" :label="lang.info" />
+          </div>
+          <div class="col-12">
+            <q-separator color="grey-9" />
+          </div>
+          <div class="col-12"></div>
+        </div>
+        <div class="row justify-center items-center" :class="screen.gt.sm ? ' q-gutter-x-sm' : 'q-gutter-x-xs'">
+          <div>{{skillPoints}}</div>
+          <div v-for="(r,idx) in lang.remain.split(' ')" :key="idx" class="first-letter">
+            {{r}}</div>
+        </div>
       </div>
     </div>
   </div>
@@ -105,7 +107,7 @@ const reset = () => {
 .tree-back {
   position: relative;
   max-width: 589px;
-  font-size: 1.3em;
+  font-size: 1.4em;
   line-height: 1.5em;
   color: rgb(230, 230, 230);
   text-align: center;
@@ -118,10 +120,6 @@ const reset = () => {
 
 .body--dark .tree-back {
   box-shadow: inset 0 0 10px 5px rgb(0, 0, 0), 0 0 0 1px rgb(46, 27, 0);
-}
-
-.tree-back:lang(en)::first-letter {
-  font-size: 1.2em;
 }
 
 @media screen and (max-width:599px) {
@@ -160,7 +158,7 @@ const reset = () => {
 }
 
 .first-letter:lang(en)::first-letter {
-  font-size: 1.2em;
+  font-size: 1.4em;
 }
 
 .loading {

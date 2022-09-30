@@ -1435,7 +1435,7 @@
             "level": "6",
             "stat": [
               {
-                "text": "Fire Damage {0}-{1} To Your Attack",
+                "text": "Fire Damage: {0}-{1} To Your Attack",
                 "value": [
                   0,
                   [
@@ -1521,7 +1521,7 @@
                 ]
               },
               {
-                "text": "Fire Damage {0}-{1}",
+                "text": "Fire Damage: {0}-{1}",
                 "value": [
                   0,
                   [
@@ -1689,7 +1689,7 @@
             "level": "18",
             "stat": [
               {
-                "text": "Cold Damage {0}-{1} To Your Attack",
+                "text": "Cold Damage: {0}-{1} To Your Attack",
                 "value": [
                   0,
                   [
@@ -1775,7 +1775,7 @@
                 ]
               },
               {
-                "text": "Cold Damage {0}-{1}",
+                "text": "Cold Damage: {0}-{1}",
                 "value": [
                   0,
                   [
@@ -1976,7 +1976,7 @@
             "level": "24",
             "stat": [
               {
-                "text": "Lightning Damage {0}-{1} To Your Attack",
+                "text": "Lightning Damage: {0}-{1} To Your Attack",
                 "value": [
                   0,
                   [
@@ -2062,7 +2062,7 @@
                 ]
               },
               {
-                "text": "Lightning Damage {0}-{1}",
+                "text": "Lightning Damage: {0}-{1}",
                 "value": [
                   0,
                   [
@@ -2326,7 +2326,7 @@
                 ]
               },
               {
-                "text": "Magic Damage {0}-{1}",
+                "text": "Magic Damage: {0}-{1}",
                 "value": [
                   0,
                   [
@@ -3193,7 +3193,7 @@
             "level": "6",
             "stat": [
               {
-                "text": "Magic Damage {0}-{1}",
+                "text": "Magic Damage: {0}-{1}",
                 "value": [
                   0,
                   [
@@ -3489,7 +3489,7 @@
             ],
             "stat": [
               {
-                "text": "Magic Damage {0}-{1}",
+                "text": "Magic Damage: {0}-{1}",
                 "value": [
                   0,
                   [
@@ -3689,7 +3689,7 @@
             ],
             "stat": [
               {
-                "text": "Lightning Damage {0}-{1}",
+                "text": "Lightning Damage: {0}-{1}",
                 "value": [
                   0,
                   [
@@ -3775,7 +3775,7 @@
                 ]
               },
               {
-                "text": "Holy Bolt Damage {0}-{1}",
+                "text": "Holy Bolt Damage: {0}-{1}",
                 "value": [
                   0,
                   [
@@ -4167,7 +4167,7 @@
             ],
             "stat": [
               {
-                "text": "Smite Damage {0}-{1}",
+                "text": "Smite Damage: {0}-{1}",
                 "value": [
                   0,
                   [

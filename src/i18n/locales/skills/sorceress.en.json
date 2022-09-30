@@ -25,7 +25,7 @@
             "level": "6",
             "stat": [
               {
-                "text": "Cold Damage {0}-{1}",
+                "text": "Cold Damage: {0}-{1}",
                 "value": [
                   0,
                   [
@@ -262,7 +262,7 @@
             ],
             "stat": [
               {
-                "text": "Cold Damage {0}-{1}",
+                "text": "Cold Damage: {0}-{1}",
                 "value": [
                   0,
                   [
@@ -454,7 +454,7 @@
             "level": "30",
             "stat": [
               {
-                "text": "Cold Damage {0}-{1}",
+                "text": "Cold Damage: {0}-{1}",
                 "value": [
                   0,
                   [
@@ -668,7 +668,7 @@
             ],
             "stat": [
               {
-                "text": "Cold Damage {0}-{1}",
+                "text": "Cold Damage: {0}-{1}",
                 "value": [
                   0,
                   [
@@ -886,7 +886,7 @@
             "level": "6",
             "stat": [
               {
-                "text": "Cold Damage {0}-{1}",
+                "text": "Cold Damage: {0}-{1}",
                 "value": [
                   0,
                   [
@@ -1144,7 +1144,7 @@
             ],
             "stat": [
               {
-                "text": "Cold Damage {0}-{1}",
+                "text": "Cold Damage: {0}-{1}",
                 "value": [
                   0,
                   [
@@ -1652,7 +1652,7 @@
                 ]
               },
               {
-                "text": "Cold Damage {0}-{1}",
+                "text": "Cold Damage: {0}-{1}",
                 "value": [
                   0,
                   [
@@ -1932,7 +1932,7 @@
                 ]
               },
               {
-                "text": "Cold Damage {0}-{1}",
+                "text": "Cold Damage: {0}-{1}",
                 "value": [
                   0,
                   [
@@ -2233,7 +2233,7 @@
             "level": "12",
             "stat": [
               {
-                "text": "Lightning Damage {0}-{1}",
+                "text": "Lightning Damage: {0}-{1}",
                 "value": [
                   0,
                   [
@@ -2409,7 +2409,7 @@
             ],
             "stat": [
               {
-                "text": "Lightning Damage {0}-{1}",
+                "text": "Lightning Damage: {0}-{1}",
                 "value": [
                   0,
                   [
@@ -2587,7 +2587,7 @@
                 ]
               },
               {
-                "text": "Lightning Damage {0}-{1}",
+                "text": "Lightning Damage: {0}-{1}",
                 "value": [
                   0,
                   [
@@ -2755,7 +2755,7 @@
             "level": "12",
             "stat": [
               {
-                "text": "Lightning Damage {0}-{1}",
+                "text": "Lightning Damage: {0}-{1}",
                 "value": [
                   0,
                   [
@@ -2977,7 +2977,7 @@
                 ]
               },
               {
-                "text": "Lightning Damage {0}-{1}",
+                "text": "Lightning Damage: {0}-{1}",
                 "value": [
                   0,
                   [
@@ -3261,7 +3261,7 @@
             ],
             "stat": [
               {
-                "text": "Lightning Damage {0}-{1}",
+                "text": "Lightning Damage: {0}-{1}",
                 "value": [
                   0,
                   [
@@ -3577,7 +3577,7 @@
             ],
             "stat": [
               {
-                "text": "Average Fire Damage {0}-{1} Per Second",
+                "text": "Average Fire Damage: {0}-{1} Per Second",
                 "value": [
                   0,
                   [
@@ -3765,7 +3765,7 @@
             "level": "12",
             "stat": [
               {
-                "text": "Average Fire Damage {0}-{1} Per Second",
+                "text": "Average Fire Damage: {0}-{1} Per Second",
                 "value": [
                   0,
                   [
@@ -4001,7 +4001,7 @@
             ],
             "stat": [
               {
-                "text": "Average Fire Damage {0}-{1} Per Second",
+                "text": "Average Fire Damage: {0}-{1} Per Second",
                 "value": [
                   0,
                   [
@@ -4238,7 +4238,7 @@
             ],
             "stat": [
               {
-                "text": "Fire Damage {0}-{1}",
+                "text": "Fire Damage: {0}-{1}",
                 "value": [
                   0,
                   [
@@ -4430,7 +4430,7 @@
             ],
             "stat": [
               {
-                "text": "Fire Damage {0}-{1}",
+                "text": "Fire Damage: {0}-{1}",
                 "value": [
                   0,
                   [
@@ -4648,7 +4648,7 @@
             ],
             "stat": [
               {
-                "text": "Fire Damage {0}-{1}",
+                "text": "Fire Damage: {0}-{1}",
                 "value": [
                   0,
                   [
@@ -4734,7 +4734,7 @@
                 ]
               },
               {
-                "text": "Average Fire Damage {0}-{1} Per Second",
+                "text": "Average Fire Damage: {0}-{1} Per Second",
                 "value": [
                   0,
                   [
@@ -5091,7 +5091,7 @@
                 ]
               },
               {
-                "text": "Fire Damage {0}-{1}",
+                "text": "Fire Damage: {0}-{1}",
                 "value": [
                   0,
                   [
@@ -5307,7 +5307,7 @@
             ],
             "stat": [
               {
-                "text": "Hydra Fire Damage {0}-{1}",
+                "text": "Hydra Fire Damage: {0}-{1}",
                 "value": [
                   0,
                   [
