@@ -163,10 +163,10 @@ watch(() => route.params.part, (val, old) => {
             <q-icon flat class="text-secondary rotate-180 q-mr-xs text-title" name="align_vertical_center"
               size="24px" />
             <div class="gt-md font-kodia column items-center">
-              <div class="text-h5 text-amber text-title" style="line-height:1">DIABLO® II</div>
+              <div class="text-h5 text-primary text-title" style="line-height:1">DIABLO® II</div>
               <div class="text-caption text-primary" style="line-height:1">Resurrected</div>
             </div>
-            <div class="lt-lg font-kodia text-h4 text-amber text-title">D2R</div>
+            <div class="lt-lg font-kodia text-h4 text-primary text-title">D2R</div>
           </div>
         </q-toolbar-title>
         <div class="q-pl-xl gt-md row items-center justify-start q-gutter-x-sm nav font-kodia">
@@ -186,6 +186,7 @@ watch(() => route.params.part, (val, old) => {
         </div>
         <q-space class="gt-md" />
         <div class="row justify-end items-center func" :class="screen.gt.sm ? 'q-gutter-x-sm' : ''">
+          <q-icon class="lt-lg" name="none" size="sm" />
           <q-btn class="gt-md" :ripple="false" dense flat icon="language">
             <q-menu anchor="bottom end" self="top end">
               <q-list separator bordered>

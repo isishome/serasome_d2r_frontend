@@ -157,12 +157,12 @@ watch(() => route.query.page, (val, old) => {
   <div class="contents-wrap" v-show="!(search && data.length === 0)">
     <div class="row justify-between items-center q-gutter-x-xs" :class="search ? '' : 'lt-md'">
       <div class="row items-center">
-        <div class="q-ml-xs text-uppercase font-kodia">{{ secInfo.label }}</div>
+        <div class="q-ml-xs q-mb-sm text-uppercase font-kodia">{{ secInfo.label }}</div>
       </div>
     </div>
     <Table ref="table" :pagination.sync="pagination" :columns="columns[sec] || columns.default" :data="data"
       :search="search" :grid="$q.screen.lt.lg" @request="getList">
-      <template v-if="!search" #top-right>
+      <template v-if="!search && (sec === 'trade' || signStatus)" #top-right>
         <div class="row justify-end q-gutter-x-md" :class="[$q.screen.gt.sm ? '' : 'no-margin']">
           <div v-if="sec === 'trade'">
             <q-checkbox dense v-model="filter.finish" val="d2r" class="text-caption" :label="t('d2r.bbs.finish')"
@@ -319,23 +319,17 @@ watch(() => route.query.page, (val, old) => {
 </template>
 
 <style scoped>
-.contents-wrap:deep(.q-table__bottom) {
-  border: none !important;
+.contents-on:deep(thead) {
+  background-color: var(--q-light-half);
 }
 
-.contents-wrap:deep(tbody),
-.contents-wrap:deep(.q-table__bottom) {
-  background-color: rgba(254, 254, 254, .8);
+.contents-on:deep(thead th) {
+  font-size: 1.1em !important;
+  font-weight: 700 !important;
 }
 
-.body--dark .contents-wrap:deep(tbody),
-.body--dark .contents-wrap:deep(.q-table__bottom) {
-  background-color: rgba(20, 20, 20, .5);
-}
-
-.contents-wrap:deep(thead th) {
-  font-weight: bold !important;
-  font-size: 1em !important;
+.body--dark .contents-on:deep(thead) {
+  background-color: rgb(0, 0, 0);
 }
 
 .d2r-card-list {

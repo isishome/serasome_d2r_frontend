@@ -58,7 +58,7 @@ defineExpose({
 </script>
 
 <template>
-  <div class="table-wrap" :class="tableClass">
+  <div class="contents-on" :class="tableClass">
     <q-table class="no-padding" :columns="columns" :rows="data" row-key="index"
       card-container-class="bg-transparent non-selectable" card-class="bg-transparent non-selectable" :grid="grid"
       :pagination.sync="paginationClone" :loading="loading" no-data-label @request="onRequest" separator="none"
@@ -95,7 +95,7 @@ defineExpose({
       </template>
     </q-table>
     <div>
-      <div class="row justify-between items-baseline">
+      <div class="row justify-between items-baseline q-pa-md">
         <div v-if="!search" class="col-12 col-sm">
           <slot name="search">
           </slot>
