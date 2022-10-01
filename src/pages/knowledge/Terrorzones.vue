@@ -17,8 +17,11 @@ const calc = () => {
   const now = Date.now()
   const start = Math.floor(now / hour) * hour
   const span = start + hour - now
-  if (span < -1000)
-    getInfo()
+  if (span < 2000) {
+    setTimeout(() => {
+      getInfo()
+    }, 3000)
+  }
   return date.formatDate(span, 'mm:ss')
 }
 
