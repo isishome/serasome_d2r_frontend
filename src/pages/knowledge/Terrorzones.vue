@@ -54,6 +54,9 @@ getInfo()
 
 <template>
   <div>
+    <div class="font-kodia text-center text-h4 text-weight-bold text-primary q-pt-sm q-pb-xl word-keep">
+      {{tm('d2r.knowledge.list').find(l => l.value === 'terrorzones').name}}
+    </div>
     <q-card v-if="terrorZone.value" class="terror-zone no-shadow text-body2 word-keep">
       <q-card-section horizontal>
         <q-img src="/images/knowledge/terrorzones/back.webp">

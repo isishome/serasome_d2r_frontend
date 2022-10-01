@@ -3,7 +3,7 @@ import { reactive } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useQuasar } from 'quasar'
 
-const { t, tm } = useI18n()
+const { t, tm, rt } = useI18n()
 const $q = useQuasar()
 
 const pagination = reactive({
@@ -22,6 +22,9 @@ const columns = reactive([
 
 <template>
   <div>
+    <div class="font-kodia text-center text-h4 text-weight-bold text-primary q-pt-sm q-pb-xl word-keep">
+      {{tm('d2r.knowledge.list').find(l => l.value === 'shrines').name}}
+    </div>
     <q-table class="no-shadow knowledge-table" table-header-class="text-left" card-container-class="q-col-gutter-md"
       :grid="$q.screen.lt.lg" :columns="columns" :rows="data" row-key="name" :pagination="pagination" dense bordered
       hide-pagination wrap-cells>
