@@ -62,7 +62,7 @@ getInfo()
             <div class="text-subtitle2">{{terrorZone.superUniques}}</div>
           </div>
         </q-img>
-        <q-card-section class="column justify-between items-start q-gutter-y-sm">
+        <q-card-section class="column justify-between items-start q-gutter-y-sm word-keep" style="min-width:120px">
           <div class="row justify-center q-gutter-x-xs text-caption">
             <q-tooltip anchor="top middle" self="center middle">
               {{lang.immunities}}
@@ -70,7 +70,7 @@ getInfo()
             <div v-for="i in terrorZone.immunities" :key="i.value" :style="`color:${immunities[i].color}`">
               {{immunities[i].label}}</div>
           </div>
-          <div class="row items-center q-gutter-x-sm">
+          <div class="row items-center q-gutter-x-sm no-wrap">
             <q-icon name="inbox" size="sm">
               <q-tooltip anchor="top middle" self="center middle">
                 {{lang.bossPacks}}
@@ -78,7 +78,7 @@ getInfo()
             </q-icon>
             <div>{{terrorZone.bossPacks.join(' - ')}}</div>
           </div>
-          <div class="row items-center q-gutter-x-sm">
+          <div class="row items-center q-gutter-x-sm no-wrap">
             <q-icon color="yellow-8" name="inventory_2" size="sm">
               <q-tooltip anchor="top middle" self="center middle">
                 {{lang.sparklyChests}}
@@ -86,7 +86,7 @@ getInfo()
             </q-icon>
             <div>{{terrorZone.sparklyChests === 0 ? '' : terrorZone.sparklyChests}}</div>
           </div>
-          <div class="row items-center q-gutter-x-sm">
+          <div class="row items-center q-gutter-x-sm no-wrap">
             <q-icon name="schedule" size="sm">
               <q-tooltip anchor="top middle" self="center middle">
                 {{lang.timeRemaining}}
