@@ -31,7 +31,7 @@ router.beforeEach(async (to) => {
   let title = 'Sera\'s Diablo® II Resurrected'
 
   if (isKnowledge)
-    title = `${pascalCase(to.params.section)} : ${pascalCase(to.params.part)} | Sera\'s Diablo® II Resurrected`
+    title = `${pascalCase(to.params.section)}${to.params.part ? ' : ' + pascalCase(to.params.part) : ''} | Sera\'s Diablo® II Resurrected`
   else if (isBbs)
     title = `${pascalCase(to.params.sec)} | Sera\'s Diablo® II Resurrected`
 
