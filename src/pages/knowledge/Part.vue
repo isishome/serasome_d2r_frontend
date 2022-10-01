@@ -35,6 +35,9 @@ const loadComponent = (s, p) => {
     case 'shrines':
       partComponent.value = defineAsyncComponent(() => import('@/pages/knowledge/Shrines.vue'))
       break
+    case 'terrorzones':
+      partComponent.value = defineAsyncComponent(() => import('@/pages/knowledge/Terrorzones.vue'))
+      break
     default:
       partComponent.value = defineAsyncComponent(() => import(`@/pages/knowledge/${s}/${pascalCase(p)}.vue`))
   }

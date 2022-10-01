@@ -1,0 +1,626 @@
+{
+  "terrorzones": [
+    {
+      "value": "terrorzones",
+      "label": "Terror Zones",
+      "img": ""
+    }
+  ],
+  "immunities": {
+    "f": {
+      "label": "Fire",
+      "color": "#f44336"
+    },
+    "c": {
+      "label": "Cold",
+      "color": "#8383ff"
+    },
+    "l": {
+      "label": "Lightning",
+      "color": "#fae04e"
+    },
+    "p": {
+      "label": "Poison",
+      "color": "#5bc82e"
+    },
+    "m": {
+      "label": "Magic",
+      "color": "#d86f23"
+    },
+    "ph": {
+      "label": "Physical",
+      "color": "#918a6b"
+    }
+  },
+  "terrorzonesLang": {
+    "act": "Act",
+    "zone": "Zone",
+    "immunities": "Immunities",
+    "superUniques": "Super Unique Monster",
+    "bossPacks": "Boss Packs",
+    "sparklyChests": "Sparkly Chests",
+    "timeRemaining": "Time Remaining"
+  },
+  "terrorzonesData": {
+    "act1": {
+      "label": "Act 1",
+      "zones": [
+        {
+          "value": "bmadoe",
+          "label": "Blood Moor and Den of Evil",
+          "immunities": [
+            "f",
+            "c"
+          ],
+          "bossPacks": [
+            7,
+            9
+          ],
+          "superUniques": "Corpsefire",
+          "sparklyChests": 0
+        },
+        {
+          "value": "cpatc",
+          "label": "Cold Plains and The Cave",
+          "immunities": [
+            "f",
+            "c",
+            "l"
+          ],
+          "bossPacks": [
+            13,
+            16
+          ],
+          "superUniques": "Bishibosh and Coldcrow",
+          "sparklyChests": 1
+        },
+        {
+          "value": "bgtcatm",
+          "label": "Burial Grounds, The Crypt, and The Mausoleum",
+          "immunities": [
+            "l"
+          ],
+          "bossPacks": [
+            8,
+            10
+          ],
+          "superUniques": "Blood Raven and Bonebreaker",
+          "sparklyChests": 2
+        },
+        {
+          "value": "sf",
+          "label": "Stony Field",
+          "immunities": [
+            "f",
+            "c",
+            "l",
+            "p"
+          ],
+          "bossPacks": [
+            7,
+            9
+          ],
+          "superUniques": "Rakanishu",
+          "sparklyChests": 0
+        },
+        {
+          "value": "dw",
+          "label": "Dark Wood",
+          "immunities": [
+            "f",
+            "c",
+            "p"
+          ],
+          "bossPacks": [
+            7,
+            9
+          ],
+          "superUniques": "Treehead Woodfist",
+          "sparklyChests": 0
+        },
+        {
+          "value": "tft",
+          "label": "The Forgotten Tower",
+          "immunities": [
+            "f",
+            "l",
+            "ph"
+          ],
+          "bossPacks": [
+            15,
+            20
+          ],
+          "superUniques": "The Countess",
+          "sparklyChests": 0
+        },
+        {
+          "value": "j",
+          "label": "Jail",
+          "immunities": [
+            "f",
+            "c",
+            "p",
+            "ph"
+          ],
+          "bossPacks": [
+            18,
+            24
+          ],
+          "superUniques": "Pitspawn Fouldog",
+          "sparklyChests": 0
+        },
+        {
+          "value": "cac",
+          "label": "Cathedral and Catacombs",
+          "immunities": [
+            "f",
+            "c",
+            "l",
+            "ph"
+          ],
+          "bossPacks": [
+            27,
+            35
+          ],
+          "superUniques": "Bone Ash and Andariel",
+          "sparklyChests": 0
+        },
+        {
+          "value": "tp",
+          "label": "The Pit",
+          "immunities": [
+            "f",
+            "c"
+          ],
+          "bossPacks": [
+            8,
+            11
+          ],
+          "superUniques": "",
+          "sparklyChests": 1
+        },
+        {
+          "value": "t",
+          "label": "Tristram",
+          "immunities": [
+            "f",
+            "l",
+            "p"
+          ],
+          "bossPacks": [
+            5,
+            6
+          ],
+          "superUniques": "Griswold",
+          "sparklyChests": 0
+        },
+        {
+          "value": "mmf",
+          "label": "Moo Moo Farm",
+          "immunities": [],
+          "bossPacks": [
+            6,
+            8
+          ],
+          "superUniques": "The Cow King",
+          "sparklyChests": 0
+        }
+      ]
+    },
+    "act2": {
+      "label": "Act 2",
+      "zones": [
+        {
+          "value": "s",
+          "label": "Sewers",
+          "immunities": [
+            "f",
+            "c",
+            "p",
+            "m"
+          ],
+          "bossPacks": [
+            18,
+            24
+          ],
+          "superUniques": "Radament",
+          "sparklyChests": 0
+        },
+        {
+          "value": "rwast",
+          "label": "Rocky Waste and Stony Tomb",
+          "immunities": [
+            "f",
+            "c",
+            "l",
+            "p",
+            "m"
+          ],
+          "bossPacks": [
+            17,
+            23
+          ],
+          "superUniques": "Creeping Feature",
+          "sparklyChests": 1
+        },
+        {
+          "value": "dhahotd",
+          "label": "Dry Hills and Halls of the Dead",
+          "immunities": [
+            "f",
+            "c",
+            "l",
+            "p"
+          ],
+          "bossPacks": [
+            20,
+            27
+          ],
+          "superUniques": "Bloodwitch the Wild",
+          "sparklyChests": 0
+        },
+        {
+          "value": "fo",
+          "label": "Far Oasis",
+          "immunities": [],
+          "bossPacks": [
+            7,
+            9
+          ],
+          "superUniques": "",
+          "sparklyChests": 0
+        },
+        {
+          "value": "lcvosacvt",
+          "label": "Lost City, Valley of Snakes, and Claw Viper Temple",
+          "immunities": [
+            "f",
+            "c",
+            "l",
+            "p",
+            "m"
+          ],
+          "bossPacks": [
+            21,
+            28
+          ],
+          "superUniques": "Fangskin",
+          "sparklyChests": 0
+        },
+        {
+          "value": "as",
+          "label": "Arcane Sanctuary",
+          "immunities": [
+            "f",
+            "c",
+            "l",
+            "p",
+            "ph"
+          ],
+          "bossPacks": [
+            7,
+            9
+          ],
+          "superUniques": "The Summoner",
+          "sparklyChests": 0
+        },
+        {
+          "value": "trtatrc",
+          "label": "Tal Rasha's Tombs and Tal Rasha's Chamber",
+          "immunities": [
+            "f",
+            "c",
+            "l",
+            "p",
+            "m"
+          ],
+          "bossPacks": [
+            49,
+            63
+          ],
+          "superUniques": "Ancient Kaa The Soulless and Duriel",
+          "sparklyChests": 6
+        }
+      ]
+    },
+    "act3": {
+      "label": "Act 3",
+      "zones": [
+        {
+          "value": "sfasc",
+          "label": "Spider Forest and Spider Cavern",
+          "immunities": [
+            "f",
+            "c",
+            "l",
+            "p"
+          ],
+          "bossPacks": [
+            14,
+            20
+          ],
+          "superUniques": "Sszark The Burning",
+          "sparklyChests": 0
+        },
+        {
+          "value": "fjafd",
+          "label": "Flayer Jungle and Flayer Dungeon",
+          "immunities": [
+            "f",
+            "c",
+            "l",
+            "p",
+            "m",
+            "ph"
+          ],
+          "bossPacks": [
+            22,
+            29
+          ],
+          "superUniques": "Stormtree and Witch Doctor Endugu",
+          "sparklyChests": 0
+        },
+        {
+          "value": "kbrtadf",
+          "label": "Kurast Bazaar, Ruined Temple, and Disused Fane",
+          "immunities": [
+            "f",
+            "c",
+            "l",
+            "p",
+            "m",
+            "ph"
+          ],
+          "bossPacks": [
+            15,
+            17
+          ],
+          "superUniques": "Battlemaid Sarina",
+          "sparklyChests": 0
+        },
+        {
+          "value": "ks",
+          "label": "Kurast Sewers",
+          "immunities": [
+            "c",
+            "l",
+            "p",
+            "m"
+          ],
+          "bossPacks": [
+            12,
+            14
+          ],
+          "superUniques": "Icehawk Riftwing",
+          "sparklyChests": 1
+        },
+        {
+          "value": "t",
+          "label": "Travincal",
+          "immunities": [
+            "f",
+            "c",
+            "l",
+            "p"
+          ],
+          "bossPacks": [
+            6,
+            8
+          ],
+          "superUniques": "Ismail Vilehand, Toorc Icefist and Geleb Flamefinger",
+          "sparklyChests": 0
+        },
+        {
+          "value": "doh",
+          "label": "Durance of Hate",
+          "immunities": [
+            "f",
+            "c",
+            "l",
+            "p"
+          ],
+          "bossPacks": [
+            15,
+            21
+          ],
+          "superUniques": "Wyand Voidbringer, Maffer Dragonhand, Bremm Sparkfist and Mephisto",
+          "sparklyChests": 0
+        }
+      ]
+    },
+    "act4": {
+      "label": "Act 4",
+      "zones": [
+        {
+          "value": "osapod",
+          "label": "Outer Steppes and Plains of Despair",
+          "immunities": [
+            "f",
+            "c",
+            "l",
+            "p"
+          ],
+          "bossPacks": [
+            16,
+            20
+          ],
+          "superUniques": "Izual",
+          "sparklyChests": 0
+        },
+        {
+          "value": "rofacotd",
+          "label": "River of Flame and City of the Damned",
+          "immunities": [
+            "f",
+            "c",
+            "l",
+            "p"
+          ],
+          "bossPacks": [
+            14,
+            17
+          ],
+          "superUniques": "Hephasto The Armorer",
+          "sparklyChests": 0
+        },
+        {
+          "value": "cs",
+          "label": "Chaos Sanctuary",
+          "immunities": [
+            "f",
+            "c",
+            "l"
+          ],
+          "bossPacks": [
+            6,
+            7
+          ],
+          "superUniques": "Grand Vizier of Chaos, Infector of Souls, Lord De Seis and Diablo",
+          "sparklyChests": 0
+        }
+      ]
+    },
+    "act5": {
+      "label": "Act 5",
+      "zones": [
+        {
+          "value": "bf",
+          "label": "Bloody Foothills",
+          "immunities": [
+            "f",
+            "c",
+            "l",
+            "p"
+          ],
+          "bossPacks": [
+            4,
+            6
+          ],
+          "superUniques": "Dac Farren and Shenk The Overseer",
+          "sparklyChests": 0
+        },
+        {
+          "value": "fh",
+          "label": "Frigid Highlands",
+          "immunities": [
+            "f",
+            "c",
+            "l",
+            "p",
+            "m",
+            "ph"
+          ],
+          "bossPacks": [
+            9,
+            11
+          ],
+          "superUniques": "Eldritch the Rectifier, Sharptooth Slayer and Eyeback the Unleashed",
+          "sparklyChests": 0
+        },
+        {
+          "value": "gt",
+          "label": "Glacial Trail",
+          "immunities": [
+            "f",
+            "c",
+            "l",
+            "p",
+            "ph"
+          ],
+          "bossPacks": [
+            7,
+            9
+          ],
+          "superUniques": "Bonesaw Breaker",
+          "sparklyChests": 0
+        },
+        {
+          "value": "cpafr",
+          "label": "Crystalline Passage and Frozen River",
+          "immunities": [
+            "f",
+            "c",
+            "l",
+            "p",
+            "m",
+            "ph"
+          ],
+          "bossPacks": [
+            13,
+            17
+          ],
+          "superUniques": "Frozenstein",
+          "sparklyChests": 0
+        },
+        {
+          "value": "ap",
+          "label": "Arreat Plateau",
+          "immunities": [
+            "f",
+            "c",
+            "l",
+            "p"
+          ],
+          "bossPacks": [
+            9,
+            11
+          ],
+          "superUniques": "Thresh Socket",
+          "sparklyChests": 0
+        },
+        {
+          "value": "ntath",
+          "label": "Nihlathak's Temple and Temple Halls",
+          "immunities": [
+            "f",
+            "c",
+            "l",
+            "p",
+            "m",
+            "ph"
+          ],
+          "bossPacks": [
+            12,
+            14
+          ],
+          "superUniques": "Pindleskin and Nihlathak",
+          "sparklyChests": 0
+        },
+        {
+          "value": "awaic",
+          "label": "Ancient's Way and Icy Cellar",
+          "immunities": [
+            "c",
+            "l",
+            "p",
+            "ph"
+          ],
+          "bossPacks": [
+            6,
+            8
+          ],
+          "superUniques": "Snapchip Shatter",
+          "sparklyChests": 1
+        },
+        {
+          "value": "wktodawc",
+          "label": "Worldstone Keep, Throne of Destruction, and Worldstone Chamber",
+          "immunities": [
+            "f",
+            "c",
+            "l",
+            "p",
+            "m",
+            "ph"
+          ],
+          "bossPacks": [
+            22,
+            29
+          ],
+          "superUniques": "Snapchip Shatter, Colenzo The Annihilator, Achmel The Cursed, Bartuc The Bloody, Ventar The Unholy, Lister The Tormentor and Baal",
+          "sparklyChests": 0
+        }
+      ]
+    }
+  }
+}

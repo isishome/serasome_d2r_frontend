@@ -226,6 +226,11 @@
           "value": "maps",
           "name": "Maps",
           "icon": "map"
+        },
+        {
+          "value": "terrorzones",
+          "name": "Terror Zones",
+          "icon": "activity_zone"
         }
       ],
       "skills": {

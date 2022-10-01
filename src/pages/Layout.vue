@@ -179,7 +179,7 @@ watch(() => route.params.part, (val, old) => {
               no-caps padding="0 5px" size="18px" :label="t('d2r.knowledge.title')" />
             <template v-if="isKnowledge">
               <q-separator color="primary" class="full-width" />
-              <q-btn-toggle flat dense v-model="_section" toggle-color="primary" class="section" padding="0 sm"
+              <q-btn-toggle flat dense v-model="_section" toggle-color="primary" class="section" padding="0 10px"
                 :options="sectionList" @update:model-value="toSection" type="a" :ripple="false" />
             </template>
           </div>
@@ -401,10 +401,11 @@ watch(() => route.params.part, (val, old) => {
 .part:deep(.q-btn.active:after) {
   content: '';
   top: 0;
-  left: 0;
+  right: 0;
   bottom: 0;
-  width: 4px;
+  width: 8px;
   background-color: var(--q-primary) !important;
+  box-shadow: inset 0 0 1px 0 var(--q-dark-page);
   position: absolute;
   z-index: 1;
 }
@@ -419,7 +420,7 @@ watch(() => route.params.part, (val, old) => {
   content: attr(data-class);
   z-index: 1;
   left: 50%;
-  bottom: 6px;
+  bottom: 0;
   line-height: 1.2 !important;
   transform: translateX(-50%);
   color: var(--q-dark-page);

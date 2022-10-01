@@ -226,6 +226,11 @@
           "value": "maps",
           "name": "지도",
           "icon": "map"
+        },
+        {
+          "value": "terrorzones",
+          "name": "공포의 영역",
+          "icon": "activity_zone"
         }
       ],
       "skills": {
