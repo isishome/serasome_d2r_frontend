@@ -17,9 +17,9 @@ const calc = () => {
   const now = Date.now()
   const start = Math.floor(now / hour) * hour
   const span = start + hour - now
-  if (span < 2000) {
+  if (span <= 2000) {
     setTimeout(() => {
-      getInfo()
+      getInfo(true)
     }, 3000)
   }
   return date.formatDate(span, 'mm:ss')
@@ -31,8 +31,12 @@ const time = setInterval(() => {
   timeRemaining.value = calc()
 }, 1000)
 
-const getInfo = () => {
-  axios.get('/d2r/knowledge/terrorzones')
+const getInfo = (force) => {
+  axios.get('/d2r/knowledge/terrorzones', {
+    params: {
+      force: force
+    }
+  })
     .then((response) => {
       if (response && response.data && response.data.terrorZone) {
         const act = response.data.terrorZone.act
@@ -59,13 +63,13 @@ getInfo()
     </div>
     <q-card v-if="terrorZone.value" class="terror-zone no-shadow text-body2 word-keep">
       <q-card-section horizontal>
-        <q-img src="/images/knowledge/terrorzones/back.webp">
+        <q-img :src="terrorZone.img">
           <div class="absolute-bottom">
             <div class="text-h6">{{terrorZone.label}}</div>
             <div class="text-subtitle2">{{terrorZone.superUniques}}</div>
           </div>
         </q-img>
-        <q-card-section class="column justify-between items-start q-gutter-y-sm word-keep" style="min-width:120px">
+        <q-card-section class="column justify-around items-start q-gutter-y-sm word-keep" style="min-width:120px">
           <div class="row justify-center q-gutter-x-xs text-caption">
             <q-tooltip anchor="top middle" self="center middle">
               {{lang.immunities}}
@@ -74,27 +78,24 @@ getInfo()
               {{immunities[i].label}}</div>
           </div>
           <div class="row items-center q-gutter-x-sm no-wrap">
-            <q-icon name="inbox" size="sm">
-              <q-tooltip anchor="top middle" self="center middle">
-                {{lang.bossPacks}}
-              </q-tooltip>
-            </q-icon>
+            <q-tooltip anchor="top middle" self="center middle">
+              {{lang.bossPacks}}
+            </q-tooltip>
+            <q-icon name="inbox" size="sm" />
             <div>{{terrorZone.bossPacks.join(' - ')}}</div>
           </div>
-          <div class="row items-center q-gutter-x-sm no-wrap">
-            <q-icon color="yellow-8" name="inventory_2" size="sm">
-              <q-tooltip anchor="top middle" self="center middle">
-                {{lang.sparklyChests}}
-              </q-tooltip>
-            </q-icon>
+          <div v-if="terrorZone.sparklyChests !== 0" class="row items-center q-gutter-x-sm no-wrap">
+            <q-tooltip anchor="top middle" self="center middle">
+              {{lang.sparklyChests}}
+            </q-tooltip>
+            <q-icon color="yellow-8" name="inventory_2" size="sm" />
             <div>{{terrorZone.sparklyChests === 0 ? '' : terrorZone.sparklyChests}}</div>
           </div>
           <div class="row items-center q-gutter-x-sm no-wrap">
-            <q-icon name="schedule" size="sm">
-              <q-tooltip anchor="top middle" self="center middle">
-                {{lang.timeRemaining}}
-              </q-tooltip>
-            </q-icon>
+            <q-tooltip anchor="top middle" self="center middle">
+              {{lang.timeRemaining}}
+            </q-tooltip>
+            <q-icon name="schedule" size="24px" />
             <div class="text-body1">{{timeRemaining}}</div>
           </div>
         </q-card-section>
@@ -120,7 +121,7 @@ getInfo()
           <td class="immunities">
             <div class="row justify-start q-gutter-x-xs text-caption">
               <div v-for="i in zone.immunities" :key="i.value" :style="`color:${immunities[i].color}`">
-                {{immunities[i].label.charAt(0)}}</div>
+                {{ immunities[i].label}}</div>
             </div>
           </td>
           <td style="min-width:150px;text-align: center;">{{zone.bossPacks.join(' - ')}}</td>
@@ -138,8 +139,8 @@ getInfo()
 <style scoped>
 .terror-zone {
   margin: auto;
-  min-width: 200px;
-  max-width: 500px;
+  width: 600px;
+  max-width: 100%;
   margin-bottom: 5em;
   overflow: hidden;
 }

@@ -47,6 +47,7 @@
       "zones": [
         {
           "value": "bmadoe",
+          "img": "/images/knowledge/maps/act1/BloodMoor.jpg",
           "label": "핏빛 황무지와 악의 소굴",
           "immunities": [
             "f",
@@ -61,6 +62,7 @@
         },
         {
           "value": "cpatc",
+          "img": "/images/knowledge/maps/act1/ColdPlains.jpg",
           "label": "차가운 평야와 동굴",
           "immunities": [
             "f",
@@ -76,6 +78,7 @@
         },
         {
           "value": "bgtcatm",
+          "img": "/images/knowledge/maps/act1/BurialGrounds.jpg",
           "label": "매장지, 묘실, 영묘",
           "immunities": [
             "l"
@@ -89,6 +92,7 @@
         },
         {
           "value": "sf",
+          "img": "/images/knowledge/maps/act1/StoneyField.jpg",
           "label": "바위 벌판",
           "immunities": [
             "f",
@@ -105,6 +109,7 @@
         },
         {
           "value": "dw",
+          "img": "/images/knowledge/maps/act1/DarkWood.jpg",
           "label": "어둠숲",
           "immunities": [
             "f",
@@ -120,6 +125,7 @@
         },
         {
           "value": "tft",
+          "img": "/images/knowledge/maps/act1/BlackMarsh.jpg",
           "label": "잊힌 탑",
           "immunities": [
             "f",
@@ -135,6 +141,7 @@
         },
         {
           "value": "j",
+          "img": "/images/knowledge/maps/act1/Jail.jpg",
           "label": "감옥",
           "immunities": [
             "f",
@@ -151,6 +158,7 @@
         },
         {
           "value": "cac",
+          "img": "/images/knowledge/maps/act1/Catacombs.jpg",
           "label": "대성당과 지하 묘지",
           "immunities": [
             "f",
@@ -167,6 +175,7 @@
         },
         {
           "value": "tp",
+          "img": "/images/knowledge/maps/act1/TamoeHighland.jpg",
           "label": "구덩이",
           "immunities": [
             "f",
@@ -181,6 +190,7 @@
         },
         {
           "value": "t",
+          "img": "/images/knowledge/maps/act1/Tristram.jpg",
           "label": "트리스트럼",
           "immunities": [
             "f",
@@ -196,6 +206,7 @@
         },
         {
           "value": "mmf",
+          "img": "/images/knowledge/maps/act1/RogueEncampment.jpg",
           "label": "음메음메 농장",
           "immunities": [],
           "bossPacks": [
@@ -212,6 +223,7 @@
       "zones": [
         {
           "value": "s",
+          "img": "/images/knowledge/maps/act2/Sewers.jpg",
           "label": "하수도",
           "immunities": [
             "f",
@@ -228,6 +240,7 @@
         },
         {
           "value": "rwast",
+          "img": "/images/knowledge/maps/act2/RockyWaste.jpg",
           "label": "바위투성이 황무지와 바위 무덤",
           "immunities": [
             "f",
@@ -245,6 +258,7 @@
         },
         {
           "value": "dhahotd",
+          "img": "/images/knowledge/maps/act2/DryHills.jpg",
           "label": "메마른 언덕과 망자의 전당",
           "immunities": [
             "f",
@@ -261,6 +275,7 @@
         },
         {
           "value": "fo",
+          "img": "/images/knowledge/maps/act2/FarOasis.jpg",
           "label": "머나먼 오아시스",
           "immunities": [],
           "bossPacks": [
@@ -272,6 +287,7 @@
         },
         {
           "value": "lcvosacvt",
+          "img": "/images/knowledge/maps/act2/LostCity.jpg",
           "label": "잊힌 도시, 뱀의 골짜기, 발톱 독사 사원",
           "immunities": [
             "f",
@@ -289,6 +305,7 @@
         },
         {
           "value": "as",
+          "img": "/images/knowledge/maps/act2/ArcaneSanctuary.jpg",
           "label": "비전의 성역",
           "immunities": [
             "f",
@@ -306,6 +323,7 @@
         },
         {
           "value": "trtatrc",
+          "img": "/images/knowledge/maps/act2/TalRashasTomb.jpg",
           "label": "탈 라샤의 무덤",
           "immunities": [
             "f",
@@ -328,6 +346,7 @@
       "zones": [
         {
           "value": "sfasc",
+          "img": "/images/knowledge/maps/act3/SpiderForest.jpg",
           "label": "거미 숲과 거미 동굴",
           "immunities": [
             "f",
@@ -344,6 +363,7 @@
         },
         {
           "value": "fjafd",
+          "img": "/images/knowledge/maps/act3/FlayerJungle.jpg",
           "label": "약탈자 밀림과 약탈자 던전",
           "immunities": [
             "f",
@@ -362,6 +382,7 @@
         },
         {
           "value": "kbrtadf",
+          "img": "/images/knowledge/maps/act3/KurastBazaar.jpg",
           "label": "쿠라스트 시장, 허물어진 사원, 버려진 교회당",
           "immunities": [
             "f",
@@ -380,6 +401,7 @@
         },
         {
           "value": "ks",
+          "img": "/images/knowledge/maps/act3/Sewers.jpg",
           "label": "쿠라스트 하수도",
           "immunities": [
             "c",
@@ -396,6 +418,7 @@
         },
         {
           "value": "t",
+          "img": "/images/knowledge/maps/act3/Travincal.jpg",
           "label": "트라빈칼",
           "immunities": [
             "f",
@@ -412,6 +435,7 @@
         },
         {
           "value": "doh",
+          "img": "/images/knowledge/maps/act3/DuranceofHate.jpg",
           "label": "증오의 억류지",
           "immunities": [
             "f",
@@ -433,6 +457,7 @@
       "zones": [
         {
           "value": "osapod",
+          "img": "/images/knowledge/maps/act4/OuterSteppes.jpg",
           "label": "평원 외곽과 절망의 평원",
           "immunities": [
             "f",
@@ -449,6 +474,7 @@
         },
         {
           "value": "rofacotd",
+          "img": "/images/knowledge/maps/act4/CityoftheDamned.jpg",
           "label": "불길의 강/저주받은 운명의 도시",
           "immunities": [
             "f",
@@ -465,6 +491,7 @@
         },
         {
           "value": "cs",
+          "img": "/images/knowledge/maps/act4/ChaosSanctuary.jpg",
           "label": "혼돈의 성역",
           "immunities": [
             "f",
@@ -485,6 +512,7 @@
       "zones": [
         {
           "value": "bf",
+          "img": "/images/knowledge/maps/act5/bloodyfoothills.jpg",
           "label": "핏빛 언덕",
           "immunities": [
             "f",
@@ -501,6 +529,7 @@
         },
         {
           "value": "fh",
+          "img": "/images/knowledge/maps/act5/frigidhighlands.jpg",
           "label": "혹한의 고산지",
           "immunities": [
             "f",
@@ -519,6 +548,7 @@
         },
         {
           "value": "gt",
+          "img": "/images/knowledge/maps/act5/glacialtrail.jpg",
           "label": "빙하의 길",
           "immunities": [
             "f",
@@ -536,6 +566,7 @@
         },
         {
           "value": "cpafr",
+          "img": "/images/knowledge/maps/act5/frozenriver.jpg",
           "label": "수정 동굴과 얼어붙은 강",
           "immunities": [
             "f",
@@ -554,6 +585,7 @@
         },
         {
           "value": "ap",
+          "img": "/images/knowledge/maps/act5/arreatplateau.jpg",
           "label": "아리앗 고원",
           "immunities": [
             "f",
@@ -570,6 +602,7 @@
         },
         {
           "value": "ntath",
+          "img": "/images/knowledge/maps/act5/nihlathaktemple.jpg",
           "label": "니흘라탁의 사원, 고뇌의 전당, 고통의 전당, 보트의 전당",
           "immunities": [
             "f",
@@ -588,6 +621,7 @@
         },
         {
           "value": "awaic",
+          "img": "/images/knowledge/maps/act5/ancientsway.jpg",
           "label": "고대인의 길과 얼음 지하실",
           "immunities": [
             "c",
@@ -604,6 +638,7 @@
         },
         {
           "value": "wktodawc",
+          "img": "/images/knowledge/maps/act5/throneofdestruction.jpg",
           "label": "세계석 성채, 파괴의 왕좌, 세계석 보관실",
           "immunities": [
             "f",

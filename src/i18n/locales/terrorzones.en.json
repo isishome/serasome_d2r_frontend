@@ -47,6 +47,7 @@
       "zones": [
         {
           "value": "bmadoe",
+          "img": "/images/knowledge/maps/act1/BloodMoor.jpg",
           "label": "Blood Moor and Den of Evil",
           "immunities": [
             "f",
@@ -61,6 +62,7 @@
         },
         {
           "value": "cpatc",
+          "img": "/images/knowledge/maps/act1/ColdPlains.jpg",
           "label": "Cold Plains and The Cave",
           "immunities": [
             "f",
@@ -76,6 +78,7 @@
         },
         {
           "value": "bgtcatm",
+          "img": "/images/knowledge/maps/act1/BurialGrounds.jpg",
           "label": "Burial Grounds, The Crypt, and The Mausoleum",
           "immunities": [
             "l"
@@ -89,6 +92,7 @@
         },
         {
           "value": "sf",
+          "img": "/images/knowledge/maps/act1/StoneyField.jpg",
           "label": "Stony Field",
           "immunities": [
             "f",
@@ -105,6 +109,7 @@
         },
         {
           "value": "dw",
+          "img": "/images/knowledge/maps/act1/DarkWood.jpg",
           "label": "Dark Wood",
           "immunities": [
             "f",
@@ -120,6 +125,7 @@
         },
         {
           "value": "tft",
+          "img": "/images/knowledge/maps/act1/BlackMarsh.jpg",
           "label": "The Forgotten Tower",
           "immunities": [
             "f",
@@ -135,6 +141,7 @@
         },
         {
           "value": "j",
+          "img": "/images/knowledge/maps/act1/Jail.jpg",
           "label": "Jail",
           "immunities": [
             "f",
@@ -151,6 +158,7 @@
         },
         {
           "value": "cac",
+          "img": "/images/knowledge/maps/act1/Catacombs.jpg",
           "label": "Cathedral and Catacombs",
           "immunities": [
             "f",
@@ -167,6 +175,7 @@
         },
         {
           "value": "tp",
+          "img": "/images/knowledge/maps/act1/TamoeHighland.jpg",
           "label": "The Pit",
           "immunities": [
             "f",
@@ -181,6 +190,7 @@
         },
         {
           "value": "t",
+          "img": "/images/knowledge/maps/act1/Tristram.jpg",
           "label": "Tristram",
           "immunities": [
             "f",
@@ -196,6 +206,7 @@
         },
         {
           "value": "mmf",
+          "img": "/images/knowledge/maps/act1/RogueEncampment.jpg",
           "label": "Moo Moo Farm",
           "immunities": [],
           "bossPacks": [
@@ -212,6 +223,7 @@
       "zones": [
         {
           "value": "s",
+          "img": "/images/knowledge/maps/act2/Sewers.jpg",
           "label": "Sewers",
           "immunities": [
             "f",
@@ -228,6 +240,7 @@
         },
         {
           "value": "rwast",
+          "img": "/images/knowledge/maps/act2/RockyWaste.jpg",
           "label": "Rocky Waste and Stony Tomb",
           "immunities": [
             "f",
@@ -245,6 +258,7 @@
         },
         {
           "value": "dhahotd",
+          "img": "/images/knowledge/maps/act2/DryHills.jpg",
           "label": "Dry Hills and Halls of the Dead",
           "immunities": [
             "f",
@@ -261,6 +275,7 @@
         },
         {
           "value": "fo",
+          "img": "/images/knowledge/maps/act2/FarOasis.jpg",
           "label": "Far Oasis",
           "immunities": [],
           "bossPacks": [
@@ -272,6 +287,7 @@
         },
         {
           "value": "lcvosacvt",
+          "img": "/images/knowledge/maps/act2/LostCity.jpg",
           "label": "Lost City, Valley of Snakes, and Claw Viper Temple",
           "immunities": [
             "f",
@@ -289,6 +305,7 @@
         },
         {
           "value": "as",
+          "img": "/images/knowledge/maps/act2/ArcaneSanctuary.jpg",
           "label": "Arcane Sanctuary",
           "immunities": [
             "f",
@@ -306,6 +323,7 @@
         },
         {
           "value": "trtatrc",
+          "img": "/images/knowledge/maps/act2/TalRashasTomb.jpg",
           "label": "Tal Rasha's Tombs and Tal Rasha's Chamber",
           "immunities": [
             "f",
@@ -328,6 +346,7 @@
       "zones": [
         {
           "value": "sfasc",
+          "img": "/images/knowledge/maps/act3/SpiderForest.jpg",
           "label": "Spider Forest and Spider Cavern",
           "immunities": [
             "f",
@@ -344,6 +363,7 @@
         },
         {
           "value": "fjafd",
+          "img": "/images/knowledge/maps/act3/FlayerJungle.jpg",
           "label": "Flayer Jungle and Flayer Dungeon",
           "immunities": [
             "f",
@@ -362,6 +382,7 @@
         },
         {
           "value": "kbrtadf",
+          "img": "/images/knowledge/maps/act3/KurastBazaar.jpg",
           "label": "Kurast Bazaar, Ruined Temple, and Disused Fane",
           "immunities": [
             "f",
@@ -380,6 +401,7 @@
         },
         {
           "value": "ks",
+          "img": "/images/knowledge/maps/act3/Sewers.jpg",
           "label": "Kurast Sewers",
           "immunities": [
             "c",
@@ -396,6 +418,7 @@
         },
         {
           "value": "t",
+          "img": "/images/knowledge/maps/act3/Travincal.jpg",
           "label": "Travincal",
           "immunities": [
             "f",
@@ -412,6 +435,7 @@
         },
         {
           "value": "doh",
+          "img": "/images/knowledge/maps/act3/DuranceofHate.jpg",
           "label": "Durance of Hate",
           "immunities": [
             "f",
@@ -433,6 +457,7 @@
       "zones": [
         {
           "value": "osapod",
+          "img": "/images/knowledge/maps/act4/OuterSteppes.jpg",
           "label": "Outer Steppes and Plains of Despair",
           "immunities": [
             "f",
@@ -449,6 +474,7 @@
         },
         {
           "value": "rofacotd",
+          "img": "/images/knowledge/maps/act4/CityoftheDamned.jpg",
           "label": "River of Flame and City of the Damned",
           "immunities": [
             "f",
@@ -465,6 +491,7 @@
         },
         {
           "value": "cs",
+          "img": "/images/knowledge/maps/act4/ChaosSanctuary.jpg",
           "label": "Chaos Sanctuary",
           "immunities": [
             "f",
@@ -485,6 +512,7 @@
       "zones": [
         {
           "value": "bf",
+          "img": "/images/knowledge/maps/act5/bloodyfoothills.jpg",
           "label": "Bloody Foothills",
           "immunities": [
             "f",
@@ -501,6 +529,7 @@
         },
         {
           "value": "fh",
+          "img": "/images/knowledge/maps/act5/frigidhighlands.jpg",
           "label": "Frigid Highlands",
           "immunities": [
             "f",
@@ -519,6 +548,7 @@
         },
         {
           "value": "gt",
+          "img": "/images/knowledge/maps/act5/glacialtrail.jpg",
           "label": "Glacial Trail",
           "immunities": [
             "f",
@@ -536,6 +566,7 @@
         },
         {
           "value": "cpafr",
+          "img": "/images/knowledge/maps/act5/frozenriver.jpg",
           "label": "Crystalline Passage and Frozen River",
           "immunities": [
             "f",
@@ -554,6 +585,7 @@
         },
         {
           "value": "ap",
+          "img": "/images/knowledge/maps/act5/arreatplateau.jpg",
           "label": "Arreat Plateau",
           "immunities": [
             "f",
@@ -570,6 +602,7 @@
         },
         {
           "value": "ntath",
+          "img": "/images/knowledge/maps/act5/nihlathaktemple.jpg",
           "label": "Nihlathak's Temple and Temple Halls",
           "immunities": [
             "f",
@@ -588,6 +621,7 @@
         },
         {
           "value": "awaic",
+          "img": "/images/knowledge/maps/act5/ancientsway.jpg",
           "label": "Ancient's Way and Icy Cellar",
           "immunities": [
             "c",
@@ -604,6 +638,7 @@
         },
         {
           "value": "wktodawc",
+          "img": "/images/knowledge/maps/act5/throneofdestruction.jpg",
           "label": "Worldstone Keep, Throne of Destruction, and Worldstone Chamber",
           "immunities": [
             "f",
