@@ -8,7 +8,6 @@ const $q = useQuasar()
 const { t, tm } = useI18n()
 
 const loading = ref(false)
-let beforeZone = {}
 const terrorZone = reactive({})
 const terrorZones = computed(() => tm('terrorzonesData'))
 const immunities = computed(() => tm('immunities'))
@@ -39,19 +38,18 @@ const getInfo = (force) => {
     }
   })
     .then((response) => {
-      if (response && response.data && response.data.terrorZone) {
-        const probability = response.data.terrorZone.highestProbabilityZone && response.data.terrorZone.highestProbabilityZone.probability > .5
-        const act = probability ? response.data.terrorZone.highestProbabilityZone.act : response.data.terrorZone.act
-        const zone = probability ? response.data.terrorZone.highestProbabilityZone.zone.split(/\s/).map(z => z.charAt(0).toLowerCase()).join('') : response.data.terrorZone.zone.split(/\s/).map(z => z.charAt(0).toLowerCase()).join('')
-        const findZone = terrorZones.value[act].zones.find(z => z.value === zone)
-        //const findZone = terrorZones.value['act1'].zones.find(z => z.value === 'bgtcatm')
-
-        if (findZone && (!force || beforeZone.value !== findZone.value)) {
-          beforeZone = terrorZone.value && terrorZone.value !== 'unknown' ? terrorZone : findZone
-          Object.assign(terrorZone, findZone)
-        }
-        else
+      if (response && response.data) {
+        if (response.data.act === null || response.data.zone === null)
           failed = true
+        else {
+          const findZone = terrorZones.value[response.data.act].zones.find(z => z.value === response.data.zone)
+          //const findZone = terrorZones.value['act1'].zones.find(z => z.value === 'bgtcatm')
+
+          if (findZone)
+            Object.assign(terrorZone, findZone)
+          else
+            failed = true
+        }
       }
     })
     .catch(() => {
