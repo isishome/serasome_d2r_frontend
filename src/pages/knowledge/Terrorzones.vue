@@ -39,9 +39,10 @@ const getInfo = (force) => {
   })
     .then((response) => {
       if (response && response.data && response.data.terrorZone) {
-        const act = response.data.terrorZone.act
-        const zone = response.data.terrorZone.zone.split(/\s/).map(z => z.charAt(0).toLowerCase()).join('')
+        const act = response.data.terrorZone.highestProbabilityZone.act
+        const zone = response.data.terrorZone.highestProbabilityZone.zone.split(/\s/).map(z => z.charAt(0).toLowerCase()).join('')
         const findZone = terrorZones.value[act].zones.find(z => z.value === zone)
+        //const findZone = terrorZones.value['act1'].zones.find(z => z.value === 'bgtcatm')
 
         if (findZone)
           Object.assign(terrorZone, findZone)

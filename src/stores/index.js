@@ -8,8 +8,7 @@ export const useStore = defineStore('main', {
     partList: [],
     noAD: false,
     images: [],
-    skillsData: {},
-    active: null
+    skillsData: {}
   }),
   getters: {
     getSection: state => {
@@ -57,20 +56,6 @@ export const useStore = defineStore('main', {
     },
     setSkillsData(payload) {
       this.skillsData = payload
-    },
-
-    setTop(id, top) {
-      const findSection = this.sections.find(s => s.id === id && s.top === 0)
-      if (findSection)
-        findSection.top = top
-    },
-    setIntersecting(id, intersecting) {
-      const findSection = this.sections.find(s => s.id === id)
-      if (findSection)
-        findSection.intersecting = intersecting
-    },
-    setActive(id) {
-      this.active = id
     }
   }
 })

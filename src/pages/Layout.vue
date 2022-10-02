@@ -111,6 +111,7 @@ const _part = ref('')
 const toPart = (val) => {
   router.push({ name: 'd2r-knowledge-part', params: { section: _section.value, part: val } })
 }
+
 watch(() => route.name, (val, old) => {
   if (val !== old && old !== null) {
     progress.value = 0
