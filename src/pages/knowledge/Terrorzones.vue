@@ -19,7 +19,7 @@ const calc = () => {
   const start = Math.floor(now / hour) * hour
   const span = start + hour - now
   if (span <= 1000)
-    getInfo(true)
+    getInfo(2000)
   return date.formatDate(span, 'mm:ss')
 }
 
@@ -29,38 +29,37 @@ const time = setInterval(() => {
   timeRemaining.value = calc()
 }, 1000)
 
-const getInfo = (force) => {
+const getInfo = (ms) => {
+  const rms = ms || 0
   loading.value = true
-  let failed = false
-  axios.get('/d2r/knowledge/terrorzones', {
-    params: {
-      force: force
-    }
-  })
-    .then((response) => {
-      if (response && response.data) {
-        if (response.data.act === null || response.data.zone === null)
-          failed = true
-        else {
-          const findZone = terrorZones.value[response.data.act].zones.find(z => z.value === response.data.zone)
-          //const findZone = terrorZones.value['act1'].zones.find(z => z.value === 'bgtcatm')
-
-          if (findZone)
-            Object.assign(terrorZone, findZone)
-          else
+  setTimeout(() => {
+    let failed = false
+    axios.get('/d2r/knowledge/terrorzones')
+      .then((response) => {
+        if (response && response.data) {
+          if (response.data.act === null || response.data.zone === null)
             failed = true
-        }
-      }
-    })
-    .catch(() => {
-      failed = true
-    })
-    .then(() => {
-      if (failed)
-        Object.assign(terrorZone, lang.value.unknown)
+          else {
+            const findZone = terrorZones.value[response.data.act].zones.find(z => z.value === response.data.zone)
+            //const findZone = terrorZones.value['act1'].zones.find(z => z.value === 'bgtcatm')
 
-      loading.value = false
-    })
+            if (findZone)
+              Object.assign(terrorZone, findZone)
+            else
+              failed = true
+          }
+        }
+      })
+      .catch(() => {
+        failed = true
+      })
+      .then(() => {
+        if (failed)
+          Object.assign(terrorZone, lang.value.unknown)
+
+        loading.value = false
+      })
+  }, rms)
 }
 
 onUnmounted(() => {
@@ -81,7 +80,7 @@ getInfo()
           <div class="absolute-bottom">
             <div class="row items-center q-gutter-x-xs">
               <div class="text-h6">{{terrorZone.label}}</div>
-              <q-btn :loading="loading" v-if="terrorZone.value === 'unknown'" icon="refresh" @click="getInfo(true)" />
+              <q-btn :loading="loading" v-if="terrorZone.value === 'unknown'" icon="refresh" @click="getInfo(2000)" />
             </div>
             <div class="text-subtitle2">{{terrorZone.superUniques}}</div>
           </div>
