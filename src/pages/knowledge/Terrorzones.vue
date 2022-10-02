@@ -7,6 +7,8 @@ const axios = inject('axios')
 const $q = useQuasar()
 const { t, tm } = useI18n()
 
+const loading = ref(false)
+let beforeZone = {}
 const terrorZone = reactive({})
 const terrorZones = computed(() => tm('terrorzonesData'))
 const immunities = computed(() => tm('immunities'))
@@ -17,11 +19,8 @@ const calc = () => {
   const now = Date.now()
   const start = Math.floor(now / hour) * hour
   const span = start + hour - now
-  if (span <= 1000) {
-    setTimeout(() => {
-      getInfo(true)
-    }, 2000)
-  }
+  if (span <= 1000)
+    getInfo(true)
   return date.formatDate(span, 'mm:ss')
 }
 
@@ -32,6 +31,7 @@ const time = setInterval(() => {
 }, 1000)
 
 const getInfo = (force) => {
+  loading.value = true
   let failed = false
   axios.get('/d2r/knowledge/terrorzones', {
     params: {
@@ -46,8 +46,10 @@ const getInfo = (force) => {
         const findZone = terrorZones.value[act].zones.find(z => z.value === zone)
         //const findZone = terrorZones.value['act1'].zones.find(z => z.value === 'bgtcatm')
 
-        if (findZone && (!force || terrorZone.value !== findZone.value))
+        if (findZone && (!force || beforeZone.value !== findZone.value)) {
+          beforeZone = terrorZone.value && terrorZone.value !== 'unknown' ? terrorZone : findZone
           Object.assign(terrorZone, findZone)
+        }
         else
           failed = true
       }
@@ -58,6 +60,8 @@ const getInfo = (force) => {
     .then(() => {
       if (failed)
         Object.assign(terrorZone, lang.value.unknown)
+
+      loading.value = false
     })
 }
 
@@ -79,7 +83,7 @@ getInfo()
           <div class="absolute-bottom">
             <div class="row items-center q-gutter-x-xs">
               <div class="text-h6">{{terrorZone.label}}</div>
-              <q-btn v-if="terrorZone.value === 'unknown'" icon="refresh" @click="getInfo(true)" />
+              <q-btn :loading="loading" v-if="terrorZone.value === 'unknown'" icon="refresh" @click="getInfo(true)" />
             </div>
             <div class="text-subtitle2">{{terrorZone.superUniques}}</div>
           </div>
