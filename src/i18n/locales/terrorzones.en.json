@@ -39,7 +39,16 @@
     "superUniques": "Super Unique Monster",
     "bossPacks": "Boss Packs",
     "sparklyChests": "Sparkly Chests",
-    "timeRemaining": "Time Remaining"
+    "timeRemaining": "Time Remaining",
+    "unknown": {
+      "value": "unknown",
+      "img": "/images/blank.png",
+      "label": "Unknown",
+      "immunities": [],
+      "bossPacks": [],
+      "superUniques": "",
+      "sparklyChests": 0
+    }
   },
   "terrorzonesData": {
     "act1": {

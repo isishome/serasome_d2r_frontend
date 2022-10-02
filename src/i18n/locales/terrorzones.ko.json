@@ -39,7 +39,16 @@
     "superUniques": "슈퍼 유니크 몬스터",
     "bossPacks": "보스 팩",
     "sparklyChests": "빛나는 상자",
-    "timeRemaining": "남은 시간"
+    "timeRemaining": "남은 시간",
+    "unknown": {
+      "value": "unknown",
+      "img": "/images/blank.png",
+      "label": "알 수 없음",
+      "immunities": [],
+      "bossPacks": [],
+      "superUniques": "",
+      "sparklyChests": 0
+    }
   },
   "terrorzonesData": {
     "act1": {

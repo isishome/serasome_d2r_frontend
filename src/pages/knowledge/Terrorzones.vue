@@ -17,10 +17,10 @@ const calc = () => {
   const now = Date.now()
   const start = Math.floor(now / hour) * hour
   const span = start + hour - now
-  if (span <= 2000) {
+  if (span <= 1000) {
     setTimeout(() => {
       getInfo(true)
-    }, 3000)
+    }, 2000)
   }
   return date.formatDate(span, 'mm:ss')
 }
@@ -32,6 +32,7 @@ const time = setInterval(() => {
 }, 1000)
 
 const getInfo = (force) => {
+  let failed = false
   axios.get('/d2r/knowledge/terrorzones', {
     params: {
       force: force
@@ -39,14 +40,24 @@ const getInfo = (force) => {
   })
     .then((response) => {
       if (response && response.data && response.data.terrorZone) {
-        const act = response.data.terrorZone.highestProbabilityZone.act
-        const zone = response.data.terrorZone.highestProbabilityZone.zone.split(/\s/).map(z => z.charAt(0).toLowerCase()).join('')
+        const probability = response.data.terrorZone.highestProbabilityZone && response.data.terrorZone.highestProbabilityZone.probability > .5
+        const act = probability ? response.data.terrorZone.highestProbabilityZone.act : response.data.terrorZone.act
+        const zone = probability ? response.data.terrorZone.highestProbabilityZone.zone.split(/\s/).map(z => z.charAt(0).toLowerCase()).join('') : response.data.terrorZone.zone.split(/\s/).map(z => z.charAt(0).toLowerCase()).join('')
         const findZone = terrorZones.value[act].zones.find(z => z.value === zone)
         //const findZone = terrorZones.value['act1'].zones.find(z => z.value === 'bgtcatm')
 
-        if (findZone)
+        if (findZone && (!force || terrorZone.value !== findZone.value))
           Object.assign(terrorZone, findZone)
+        else
+          failed = true
       }
+    })
+    .catch(() => {
+      failed = true
+    })
+    .then(() => {
+      if (failed)
+        Object.assign(terrorZone, lang.value.unknown)
     })
 }
 
@@ -66,7 +77,10 @@ getInfo()
       <q-card-section horizontal>
         <q-img :src="terrorZone.img">
           <div class="absolute-bottom">
-            <div class="text-h6">{{terrorZone.label}}</div>
+            <div class="row items-center q-gutter-x-xs">
+              <div class="text-h6">{{terrorZone.label}}</div>
+              <q-btn v-if="terrorZone.value === 'unknown'" icon="refresh" @click="getInfo(true)" />
+            </div>
             <div class="text-subtitle2">{{terrorZone.superUniques}}</div>
           </div>
         </q-img>
@@ -78,11 +92,11 @@ getInfo()
             <div v-for="i in terrorZone.immunities" :key="i.value" :style="`color:${immunities[i].color}`">
               {{immunities[i].label}}</div>
           </div>
-          <div class="row items-center q-gutter-x-sm no-wrap">
+          <div v-if="terrorZone.bossPacks.length > 0" class="row items-center q-gutter-x-sm no-wrap">
             <q-tooltip anchor="top middle" self="center middle">
               {{lang.bossPacks}}
             </q-tooltip>
-            <q-icon name="inbox" size="sm" />
+            <q-icon name="groups_3" size="sm" />
             <div>{{terrorZone.bossPacks.join(' - ')}}</div>
           </div>
           <div v-if="terrorZone.sparklyChests !== 0" class="row items-center q-gutter-x-sm no-wrap">
