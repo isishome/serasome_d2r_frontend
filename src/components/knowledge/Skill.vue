@@ -138,6 +138,7 @@ const format = (type, idx, val) => {
     for (const v in val) {
       const result = [val[v]]
       const rates = []
+      let origin = 0
       if (calc) {
         calc.forEach(c => {
           if (c.type === 'rate')
@@ -150,11 +151,15 @@ const format = (type, idx, val) => {
             result.push(c.value[c.points])
           else if (c.type === 'rate_array')
             rates.push(c.stat[c.value].value[c.points] / 100)
+          else if (c.type === 'origin_rate')
+            origin = (type === 'stat' ? info.value.stat[idx].value[1][v] : type === 'add' ? info.value.add[idx].value[1][v] : 0) * (c.value * c.points / 100)
         })
       }
 
       if (rates.length > 0)
         result.push(rates.reduce((sum, x) => sum + x) * val[v])
+
+      result.push(origin)
 
       formatted = formatted.replace('{' + v + '}', Math.floor(result.reduce((sum, x) => sum + x) * 10) / 10)
     }
@@ -162,6 +167,7 @@ const format = (type, idx, val) => {
   else {
     const result = [val]
     const rates = []
+    let origin = 0
     if (calc) {
       calc.forEach(c => {
         if (c.type === 'rate')
@@ -174,11 +180,15 @@ const format = (type, idx, val) => {
           result.push(c.value[c.points])
         else if (c.type === 'rate_array')
           rates.push(c.stat[c.value].value[c.points] / 100)
+        else if (c.type === 'origin_rate')
+          origin = (type === 'stat' ? info.value.stat[idx].value[1] : type === 'add' ? info.value.add[idx].value[1] : 0) * (c.value * c.points / 100)
       })
     }
 
     if (rates.length > 0)
       result.push(rates.reduce((sum, x) => sum + x) * val)
+
+    result.push(origin)
 
     formatted = formatted.replace('{0}', Math.floor(result.reduce((sum, x) => sum + x) * 10) / 10)
   }
