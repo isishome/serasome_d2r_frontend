@@ -138,6 +138,7 @@ const format = (type, idx, val) => {
     for (const v in val) {
       const result = [val[v]]
       const rates = []
+      const rateArray = []
       let origin = 0
       if (calc) {
         calc.forEach(c => {
@@ -150,7 +151,7 @@ const format = (type, idx, val) => {
           else if (c.type === 'array')
             result.push(c.value[c.points])
           else if (c.type === 'rate_array')
-            rates.push(c.stat[c.value].value[c.points] / 100)
+            rateArray.push(c.stat[c.value].value[c.points] / 100)
           else if (c.type === 'origin_rate')
             origin = (type === 'stat' ? info.value.stat[idx].value[1][v] : type === 'add' ? info.value.add[idx].value[1][v] : 0) * (c.value * c.points / 100)
         })
@@ -161,12 +162,15 @@ const format = (type, idx, val) => {
 
       result.push(origin)
 
-      formatted = formatted.replace('{' + v + '}', Math.floor(result.reduce((sum, x) => sum + x) * 10) / 10)
+      const total = Math.floor(result.reduce((sum, x) => sum + x) * (1 + (rateArray.length > 0 ? rateArray.reduce((sum, x) => sum + x) : 0)) * 10) / 10
+
+      formatted = formatted.replace('{' + v + '}', total)
     }
   }
   else {
     const result = [val]
     const rates = []
+    const rateArray = []
     let origin = 0
     if (calc) {
       calc.forEach(c => {
@@ -179,7 +183,7 @@ const format = (type, idx, val) => {
         else if (c.type === 'array')
           result.push(c.value[c.points])
         else if (c.type === 'rate_array')
-          rates.push(c.stat[c.value].value[c.points] / 100)
+          rateArray.push(c.stat[c.value].value[c.points] / 100)
         else if (c.type === 'origin_rate')
           origin = (type === 'stat' ? info.value.stat[idx].value[1] : type === 'add' ? info.value.add[idx].value[1] : 0) * (c.value * c.points / 100)
       })
@@ -190,7 +194,9 @@ const format = (type, idx, val) => {
 
     result.push(origin)
 
-    formatted = formatted.replace('{0}', Math.floor(result.reduce((sum, x) => sum + x) * 10) / 10)
+    const total = Math.floor(result.reduce((sum, x) => sum + x) * (1 + (rateArray.length > 0 ? rateArray.reduce((sum, x) => sum + x) : 0)) * 10) / 10
+
+    formatted = formatted.replace('{0}', total)
   }
   return formatted
 }

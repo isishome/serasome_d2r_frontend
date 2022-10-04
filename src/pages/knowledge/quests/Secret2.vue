@@ -1,31 +1,111 @@
 <script setup>
-import { reactive } from 'vue'
+import { ref, reactive, inject, onUnmounted } from 'vue'
+import { date } from 'quasar'
 import { useStore } from '@/stores'
 import { useI18n } from 'vue-i18n'
 import { mergeSection } from '@/i18n'
 
-
+const axios = inject('axios')
 const store = useStore()
 const { t, tm } = useI18n()
 
-const secretData = reactive([])
+let time
+const circle = ref(null)
+const circleWidth = ref(100)
+const loading = ref(false)
+const disable = ref(true)
+const ladder = ref(true)
+const hardcore = ref(false)
+const secretData = reactive({})
+const uberDiablo = reactive({})
 
 const onload = (el) => {
   store.addImage({ 'element': el, 'src': el.src })
 }
 
+const onResize = () => {
+  circleWidth.value = Math.round((circle.value ? circle.value.offsetWidth : 600) / 3.5)
+}
+
+const getInfo = (ms) => {
+  const rms = ms || 0
+  loading.value = true
+  setTimeout(() => {
+    axios.get('/d2r/knowledge/uberdiablo')
+      .then((response) => {
+        if (response && response.data) {
+          Object.assign(uberDiablo, response.data)
+          disable.value = true
+        }
+        else
+          disable.value = false
+      })
+      .catch(() => {
+        disable.value = false
+      })
+      .then(() => {
+        loading.value = false
+      })
+  }, rms)
+}
+
 mergeSection('quests', 'secret2').then(() => {
-  secretData.push(...tm('questsData')['secret2'])
+  Object.assign(secretData, tm('questsData')['secret2'])
+  time = setInterval(() => {
+    getInfo()
+  }, 120000)
+
+  getInfo()
+})
+
+onUnmounted(() => {
+  clearInterval(time)
 })
 </script>
   
 <template>
   <div class="column quests word-keep text-body2">
+    <q-resize-observer @resize="onResize" />
     <div class="row justify-center items-center">
       <img :src="'/images/knowledge/quests/secret2/uberdia.gif'" style="max-width:125px" />
     </div>
+    <q-card v-if="secretData.uberData && Object.keys(uberDiablo).length > 0"
+      class="uber-diablo no-shadow text-body2 word-keep">
+      <q-card-section>
+        <div class="text-h5 text-center">
+          {{date.formatDate(uberDiablo.reg_date, 'YYYY-MM-DD HH:mm:ss')}}
+        </div>
+      </q-card-section>
+      <q-card-section>
+        <div ref="circle" class="row jusitify-center items-center q-col-gutter-md">
+          <div class="col-4 column items-center self-start"
+            v-show="server.ladder === ladder && server.hardcore === hardcore"
+            v-for="(server, idx) in uberDiablo.servers" :key="idx">
+            <q-circular-progress :value="server.step" step="10" track-color="track" :size="`${circleWidth}px`"
+              :color="`green-${server.progress+2}`" show-value>
+              {{server.progress}}
+            </q-circular-progress>
+            <div class="text-h5 q-py-sm">
+              {{secretData.uberData[server.region]}}
+            </div>
+            <div class="text-caption text-center" style="min-height:50px">{{secretData.uberData.step[server.progress]}}
+            </div>
+          </div>
+        </div>
+      </q-card-section>
+      <q-separator inset />
+      <q-card-actions class="q-px-lg" align="between">
+        <div>
+          <q-btn v-if="!disable" icon="refresh" flat round :loading="loading" @click="getInfo(2000)" />
+        </div>
+        <div>
+          <q-toggle v-model="ladder" color="primary" :disable="loading" :label="secretData.uberData.ladder" />
+          <q-toggle v-model="hardcore" color="secondary" :disable="loading" :label="secretData.uberData.hardcore" />
+        </div>
+      </q-card-actions>
+    </q-card>
     <div class="column items-start q-gutter-y-lg">
-      <div v-for="(contents, index) in secretData" :key="index" class="full-width">
+      <div v-for="(contents, index) in secretData.contents" :key="index" class="full-width">
         <div class="text-h5">
           {{contents.label}}
         </div>
@@ -51,5 +131,19 @@ mergeSection('quests', 'secret2').then(() => {
 </template>
 
 <style scoped>
+.uber-diablo {
+  margin: 1em auto;
+  width: 600px;
+  max-width: 100%;
+  margin-bottom: 2em;
+  overflow: hidden;
+}
 
+.uber-diablo:deep(.text-track) {
+  color: var(--q-dark-cloud);
+}
+
+.body--dark .uber-diablo:deep(.text-track) {
+  color: var(--q-light-cloud) !important;
+}
 </style>

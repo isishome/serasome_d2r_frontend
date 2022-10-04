@@ -87,28 +87,28 @@ getInfo()
         </q-img>
         <q-card-section class="column justify-around items-start q-gutter-y-sm word-keep" style="min-width:120px">
           <div class="row justify-center q-gutter-x-xs text-caption">
-            <q-tooltip anchor="top middle" self="center middle">
+            <q-tooltip transition-show="jump-up" transition-hide="jump-down" anchor="top middle" self="center middle">
               {{lang.immunities}}
             </q-tooltip>
             <div v-for="i in terrorZone.immunities" :key="i.value" :style="`color:${immunities[i].color}`">
               {{immunities[i].label}}</div>
           </div>
           <div v-if="terrorZone.bossPacks.length > 0" class="row items-center q-gutter-x-sm no-wrap">
-            <q-tooltip anchor="top middle" self="center middle">
+            <q-tooltip transition-show="jump-up" transition-hide="jump-down" anchor="top middle" self="center middle">
               {{lang.bossPacks}}
             </q-tooltip>
             <q-icon name="groups_3" size="sm" />
             <div>{{terrorZone.bossPacks.join(' - ')}}</div>
           </div>
           <div v-if="terrorZone.sparklyChests !== 0" class="row items-center q-gutter-x-sm no-wrap">
-            <q-tooltip anchor="top middle" self="center middle">
+            <q-tooltip transition-show="jump-up" transition-hide="jump-down" anchor="top middle" self="center middle">
               {{lang.sparklyChests}}
             </q-tooltip>
             <q-icon color="yellow-8" name="inventory_2" size="sm" />
             <div>{{terrorZone.sparklyChests === 0 ? '' : terrorZone.sparklyChests}}</div>
           </div>
           <div class="row items-center q-gutter-x-sm no-wrap">
-            <q-tooltip anchor="top middle" self="center middle">
+            <q-tooltip transition-show="jump-up" transition-hide="jump-down" anchor="top middle" self="center middle">
               {{lang.timeRemaining}}
             </q-tooltip>
             <q-icon name="schedule" size="24px" />

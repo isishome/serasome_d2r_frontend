@@ -26,6 +26,7 @@ const secComponent = shallowRef(null)
 const load = (val) => {
   mergeMessages(val)
     .then(() => {
+      store.setPartList([])
       if (val === 'shrines')
         secComponent.value = defineAsyncComponent(() => import('@/pages/knowledge/Shrines.vue'))
       else if (val === 'terrorzones')
