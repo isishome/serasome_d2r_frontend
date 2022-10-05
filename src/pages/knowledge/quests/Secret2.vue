@@ -121,7 +121,9 @@ onUnmounted(() => {
         </div>
       </div>
     </div>
-    <p class="q-mt-xl self-end text-grey-6 text-body2">{{t('d2r.knowledge.source')}} : <a style="text-decoration: none;"
+    <p class="q-mt-xl self-end text-grey-6 text-body2">{{t('d2r.knowledge.source')}} : <a
+        style="text-decoration: none;color:#e2b34f" target="_blank"
+        href="https://d2runewizard.com/diablo-clone-tracker">d2runewizard</a> & <a style="text-decoration: none;"
         target="_blank"
         href="https://diablo-archive.fandom.com/wiki/Uber_Diablo_(Diablo_II)">{{t('d2r.knowledge.diabloWiki')}}</a>
       & <a style="text-decoration: none;" class=" text-green-4" target="_blank"
