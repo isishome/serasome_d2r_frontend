@@ -272,15 +272,22 @@ watch(() => route.params.part, (val, old) => {
         </q-page>
         <div class="gt-md col row items-start" style="padding:7px 0 0 6px">
           <div class="fixed">
-            <div v-if="isKnowledge && partList.length > 1" class="part word-keep">
-              <div class="column no-wrap q-gutter-y-sm">
-                <q-btn type="a" v-for="part in partList" :key="part.value" dense flat
-                  :class="_part === part.value ? 'active' : ''" @click="toPart(part.value)">
-                  <q-img :src="part.img" :ratio="2" :height="`${600 / partList.length - 12}px`"
-                    :data-class="part.label" />
-                </q-btn>
+            <template v-if="isKnowledge && partList.length > 1">
+              <div class="part word-keep">
+                <div class="column no-wrap q-gutter-y-sm">
+                  <q-btn type="a" v-for="part in partList" :key="part.value" dense flat
+                    :class="_part === part.value ? 'active' : ''" @click="toPart(part.value)">
+                    <q-img :src="part.img" :ratio="2" :height="`${600 / partList.length - 12}px`"
+                      :data-class="part.label" />
+                  </q-btn>
+                </div>
               </div>
-            </div>
+              <div class="q-mt-sm">
+                <AdSense v-if="screen.gt.md && !noAD" data-ad-client="ca-pub-5110777286519562" data-ad-slot="3887197241"
+                  :data-adtest="isProduction ? 'off' : 'on'" width="200px" height="200px" horizontal="left"
+                  :key="`ar1-${key}`" />
+              </div>
+            </template>
             <AdSense v-else-if="screen.gt.md && !noAD" data-ad-client="ca-pub-5110777286519562"
               data-ad-slot="9654321794" :data-adtest="isProduction ? 'off' : 'on'"
               :width="screen.gt.md ? '160px' : '120px'" height="600px" horizontal="left" :key="`ar1-${key}`" />
@@ -373,7 +380,8 @@ watch(() => route.params.part, (val, old) => {
 }
 
 .part {
-  width: 160px;
+  width: 200px;
+  margin-top: 2px;
 }
 
 .part:deep(.q-btn) {

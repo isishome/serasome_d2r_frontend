@@ -4,6 +4,7 @@ import { date } from 'quasar'
 import { useStore } from '@/stores'
 import { useI18n } from 'vue-i18n'
 import { mergeSection } from '@/i18n'
+import { computed } from '@vue/reactivity'
 
 const axios = inject('axios')
 const store = useStore()
@@ -18,13 +19,16 @@ const ladder = ref(true)
 const hardcore = ref(false)
 const secretData = reactive({})
 const uberDiablo = reactive({})
+const color = (progress) => {
+  return progress === 1 ? 'light-green-4' : progress === 2 ? 'green-4' : progress === 3 ? 'amber-4' : progress === 4 ? 'orange-4' : progress === 5 ? 'deep-orange-4' : 'red-4'
+}
 
 const onload = (el) => {
   store.addImage({ 'element': el, 'src': el.src })
 }
 
 const onResize = () => {
-  circleWidth.value = Math.round((circle.value ? circle.value.offsetWidth : 600) / 3.5)
+  circleWidth.value = Math.round((circle.value ? circle.value.offsetWidth : 300) / 3.5)
 }
 
 const getInfo = (ms) => {
@@ -67,7 +71,7 @@ onUnmounted(() => {
   <div class="column quests word-keep text-body2">
     <q-resize-observer @resize="onResize" />
     <div class="row justify-center items-center">
-      <img :src="'/images/knowledge/quests/secret2/uberdia.gif'" style="max-width:125px" />
+      <img :src="'/images/knowledge/quests/secret2/uberdia.gif'" style="max-width:125px;" />
     </div>
     <q-card class="uber-diablo no-shadow text-body2 word-keep" style="min-height:300px">
       <q-inner-loading :showing="!uberDiablo.servers" color="primary" size="100px" />
@@ -83,7 +87,7 @@ onUnmounted(() => {
               v-show="server.ladder === ladder && server.hardcore === hardcore"
               v-for="(server, idx) in uberDiablo.servers" :key="idx">
               <q-circular-progress :value="server.step" step="10" track-color="track" :size="`${circleWidth}px`"
-                :color="`green-${server.progress+2}`" show-value>
+                :color="color(server.progress)" show-value>
                 {{server.progress}}
               </q-circular-progress>
               <div class="text-h5 q-py-sm">
