@@ -69,40 +69,43 @@ onUnmounted(() => {
     <div class="row justify-center items-center">
       <img :src="'/images/knowledge/quests/secret2/uberdia.gif'" style="max-width:125px" />
     </div>
-    <q-card v-if="secretData.uberData && Object.keys(uberDiablo).length > 0"
-      class="uber-diablo no-shadow text-body2 word-keep">
-      <q-card-section>
-        <div class="text-h5 text-center">
-          {{date.formatDate(uberDiablo.reg_date, 'YYYY-MM-DD HH:mm:ss')}}
-        </div>
-      </q-card-section>
-      <q-card-section>
-        <div ref="circle" class="row jusitify-center items-center q-col-gutter-md">
-          <div class="col-4 column items-center self-start"
-            v-show="server.ladder === ladder && server.hardcore === hardcore"
-            v-for="(server, idx) in uberDiablo.servers" :key="idx">
-            <q-circular-progress :value="server.step" step="10" track-color="track" :size="`${circleWidth}px`"
-              :color="`green-${server.progress+2}`" show-value>
-              {{server.progress}}
-            </q-circular-progress>
-            <div class="text-h5 q-py-sm">
-              {{secretData.uberData[server.region]}}
-            </div>
-            <div class="text-caption text-center" style="min-height:50px">{{secretData.uberData.step[server.progress]}}
+    <q-card class="uber-diablo no-shadow text-body2 word-keep" style="min-height:300px">
+      <q-inner-loading :showing="!uberDiablo.servers" color="primary" size="100px" />
+      <template v-if="secretData.uberData && uberDiablo.servers">
+        <q-card-section>
+          <div class="text-h5 text-center">
+            {{date.formatDate(uberDiablo.reg_date, 'YYYY-MM-DD HH:mm:ss')}}
+          </div>
+        </q-card-section>
+        <q-card-section>
+          <div ref="circle" class="row jusitify-center items-center q-col-gutter-md">
+            <div class="col-4 column items-center self-start"
+              v-show="server.ladder === ladder && server.hardcore === hardcore"
+              v-for="(server, idx) in uberDiablo.servers" :key="idx">
+              <q-circular-progress :value="server.step" step="10" track-color="track" :size="`${circleWidth}px`"
+                :color="`green-${server.progress+2}`" show-value>
+                {{server.progress}}
+              </q-circular-progress>
+              <div class="text-h5 q-py-sm">
+                {{secretData.uberData[server.region]}}
+              </div>
+              <div class="text-caption text-center" style="min-height:50px">
+                {{secretData.uberData.step[server.progress]}}
+              </div>
             </div>
           </div>
-        </div>
-      </q-card-section>
-      <q-separator inset />
-      <q-card-actions class="q-px-lg" align="between">
-        <div>
-          <q-btn v-if="!disable" icon="refresh" flat round :loading="loading" @click="getInfo(2000)" />
-        </div>
-        <div>
-          <q-toggle v-model="ladder" color="primary" :disable="loading" :label="secretData.uberData.ladder" />
-          <q-toggle v-model="hardcore" color="secondary" :disable="loading" :label="secretData.uberData.hardcore" />
-        </div>
-      </q-card-actions>
+        </q-card-section>
+        <q-separator inset />
+        <q-card-actions class="q-px-lg" align="between">
+          <div>
+            <q-btn v-if="!disable" icon="refresh" flat round :loading="loading" @click="getInfo(2000)" />
+          </div>
+          <div>
+            <q-toggle v-model="ladder" color="primary" :disable="loading" :label="secretData.uberData.ladder" />
+            <q-toggle v-model="hardcore" color="secondary" :disable="loading" :label="secretData.uberData.hardcore" />
+          </div>
+        </q-card-actions>
+      </template>
     </q-card>
     <div class="column items-start q-gutter-y-lg">
       <div v-for="(contents, index) in secretData.contents" :key="index" class="full-width">

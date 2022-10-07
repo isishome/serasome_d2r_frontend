@@ -404,8 +404,9 @@ watch(() => route.params.part, (val, old) => {
   top: 0;
   right: 0;
   bottom: 0;
-  width: 8px;
-  background-color: var(--q-primary) !important;
+  left: 0;
+  /* width: 6px; */
+  background: linear-gradient(45deg, var(--q-primary) 10%, transparent 10%) !important;
   box-shadow: inset 0 0 1px 0 var(--q-dark-page);
   position: absolute;
   z-index: 1;
@@ -426,12 +427,12 @@ watch(() => route.params.part, (val, old) => {
   transform: translateX(-50%);
   color: var(--q-dark-page);
   font-weight: bold;
-  text-shadow: 1px 0 1px var(--q-light-page), -1px 0 1px var(--q-light-page), 0 1px 1px var(--q-light-page), 0 -1px 1px var(--q-light-page);
+  text-shadow: 2px 0 2px var(--q-light-page), -2px 0 2px var(--q-light-page), 0 2px 2px var(--q-light-page), 0 -2px 2px var(--q-light-page);
   line-height: 1em;
 }
 
-.body--dark .part:deep(.q-btn::after) {
+.body--dark .part:deep(.q-img::after) {
   color: var(--q-light-page) !important;
-  text-shadow: 1px 0 1px var(--q-dark-page), -1px 0 1px var(--q-dark-page), 0 1px 1px var(--q-dark-page), 0 -1px 1px var(--q-dark-page);
+  text-shadow: 2px 0 2px var(--q-dark-page), -2px 0 2px var(--q-dark-page), 0 2px 2px var(--q-dark-page), 0 -2px 2px var(--q-dark-page);
 }
 </style>

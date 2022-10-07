@@ -74,8 +74,9 @@ getInfo()
     <div class="font-kodia text-center text-h4 text-weight-bold text-primary q-pt-sm q-pb-xl word-keep">
       {{tm('d2r.knowledge.list').find(l => l.value === 'terrorzones').name}}
     </div>
-    <q-card v-if="terrorZone.value" class="terror-zone no-shadow text-body2 word-keep">
-      <q-card-section horizontal>
+    <q-card class="terror-zone no-shadow text-body2 word-keep" style="min-height:200px">
+      <q-inner-loading :showing="!terrorZone.value" color="primary" size="100px" />
+      <q-card-section v-if="terrorZone.value" horizontal>
         <q-img :src="terrorZone.img">
           <div class="absolute-bottom">
             <div class="row items-center q-gutter-x-xs">
