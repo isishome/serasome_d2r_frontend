@@ -66,6 +66,7 @@ const onWindowLoad = () => {
     (window.adsbygoogle || []).push({})
 }
 
+const styleSize = ref('width:100%;min-height:100px')
 const setSize = () => {
   if (props.random === true) {
     const selectedRandomSize = randomSize[Math.floor(Math.random() * ($q.screen.gt.lg ? 9 : $q.screen.gt.md ? 6 : 3))]
@@ -76,6 +77,8 @@ const setSize = () => {
     adWidth.value = props.width
     adHeight.value = props.height
   }
+
+  styleSize.value = props.dataAdFormat !== 'auto' ? `width:${adWidth.value};height:${adHeight.value}` : 'width:100%;min-height:100px'
 }
 
 onMounted(() => {
@@ -98,7 +101,7 @@ onUnmounted(() => {
   <div class="full-width" :style="`position:${fixed ? 'fixed' : ''};text-align:${horizontal}`">
     <ins class="adsbygoogle box" :data-ad-client="dataAdClient" :data-ad-slot="dataAdSlot"
       :data-ad-format="dataAdFormat" :data-adtest="dataAdtest" :data-full-width-responsive="dataFullWidthResponsive"
-      :style="`display:inline-block;width:${adWidth};height:${adHeight}`"></ins>
+      :style="`display:inline-block;${styleSize}`"></ins>
   </div>
 </template>
 

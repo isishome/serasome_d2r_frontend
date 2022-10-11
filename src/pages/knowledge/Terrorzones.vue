@@ -1,13 +1,24 @@
 <script setup>
-import { inject, ref, reactive, computed, onUnmounted } from 'vue'
+import { inject, ref, reactive, computed, onUnmounted, defineAsyncComponent } from 'vue'
+import { useStore } from '@/stores'
 import { useQuasar, date } from 'quasar'
 import { useI18n } from 'vue-i18n'
+
+// components
+const AdSense = defineAsyncComponent(() => import('@/components/AdSense.vue'))
+
+// environment variables
+const isProduction = import.meta.env.PROD
 
 const axios = inject('axios')
 const $q = useQuasar()
 const { t, tm } = useI18n()
+const store = useStore()
 
 const loading = ref(false)
+const platform = computed(() => $q.platform)
+const noAD = computed(() => store.noAD)
+
 const terrorZone = reactive({})
 const terrorZones = computed(() => tm('terrorzonesData'))
 const immunities = computed(() => tm('immunities'))
@@ -118,6 +129,10 @@ getInfo()
         </q-card-section>
       </q-card-section>
     </q-card>
+    <div class="q-my-xl">
+      <AdSense v-if="platform.is.mobile && !noAD" data-ad-client="ca-pub-5110777286519562" data-ad-slot="7884972370"
+        data-ad-format="auto" data-full-width-responsive="true" :data-adtest="isProduction ? 'off' : 'on'" />
+    </div>
     <q-markup-table class="no-shadow knowledge-table text-body2" :wrap-cells="$q.screen.gt.sm" dense bordered
       separator="vertical">
       <thead>
@@ -158,7 +173,6 @@ getInfo()
   margin: auto;
   width: 600px;
   max-width: 100%;
-  margin-bottom: 5em;
   overflow: hidden;
 }
 
