@@ -34,7 +34,7 @@ const socket = ref({
 const materials = computed(() => tm('d2r.knowledge.items.materials'))
 
 const runeWords = reactive([])
-const meterialOptions = computed(() => tm('d2r.knowledge.items.materials').map(m => { return { 'label': rt(m.name), 'value': rt(m.no) } }))
+const meterialOptions = computed(() => tm('d2r.knowledge.items.materials').filter(m => m.no < 16).map(m => { return { 'label': rt(m.name), 'value': rt(m.no) } }))
 const sortOptions = computed(() => [{ 'label': t('d2r.knowledge.items.hot'), 'value': 'hot' }, { 'label': t('d2r.knowledge.items.runewordName'), 'value': 'name' }, { 'label': t('d2r.knowledge.items.level'), 'value': 'level' }, { 'label': t('d2r.knowledge.items.version'), 'value': 'version' }])
 const classesOptions = reactive([])
 
@@ -42,7 +42,7 @@ const filtering = computed(() => {
   let result = []
   const selectedRunes = runes.filter(r => r.selected === true).map(r => r.no)
 
-  let resultRuneWords = selectedMaterial.value === '0' ? runeWords : selectedMaterial.value === '1' ? runeWords.filter(r => r.materials.filter(m => !['2', '3', '4', '5'].includes(m)).length > 0) : runeWords.filter(r => r.materials.includes(selectedMaterial.value))
+  let resultRuneWords = selectedMaterial.value === '0' ? runeWords : selectedMaterial.value === '1' ? runeWords.filter(r => r.materials.filter(m => ![2, 3, 4, 5].includes(m)).length > 0) : runeWords.filter(r => r.materials.includes(Number(selectedMaterial.value)))
   resultRuneWords = selectedClass.value === 'all' ? resultRuneWords : resultRuneWords.filter(r => r.recc.includes(selectedClass.value))
   resultRuneWords = resultRuneWords.filter(r => r.runeword.length >= socket.value.min && r.runeword.length <= socket.value.max)
 
