@@ -112,6 +112,27 @@ const toPart = (val) => {
   router.push({ name: 'd2r-knowledge-part', params: { section: _section.value, part: val } })
 }
 
+// sign
+const processSignOut = ref(false)
+const sign = () => {
+  if (signStatus.value) {
+    processSignOut.value = true
+    axios
+      .get('/d2r/account/signout')
+      .then(function (response) {
+        store.setInfo(response.data)
+      })
+      .catch(function () { })
+      .then(function () {
+        processSignOut.value = false
+        document.location.reload()
+      })
+  } else {
+    const seras = `${isProduction ? import.meta.env.VITE_APP_SERAS : window.location.protocol.concat('//', window.location.hostname, ':', import.meta.env.VITE_APP_SERAS)}/sign?d2r`
+    document.location.href = seras
+  }
+}
+
 watch(() => route.name, (val, old) => {
   if (val !== old && old !== null) {
     progress.value = 0
@@ -187,7 +208,8 @@ watch(() => route.params.part, (val, old) => {
         </div>
         <q-space class="gt-md" />
         <div class="row justify-end items-center func" :class="screen.gt.sm ? 'q-gutter-x-sm' : ''">
-          <q-icon class="lt-lg" name="none" size="sm" />
+          <q-btn dense flat :loading="processSignOut" :ripple="false" @click="sign"
+            :icon="signStatus ? 'logout' : 'login'" />
           <q-btn class="gt-md" :ripple="false" dense flat icon="language">
             <q-menu anchor="bottom end" self="top end">
               <q-list separator bordered>
