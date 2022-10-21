@@ -3,6 +3,7 @@ import { inject, ref, reactive, computed, onUnmounted, defineAsyncComponent } fr
 import { useStore } from '@/stores'
 import { useQuasar, date } from 'quasar'
 import { useI18n } from 'vue-i18n'
+import { useRoute } from 'vue-router'
 
 // components
 const AdSense = defineAsyncComponent(() => import('@/components/AdSense.vue'))
@@ -14,7 +15,9 @@ const axios = inject('axios')
 const $q = useQuasar()
 const { t, tm } = useI18n()
 const store = useStore()
+const route = useRoute()
 
+const key = ref(0)
 const loading = ref(false)
 const platform = computed(() => $q.platform)
 const noAD = computed(() => store.noAD)
@@ -72,6 +75,14 @@ const getInfo = (ms) => {
       })
   }, rms)
 }
+
+watch(() => route.name, (val, old) => {
+  if (val !== old && old !== null) {
+    key.value++
+  }
+}, {
+  immediate: true
+})
 
 onUnmounted(() => {
   clearInterval(time)
@@ -131,7 +142,8 @@ getInfo()
     </q-card>
     <div class="q-my-xl">
       <AdSense v-if="platform.is.mobile && !noAD" data-ad-client="ca-pub-5110777286519562" data-ad-slot="7884972370"
-        data-ad-format="auto" data-full-width-responsive="true" :data-adtest="isProduction ? 'off' : 'on'" />
+        data-ad-format="auto" data-full-width-responsive="true" :data-adtest="isProduction ? 'off' : 'on'"
+        :key="`tr1-${key}`" />
     </div>
     <q-markup-table class="no-shadow knowledge-table text-body2" :wrap-cells="$q.screen.gt.sm" dense bordered
       separator="vertical">
