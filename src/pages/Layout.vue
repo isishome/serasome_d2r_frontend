@@ -78,7 +78,7 @@ const home = () => {
 }
 // adsense
 const noAD = computed(() => store.noAD)
-const key = ref(0)
+const key = computed(() => store.key)
 
 // sign
 const checkStatus = () => {
@@ -137,7 +137,7 @@ watch(() => route.name, (val, old) => {
   if (val !== old && old !== null) {
     progress.value = 0
     checkStatus()
-    key.value++
+    store.addKey()
   }
 }, {
   immediate: true
@@ -147,7 +147,7 @@ watch(() => route.params.sec, (val, old) => {
   if (val !== old && old !== null) {
     progress.value = 0
     checkStatus()
-    key.value++
+    store.addKey()
   }
 }, {
   immediate: true
@@ -156,7 +156,7 @@ watch(() => route.params.sec, (val, old) => {
 watch(() => route.params.section, (val, old) => {
   if (val !== old && old !== null) {
     _section.value = val
-    key.value++
+    store.addKey()
   }
 }, {
   immediate: true
@@ -165,7 +165,7 @@ watch(() => route.params.section, (val, old) => {
 watch(() => route.params.part, (val, old) => {
   if (val !== old && old !== null) {
     _part.value = val
-    key.value++
+    store.addKey()
   }
 }, {
   immediate: true

@@ -2,6 +2,7 @@ import { defineStore } from 'pinia'
 
 export const useStore = defineStore('main', {
   state: () => ({
+    key: 0,
     signStatus: null,
     info: null,
     sectionList: [],
@@ -56,6 +57,9 @@ export const useStore = defineStore('main', {
     },
     setSkillsData(payload) {
       this.skillsData = payload
+    },
+    addKey() {
+      this.key++
     }
   }
 })

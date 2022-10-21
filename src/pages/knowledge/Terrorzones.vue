@@ -1,9 +1,8 @@
 <script setup>
-import { inject, ref, reactive, computed, onUnmounted, defineAsyncComponent, watch } from 'vue'
+import { inject, ref, reactive, computed, onUnmounted, defineAsyncComponent } from 'vue'
 import { useStore } from '@/stores'
 import { useQuasar, date } from 'quasar'
 import { useI18n } from 'vue-i18n'
-import { useRoute } from 'vue-router'
 
 // components
 const AdSense = defineAsyncComponent(() => import('@/components/AdSense.vue'))
@@ -15,9 +14,8 @@ const axios = inject('axios')
 const $q = useQuasar()
 const { t, tm } = useI18n()
 const store = useStore()
-const route = useRoute()
 
-const key = ref(0)
+const key = computed(() => store.key)
 const loading = ref(false)
 const platform = computed(() => $q.platform)
 const noAD = computed(() => store.noAD)
@@ -75,14 +73,6 @@ const getInfo = (ms) => {
       })
   }, rms)
 }
-
-watch(() => route.name, (val, old) => {
-  if (val !== old && old !== null) {
-    key.value++
-  }
-}, {
-  immediate: true
-})
 
 onUnmounted(() => {
   clearInterval(time)
