@@ -66,8 +66,10 @@ const getInfo = (ms) => {
         failed = true
       })
       .then(() => {
-        if (failed)
+        if (failed) {
+          getInfo(60000)
           Object.assign(terrorZone, lang.value.unknown)
+        }
 
         loading.value = false
       })
@@ -84,7 +86,7 @@ getInfo()
 <template>
   <div>
     <div class="font-kodia text-center text-h4 text-weight-bold text-primary q-pt-sm q-pb-xl word-keep">
-      {{tm('d2r.knowledge.list').find(l => l.value === 'terrorzones').name}}
+      {{ tm('d2r.knowledge.list').find(l => l.value === 'terrorzones').name }}
     </div>
     <q-card class="terror-zone no-shadow text-body2 word-keep" style="min-height:100px">
       <q-inner-loading :showing="!terrorZone.value" color="primary" size="50px" />
@@ -92,40 +94,40 @@ getInfo()
         <q-img :src="terrorZone.img">
           <div class="absolute-bottom">
             <div class="row items-center q-gutter-x-xs">
-              <div class="text-h6">{{terrorZone.label}}</div>
+              <div class="text-h6">{{ terrorZone.label }}</div>
               <q-btn :loading="loading" v-if="terrorZone.value === 'unknown'" icon="refresh" @click="getInfo(2000)" />
             </div>
-            <div class="text-subtitle2">{{terrorZone.superUniques}}</div>
+            <div class="text-subtitle2">{{ terrorZone.superUniques }}</div>
           </div>
         </q-img>
         <q-card-section class="column justify-around items-start q-gutter-y-sm word-keep" style="min-width:120px">
           <div class="row justify-center q-gutter-x-xs text-caption">
             <q-tooltip transition-show="jump-up" transition-hide="jump-down" anchor="top middle" self="center middle">
-              {{lang.immunities}}
+              {{ lang.immunities }}
             </q-tooltip>
             <div v-for="i in terrorZone.immunities" :key="i.value" :style="`color:${immunities[i].color}`">
-              {{immunities[i].label}}</div>
+              {{ immunities[i].label }}</div>
           </div>
           <div v-if="terrorZone.bossPacks.length > 0" class="row items-center q-gutter-x-sm no-wrap">
             <q-tooltip transition-show="jump-up" transition-hide="jump-down" anchor="top middle" self="center middle">
-              {{lang.bossPacks}}
+              {{ lang.bossPacks }}
             </q-tooltip>
             <q-icon name="groups_3" size="sm" />
-            <div>{{terrorZone.bossPacks.join(' - ')}}</div>
+            <div>{{ terrorZone.bossPacks.join(' - ') }}</div>
           </div>
           <div v-if="terrorZone.sparklyChests !== 0" class="row items-center q-gutter-x-sm no-wrap">
             <q-tooltip transition-show="jump-up" transition-hide="jump-down" anchor="top middle" self="center middle">
-              {{lang.sparklyChests}}
+              {{ lang.sparklyChests }}
             </q-tooltip>
             <q-icon color="yellow-8" name="inventory_2" size="sm" />
-            <div>{{terrorZone.sparklyChests === 0 ? '' : terrorZone.sparklyChests}}</div>
+            <div>{{ terrorZone.sparklyChests === 0 ? '' : terrorZone.sparklyChests }}</div>
           </div>
           <div class="row items-center q-gutter-x-sm no-wrap">
             <q-tooltip transition-show="jump-up" transition-hide="jump-down" anchor="top middle" self="center middle">
-              {{lang.timeRemaining}}
+              {{ lang.timeRemaining }}
             </q-tooltip>
             <q-icon name="schedule" size="24px" />
-            <div class="text-body1">{{timeRemaining}}</div>
+            <div class="text-body1">{{ timeRemaining }}</div>
           </div>
         </q-card-section>
       </q-card-section>
@@ -139,32 +141,32 @@ getInfo()
       separator="vertical">
       <thead>
         <tr>
-          <th>{{lang.act}}</th>
-          <th>{{lang.zone}}</th>
-          <th>{{lang.immunities}}</th>
-          <th>{{lang.bossPacks}}</th>
-          <th>{{lang.superUniques}}</th>
-          <th>{{lang.sparklyChests}}</th>
+          <th>{{ lang.act }}</th>
+          <th>{{ lang.zone }}</th>
+          <th>{{ lang.immunities }}</th>
+          <th>{{ lang.bossPacks }}</th>
+          <th>{{ lang.superUniques }}</th>
+          <th>{{ lang.sparklyChests }}</th>
         </tr>
       </thead>
       <tbody v-for="(info, act) in terrorZones" :key="act">
         <tr v-for="(zone, idx) in info.zones" :key="zone.value">
           <th v-if="idx === 0" class="act" :rowspan="info.zones.length">
-            {{info.label}}</th>
-          <td class="text-subtitle2">{{zone.label}}</td>
+            {{ info.label }}</th>
+          <td class="text-subtitle2">{{ zone.label }}</td>
           <td class="immunities">
             <div class="row justify-start q-gutter-x-xs text-caption">
               <div v-for="i in zone.immunities" :key="i.value" :style="`color:${immunities[i].color}`">
-                {{ immunities[i].label}}</div>
+                {{ immunities[i].label }}</div>
             </div>
           </td>
-          <td style="min-width:150px;text-align: center;">{{zone.bossPacks.join(' - ')}}</td>
-          <td>{{zone.superUniques}}</td>
-          <td style="min-width:150px;text-align: center;">{{zone.sparklyChests === 0 ? '' :zone.sparklyChests}}</td>
+          <td style="min-width:150px;text-align: center;">{{ zone.bossPacks.join(' - ') }}</td>
+          <td>{{ zone.superUniques }}</td>
+          <td style="min-width:150px;text-align: center;">{{ zone.sparklyChests === 0 ? '' : zone.sparklyChests }}</td>
         </tr>
       </tbody>
     </q-markup-table>
-    <p class="q-mt-xl text-right text-grey-6 text-body2" style="font-size: 1em;">{{t('d2r.knowledge.source')}} : <a
+    <p class="q-mt-xl text-right text-grey-6 text-body2" style="font-size: 1em;">{{ t('d2r.knowledge.source') }} : <a
         style="text-decoration: none;color:#e2b34f" target="_blank"
         href="https://d2runewizard.com/terror-zone-tracker">d2runewizard</a>
     </p>

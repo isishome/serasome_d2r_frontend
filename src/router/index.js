@@ -47,6 +47,16 @@ router.beforeEach(async (to) => {
   else
     oldOgTitle.replaceWith(ogTitle)
 
+  const canonicalLink = document.createElement('link')
+  canonicalLink.setAttribute('rel', 'canonical')
+  canonicalLink.setAttribute('href', `${location.origin}${to.path}`)
+
+  const oldCanonicalLink = document.head.querySelector('link[rel="canonical"]')
+  if (oldCanonicalLink === null)
+    document.head.appendChild(canonicalLink)
+  else
+    oldCanonicalLink.replaceWith(canonicalLink)
+
   let locale = Cookies.has(import.meta.env.VITE_APP_LANGUAGE_NAME) ? Cookies.get(import.meta.env.VITE_APP_LANGUAGE_NAME) : Quasar.lang.getLocale().substring(0, 2)
   if (!supportLanguages.includes(locale)) {
     locale = 'en'
