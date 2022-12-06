@@ -9,11 +9,11 @@ $q.dark.set(isDark)
 //document.documentElement.style.setProperty('color-scheme', isDark ? 'dark' : 'light')
 
 if (import.meta.env.PROD) {
-  window.dataLayer = window.dataLayer || [];
-  function gtag() { dataLayer.push(arguments); }
-  gtag('js', new Date());
+  window.dataLayer = window.dataLayer || []
+  function gtag() { dataLayer.push(arguments) }
+  gtag('js', new Date())
 
-  gtag('config', 'G-DCMMV6W5LP');
+  gtag('config', 'G-DCMMV6W5LP')
 }
 </script>
 <template>
