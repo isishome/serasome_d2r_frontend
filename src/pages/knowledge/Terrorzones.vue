@@ -41,10 +41,12 @@ const time = setInterval(() => {
   timeRemaining.value = calc()
 }, 1000)
 
+let time2 = null
+
 const getInfo = (ms) => {
   const rms = ms || 0
   loading.value = true
-  setTimeout(() => {
+  time2 = setTimeout(() => {
     let failed = false
     axios.get('/d2r/knowledge/terrorzones')
       .then((response) => {
@@ -67,6 +69,7 @@ const getInfo = (ms) => {
       })
       .then(() => {
         if (failed) {
+          clearTimeout(time2)
           getInfo(60000)
           Object.assign(terrorZone, lang.value.unknown)
         }
