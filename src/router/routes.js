@@ -14,9 +14,6 @@ export const routes = [
         components: {
           carousel: () => import('@/components/Carousel.vue'),
           default: () => import('@/pages/Main.vue')
-        },
-        meta: {
-          noAD: true
         }
       },
       {

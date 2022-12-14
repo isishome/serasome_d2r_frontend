@@ -197,7 +197,7 @@ watch(() => route.params.part, (val, old) => {
             size="18px" :label="sec.label" />
           <div class="column justify-center items-start" style="height:56px">
             <q-btn type="a" :style="isKnowledge ? 'opacity:1' : ''"
-              :to="{ name: 'd2r-knowledge-part', params:{ section:'classes', part:'amazon'} }" :ripple="false" flat
+              :to="{ name: 'd2r-knowledge-part', params: { section: 'classes', part: 'amazon' } }" :ripple="false" flat
               no-caps padding="0 5px" size="18px" :label="t('d2r.knowledge.title')" />
             <template v-if="isKnowledge">
               <q-separator color="primary" class="full-width" />
@@ -252,7 +252,7 @@ watch(() => route.params.part, (val, old) => {
         </q-item>
         <q-expansion-item default-opened :header-inset-level="0.5" :label="t('d2r.knowledge.title')">
           <q-item :active="section.value === _section" v-for="section in sectionList" :key="section" :inset-level="1"
-            :to="section.value !== _section ? { name: 'd2r-knowledge-section', params:{ section: section.value} } : null"
+            :to="section.value !== _section ? { name: 'd2r-knowledge-section', params: { section: section.value } } : null"
             active-class="text-primary">
             <q-item-section>
               {{ section.label }}
@@ -293,7 +293,7 @@ watch(() => route.params.part, (val, old) => {
           </div>
         </q-page>
         <div class="gt-md col row items-start" style="padding:7px 0 0 6px">
-          <div class="fixed">
+          <div style="position:sticky;top:79px">
             <template v-if="isKnowledge && partList.length > 1">
               <div class="part word-keep">
                 <div class="column no-wrap q-gutter-y-sm">
