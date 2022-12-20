@@ -13,7 +13,7 @@ const props = defineProps({
   },
   dataAdFormat: {
     type: String,
-    default: null
+    default: 'vertical'
   },
   dataAdtest: {
     type: String,
@@ -21,7 +21,7 @@ const props = defineProps({
   },
   dataFullWidthResponsive: {
     type: String,
-    default: null
+    default: 'false'
   },
   width: {
     type: String,
@@ -101,7 +101,7 @@ onUnmounted(() => {
   <div class="full-width" :style="`position:${fixed ? 'fixed' : ''};text-align:${horizontal}`">
     <ins class="adsbygoogle box" :data-ad-client="dataAdClient" :data-ad-slot="dataAdSlot"
       :data-ad-format="dataAdFormat" :data-adtest="dataAdtest" :data-full-width-responsive="dataFullWidthResponsive"
-      :style="`display:inline-block;${styleSize}`"></ins>
+      :style="dataFullWidthResponsive === 'true' ? 'display:block' : `display:inline-block;${styleSize}`"></ins>
   </div>
 </template>
 
