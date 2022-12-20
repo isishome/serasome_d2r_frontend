@@ -62,10 +62,8 @@ const randomSize = shallowReadonly([
 ])
 
 const onWindowLoad = () => {
-  if (props.dataAdtest === 'off') {
+  if (props.dataAdtest === 'off')
     (adsbygoogle = window.adsbygoogle || []).push({})
-    console.log('show adsense')
-  }
 }
 
 const styleSize = ref('width:100%;min-height:100px')
