@@ -1,5 +1,5 @@
 <script setup>
-import { ref, shallowReadonly, onMounted } from 'vue'
+import { ref, shallowReadonly, onMounted, onUnmounted, nextTick } from 'vue'
 import { useQuasar } from 'quasar'
 
 const props = defineProps({
@@ -62,9 +62,9 @@ const randomSize = shallowReadonly([
 ])
 
 const onWindowLoad = () => {
-  if (props.dataAdtest === 'off' && window.adsbygoogle) {
-    const adsbygoogle = window.adsbygoogle || []
-    adsbygoogle.push({})
+  if (props.dataAdtest === 'off') {
+    (adsbygoogle = window.adsbygoogle || []).push({})
+    console.log('show adsense')
   }
 }
 
@@ -85,19 +85,17 @@ const setSize = () => {
 
 onMounted(() => {
   setSize()
-  const adsenseUrl = `https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${props.dataAdClient}`
-
-  const findScript = document.head.querySelectorAll(`script[src="${adsenseUrl}"]`)
-
-  if (findScript.length > 0)
-    onWindowLoad()
+  if (document.readyState !== 'complete')
+    window.addEventListener("load", onWindowLoad)
   else {
-    const adsenseScript = document.createElement('script')
-    adsenseScript.setAttribute('src', adsenseUrl)
-    adsenseScript.setAttribute('crossorigin', 'anonymous')
-    adsenseScript.addEventListener('load', onWindowLoad)
-    document.head.appendChild(adsenseScript)
+    nextTick(() => {
+      onWindowLoad()
+    })
   }
+})
+
+onUnmounted(() => {
+  window.removeEventListener("load", onWindowLoad)
 })
 </script>
 
