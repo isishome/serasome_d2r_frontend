@@ -1,6 +1,6 @@
 {
   "name": "serasome_d2r_frontend_v2",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "scripts": {
     "dev": "vite --host --port 6002",
     "build": "vite build",
