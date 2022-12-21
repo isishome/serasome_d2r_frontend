@@ -1,5 +1,5 @@
 <script setup>
-import { computed, onMounted, onUnmounted, nextTick } from 'vue'
+import { computed, onMounted } from 'vue'
 
 const props = defineProps({
   dataAdClient: {
@@ -34,22 +34,21 @@ const props = defineProps({
 
 const boxStyle = computed(() => props.dataFullWidthResponsive ? 'display:block' : `display:inline-block;width:${props.width};height:${props.height}`)
 
-const onWindowLoad = () => {
-  (adsbygoogle = window.adsbygoogle || []).push({})
-}
-
 onMounted(() => {
-  if (document.readyState !== 'complete')
-    window.addEventListener("load", onWindowLoad)
+  const adsbygoogle = window.adsbygoogle || []
+  const scriptURL = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'
+  const findScript = document.body.querySelectorAll(`script[src="${scriptURL}"]`)
+  if (findScript.length > 0)
+    adsbygoogle.push({})
   else {
-    nextTick(() => {
-      onWindowLoad()
+    const newScript = document.createElement('script')
+    newScript.setAttribute('src', scriptURL)
+    newScript.setAttribute('defer', 'true')
+    newScript.addEventListener('load', () => {
+      adsbygoogle.push({})
     })
+    document.body.appendChild(newScript)
   }
-})
-
-onUnmounted(() => {
-  window.removeEventListener("load", onWindowLoad)
 })
 </script>
 
