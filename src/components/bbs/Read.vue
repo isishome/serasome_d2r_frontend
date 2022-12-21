@@ -314,13 +314,13 @@ onMounted(() => {
     <q-card v-if="data.title" class="contents-on">
       <q-card-section class="q-py-sm">
         <div class="font-kodia">
-          {{screen.lt.md ? `${secInfo.label} > ` : ''}}{{classifyName(sec, data.classify)}}
+          {{ screen.lt.md ? `${secInfo.label} > ` : '' }}{{ classifyName(sec, data.classify) }}
         </div>
       </q-card-section>
       <q-separator inset />
       <q-card-section>
         <div style="word-break: break-all;" :class="$q.screen.gt.sm ? 'text-h5' : 'text-h6'">
-          {{data.title}}</div>
+          {{ data.title }}</div>
       </q-card-section>
       <q-card-section class="q-pt-none">
         <div class="text-subtitle2">
@@ -328,27 +328,27 @@ onMounted(() => {
             <q-img v-if="data.avatar" :src="data.avatar" :ratio="1">
               <template #error>
                 <div class="bg-d2r absolute-center">
-                  {{data.writer.substr(0,1)}}
+                  {{ data.writer.substr(0, 1) }}
                 </div>
               </template>
             </q-img>
-            <template v-else>{{data.writer.substr(0,1)}}</template>
+            <template v-else>{{ data.writer.substr(0, 1) }}</template>
           </q-avatar>
-          {{data.writer}}
+          {{ data.writer }}
         </div>
         <div class="text-right text-subtitle2 row justify-end items-center q-gutter-x-md">
           <div class="row justify-end items-center">
-            <q-icon name="visibility" class="q-mr-xs" />{{data.seq}}
+            <q-icon name="visibility" class="q-mr-xs" />{{ data.seq }}
           </div>
           <div class="row justify-end items-center">
-            <q-icon name="schedule" class="q-mr-xs" />{{parsDateTime(data.upd_date)}}
+            <q-icon name="schedule" class="q-mr-xs" />{{ parsDateTime(data.upd_date) }}
           </div>
         </div>
       </q-card-section>
       <q-separator inset />
       <q-card-section>
         <div v-if="data && data.youtube">
-          <q-video :ratio="16/9" :src="`https://www.youtube.com/embed/${getYoutubeId(data.youtube)}?rel=0`" />
+          <q-video :ratio="16 / 9" :src="`https://www.youtube.com/embed/${getYoutubeId(data.youtube)}?rel=0`" />
         </div>
         <p v-if="data.title" ref="contentsObj" class="word-wrap contents" v-html="contents">
         </p>
@@ -356,11 +356,11 @@ onMounted(() => {
       <template v-if="isQuiz">
         <q-separator inset />
         <q-card-section class="q-mb-lg q-gutter-y-sm column items-start">
-          <div class="text-h6">{{t('d2r.bbs.quiz')}}</div>
+          <div class="text-h6">{{ t('d2r.bbs.quiz') }}</div>
           <q-form @submit="submit" class="full-width">
-            <div class="text-subtitle1 text-right q-mb-xs">{{data.quiz.question}}</div>
-            <div v-if="data.status === 'FIN'" class="text-body1 text-right">{{t('d2r.bbs.answer')}} :
-              <span>{{data.quiz.answer}}</span>
+            <div class="text-subtitle1 text-right q-mb-xs">{{ data.quiz.question }}</div>
+            <div v-if="data.status === 'FIN'" class="text-body1 text-right">{{ t('d2r.bbs.answer') }} :
+              <span>{{ data.quiz.answer }}</span>
             </div>
             <div v-else class="row justify-end items-center q-col-gutter-x-sm text-right">
               <div class="col-9 col-sm-4 col-md-3">
@@ -388,9 +388,9 @@ onMounted(() => {
         <div class="row justify-end q-gutter-x-sm">
           <q-btn v-if="authority(sec, 'delete') || data.owner === true" dense unelevated color="primary"
             :disable="loading" :label="t('btn.modify')"
-            :to="{name:'d2r-modify', params:{ sec:sec, pid:pid }, query:{page:route.query.page || 1}}" />
+            :to="{ name: 'd2r-modify', params: { sec: sec, pid: pid }, query: { page: route.query.page || 1 } }" />
           <q-btn dense outline :disable="loading" :label="t('btn.list')"
-            :to="{name:'d2r-bbs', params:{sec:sec}, query:{page:route.query.page || 1}}" />
+            :to="{ name: 'd2r-bbs', params: { sec: sec }, query: { page: route.query.page || 1 } }" />
         </div>
       </q-card-section>
       <q-card-section v-if="!(data.classify === 'notice' || comments.length === 0)"
@@ -404,14 +404,14 @@ onMounted(() => {
     <q-dialog persistent :content-class="$q.screen.lt.md ? 'full-width' : ''" v-model="reward.show">
       <q-card class="reward">
         <q-card-section class="bg-title text-h5 text-black">
-          {{t('d2r.bbs.message.right')}}
+          {{ t('d2r.bbs.message.right') }}
         </q-card-section>
         <q-card-section class="word-wrap row justify-center items-center text-weight-bold text-h6">
-          {{reward.contents}}
+          {{ reward.contents }}
         </q-card-section>
         <q-card-section class="no-padding overflow-hidden">
           <AdSense v-if="!noAD && isProduction" data-ad-client="ca-pub-5110777286519562" data-ad-slot="4748983001"
-            :data-adtest="isProduction ? 'off' : 'on'" width="300px" height="250px" :key="`ac-${key}`" />
+            :data-adtest="isProduction ? null : 'on'" width="300px" height="250px" :key="`ac-${key}`" />
         </q-card-section>
         <q-card-actions class="row justify-end q-pa-md">
           <q-btn dense :disable="loading || current !== 0" text-color="grey-10" color="grey-5" :label="currentText"

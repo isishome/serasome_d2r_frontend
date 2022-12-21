@@ -283,7 +283,7 @@ watch(() => route.params.part, (val, old) => {
         <div class="gt-md col row justify-end" style="padding:7px 6px 0 0">
           <div :class="isKnowledge && partList.length > 1 ? 'fixed' : ''">
             <AdSense v-if="!noAD && screen.gt.md" class="text-right" data-ad-client="ca-pub-5110777286519562"
-              data-ad-slot="4948790020" :data-adtest="isProduction ? 'off' : 'on'"
+              data-ad-slot="4948790020" :data-adtest="isProduction ? null : 'on'"
               :width="screen.gt.md ? '160px' : '120px'" height="600px" :key="`al-${key}`" />
           </div>
         </div>
@@ -306,12 +306,12 @@ watch(() => route.params.part, (val, old) => {
               </div>
               <div class="q-mt-sm">
                 <AdSense v-if="screen.gt.md && !noAD" class="text-left" data-ad-client="ca-pub-5110777286519562"
-                  data-ad-slot="3887197241" :data-adtest="isProduction ? 'off' : 'on'" width="200px" height="200px"
+                  data-ad-slot="3887197241" :data-adtest="isProduction ? null : 'on'" width="200px" height="200px"
                   :key="`ar1-${key}`" />
               </div>
             </template>
             <AdSense v-else-if="screen.gt.md && !noAD" class="text-left" data-ad-client="ca-pub-5110777286519562"
-              data-ad-slot="9654321794" :data-adtest="isProduction ? 'off' : 'on'"
+              data-ad-slot="9654321794" :data-adtest="isProduction ? null : 'on'"
               :width="screen.gt.md ? '160px' : '120px'" height="600px" :key="`ar1-${key}`" />
           </div>
         </div>

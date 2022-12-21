@@ -137,7 +137,7 @@ getInfo()
     </q-card>
     <div class="q-my-xl">
       <AdSense v-if="platform.is.mobile && !noAD" data-ad-client="ca-pub-5110777286519562" data-ad-slot="7884972370"
-        data-ad-format="auto" data-full-width-responsive="true" :data-adtest="isProduction ? 'off' : 'on'"
+        data-ad-format="auto" data-full-width-responsive="true" :data-adtest="isProduction ? null : 'on'"
         :key="`tr1-${key}`" />
     </div>
     <q-markup-table class="no-shadow knowledge-table text-body2" :wrap-cells="$q.screen.gt.sm" dense bordered
