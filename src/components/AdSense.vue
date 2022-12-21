@@ -43,6 +43,7 @@ onMounted(() => {
   else {
     const newScript = document.createElement('script')
     newScript.setAttribute('src', scriptURL)
+    newScript.setAttribute('crossorigin', 'anonymous')
     newScript.setAttribute('defer', 'true')
     newScript.addEventListener('load', () => {
       adsbygoogle.push({})
