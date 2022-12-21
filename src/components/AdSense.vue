@@ -1,6 +1,5 @@
 <script setup>
-import { ref, shallowReadonly, onMounted, onUnmounted, nextTick } from 'vue'
-import { useQuasar } from 'quasar'
+import { computed, onMounted, onUnmounted, nextTick } from 'vue'
 
 const props = defineProps({
   dataAdClient: {
@@ -13,7 +12,7 @@ const props = defineProps({
   },
   dataAdFormat: {
     type: String,
-    default: 'vertical'
+    default: null
   },
   dataAdtest: {
     type: String,
@@ -21,7 +20,7 @@ const props = defineProps({
   },
   dataFullWidthResponsive: {
     type: String,
-    default: 'false'
+    default: null
   },
   width: {
     type: String,
@@ -30,59 +29,16 @@ const props = defineProps({
   height: {
     type: String,
     default: '600px'
-  },
-  fixed: {
-    type: Boolean,
-    default: false
-  },
-  random: {
-    type: Boolean,
-    default: false
-  },
-  horizontal: {
-    type: String,
-    default: "center"
   }
 })
 
-const $q = useQuasar()
-
-const adWidth = ref('')
-const adHeight = ref('')
-const randomSize = shallowReadonly([
-  { width: '120px', height: '240px' },
-  { width: '120px', height: '600px' },
-  { width: '160px', height: '600px' },
-  { width: '250px', height: '250px' },
-  { width: '250px', height: '360px' },
-  { width: '240px', height: '400px' },
-  { width: '300px', height: '250px' },
-  { width: '300px', height: '600px' },
-  { width: '336px', height: '280px' }
-])
+const boxStyle = computed(() => props.dataFullWidthResponsive ? 'display:block' : `display:inline-block;width:${props.width};height:${props.height}`)
 
 const onWindowLoad = () => {
-  if (props.dataAdtest === 'off')
-    (adsbygoogle = window.adsbygoogle || []).push({})
-}
-
-const styleSize = ref('width:100%;min-height:100px')
-const setSize = () => {
-  if (props.random === true) {
-    const selectedRandomSize = randomSize[Math.floor(Math.random() * ($q.screen.gt.lg ? 9 : $q.screen.gt.md ? 6 : 3))]
-    adWidth.value = selectedRandomSize.width
-    adHeight.value = selectedRandomSize.height
-  }
-  else {
-    adWidth.value = props.width
-    adHeight.value = props.height
-  }
-
-  styleSize.value = props.dataAdFormat !== 'auto' ? `width:${adWidth.value};height:${adHeight.value}` : 'width:100%;min-height:100px'
+  (adsbygoogle = window.adsbygoogle || []).push({})
 }
 
 onMounted(() => {
-  setSize()
   if (document.readyState !== 'complete')
     window.addEventListener("load", onWindowLoad)
   else {
@@ -98,11 +54,8 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div class="full-width" :style="`position:${fixed ? 'fixed' : ''};text-align:${horizontal}`">
-    <ins class="adsbygoogle box" :data-ad-client="dataAdClient" :data-ad-slot="dataAdSlot"
-      :data-ad-format="dataAdFormat" :data-adtest="dataAdtest" :data-full-width-responsive="dataFullWidthResponsive"
-      :style="dataFullWidthResponsive === 'true' ? 'display:block' : `display:inline-block;${styleSize}`"></ins>
-  </div>
+  <ins class="adsbygoogle box" :data-ad-client="dataAdClient" :data-ad-slot="dataAdSlot" :data-ad-format="dataAdFormat"
+    :data-adtest="dataAdtest" :data-full-width-responsive="dataFullWidthResponsive" :style="boxStyle"></ins>
 </template>
 
 <style scoped>
