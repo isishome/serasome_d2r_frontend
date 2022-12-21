@@ -32,7 +32,7 @@ const props = defineProps({
   }
 })
 
-const boxStyle = computed(() => props.dataFullWidthResponsive ? 'display:block' : `display:inline-block;width:${props.width};height:${props.height}`)
+const boxStyle = computed(() => props.dataFullWidthResponsive === 'true' ? 'display:block' : `display:inline-block;width:${props.width};height:${props.height}`)
 
 onMounted(() => {
   const adsbygoogle = window.adsbygoogle || []
