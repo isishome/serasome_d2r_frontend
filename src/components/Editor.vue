@@ -511,6 +511,11 @@ defineExpose({ focus, getAttach, upload })
   background-color: rgba(0, 0, 0, .1) !important;
 }
 
+.editor:deep(.q-editor__toolbars-container) {
+  position: sticky;
+  top: 72px;
+}
+
 .body--dark .editor:deep(.q-editor__toolbar .text-active-toggle),
 .body--dark .q-item.text-active-toggle {
   background-color: rgba(255, 255, 255, .2) !important;

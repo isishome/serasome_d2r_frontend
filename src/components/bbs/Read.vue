@@ -9,6 +9,7 @@ import { parsDateTime, getYoutubeId } from '@/common'
 const Confirm = defineAsyncComponent(() => import('@/components/bbs/Confirm.vue'))
 const Comments = defineAsyncComponent(() => import('@/components/bbs/Comments.vue'))
 const AdSense = defineAsyncComponent(() => import('@/components/AdSense.vue'))
+const Editor = defineAsyncComponent(() => import('@/components/Editor.vue'))
 
 const props = defineProps({
   sec: {
@@ -350,7 +351,7 @@ onMounted(() => {
         <div v-if="data && data.youtube">
           <q-video :ratio="16 / 9" :src="`https://www.youtube.com/embed/${getYoutubeId(data.youtube)}?rel=0`" />
         </div>
-        <p v-if="data.title" ref="contentsObj" class="word-wrap contents" v-html="contents">
+        <p v-if="data.title" ref="contentsObj" class="word-wrap contents editor" v-html="contents">
         </p>
       </q-card-section>
       <template v-if="isQuiz">
@@ -440,5 +441,111 @@ onMounted(() => {
 
 .contents {
   min-height: 272px;
+}
+
+.editor:deep(img) {
+  max-width: 100%;
+}
+
+.editor:deep(.q-btn-dropdown--simple *+.q-btn-dropdown__arrow) {
+  margin-left: 0 !important;
+}
+
+.editor:deep(.q-btn--dense .on-left) {
+  margin-right: 0 !important;
+}
+
+.editor:deep(.q-editor__toolbar) {
+  align-items: center;
+}
+
+@media (max-width: 350px) {
+  .editor:deep(.q-editor__toolbar) {
+    align-items: start;
+  }
+}
+
+.editor:deep(.q-editor__toolbar .q-btn) {
+  margin: 1px !important;
+}
+
+.editor:deep(.q-editor__toolbar) {
+  user-select: none;
+}
+
+.editor:deep(pre[data-language]) {
+  font-family: Menlo, Monaco, Consolas, "Andale Mono", "Ubuntu Mono", "Courier New", monospace;
+  font-size: 14px;
+  border-radius: 8px;
+  background-color: #202030;
+  padding: 1em 1.6em;
+  color: lightgrey;
+  transition: background-color .2s ease;
+  position: relative;
+}
+
+.editor:deep(pre[data-language]::before) {
+  content: attr(data-language);
+  position: absolute;
+  z-index: 2;
+  color: rgba(255, 255, 255, .3);
+  top: 4px;
+  right: 10px;
+  font-weight: 700;
+}
+
+.body--dark .editor:deep(pre[data-language]) {
+  background-color: #000000;
+}
+
+@media (max-width: 480px) {
+  .editor:deep(pre[data-language]) {
+    border-radius: 0 !important;
+  }
+
+  .editor:deep(pre[data-language]::before) {
+    top: 1px;
+    right: 5px;
+    font-size: 11px;
+  }
+}
+
+.editor:deep(blockquote) {
+  box-shadow: inset 4px 0 0 0 rgba(100, 150, 200, 1);
+  padding: 1rem 1rem 1rem 2em;
+  margin: 2rem 0;
+  background-color: rgba(0, 0, 0, .03);
+  border-radius: 0 4px 4px 0;
+}
+
+.body--dark .editor:deep(blockquote) {
+  background-color: rgba(255, 255, 255, .03);
+}
+
+.editor:deep(em) {
+  font-style: normal !important;
+  display: inline-block;
+  margin: 0 .2rem;
+  padding: 0 .2rem;
+  background-color: rgba(0, 0, 0, .1);
+  border-radius: 4px;
+}
+
+.body--dark .editor:deep(em) {
+  background-color: rgba(255, 255, 255, .2);
+}
+
+.editor:deep(.q-editor__toolbar .text-active-toggle),
+.q-item.text-active-toggle {
+  background-color: rgba(0, 0, 0, .1) !important;
+}
+
+.body--dark .editor:deep(.q-editor__toolbar .text-active-toggle),
+.body--dark .q-item.text-active-toggle {
+  background-color: rgba(255, 255, 255, .2) !important;
+}
+
+.editor:deep(a) {
+  color: currentColor;
 }
 </style>
