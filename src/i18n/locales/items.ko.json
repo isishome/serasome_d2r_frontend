@@ -14,6 +14,11 @@
       "value": "craft",
       "label": "제작 아이템",
       "img": "/images/knowledge/items/craft.webp"
+    },
+    {
+      "value": "sunder",
+      "label": "파괴참",
+      "img": "/images/knowledge/items/sunder.webp"
     }
   ]
 }

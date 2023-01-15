@@ -202,10 +202,10 @@ watch(() => route.query.page, (val, old) => {
             </q-chip>
           </q-td>
           <q-td>
-            <q-img class="rounded-borders" :ratio="20 / 13" style="width:80px"
+            <q-img no-spinner no-transition class="rounded-borders" :ratio="20 / 13" style="width:80px"
               :src="parsThumbnail(props.row.thumbnail)">
               <template #error>
-                <q-img :ratio="2 / 1" src="/images/blank.png" class="absolute-center" />
+                <q-img no-spinner no-transition :ratio="2 / 1" src="/images/blank.png" class="absolute-center" />
               </template>
             </q-img>
           </q-td>
@@ -262,10 +262,10 @@ watch(() => route.query.page, (val, old) => {
               <q-chip square icon="visibility" size="xs" color="grey-9" text-color="white"
                 class="no-margin row justify-center items-center text-caption" :label="isView(props.row.seq)" />
             </q-card-section>
-            <q-img :src="parsThumbnail(props.row.thumbnail)" ratio="1"
+            <q-img no-spinner no-transition :src="parsThumbnail(props.row.thumbnail)" ratio="1"
               :style="$q.screen.lt.sm ? 'height:80px' : 'height:100px'">
               <template #error>
-                <q-img :ratio="2 / 1" src="/images/blank.png" class="absolute-center" />
+                <q-img no-spinner no-transition :ratio="2 / 1" src="/images/blank.png" class="absolute-center" />
               </template>
             </q-img>
             <q-card-section :class="$q.screen.lt.sm ? 'q-py-xs q-px-sm' : 'q-pa-sm'">
@@ -280,7 +280,8 @@ watch(() => route.query.page, (val, old) => {
             <q-card-section :class="$q.screen.lt.sm ? 'q-py-xs q-px-sm' : 'q-pa-sm'">
               <div class="text-caption row justify-end no-wrap items-center">
                 <q-avatar rounded class="q-mr-xs avatar text-uppercase" size="16px">
-                  <q-img v-if="props.row.avatar" :src="props.row.avatar" width="100%" :ratio="1">
+                  <q-img no-spinner no-transition v-if="props.row.avatar" :src="props.row.avatar" width="100%"
+                    :ratio="1">
                     <template #error>
                       <div class="bg-d2r absolute-center">
                         {{ props.row.writer.substring(0, 1) }}

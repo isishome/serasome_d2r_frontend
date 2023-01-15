@@ -299,8 +299,8 @@ watch(() => route.params.part, (val, old) => {
                 <div class="column no-wrap q-gutter-y-sm">
                   <q-btn type="a" v-for="part in partList" :key="part.value" dense flat
                     :class="_part === part.value ? 'active' : ''" @click="toPart(part.value)">
-                    <q-img :src="part.img" :ratio="2" :height="`${600 / partList.length - 12}px`"
-                      :data-class="part.label" />
+                    <q-img no-spinner no-transition :src="part.img" :ratio="2"
+                      :height="`${600 / partList.length - 12}px`" :data-class="part.label" />
                   </q-btn>
                 </div>
               </div>

@@ -1,5 +1,6 @@
 <script setup>
 import { useI18n } from 'vue-i18n'
+import { isNew } from '@/common'
 
 const props = defineProps({
   data: {
@@ -76,16 +77,21 @@ const itemClick = (item) => {
             <q-item class="no-padding" v-for="summary in sec.summary" :key="summary.pid">
               <q-btn flat unelevated no-caps class="text-body fit" @click="itemClick(summary)">
                 <q-item-section top avatar>
-                  <q-avatar rounded class="outlined">
-                    <q-img :ratio="1" style="width:40px" :src="parsThumbnail(summary.thumbnail)">
+                  <q-avatar rounded class="outlined" size="70px">
+                    <q-badge v-if="isNew(summary.upd_date, 1000 * 60 * 60 * 24 * 7)" color="red-8" floating
+                      class="badge">NEW</q-badge>
+                    <q-img no-spinner no-transition :ratio="1" class="fit" :src="parsThumbnail(summary.thumbnail)">
                       <template v-if="blank !== null" #error>
-                        <q-img :ratio="2" :src="`/images/${blank}`" class="absolute-center bg-transparent" />
+                        <q-img no-spinner no-transition :ratio="2" :src="`/images/${blank}`"
+                          class="fit absolute-center bg-transparent" />
                       </template>
                     </q-img>
                   </q-avatar>
                 </q-item-section>
                 <q-item-section>
-                  <q-item-label class="q-py-xs text-body2 ellipsis text-left">{{ summary.title }}</q-item-label>
+                  <q-item-label class="q-py-xs text-left">
+                    <div class="text-body1 text-weight-bold ellipsis-2-lines">{{ summary.title }}</div>
+                  </q-item-label>
                   <q-item-label class="q-py-xs text-caption ellipsis text-left" style="opacity: .5;">
                     {{ summary.contents }}
                   </q-item-label>
@@ -122,5 +128,11 @@ const itemClick = (item) => {
 
 .outlined {
   box-shadow: 0 0 0 1px rgba(45, 45, 45, 1);
+}
+
+.badge {
+  z-index: 1;
+  transform: translate(30%, -30%);
+  font-size: 8px;
 }
 </style>
