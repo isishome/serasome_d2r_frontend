@@ -2206,7 +2206,7 @@
     },
     {
       "name": "Plague",
-      "level": "To Be Determined",
+      "level": 67,
       "version": "2.4",
       "materials": [
         8
@@ -2232,7 +2232,7 @@
     },
     {
       "name": "Pattern",
-      "level": "To Be Determined",
+      "level": 23,
       "version": "2.4",
       "materials": [
         15
@@ -2260,7 +2260,7 @@
     },
     {
       "name": "Unbending Will",
-      "level": "To Be Determined",
+      "level": 41,
       "version": "2.4",
       "materials": [
         8
@@ -2294,7 +2294,7 @@
     },
     {
       "name": "Wisdom",
-      "level": "To Be Determined",
+      "level": 45,
       "version": "2.4",
       "materials": [
         5
@@ -2319,7 +2319,7 @@
     },
     {
       "name": "Obsession",
-      "level": "To Be Determined",
+      "level": 69,
       "version": "2.4",
       "materials": [
         9
@@ -2351,7 +2351,7 @@
     },
     {
       "name": "Flickering Flame",
-      "level": "To Be Determined",
+      "level": 55,
       "version": "2.4",
       "materials": [
         5
@@ -2376,7 +2376,7 @@
     },
     {
       "name": "Mist",
-      "level": "To Be Determined",
+      "level": 67,
       "version": "2.4",
       "materials": [
         2
@@ -2404,6 +2404,212 @@
       "recc": [
         "amazon"
       ]
+    },
+    {
+      "name": "Cure",
+      "level": 35,
+      "version": "2.6",
+      "materials": [
+        5
+      ],
+      "runeword": [
+        13,
+        16,
+        7
+      ],
+      "stats": [
+        "+20% Faster Hit Recovery",
+        "+75-100% Enhanced Defense",
+        "+10 to Vitality",
+        "Increase Maximum Life 5%",
+        "Poison Resist +40-60%",
+        "Poison Length Reduced By 75%"
+      ],
+      "recc": []
+    },
+    {
+      "name": "Hearth",
+      "level": 35,
+      "version": "2.6",
+      "materials": [
+        5
+      ],
+      "runeword": [
+        13,
+        16,
+        10
+      ],
+      "stats": [
+        "+20% Faster Hit Recovery",
+        "+75-100% Enhanced Defense",
+        "+10 to Vitality",
+        "Increase Maximum Life 5%",
+        "Cold Resist +40-60%",
+        "Cold Absorb +10-15%"
+      ],
+      "recc": []
+    },
+    {
+      "name": "Ground",
+      "level": 35,
+      "version": "2.6",
+      "materials": [
+        5
+      ],
+      "runeword": [
+        13,
+        16,
+        9
+      ],
+      "stats": [
+        "+20% Faster Hit Recovery",
+        "+75-100% Enhanced Defense",
+        "+10 to Vitality",
+        "Increase Maximum Life 5%",
+        "Lightning Resist +40-60%",
+        "Lightning Absorb +10-15%"
+      ],
+      "recc": []
+    },
+    {
+      "name": "Temper",
+      "level": 35,
+      "version": "2.6",
+      "materials": [
+        5
+      ],
+      "runeword": [
+        13,
+        16,
+        8
+      ],
+      "stats": [
+        "+20% Faster Hit Recovery",
+        "+75-100% Enhanced Defense",
+        "+10 to Vitality",
+        "Increase Maximum Life 5%",
+        "Fire Resist +40-60%",
+        "Fire Absorb +10-15%"
+      ],
+      "recc": []
+    },
+    {
+      "name": "Bulwark",
+      "level": 35,
+      "version": "2.6",
+      "materials": [
+        5
+      ],
+      "runeword": [
+        13,
+        16,
+        12
+      ],
+      "stats": [
+        "+20% Faster Hit Recovery",
+        "5% Life Stolen Per Hit",
+        "+75-100% Enhanced Defense",
+        "+10 to Vitality",
+        "Increase Maximum Life 5%",
+        "Replenish Life +30",
+        "Damage Reduced By 7",
+        "Physical Damage Received Reduced By 10-15%"
+      ],
+      "recc": []
+    },
+    {
+      "name": "Metamorphosis",
+      "level": 67,
+      "version": "2.6",
+      "materials": [
+        22
+      ],
+      "runeword": [
+        16,
+        32,
+        19
+      ],
+      "stats": [
+        "Werewolf strikes grant Mark for 180 seconds",
+        "Mark of the wolf:",
+        "20% Bonus to Attack Rating",
+        "Increase Maximum Life 40%",
+        "",
+        "",
+        "Werebear strikes grant Mark for 180 seconds",
+        "Mark of the bear:",
+        "+25% Attack Speed",
+        "+25% chance of Crushing Blow",
+        "Physical Damage Received Reduced by 20%",
+        "",
+        "",
+        "+5 to Shape Shifting Skills (Druid Only)",
+        "69% Enhanced Defense",
+        "+10 to Strength",
+        "+10 to Vitality",
+        "All Resistances +10",
+        "Cannot be Frozen"
+      ],
+      "recc": [
+        "druid"
+      ]
+    },
+    {
+      "name": "Mosaic",
+      "level": 53,
+      "version": "2.6",
+      "materials": [
+        23
+      ],
+      "runeword": [
+        23,
+        25,
+        10
+      ],
+      "stats": [
+        "Claw Class: Very Fast Attack Speed",
+        "25% Chance for finishing moves to not consume charge",
+        "+2 to Martial Arts (Assassin Only)",
+        "+20% Increased Attack Speed",
+        "+236% Enhanced Damage",
+        "+20% Bonus to Attack Rating",
+        "+2 to Attack Rating",
+        "Adds 3-14 Cold Damage",
+        "Prevent Monster Heal",
+        "Increase maximum Durability 12%"
+      ],
+      "recc": [
+        "assassin"
+      ]
+    },
+    {
+      "name": "Hustle",
+      "level": 39,
+      "version": "2.6",
+      "materials": [
+        3,
+        8
+      ],
+      "runeword": [
+        13,
+        18,
+        2
+      ],
+      "stats": [
+        "+10 to Dexterity"
+      ],
+      "part": [
+        "Swords : 5% Chance to Cast Level 9 Burst of Speed",
+        "Swords : +30% Increased Attack Speed",
+        "Swords : +132% Enhanced Damage",
+        "Swords : +75% Damge to Undead",
+        "Swords : +50 to Attack Rating Against Undead",
+        "Armor : +50% Faster Run/Walk",
+        "Armor : +20% Increased Attack Speed",
+        "Armor : +20% Faster Hit Recovery",
+        "Armor : 50% Slower Stamina Drain"
+      ],
+      "recc": []
     }
   ]
 }

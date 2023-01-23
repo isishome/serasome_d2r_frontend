@@ -48,10 +48,10 @@ const filtering = computed(() => {
 
   if (selectedSort.value === 'version')
     resultRuneWords.sort((a, b) => {
-      a = a.version ? a.version.toLowerCase() : a.name.toLowerCase()
-      b = b.version ? b.version.toLowerCase() : b.name.toLowerCase()
-      if (a < b) return -1
-      if (a > b) return 1
+      a = a.version ? a.version.toLowerCase() : 0
+      b = b.version ? b.version.toLowerCase() : 0
+      if (a < b) return 1
+      if (a > b) return -1
       return 0
     })
   else if (selectedSort.value === 'name')
@@ -137,7 +137,7 @@ mergeMessages('classes')
           <div class="col-12 column items-center q-gutter-y-xs">
             <img :src="`/images/knowledge/items/runes/${rune.file}.png`"
               style="width: 100%;max-width:50px;max-height:50px;" />
-            <div class="word-keep rune-name text-body2">{{rune.name}}</div>
+            <div class="word-keep rune-name text-body2">{{ rune.name }}</div>
           </div>
         </q-btn>
       </div>
@@ -170,7 +170,7 @@ mergeMessages('classes')
                 </q-item-section>
                 <q-item-section>
                   <q-item-label>
-                    {{scope.opt.label}}
+                    {{ scope.opt.label }}
                   </q-item-label>
                 </q-item-section>
               </q-item>
@@ -202,35 +202,37 @@ mergeMessages('classes')
       row-key="name" :pagination="pagination" :hide-header="screen.lt.sm" bordered dense hide-pagination wrap-cells>
       <template #no-data>
         <div class="row justify-center full-width text-body2">
-          {{t('d2r.knowledge.items.noData')}}</div>
+          {{ t('d2r.knowledge.items.noData') }}</div>
       </template>
       <template #body="props">
         <q-tr :props="props">
           <q-td key="name" :props="props">
             <div class="text-h6 word-keep text-primary column">
               <div class="col">
-                {{props.row.name}}
+                {{ props.row.name }}
               </div>
-              <div v-if="props.row.oldName" class="text-body1 text-brown">({{props.row.oldName}})</div>
+              <div v-if="props.row.oldName" class="text-body1 text-brown">({{ props.row.oldName }})</div>
               <div class="col text-teal-4 text-subtitle2">clvl
-                {{props.row.level}}
+                {{ props.row.level }}
               </div>
               <div class="col q-gutter-x-xs">
                 <q-badge color="red" v-if="props.row.hot === true">
-                  {{t('d2r.knowledge.items.hot')}}
+                  {{ t('d2r.knowledge.items.hot') }}
                 </q-badge>
-                <q-badge color="blue" v-if="props.row.recc.includes('beginner')">{{t('d2r.knowledge.items.beginner')}}
+                <q-badge color="blue" v-if="props.row.recc.includes('beginner')">{{ t('d2r.knowledge.items.beginner') }}
                 </q-badge>
-                <q-badge color="yellow" text-color="black" v-if="props.row.version">{{'v'.concat(' ',
-                props.row.version)}}
+                <q-badge color="yellow" text-color="black" v-if="props.row.version">{{
+                  'v'.concat(' ',
+                    props.row.version)
+                }}
                 </q-badge>
               </div>
             </div>
           </q-td>
           <q-td key="material" :props="props">
             <div class="text-subtitle1 word-keep column">
-              <div class="col" v-for="(m, idx) in parsMaterial(props.row.materials)" :key="idx">{{m}}<span
-                  class="text-red-5">({{props.row.runeword.length}})</span>
+              <div class="col" v-for="(m, idx) in parsMaterial(props.row.materials)" :key="idx">{{ m }}<span
+                  class="text-red-5">({{ props.row.runeword.length }})</span>
               </div>
             </div>
           </q-td>
@@ -255,10 +257,10 @@ mergeMessages('classes')
                     <img :src="`/images/knowledge/items/runes/${rune.file}.png`" style="max-width:50px" />
                   </div>
                   <div class="col-4 row items-center text-body1 word-keep">
-                    {{rune.name}}
+                    {{ rune.name }}
                   </div>
                   <div class="col text-body1">
-                    ({{rune.no}})
+                    ({{ rune.no }})
                   </div>
                 </div>
               </template>
@@ -271,19 +273,21 @@ mergeMessages('classes')
           <q-card class="no-shadow text-center">
             <q-card-section class="text-grey-6 text-h6 word-keep">
               <div class="text-h6 word-keep text-primary column">
-                <div class="col">{{props.row.name}}<span class="text-body1 text-brown" v-if="props.row.oldName">
-                    ({{props.row.oldName}})</span></div>
+                <div class="col">{{ props.row.name }}<span class="text-body1 text-brown" v-if="props.row.oldName">
+                    ({{ props.row.oldName }})</span></div>
                 <div class="col text-teal-4 text-subtitle2">clvl
-                  {{props.row.level}}
+                  {{ props.row.level }}
                 </div>
                 <div class="col q-gutter-x-xs">
-                  <q-badge color="red" v-if="props.row.hot === true">{{t('d2r.knowledge.items.hot')}}
+                  <q-badge color="red" v-if="props.row.hot === true">{{ t('d2r.knowledge.items.hot') }}
                   </q-badge>
                   <q-badge color="blue" v-if="props.row.recc.includes('beginner')">
-                    {{t('d2r.knowledge.items.beginner')}}
+                    {{ t('d2r.knowledge.items.beginner') }}
                   </q-badge>
-                  <q-badge color="yellow" text-color="black" v-if="props.row.version">{{'v'.concat(' ',
-                  props.row.version)}}
+                  <q-badge color="yellow" text-color="black" v-if="props.row.version">{{
+                    'v'.concat(' ',
+                      props.row.version)
+                  }}
                   </q-badge>
                 </div>
               </div>
@@ -291,8 +295,8 @@ mergeMessages('classes')
             <q-separator />
             <q-card-section>
               <div class="text-subtitle2 word-keep row justify-around">
-                <div v-for="(m, idx) in parsMaterial(props.row.materials)" :key="idx">{{m}}<span
-                    class="text-red-5">({{props.row.runeword.length}})</span>
+                <div v-for="(m, idx) in parsMaterial(props.row.materials)" :key="idx">{{ m }}<span
+                    class="text-red-5">({{ props.row.runeword.length }})</span>
                 </div>
               </div>
             </q-card-section>
@@ -316,10 +320,10 @@ mergeMessages('classes')
                       <img :src="`/images/knowledge/items/runes/${rune.file}.png`" style="width:30px" />
                     </div>
                     <div class="row items-center word-keep">
-                      {{rune.name}}
+                      {{ rune.name }}
                     </div>
                     <div class="row items-center">
-                      ({{rune.no}})
+                      ({{ rune.no }})
                     </div>
                   </div>
                 </template>
@@ -330,10 +334,10 @@ mergeMessages('classes')
       </template>
     </q-table>
     <p class="q-mt-xl text-right text-grey-6 text-body2">
-      {{t('d2r.knowledge.source')}} : <a style="text-decoration: none;" class="text-green-4" target="_blank"
-        href="https://namu.wiki/w/%EB%A3%AC%EC%96%B4%20%EC%95%84%EC%9D%B4%ED%85%9C">{{t('d2r.knowledge.namuWiki')}}</a>
+      {{ t('d2r.knowledge.source') }} : <a style="text-decoration: none;" class="text-green-4" target="_blank"
+        href="https://namu.wiki/w/%EB%A3%AC%EC%96%B4%20%EC%95%84%EC%9D%B4%ED%85%9C">{{ t('d2r.knowledge.namuWiki') }}</a>
       & <a style="text-decoration: none;" class="text-red-6" target="_blank"
-        href="https://www.purediablo.com/diablo-2/runewords/">{{t('d2r.knowledge.pureDiablo')}}</a>
+        href="https://www.purediablo.com/diablo-2/runewords/">{{ t('d2r.knowledge.pureDiablo') }}</a>
     </p>
   </div>
 </template>

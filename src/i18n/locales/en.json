@@ -351,6 +351,14 @@
           {
             "no": 21,
             "name": "Weapon"
+          },
+          {
+            "no": 22,
+            "name": "Spired Helm"
+          },
+          {
+            "no": 23,
+            "name": "Claws"
           }
         ],
         "allWeapon": "All Weapons",

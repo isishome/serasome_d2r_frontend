@@ -1,0 +1,71 @@
+{
+  "sunder": {
+    "desc": [
+      "Sunder Charms are a new addition to Diablo 2 Resurrected in patch 2.5.",
+      "These are Grand Charms and take up 3 inventory slots",
+      "These charms will “break specific monster immunity”",
+      "The tradeoff to using the six new charms when breaking a monster’s resistance is that they also reduce your own resistance to the same element",
+      "Sunder Charm monster resistance reduction effects are applied before effects such as Amplify Damage or Lower Resist",
+      "Sunder Charms work with minions such as Hydras and traps",
+      "This was not the case when they were first revealed",
+      "Sunder Charms can only be dropped by Rare, Unique, Super Unique, or Champion terrorized monster types in Terror Zones",
+      "This includes Uber monsters",
+      "Carrying more than one of the same charm does not stack the resistance reduction effect on monsters but does stack the player’s negative resistances",
+      "Players can also carry multiple different charms but will suffer from each charm’s resistance penalty",
+      "Sunder Charms can  be equipped at level 75",
+      "For further reading on which immunities are present in which zones, check the Terror Zone immunities by zone list",
+      "An just update prior to the Sunder Charme launch stated , “Conviction and Lower Resist effectiveness will be 1/5 effective even after a Sundering Charm’s applied effects”"
+    ],
+    "required": "Required Level"
+  },
+  "sunderData": [
+    {
+      "id": "magic",
+      "name": "THE BLACK CLEFT",
+      "clvl": "75",
+      "desc": "Monster Magic Immunity if Sundered",
+      "attribute": "Magic Resist -(45~65)%",
+      "image": "/images/knowledge/items/sunder/magic.webp"
+    },
+    {
+      "id": "physical",
+      "name": "THE BONE BREAK",
+      "clvl": "75",
+      "desc": "Monster Physical Immunity is Sundered Physical Damage",
+      "attribute": "Received Increased by 10~30%",
+      "image": "/images/knowledge/items/sunder/physical.webp"
+    },
+    {
+      "id": "fire",
+      "name": "THE FLAME RIFT",
+      "clvl": "75",
+      "desc": "Monster Fire Immunity is Sundered",
+      "attribute": "Fire Resist -(70~90)%",
+      "image": "/images/knowledge/items/sunder/fire.webp"
+    },
+    {
+      "id": "cold",
+      "name": "THE COLD RUPTURE",
+      "clvl": "75",
+      "desc": "Monster Cold Immunity is Sundered",
+      "attribute": "Cold Resist -(70~90)%",
+      "image": "/images/knowledge/items/sunder/cold.webp"
+    },
+    {
+      "id": "lightning",
+      "name": "THE CRACK OF THE HEAVENS",
+      "clvl": "75",
+      "desc": "Monster Lightning Immunity is Sundered",
+      "attribute": "Lightning Resist -(70~90)%",
+      "image": "/images/knowledge/items/sunder/lightning.webp"
+    },
+    {
+      "id": "poison",
+      "name": "THE ROTTING FISSURE",
+      "clvl": "75",
+      "desc": "Monster Poison Immunity is Sundered",
+      "attribute": "Poison Resist -(70~90)%",
+      "image": "/images/knowledge/items/sunder/poison.webp"
+    }
+  ]
+}

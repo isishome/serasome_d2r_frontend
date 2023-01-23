@@ -78,8 +78,8 @@ const itemClick = (item) => {
               <q-btn flat unelevated no-caps class="text-body fit" @click="itemClick(summary)">
                 <q-item-section top avatar>
                   <q-avatar rounded class="outlined" size="70px">
-                    <q-badge v-if="isNew(summary.upd_date, 1000 * 60 * 60 * 24 * 7)" color="red-8" floating
-                      class="badge">NEW</q-badge>
+                    <q-badge v-if="isNew(summary.upd_date, 1000 * 60 * 60 * 24 * 14)" rounded color="red-8" floating
+                      class="badge" />
                     <q-img no-spinner no-transition :ratio="1" class="fit" :src="parsThumbnail(summary.thumbnail)">
                       <template v-if="blank !== null" #error>
                         <q-img no-spinner no-transition :ratio="2" :src="`/images/${blank}`"
@@ -128,11 +128,5 @@ const itemClick = (item) => {
 
 .outlined {
   box-shadow: 0 0 0 1px rgba(45, 45, 45, 1);
-}
-
-.badge {
-  z-index: 1;
-  transform: translate(30%, -30%);
-  font-size: 8px;
 }
 </style>
