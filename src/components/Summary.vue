@@ -78,7 +78,7 @@ const itemClick = (item) => {
               <q-btn flat unelevated no-caps class="text-body fit" @click="itemClick(summary)">
                 <q-item-section top avatar>
                   <q-avatar rounded class="outlined" size="70px">
-                    <q-badge v-if="isNew(summary.upd_date, 1000 * 60 * 60 * 24 * 7)" rounded color="red-8" floating
+                    <q-badge v-if="isNew(summary.upd_date, 1000 * 60 * 60 * 24 * 7)" rounded color="red-6" floating
                       class="badge" />
                     <q-img no-spinner no-transition :ratio="1" class="fit" :src="parsThumbnail(summary.thumbnail)">
                       <template v-if="blank !== null" #error>

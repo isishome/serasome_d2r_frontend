@@ -2439,7 +2439,7 @@
       ]
     },
     {
-      "name": "큐어",
+      "name": "치유",
       "level": 35,
       "version": "2.6",
       "materials": [
@@ -2461,7 +2461,7 @@
       "recc": []
     },
     {
-      "name": "하스",
+      "name": "온기",
       "level": 35,
       "version": "2.6",
       "materials": [
@@ -2483,7 +2483,7 @@
       "recc": []
     },
     {
-      "name": "그라운드",
+      "name": "접지",
       "level": 35,
       "version": "2.6",
       "materials": [
@@ -2505,7 +2505,7 @@
       "recc": []
     },
     {
-      "name": "템퍼",
+      "name": "단련",
       "level": 35,
       "version": "2.6",
       "materials": [
@@ -2551,7 +2551,7 @@
       "recc": []
     },
     {
-      "name": "탈태",
+      "name": "탈바꿈",
       "level": 67,
       "version": "2.6",
       "materials": [
