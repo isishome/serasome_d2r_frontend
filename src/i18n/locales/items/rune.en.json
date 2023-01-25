@@ -2567,16 +2567,13 @@
         10
       ],
       "stats": [
-        "Claw Class: Very Fast Attack Speed",
         "25% Chance for finishing moves to not consume charge",
         "+2 to Martial Arts (Assassin Only)",
         "+20% Increased Attack Speed",
-        "+236% Enhanced Damage",
+        "+200-250% Enhanced Damage",
         "+20% Bonus to Attack Rating",
-        "+2 to Attack Rating",
         "Adds 3-14 Cold Damage",
-        "Prevent Monster Heal",
-        "Increase maximum Durability 12%"
+        "Prevent Monster Heal"
       ],
       "recc": [
         "assassin"
