@@ -161,7 +161,7 @@ watch(() => route.query.page, (val, old) => {
       </div>
     </div>
     <Table ref="table" :pagination.sync="pagination" :columns="columns[sec] || columns.default" :data="data"
-      :search="search" :grid="$q.screen.lt.lg" @request="getList">
+      :search="search" :grid="$q.screen.lt.md" @request="getList">
       <template v-if="!search && (sec === 'trade' || signStatus)" #top-right>
         <div class="row justify-end q-gutter-x-md" :class="[$q.screen.gt.sm ? '' : 'no-margin']">
           <div v-if="sec === 'trade'">
@@ -210,7 +210,7 @@ watch(() => route.query.page, (val, old) => {
             </q-img>
           </q-td>
           <q-td key="title" class="table-row">
-            <div :class="`${props.row.classify}-title`"
+            <div :class="['bbs-title', `${props.row.classify}-title`]"
               v-html="parsSearch(['title', 'titleWithContents'], props.row.title)"></div>
           </q-td>
           <q-td>
@@ -350,6 +350,11 @@ watch(() => route.query.page, (val, old) => {
 
 .classify {
   opacity: .8;
+}
+
+.bbs-title {
+  line-height: 1.8;
+  letter-spacing: -0.002em;
 }
 
 .notice {
