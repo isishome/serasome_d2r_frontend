@@ -2439,7 +2439,7 @@
       ]
     },
     {
-      "name": "치유",
+      "name": "치료",
       "level": 35,
       "version": "2.6",
       "materials": [
@@ -2461,7 +2461,7 @@
       "recc": []
     },
     {
-      "name": "온기",
+      "name": "화로",
       "level": 35,
       "version": "2.6",
       "materials": [
@@ -2505,7 +2505,7 @@
       "recc": []
     },
     {
-      "name": "단련",
+      "name": "담금질",
       "level": 35,
       "version": "2.6",
       "materials": [
@@ -2551,7 +2551,7 @@
       "recc": []
     },
     {
-      "name": "탈바꿈",
+      "name": "탈태",
       "level": 67,
       "version": "2.6",
       "materials": [
@@ -2588,7 +2588,7 @@
       ]
     },
     {
-      "name": "짜맞춤",
+      "name": "모자이크",
       "level": 53,
       "version": "2.6",
       "materials": [
@@ -2613,7 +2613,7 @@
       ]
     },
     {
-      "name": "소란",
+      "name": "투지",
       "level": 39,
       "version": "2.6",
       "materials": [
