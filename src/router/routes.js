@@ -2,7 +2,10 @@ export const routes = [
   {
     name: 'pnf',
     path: '/:pathMatch(.*)*',
-    component: () => import('@/pages/PNF.vue')
+    component: () => import('@/pages/PNF.vue'),
+    meta: {
+      description: 'Page not found.'
+    }
   },
   {
     path: '/',
@@ -14,6 +17,9 @@ export const routes = [
         components: {
           carousel: () => import('@/components/Carousel.vue'),
           default: () => import('@/pages/Main.vue')
+        },
+        meta: {
+          description: 'This is a website that checks various information of Diablo® II Resurrected.'
         }
       },
       {
@@ -22,7 +28,8 @@ export const routes = [
         component: () => import('@/pages/Bbs.vue'),
         props: true,
         meta: {
-          checkGrade: 'list'
+          checkGrade: 'list',
+          description: 'Diablo® II Resurrected\'s news, trade, laboratory, information, etc. A place of communication.'
         },
         children: [
           {
@@ -60,6 +67,9 @@ export const routes = [
         name: 'd2r-knowledge',
         path: '/knowledge',
         component: () => import('@/pages/knowledge/Main.vue'),
+        meta: {
+          description: 'Diablo® II Resurrected provides various information such as classes, skills, items, NPCs, quests, shrines, maps, and terror zones.'
+        },
         children: [
           {
             name: 'd2r-knowledge-section',

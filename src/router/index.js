@@ -47,6 +47,28 @@ router.beforeEach(async (to) => {
   else
     oldOgTitle.replaceWith(ogTitle)
 
+  const descList = to.matched.filter(r => r.meta && r.meta.description)
+  const desc = to.meta.desc || descList.length > 0 ? descList[0].meta.description : 'Sera\'s Diablo® II Resurrected'
+  const description = document.createElement('meta')
+  description.setAttribute('name', 'description')
+  description.setAttribute('content', desc)
+
+  const oldDescription = document.head.querySelector('meta[name="description"]')
+  if (oldDescription === null)
+    document.head.appendChild(description)
+  else
+    oldDescription.replaceWith(description)
+
+  const ogDescription = document.createElement('meta')
+  ogDescription.setAttribute('property', 'og:description')
+  ogDescription.setAttribute('content', desc)
+
+  const oldOgDescription = document.head.querySelector('meta[property="og:description"]')
+  if (oldOgDescription === null)
+    document.head.appendChild(ogDescription)
+  else
+    oldOgDescription.replaceWith(ogDescription)
+
   const canonicalLink = document.createElement('link')
   canonicalLink.setAttribute('rel', 'canonical')
   canonicalLink.setAttribute('href', `${location.origin}${to.path}`)
