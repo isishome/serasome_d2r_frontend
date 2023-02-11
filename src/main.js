@@ -5,7 +5,6 @@ import { router } from './router'
 import { i18n } from './i18n'
 import { instance } from './axios'
 import { createPinia } from 'pinia'
-import { updateMeta } from '@/common/meta'
 import App from './App.vue'
 
 // Import icon libraries
@@ -16,9 +15,6 @@ import 'quasar/dist/quasar.css'
 
 // Create pinia object
 const pinia = createPinia()
-
-// Update Meta
-updateMeta()
 
 createApp(App).provide('axios', instance).use(router).use(pinia).use(i18n).use(Quasar, {
   plugins: { Cookies, Notify }, // import Quasar plugins and add here
